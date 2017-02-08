@@ -52,7 +52,7 @@ public class GameOverScript : MonoBehaviour {
 		
 		musicBool = true;
 		//yield return new WaitForSeconds (0.5f);
-		Application.LoadLevel (1);
+		Application.LoadLevel (0);
 		yield return null;
 	
 	}
