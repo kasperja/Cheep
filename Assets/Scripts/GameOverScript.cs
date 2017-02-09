@@ -6,6 +6,8 @@ public class GameOverScript : MonoBehaviour {
 
 	int score = 0;
 
+	public int highscore = 0;
+
 	public Text finalScoreTxt;
 
 	public AudioSource click;
@@ -14,8 +16,35 @@ public class GameOverScript : MonoBehaviour {
 	private bool musicBool = false;
 
 	void Start () {
-	
-		score = PlayerPrefs.GetInt ("Score");
+		
+		if (ES2.Exists ("myCurrentScore")) {
+
+			score = ES2.Load<int> ("myCurrentScore");
+
+		}
+
+		if(ES2.Exists("myHighscore")){
+
+			highscore = ES2.Load<int> ("myHighscore");
+
+			if (score > highscore) {
+
+				highscore = score;
+				ES2.Save (score, "myHighscore");
+
+			}
+
+
+		}
+			
+
+
+
+
+
+
+
+		//score = PlayerPrefs.GetInt ("Score");
 
 		finalScoreTxt.text = "" + score;
 

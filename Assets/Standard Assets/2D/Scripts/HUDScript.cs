@@ -12,18 +12,20 @@ public class HUDScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(!pc2D.isDead) playerScore += Time.deltaTime * 100f;
+		if(!pc2D.isDead) playerScore += Time.deltaTime * 10f;
 		ScoreTxt.text = "" + (int)( playerScore);
 	
 	}
 
 	public void IncreaseScore (float amount){
-	
+
 		playerScore += amount;
 	
 	}
 
 	public void OnDisable(){
+
+		ES2.Save ((int)playerScore, "myCurrentScore");
 
 		PlayerPrefs.SetInt ("Score", (int)(playerScore));
 
