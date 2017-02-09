@@ -225,19 +225,36 @@ public class FacebookManager : MonoBehaviour {
 
 	public void ShareWithUsers(){
 
-		FB.AppRequest (
 
-			"Come and see if you can beat my score!",
-			null,
-			new List<object>(){ "app_users"},
-			null,
-			null,
-			null,
-			null,
-			ShareWithUsersCallback
+		if (ES2.Exists ("myHighscore")) {
+			FB.AppRequest (
 
-		);
+				"Can you beat my score: " + ES2.Load<int> ("myHighscore"),
+				null,
+				new List<object> (){ "app_users" },
+				null,
+				null,
+				null,
+				null,
+				ShareWithUsersCallback
 
+			);
+		} else {
+		
+			FB.AppRequest (
+
+				"Can you beat my score: 0",
+				null,
+				new List<object>(){ "app_users"},
+				null,
+				null,
+				null,
+				null,
+				ShareWithUsersCallback
+
+			);
+		
+		}
 	}
 
 	void ShareWithUsersCallback(IAppRequestResult result){
@@ -252,7 +269,13 @@ public class FacebookManager : MonoBehaviour {
 
 		} else if (!string.IsNullOrEmpty (result.RawResult)) {
 
-			Debug.Log ("succes on Challenge");
+			if (ES2.Exists ("myHighscore")) {
+				Debug.Log ("succes on Challenge: " + ES2.Load<int> ("myHighscore"));
+			} else {
+			
+				Debug.Log ("succes on Challenge: 0");
+			
+			}
 
 		}
 
