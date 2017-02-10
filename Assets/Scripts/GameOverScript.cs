@@ -8,7 +8,13 @@ public class GameOverScript : MonoBehaviour {
 
 	public int highscore = 0;
 
+	public Text yourScoreIsTxt;
+
 	public Text finalScoreTxt;
+
+	public Text yourRecordIsTxt;
+
+	//public Text highScoreTxt;
 
 	public AudioSource click;
 
@@ -16,6 +22,9 @@ public class GameOverScript : MonoBehaviour {
 	private bool musicBool = false;
 
 	void Start () {
+
+		yourRecordIsTxt.gameObject.SetActive (false);
+		//highScoreTxt.gameObject.SetActive (false);
 		
 		if (ES2.Exists ("myCurrentScore")) {
 
@@ -29,8 +38,19 @@ public class GameOverScript : MonoBehaviour {
 
 			if (score > highscore) {
 
+				yourScoreIsTxt.text = "It's a new record!";
+
 				highscore = score;
 				ES2.Save (score, "myHighscore");
+
+
+
+			} else {
+			
+				yourRecordIsTxt.gameObject.SetActive (true);
+				//highScoreTxt.gameObject.SetActive (true);
+				yourRecordIsTxt.text = "Your record is:   " + highscore;
+				//highScoreTxt.text = "" + highscore; 
 
 			}
 
