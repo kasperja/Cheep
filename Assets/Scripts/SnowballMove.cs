@@ -11,6 +11,8 @@ public class SnowballMove : MonoBehaviour {
 	public bool isRolling = false;
 
 	private bool rollOnce = true;
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -34,7 +36,9 @@ public class SnowballMove : MonoBehaviour {
 				
 		} else {
 		
-			transform.position = beginPos.position;
+
+				transform.position = beginPos.position;
+
 		
 		}
 	
@@ -44,7 +48,7 @@ public class SnowballMove : MonoBehaviour {
 	
 		yield return new WaitForSeconds (5f);
 		isRolling = false;
-		yield return new WaitForSeconds (Random.Range(5f,10f));
+		yield return new WaitForSeconds (Random.Range(10f, 30f));
 		rollOnce = true;
 		isRolling = true;
 
