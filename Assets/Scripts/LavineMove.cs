@@ -57,7 +57,7 @@ public class LavineMove : MonoBehaviour {
 
 		if (pc2D.isDead) {
 		
-			if(speed>0f)speed -= 2f * Time.deltaTime;
+			if(speed>0f)speed -= 1.8f * Time.deltaTime;
 		
 		}
 
