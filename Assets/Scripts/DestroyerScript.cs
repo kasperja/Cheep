@@ -11,6 +11,11 @@ public class DestroyerScript : MonoBehaviour {
 	public AudioSource music;
 	private bool fadeMusic = false;
 
+	public bool dieBool = false;
+	private bool dieOnce = true;
+
+	public GameObject graphicsPlayer;
+
 	void Update(){
 	
 		if (fadeMusic) {
@@ -19,6 +24,18 @@ public class DestroyerScript : MonoBehaviour {
 
 		}
 
+
+		if (dieBool && dieOnce) {
+		
+			pc2d.isDead = true;
+			pc2d.m_MaxSpeed = 0f;
+			deathParticle.Play ();
+			StartCoroutine (waitForDeath ());
+			graphicsPlayer.SetActive (false);
+			dieOnce = false;
+			//Application.LoadLevel (2);
+		
+		}
 	
 	}
 
@@ -56,7 +73,7 @@ public class DestroyerScript : MonoBehaviour {
 		if(pc2d.scream3)scream3.Play ();
 
 
-		yield return new WaitForSeconds (3.5f);
+		yield return new WaitForSeconds (4.5f);
 		Application.LoadLevel (2);
 		//return;
 
