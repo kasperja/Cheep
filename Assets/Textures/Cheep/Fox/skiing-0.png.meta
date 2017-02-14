@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: 49ded9eca1de0f34aa5e10cf10aaa022
+timeCreated: 1487069529
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: foxsking-0000
+    21300002: foxsking-0001
+    21300004: foxsking-0002
+    21300006: foxsking-0003
+    21300008: foxsking-0004
+    21300010: foxsking-0005
+    21300012: foxsking-0006
+    21300014: foxsking-0007
+    21300016: foxsking-0008
+    21300018: foxsking-0009
+    21300020: foxsking-0010
+    21300022: foxsking-0011
+    21300024: foxsking-0012
+    21300026: foxsking-0013
+    21300028: foxsking-0014
+    21300030: foxsking-0015
+    21300032: foxsking-0016
+    21300034: foxsking-0017
+    21300036: foxsking-0018
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 7
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 7
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 7
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 7
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 7
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: foxsking-0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1800
+        width: 483
+        height: 247
+      alignment: 9
+      pivot: {x: 0.5279503, y: 0.5060729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0001
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1798
+        width: 483
+        height: 249
+      alignment: 9
+      pivot: {x: 0.5279503, y: 0.502008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0002
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1797
+        width: 489
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5337423, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0003
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 1797
+        width: 492
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5365854, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1543
+        width: 509
+        height: 252
+      alignment: 9
+      pivot: {x: 0.55206287, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0005
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1543
+        width: 503
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5467197, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0006
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1542
+        width: 506
+        height: 253
+      alignment: 9
+      pivot: {x: 0.5494071, y: 0.49407116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0007
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1545
+        width: 503
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5467197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1288
+        width: 511
+        height: 252
+      alignment: 9
+      pivot: {x: 0.553816, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0009
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1288
+        width: 516
+        height: 252
+      alignment: 9
+      pivot: {x: 0.55813956, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0010
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1288
+        width: 517
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5589942, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1035
+        width: 529
+        height: 251
+      alignment: 9
+      pivot: {x: 0.5689981, y: 0.49800798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0012
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1033
+        width: 514
+        height: 253
+      alignment: 9
+      pivot: {x: 0.5564202, y: 0.49407116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0013
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1034
+        width: 508
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5511811, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 780
+        width: 504
+        height: 251
+      alignment: 9
+      pivot: {x: 0.54761904, y: 0.49800798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0015
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 779
+        width: 492
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5365854, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0016
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 779
+        width: 499
+        height: 252
+      alignment: 9
+      pivot: {x: 0.5430862, y: 0.49603173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0017
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 783
+        width: 489
+        height: 248
+      alignment: 9
+      pivot: {x: 0.5337423, y: 0.50403225}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: foxsking-0018
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 528
+        width: 476
+        height: 249
+      alignment: 9
+      pivot: {x: 0.52100843, y: 0.502008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

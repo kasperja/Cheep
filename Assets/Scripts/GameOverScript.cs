@@ -20,6 +20,16 @@ public class GameOverScript : MonoBehaviour {
 	public Text yourScoreIsTxt;
 
 	public Text finalScoreTxt;
+	public Text finalScoreTxt2;
+	public Text finalScoreTxt3;
+	public Text finalScoreTxt4;
+	public Text finalScoreTxt5;
+	public Text finalScoreTxt6;
+	public Text finalScoreTxt7;
+	public Text finalScoreTxt8;
+	public Text finalScoreTxt9;
+	public Text finalScoreTxt10;
+
 
 	public Text yourRecordIsTxt;
 
@@ -31,6 +41,18 @@ public class GameOverScript : MonoBehaviour {
 	private bool musicBool = false;
 
 	void Start () {
+
+		finalScoreTxt.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt2.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt3.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt4.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt5.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt6.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt7.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt8.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt9.gameObject.GetComponent<TextFader> ().enabled = false;
+		finalScoreTxt10.gameObject.GetComponent<TextFader> ().enabled = false;
+
 
 		yourRecordIsTxt.gameObject.SetActive (false);
 		//highScoreTxt.gameObject.SetActive (false);
@@ -54,17 +76,37 @@ public class GameOverScript : MonoBehaviour {
 			if(ES2.Exists("myHighscore9"))highscore9 = ES2.Load<int> ("myHighscore9");
 			if(ES2.Exists("myHighscore10"))highscore10 = ES2.Load<int> ("myHighscore10");
 
-			if (score > highscore) {
+			if (score >= highscore) {
 
 				yourScoreIsTxt.text = "It's a new record!";
 
+				highscore10 = highscore9;
+				highscore9 = highscore8;
+				highscore8 = highscore7;
+				highscore7 = highscore6;
+				highscore6 = highscore5;
+				highscore5 = highscore4;
+				highscore4 = highscore3;
+				highscore3 = highscore2;
+				highscore2 = highscore;
+
 				highscore = score;
 
-				ES2.Save (score, "myHighscore");
+			ES2.Save (highscore, "myHighscore");
+			ES2.Save (highscore2, "myHighscore2");
+			ES2.Save (highscore3, "myHighscore3");
+			ES2.Save (highscore4, "myHighscore4");
+			ES2.Save (highscore5, "myHighscore5");
+			ES2.Save (highscore6, "myHighscore6");
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt.gameObject.GetComponent<TextFader> ().enabled = true;
 
 
-
-			} else if(score > highscore2 && score <= highscore){
+			} else if(score > highscore2 && score < highscore){
 
 
 
@@ -79,16 +121,18 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore2 = score;
 
-				ES2.Save (score, "myHighscore2");
-				ES2.Save (score, "myHighscore3");
-				ES2.Save (score, "myHighscore4");
-				ES2.Save (score, "myHighscore5");
-				ES2.Save (score, "myHighscore6");
-				ES2.Save (score, "myHighscore7");
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
 
+			ES2.Save (highscore2, "myHighscore2");
+			ES2.Save (highscore3, "myHighscore3");
+			ES2.Save (highscore4, "myHighscore4");
+			ES2.Save (highscore5, "myHighscore5");
+			ES2.Save (highscore6, "myHighscore6");
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt2.gameObject.GetComponent<TextFader> ().enabled = true;
 
 
 			}else if(score > highscore3 && score <= highscore2){
@@ -103,16 +147,17 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore3 = score;
 
-				ES2.Save (score, "myHighscore3");
-				ES2.Save (score, "myHighscore4");
-				ES2.Save (score, "myHighscore5");
-				ES2.Save (score, "myHighscore6");
-				ES2.Save (score, "myHighscore7");
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
 
+			ES2.Save (highscore3, "myHighscore3");
+			ES2.Save (highscore4, "myHighscore4");
+			ES2.Save (highscore5, "myHighscore5");
+			ES2.Save (highscore6, "myHighscore6");
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
 
+			finalScoreTxt3.gameObject.GetComponent<TextFader> ().enabled = true;
 
 			}else if(score > highscore4 && score <= highscore3){
 
@@ -126,14 +171,16 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore4 = score;
 
-				ES2.Save (score, "myHighscore4");
-				ES2.Save (score, "myHighscore5");
-				ES2.Save (score, "myHighscore6");
-				ES2.Save (score, "myHighscore7");
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
 
+			ES2.Save (highscore4, "myHighscore4");
+			ES2.Save (highscore5, "myHighscore5");
+			ES2.Save (highscore6, "myHighscore6");
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt4.gameObject.GetComponent<TextFader> ().enabled = true;
 
 			}else if(score > highscore5 && score <= highscore4){
 
@@ -146,12 +193,15 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore5 = score;
 
-				ES2.Save (score, "myHighscore5");
-				ES2.Save (score, "myHighscore6");
-				ES2.Save (score, "myHighscore7");
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
+
+			ES2.Save (highscore5, "myHighscore5");
+			ES2.Save (highscore6, "myHighscore6");
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt5.gameObject.GetComponent<TextFader> ().enabled = true;
 
 
 			}else if(score > highscore6 && score <= highscore5){
@@ -163,13 +213,14 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore6 = score;
 
-				ES2.Save (score, "myHighscore6");
-				ES2.Save (score, "myHighscore7");
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
 
+			ES2.Save (highscore6, "myHighscore6");
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
 
+			finalScoreTxt6.gameObject.GetComponent<TextFader> ().enabled = true;
 
 			}else if(score > highscore7 && score <= highscore6){
 
@@ -179,10 +230,13 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore7 = score;
 
-				ES2.Save (score, "myHighscore7");
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
+
+			ES2.Save (highscore7, "myHighscore7");
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt7.gameObject.GetComponent<TextFader> ().enabled = true;
 
 			}else if(score > highscore8 && score <= highscore7){
 
@@ -191,9 +245,12 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore8 = score;
 
-				ES2.Save (score, "myHighscore8");
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
+
+			ES2.Save (highscore8, "myHighscore8");
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt8.gameObject.GetComponent<TextFader> ().enabled = true;
 
 
 			}else if(score > highscore9 && score <= highscore8){
@@ -202,20 +259,26 @@ public class GameOverScript : MonoBehaviour {
 
 				highscore9 = score;
 
-				ES2.Save (score, "myHighscore9");
-				ES2.Save (score, "myHighscore10");
+
+			ES2.Save (highscore9, "myHighscore9");
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt9.gameObject.GetComponent<TextFader> ().enabled = true;
 
 
 			}else if(score > highscore10 && score <= highscore9){
 
 				highscore10 = score;
 
-				ES2.Save (score, "myHighscore10");
+
+			ES2.Save (highscore10, "myHighscore10");
+
+			finalScoreTxt10.gameObject.GetComponent<TextFader> ().enabled = true;
 
 
 			}else {
 			
-				yourRecordIsTxt.gameObject.SetActive (true);
+				yourRecordIsTxt.gameObject.SetActive (false);
 				//highScoreTxt.gameObject.SetActive (true);
 				yourRecordIsTxt.text = "Your record is:   " + highscore;
 				//highScoreTxt.text = "" + highscore; 
@@ -224,7 +287,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-			
+		yourScoreIsTxt.text = "  " + score;
 
 
 
@@ -234,7 +297,41 @@ public class GameOverScript : MonoBehaviour {
 
 		//score = PlayerPrefs.GetInt ("Score");
 
-		finalScoreTxt.text = "" + score;
+		if (highscore == 0)
+			finalScoreTxt.text = "";
+
+		finalScoreTxt.text = "" + highscore;
+		finalScoreTxt2.text = "" + highscore2;
+		finalScoreTxt3.text = "" + highscore3;
+		finalScoreTxt4.text = "" + highscore4;
+		finalScoreTxt5.text = "" + highscore5;
+		finalScoreTxt6.text = "" + highscore6;
+		finalScoreTxt7.text = "" + highscore7;
+		finalScoreTxt8.text = "" + highscore8;
+		finalScoreTxt9.text = "" + highscore9;
+		finalScoreTxt10.text = "" + highscore10;
+
+		if (highscore == 0)
+			finalScoreTxt.text = "";
+		if (highscore2 == 0)
+			finalScoreTxt2.text = "";
+		if (highscore3 == 0)
+			finalScoreTxt3.text = "";
+		if (highscore4 == 0)
+			finalScoreTxt4.text = "";
+		if (highscore5 == 0)
+			finalScoreTxt5.text = "";
+		if (highscore6 == 0)
+			finalScoreTxt6.text = "";
+		if (highscore7 == 0)
+			finalScoreTxt7.text = "";
+		if (highscore8 == 0)
+			finalScoreTxt8.text = "";
+		if (highscore9 == 0)
+			finalScoreTxt9.text = "";
+		if (highscore10 == 0)
+			finalScoreTxt10.text = "";
+
 
 	}
 	void Update(){

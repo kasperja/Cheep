@@ -75,7 +75,7 @@ public class FBscript : MonoBehaviour {
 			
 				Text UserName = DialogUsername.GetComponent<Text> ();
 
-				UserName.text  = "" + FacebookManager.Instance.ProfileName;
+				UserName.text  = "   Hi there, " + FacebookManager.Instance.ProfileName;
 			
 			} else {
 			
