@@ -20,6 +20,8 @@ public class StartScript : MonoBehaviour {
 			Application.Quit ();
 		}
 	
+		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
+
 	}
 
 	public void Retry(){

@@ -116,7 +116,7 @@ public class FacebookManager : MonoBehaviour {
 
 		if (result.Error == null) {
 
-			ProfileName = "   Hi there, " + result.ResultDictionary["first_name"];
+			ProfileName = "" + result.ResultDictionary["first_name"];
 
 		} else {
 
@@ -156,19 +156,36 @@ public class FacebookManager : MonoBehaviour {
 	public void Share()
 
 	{
-	
-		FB.FeedShare (
+		if (ES2.Exists ("myHighscore")) {
+			
+			FB.FeedShare (
 		
-			string.Empty, 
-			new Uri(AppLinkURL),
-			"Hello this is the title",
-			"This is the Caption",
-			"Check out this game",
-			new Uri("http://i.imgur.com/Qwm5bEV.jpg"),
-			string.Empty,
-			ShareCallback
+				string.Empty, 
+				new Uri (AppLinkURL),
+				FacebookManager.Instance.ProfileName + " scored " + ES2.Load<int> ("myHighscore") + " in SNÖ!",
+				"Try if you can beat it",
+				"Play for free on iPhone or Android",
+				new Uri ("http://i.imgur.com/Qwm5bEV.jpg"),
+				string.Empty,
+				ShareCallback
 		
-		);
+			);
+		} else {
+		
+			FB.FeedShare (
+
+				string.Empty, 
+				new Uri (AppLinkURL),
+				FacebookManager.Instance.ProfileName + " plays SNÖ",
+				"Check out the game and compete",
+				"Play for free on iPhone or Android",
+				new Uri ("http://i.imgur.com/Qwm5bEV.jpg"),
+				string.Empty,
+				ShareCallback
+
+			);
+		
+		}
 
 	}
 
@@ -229,7 +246,7 @@ public class FacebookManager : MonoBehaviour {
 		if (ES2.Exists ("myHighscore")) {
 			FB.AppRequest (
 
-				"Can you beat my score: " + ES2.Load<int> ("myHighscore"),
+				"Can you beat my score: " + ES2.Load<int> ("myHighscore") + " ?",
 				null,
 				new List<object> (){ "app_users" },
 				null,
@@ -243,7 +260,7 @@ public class FacebookManager : MonoBehaviour {
 		
 			FB.AppRequest (
 
-				"Can you beat my score: 0",
+				"I challenge you to play SNÖ!",
 				null,
 				new List<object>(){ "app_users"},
 				null,
@@ -270,7 +287,7 @@ public class FacebookManager : MonoBehaviour {
 		} else if (!string.IsNullOrEmpty (result.RawResult)) {
 
 			if (ES2.Exists ("myHighscore")) {
-				Debug.Log ("succes on Challenge: " + ES2.Load<int> ("myHighscore"));
+				Debug.Log (FacebookManager.Instance.ProfileName + " scored " + ES2.Load<int> ("myHighscore") + " in SNÖ!");
 			} else {
 			
 				Debug.Log ("succes on Challenge: 0");
