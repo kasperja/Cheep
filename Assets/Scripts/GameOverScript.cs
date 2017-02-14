@@ -41,9 +41,9 @@ public class GameOverScript : MonoBehaviour {
 
 		}
 
-		if(ES2.Exists("myHighscore")){
 
-			highscore = ES2.Load<int> ("myHighscore");
+
+			if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
 			if(ES2.Exists("myHighscore2"))highscore2 = ES2.Load<int> ("myHighscore2");
 			if(ES2.Exists("myHighscore3"))highscore3 = ES2.Load<int> ("myHighscore3");
 			if(ES2.Exists("myHighscore4"))highscore4 = ES2.Load<int> ("myHighscore4");
@@ -64,7 +64,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-			} else if(score > highscore2){
+			} else if(score > highscore2 && score <= highscore){
 
 
 
@@ -91,7 +91,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-			}else if(score > highscore3){
+			}else if(score > highscore3 && score <= highscore2){
 
 				highscore10 = highscore9;
 				highscore9 = highscore8;
@@ -114,7 +114,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-			}else if(score > highscore4){
+			}else if(score > highscore4 && score <= highscore3){
 
 
 				highscore10 = highscore9;
@@ -135,7 +135,7 @@ public class GameOverScript : MonoBehaviour {
 				ES2.Save (score, "myHighscore10");
 
 
-			}else if(score > highscore5){
+			}else if(score > highscore5 && score <= highscore4){
 
 
 				highscore10 = highscore9;
@@ -154,7 +154,7 @@ public class GameOverScript : MonoBehaviour {
 				ES2.Save (score, "myHighscore10");
 
 
-			}else if(score > highscore6){
+			}else if(score > highscore6 && score <= highscore5){
 
 				highscore10 = highscore9;
 				highscore9 = highscore8;
@@ -171,7 +171,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-			}else if(score > highscore7){
+			}else if(score > highscore7 && score <= highscore6){
 
 				highscore10 = highscore9;
 				highscore9 = highscore8;
@@ -184,7 +184,7 @@ public class GameOverScript : MonoBehaviour {
 				ES2.Save (score, "myHighscore9");
 				ES2.Save (score, "myHighscore10");
 
-			}else if(score > highscore8){
+			}else if(score > highscore8 && score <= highscore7){
 
 				highscore10 = highscore9;
 				highscore9 = highscore8;
@@ -196,7 +196,7 @@ public class GameOverScript : MonoBehaviour {
 				ES2.Save (score, "myHighscore10");
 
 
-			}else if(score > highscore9){
+			}else if(score > highscore9 && score <= highscore8){
 
 				highscore10 = highscore9;
 
@@ -206,7 +206,7 @@ public class GameOverScript : MonoBehaviour {
 				ES2.Save (score, "myHighscore10");
 
 
-			}else if(score > highscore10){
+			}else if(score > highscore10 && score <= highscore9){
 
 				highscore10 = score;
 
@@ -223,7 +223,7 @@ public class GameOverScript : MonoBehaviour {
 			}
 
 
-		}
+
 			
 
 
@@ -238,6 +238,8 @@ public class GameOverScript : MonoBehaviour {
 
 	}
 	void Update(){
+
+		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
 	
 		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) || (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
 		
