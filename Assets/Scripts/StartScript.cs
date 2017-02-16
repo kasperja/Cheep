@@ -11,7 +11,7 @@ public class StartScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) || (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) /*|| (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began*/) {
 
 			Application.LoadLevel (1);
 
