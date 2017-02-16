@@ -4,6 +4,7 @@ using System.Collections;
 public class DestroyerScript : MonoBehaviour {
 
 	public ParticleSystem deathParticle;
+	public GameObject particlesObj;
 	public PlatformerCharacter2D pc2d;
 	public AudioSource scream1;
 	public AudioSource scream2;
@@ -65,6 +66,7 @@ public class DestroyerScript : MonoBehaviour {
 	}
 
 	IEnumerator waitForDeath(){
+		particlesObj.SetActive (false);
 		fadeMusic = true;
 		if (pc2d.scream1)scream1.Play ();
 
