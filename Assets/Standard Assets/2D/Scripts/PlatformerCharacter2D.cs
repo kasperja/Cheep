@@ -43,7 +43,7 @@ using System.Collections;
         private void Awake()
         {
 
-			Application.targetFrameRate = 120;
+			Application.targetFrameRate = 60;
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
