@@ -40,6 +40,12 @@ public class GameOverScript : MonoBehaviour {
 	public AudioSource music;
 	private bool musicBool = false;
 
+	void Awake(){
+
+		Application.targetFrameRate = 120;
+
+	}
+
 	void Start () {
 
 		finalScoreTxt.gameObject.GetComponent<TextFader> ().enabled = false;
