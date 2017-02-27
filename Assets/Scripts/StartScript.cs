@@ -9,7 +9,7 @@ public class StartScript : MonoBehaviour {
 	}
 	void Awake(){
 		
-		Application.targetFrameRate = 120;
+		Application.targetFrameRate = 60;
 	
 	}
 	// Update is called once per frame

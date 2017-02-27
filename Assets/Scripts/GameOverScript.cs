@@ -42,7 +42,7 @@ public class GameOverScript : MonoBehaviour {
 
 	void Awake(){
 
-		Application.targetFrameRate = 120;
+		Application.targetFrameRate = 60;
 
 	}
 
