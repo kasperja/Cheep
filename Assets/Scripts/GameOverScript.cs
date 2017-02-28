@@ -389,6 +389,7 @@ public class GameOverScript : MonoBehaviour {
 		//yield return new WaitForSeconds (0.5f);
 		Advertisement.Show ();
 
+		yield return new WaitForSeconds (2f);
 		adsDone = true;
 		//Application.LoadLevel (0);
 		yield return null;
