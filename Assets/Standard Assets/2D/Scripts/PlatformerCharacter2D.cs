@@ -38,8 +38,12 @@ using System.Collections;
 	public bool scream2 = true;
 	public bool scream3 = true;
 
+	private bool shiftAnimOnce = true;
+
         private void Awake()
         {
+
+			Application.targetFrameRate = 60;
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
@@ -120,7 +124,10 @@ using System.Collections;
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 			if (m_Grounded) {
+			
 				doubleJump = false;
+			m_Anim.SetBool("doubleJump", false);
+			shiftAnimOnce = true;
 			}
         
 			if(!m_Grounded){
@@ -178,6 +185,7 @@ using System.Collections;
 				jumpSound.Play ();
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
+				
 
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0);
 
@@ -194,6 +202,17 @@ using System.Collections;
 
 				//if (!m_Grounded) {
 					
+			if ((!m_Anim.IsInTransition (0) || !m_Anim.IsInTransition (1)||!m_Anim.IsInTransition (2)) && shiftAnimOnce) {
+				
+				m_Anim.SetBool ("doubleJump", true);
+				shiftAnimOnce = false;
+
+			} else {
+				
+				m_Anim.SetBool ("doubleJump", false);
+				shiftAnimOnce = false;
+
+			}
 
 					doubleJump = true;
 				

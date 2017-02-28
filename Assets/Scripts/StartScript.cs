@@ -7,11 +7,15 @@ public class StartScript : MonoBehaviour {
 	void Start () {
 	
 	}
+	void Awake(){
+		
+		Application.targetFrameRate = 60;
 	
+	}
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) || (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) /*|| (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began*/) {
 
 			Application.LoadLevel (1);
 
@@ -20,6 +24,8 @@ public class StartScript : MonoBehaviour {
 			Application.Quit ();
 		}
 	
+		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
+
 	}
 
 	public void Retry(){
