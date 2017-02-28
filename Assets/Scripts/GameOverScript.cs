@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Advertisements;
+
 
 public class GameOverScript : MonoBehaviour {
 
@@ -37,8 +39,13 @@ public class GameOverScript : MonoBehaviour {
 
 	public AudioSource click;
 
+
 	public AudioSource music;
 	private bool musicBool = false;
+
+	private bool adsDone = false;
+
+	public bool disableAds = false;
 
 	void Awake(){
 
@@ -354,6 +361,12 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
+		if ((adsDone && !Advertisement.isShowing) || disableAds) {
+			
+			Application.LoadLevel (0);
+		
+		}
+
 		if(musicBool){
 
 
@@ -374,7 +387,10 @@ public class GameOverScript : MonoBehaviour {
 		
 		musicBool = true;
 		//yield return new WaitForSeconds (0.5f);
-		Application.LoadLevel (0);
+		Advertisement.Show ();
+
+		adsDone = true;
+		//Application.LoadLevel (0);
 		yield return null;
 	
 	}
