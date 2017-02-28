@@ -9,7 +9,7 @@ public class StartScript : MonoBehaviour {
 	}
 	void Awake(){
 		
-		Application.targetFrameRate = 60;
+		//Application.targetFrameRate = 60;
 	
 	}
 	// Update is called once per frame
@@ -20,9 +20,9 @@ public class StartScript : MonoBehaviour {
 			Application.LoadLevel (1);
 
 		}
-		if (Input.GetKey ("escape")) {
+		/*if (Input.GetKey ("escape")) {
 			Application.Quit ();
-		}
+		}*/
 	
 		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
 

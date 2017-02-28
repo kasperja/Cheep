@@ -42,7 +42,7 @@ public class GameOverScript : MonoBehaviour {
 
 	void Awake(){
 
-		Application.targetFrameRate = 60;
+		//Application.targetFrameRate = 60;
 
 	}
 
@@ -350,9 +350,9 @@ public class GameOverScript : MonoBehaviour {
 			StartCoroutine (waitAndRestart());
 
 		}
-		if (Input.GetKey ("escape")) {
+		/*if (Input.GetKey ("escape")) {
 			Application.Quit ();
-		}
+		}*/
 
 		if(musicBool){
 
