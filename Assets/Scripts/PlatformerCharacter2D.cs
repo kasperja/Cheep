@@ -51,7 +51,7 @@ using System.Collections;
         private void Awake()
         {
 
-			//Application.targetFrameRate = 60;
+			Application.targetFrameRate = 60;
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
@@ -277,7 +277,7 @@ using System.Collections;
 	IEnumerator waitSpawnBooster(){
 	
 		//groundSpawnScript.Spawn();
-		hudScriptPoints.scoreOverTimeAmmount = hudScriptPoints.scoreOverTimeAmmount * 3f;
+		hudScriptPoints.scoreOverTimeAmmount = hudScriptPoints.scoreOverTimeAmmount * 2f;
 		yield return new WaitForSeconds (2f);
 		hudScriptPoints.scoreOverTimeAmmount = origAmmount;
 

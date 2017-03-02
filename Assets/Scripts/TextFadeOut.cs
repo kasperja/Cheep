@@ -48,7 +48,7 @@ public class TextFadeOut : MonoBehaviour {
 		} else {
 		
 			t = 0f;
-			//txt.color = col2;
+			txt.color = col2;
 		
 		}
 

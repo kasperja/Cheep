@@ -9,7 +9,7 @@ public class SpeedBoosterScript : MonoBehaviour {
 	private bool boostActivate = false;
 	private bool boostDeactivate = false;
 
-	public float speedBoostAmmount = 2f;
+	public float speedBoostAmmount = 11f;
 
 	public ParticleSystem boostParticle;
 
@@ -33,7 +33,7 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 		if (boostActivate) {
 
-			if(pc2D.m_MaxSpeed < boostOrig * 1.5f && !pc2D.isDead)pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
+			if(pc2D.m_MaxSpeed < boostOrig * 1.1f && !pc2D.isDead)pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
 		
 		} else if (boostDeactivate) {
 		
