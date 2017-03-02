@@ -40,6 +40,14 @@ using System.Collections;
 
 	private bool shiftAnimOnce = true;
 
+	public SpawnScript groundSpawnScript;
+
+	public HUDScript hudScriptPoints;
+
+	private float origAmmount;
+
+
+
         private void Awake()
         {
 
@@ -50,6 +58,12 @@ using System.Collections;
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
+
+	void Start(){
+
+		origAmmount = hudScriptPoints.scoreOverTimeAmmount;
+
+	}
 
 		void Update(){
 		
@@ -116,7 +130,7 @@ using System.Collections;
 				    
             }
 
-			m_MaxSpeed += 0.005f * Time.deltaTime;
+			m_MaxSpeed += 0.05f * Time.deltaTime;
 
             m_Anim.SetBool("Ground", m_Grounded);
 
@@ -245,7 +259,31 @@ using System.Collections;
 			LeanTween.rotateZ(mainCam, 0f, 0.5f);
 
     	}*/
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "SpeedBooster") {
 
+
+			//iTween.PunchScale(this.gameObject,new Vector3(0.2f,0.2f,0.2f), 1f);
+			//this.gameObject.GetComponent<AudioSource>().Play();
+			StartCoroutine(waitSpawnBooster());
+			//  particleHit.Play();
+
+
+		}
+
+	}
+
+	IEnumerator waitSpawnBooster(){
+	
+		//groundSpawnScript.Spawn();
+		hudScriptPoints.scoreOverTimeAmmount = hudScriptPoints.scoreOverTimeAmmount * 3f;
+		yield return new WaitForSeconds (2f);
+		hudScriptPoints.scoreOverTimeAmmount = origAmmount;
+
+
+	
+	}
 
 	}
 

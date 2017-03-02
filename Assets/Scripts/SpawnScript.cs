@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpawnBGplatform : MonoBehaviour {
+public class SpawnScript : MonoBehaviour {
 
 	public GameObject[] obj;
 	public float spawnMin = 1f;
@@ -12,7 +12,7 @@ public class SpawnBGplatform : MonoBehaviour {
 		Spawn ();
 
 	}
-	void Spawn(){
+	public void Spawn(){
 	
 		Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
 		
