@@ -13,7 +13,7 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 	public ParticleSystem boostParticle;
 
-	private float boostOrig;
+	private float boostOrig = 10f;
 
 	private ParticleSystem boostTextPart;
 
@@ -54,7 +54,7 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 
 
-			boostOrig = pc2D.m_MaxSpeed;
+
 
 			boostParticle.Play ();
 			boostTextPart.Play ();
