@@ -24,17 +24,20 @@ public class LavineMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		
+		speed = pc2D.m_MaxSpeed;
 
 		if (isRolling) {
 
-			if (pc2D.m_MaxSpeed < 9f) {
 
-				transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed * 2f * Time.deltaTime);
+
+			if (speed < 9f) {
+
+				transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed / 200f * 2f * Time.deltaTime);
 
 			} else {
 				
-				transform.position = Vector3.MoveTowards (transform.position, endPos.position, speed * Time.deltaTime);
+				transform.position = Vector3.MoveTowards (transform.position, endPos.position, speed * 200f * Time.deltaTime);
 
 			}
 
@@ -45,7 +48,7 @@ public class LavineMove : MonoBehaviour {
 
 		} else {
 			
-			if (pc2D.m_MaxSpeed < 9f) {
+			if (speed < 9f) {
 
 				transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed * 2f * Time.deltaTime);
 
@@ -57,7 +60,7 @@ public class LavineMove : MonoBehaviour {
 
 		if (pc2D.isDead) {
 		
-			if(speed>0f)speed -= 1.8f * Time.deltaTime;
+			if(pc2D.m_MaxSpeed > 0f) speed -= 10000.8f * Time.deltaTime;
 		
 		}
 
