@@ -46,7 +46,18 @@ using System.Collections;
 
 	private float origAmmount;
 
+	public bool boostActivate = false;
 
+	public GameObject groundSpawnNorm;
+	public GameObject groundSpawnBoss;
+
+	public float boostOrig = 10f;
+
+	private float acceleration = 2f;
+
+	public bool decreaseSpeed = true;
+
+	private GameObject[] gameObjects;
 
         private void Awake()
         {
@@ -59,6 +70,16 @@ using System.Collections;
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
+	void DestroyAllObjects()
+	{
+		gameObjects = GameObject.FindGameObjectsWithTag ("Obstacle");
+
+		for(var i = 0 ; i < gameObjects.Length ; i ++)
+		{
+			Destroy(gameObjects[i]);
+		}
+	}
+
 	void Start(){
 
 		origAmmount = hudScriptPoints.scoreOverTimeAmmount;
@@ -66,6 +87,25 @@ using System.Collections;
 	}
 
 		void Update(){
+
+
+		if (boostActivate) {
+		
+			DestroyAllObjects ();
+
+			groundSpawnBoss.SetActive (true);
+			groundSpawnNorm.SetActive (false);
+		
+		
+		} else {
+			
+			groundSpawnBoss.SetActive (false);
+			groundSpawnNorm.SetActive (true);
+		
+		
+		
+		}
+
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
 
@@ -129,8 +169,24 @@ using System.Collections;
 								
 				    
             }
+		if (!isDead && !boostActivate) {
+			if (m_MaxSpeed > 10f && decreaseSpeed)
+				boostOrig -= acceleration * 10f *Time.deltaTime;
 
-			m_MaxSpeed += 0.05f * Time.deltaTime;
+			if (boostOrig > 10f && decreaseSpeed)
+				boostOrig -= acceleration * 10f * Time.deltaTime;
+
+			if (m_MaxSpeed < 15f && !decreaseSpeed)
+				m_MaxSpeed += acceleration * Time.deltaTime;
+
+			if (boostOrig < 15f && !decreaseSpeed)
+				boostOrig += acceleration * Time.deltaTime;
+
+		} else if(isDead){
+		
+			m_MaxSpeed = 0f;
+		
+		}
 
             m_Anim.SetBool("Ground", m_Grounded);
 

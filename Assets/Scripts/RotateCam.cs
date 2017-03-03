@@ -6,6 +6,8 @@ public class RotateCam : MonoBehaviour {
 	private float angleMultiplier = 3f;
 	public PlatformerCharacter2D pc2D;
 
+	public float angle;
+
 	private float maxAngle = 100f;
 	private float minAngle = 5f;
 	private float origMaxAngle = 100f;
@@ -28,6 +30,18 @@ public class RotateCam : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+		angle = gameObject.transform.rotation.eulerAngles.z;
+
+		if (gameObject.transform.rotation.eulerAngles.z < 40f) {
+			
+			pc2D.decreaseSpeed = true;
+
+		} else {
+		
+			pc2D.decreaseSpeed = false;
+		
+		}
 		angleMultiplier += 0.0f * Time.deltaTime;
 
 		if (angleMultiplier < 0f && changeDirection) {
@@ -72,7 +86,7 @@ public class RotateCam : MonoBehaviour {
 		
 		origMaxAngle = maxAngle;
 		origMinAngle = minAngle;
-		maxAngle = Random.Range (50f, 30f);
+		maxAngle = Random.Range (80f, 50f);
 		minAngle = Random.Range (0f, 5f);
 		yield return new WaitForSeconds (2f);
 		changeDirection = true;

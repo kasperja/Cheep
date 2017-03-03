@@ -9,42 +9,53 @@ public class SpeedBoosterScript : MonoBehaviour {
 	private bool boostActivate = false;
 	private bool boostDeactivate = false;
 
-	public float speedBoostAmmount = 11f;
+	public float speedBoostAmmount = 20f;
 
 	public ParticleSystem boostParticle;
 
-	private float boostOrig = 10f;
+
 
 	private ParticleSystem boostTextPart;
+
+
 
 	void Start () {
 
 
 		pc2D = GameObject.Find ("CharacterRobotBoy").GetComponent<PlatformerCharacter2D> ();
 
-		boostTextPart =  GameObject.Find ("BoostTextPart").GetComponent<ParticleSystem> ();
+		boostTextPart = GameObject.Find ("BoostTextPart").GetComponent<ParticleSystem> ();
 
 	}
-
 	// Update is called once per frame
 	void Update () {
 
 
 
+
 		if (boostActivate) {
 
-			if(pc2D.m_MaxSpeed < boostOrig * 1.1f && !pc2D.isDead)pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
+			pc2D.boostActivate = true;
+			if (!pc2D.isDead) {
+				
+				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 2f && !pc2D.isDead)
+				if (pc2D.m_MaxSpeed < 20f)
+					pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
+			}
 		
 		} else if (boostDeactivate) {
 		
-			if(!pc2D.isDead)pc2D.m_MaxSpeed -= speedBoostAmmount * Time.deltaTime;
-		
-			if (pc2D.m_MaxSpeed <= boostOrig) {
+			if (!pc2D.isDead) {
+				if (pc2D.m_MaxSpeed > 14f)
+					pc2D.m_MaxSpeed -= speedBoostAmmount * Time.deltaTime;
+			}
+			if (pc2D.m_MaxSpeed <= 15f) {
 			
 				boostDeactivate = false;
+				pc2D.boostActivate = false;
 			
 			}
-		}
+		} 
 
 	}
 
