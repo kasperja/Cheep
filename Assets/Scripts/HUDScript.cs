@@ -6,13 +6,15 @@ public class HUDScript : MonoBehaviour {
 
 	public float playerScore = 0f;
 
+	public float scoreOverTimeAmmount = 10f;
+
 	public PlatformerCharacter2D pc2D;
 
 	public Text ScoreTxt;
 	// Update is called once per frame
 	void Update () {
 
-		if(!pc2D.isDead) playerScore += Time.deltaTime * 10f;
+		if(!pc2D.isDead) playerScore += Time.deltaTime * scoreOverTimeAmmount;
 		ScoreTxt.text = "" + (int)( playerScore);
 	
 	}

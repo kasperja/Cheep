@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpawnScript : MonoBehaviour {
+public class SpawnBGplatform : MonoBehaviour {
 
 	public GameObject[] obj;
 	public float spawnMin = 1f;
