@@ -21,7 +21,7 @@ public class RotateCam : MonoBehaviour {
 	void Start () {
 
 		maxAngle = Random.Range (50f, 30f);
-		minAngle = Random.Range (0f, 5f);
+		minAngle = Random.Range (-5f, 5f);
 		origMaxAngle = maxAngle;
 		origMinAngle = minAngle;
 	
@@ -87,7 +87,7 @@ public class RotateCam : MonoBehaviour {
 		origMaxAngle = maxAngle;
 		origMinAngle = minAngle;
 		maxAngle = Random.Range (80f, 50f);
-		minAngle = Random.Range (0f, 5f);
+		minAngle = Random.Range (-5f, 5f);
 		yield return new WaitForSeconds (2f);
 		changeDirection = true;
 
