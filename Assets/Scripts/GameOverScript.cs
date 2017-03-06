@@ -361,7 +361,7 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone && !Advertisement.isShowing) || disableAds) {
+		if ((adsDone && !Advertisement.isShowing)) {
 			
 			Application.LoadLevel (0);
 		
@@ -387,7 +387,7 @@ public class GameOverScript : MonoBehaviour {
 		
 		musicBool = true;
 		//yield return new WaitForSeconds (0.5f);
-		Advertisement.Show ();
+		if(!disableAds)Advertisement.Show ();
 
 		//yield return new WaitForSeconds (2f);
 		adsDone = true;
