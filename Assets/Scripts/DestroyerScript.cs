@@ -75,7 +75,7 @@ public class DestroyerScript : MonoBehaviour {
 		if(pc2d.scream3)scream3.Play ();
 
 
-		yield return new WaitForSeconds (4.5f);
+		yield return new WaitForSeconds (1f);
 		Application.LoadLevel (2);
 		//return;
 

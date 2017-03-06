@@ -53,7 +53,7 @@ using System.Collections;
 
 	public float boostOrig = 10f;
 
-	private float acceleration = 2f;
+	private float acceleration = 4f;
 
 	public bool decreaseSpeed = true;
 
@@ -185,6 +185,8 @@ using System.Collections;
 		} else if(isDead){
 		
 			m_MaxSpeed = 0f;
+
+			gameObject.GetComponent<TrailRenderer> ().enabled = false;
 		
 		}
 
