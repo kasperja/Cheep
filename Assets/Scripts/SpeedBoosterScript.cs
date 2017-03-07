@@ -25,9 +25,9 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 
 		pc2D = GameObject.Find ("CharacterRobotBoy").GetComponent<PlatformerCharacter2D> ();
-
 		boostTextPart = GameObject.Find ("BoostTextPart").GetComponent<ParticleSystem> ();
 		speedBoostSound = GameObject.Find ("SpeedBoostSound").GetComponent<AudioSource> ();
+
 
 
 	}
@@ -39,10 +39,13 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 		if (boostActivate) {
 
+
+
 			pc2D.boostActivate = true;
 			if (!pc2D.isDead) {
 
 				if (soundOnce) {
+					
 					speedBoostSound.Play ();
 					soundOnce = false;
 				}
