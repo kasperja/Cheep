@@ -10,11 +10,14 @@ public class SpawnScript : MonoBehaviour {
 	private float spawnMaxTwo = 2f;
 	public PlatformerCharacter2D pc2D;
 
+	public bool isTree = false;
+	public Transform camTarget;
+
 
 	// Use this for initialization
 	void Start () {
 
-		//if(isPowerup)Spawn ();
+		//Spawn ();
 
 	}
 
@@ -38,7 +41,15 @@ public class SpawnScript : MonoBehaviour {
 	}
 	public void Spawn(){
 	
-		Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+		if (false) {
+			
+			Instantiate (obj [Random.Range (0, obj.Length)], transform.position, new Quaternion(0f,0f, camTarget.rotation.z * 0.9f, 1f));
+
+		} else {
+			
+			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+		
+		}
 		
 			Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
 	}
