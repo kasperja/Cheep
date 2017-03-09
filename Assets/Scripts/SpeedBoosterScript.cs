@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpeedBoosterScript : MonoBehaviour {
 
 	private PlatformerCharacter2D pc2D;
+	private AudioSource speedBoostSound;
+	private bool soundOnce = true;
 
 	private bool boostActivate = false;
 	private bool boostDeactivate = false;
@@ -23,8 +25,10 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 
 		pc2D = GameObject.Find ("CharacterRobotBoy").GetComponent<PlatformerCharacter2D> ();
-
 		boostTextPart = GameObject.Find ("BoostTextPart").GetComponent<ParticleSystem> ();
+		speedBoostSound = GameObject.Find ("SpeedBoostSound").GetComponent<AudioSource> ();
+
+
 
 	}
 	// Update is called once per frame
@@ -35,9 +39,16 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 		if (boostActivate) {
 
+
+
 			pc2D.boostActivate = true;
 			if (!pc2D.isDead) {
-				
+
+				if (soundOnce) {
+					
+					speedBoostSound.Play ();
+					soundOnce = false;
+				}
 				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 2f && !pc2D.isDead)
 				if (pc2D.m_MaxSpeed < 20f)
 					pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
@@ -45,6 +56,9 @@ public class SpeedBoosterScript : MonoBehaviour {
 		
 		} else if (boostDeactivate) {
 		
+			soundOnce = true;
+
+
 			if (!pc2D.isDead) {
 				if (pc2D.m_MaxSpeed > 14f)
 					pc2D.m_MaxSpeed -= speedBoostAmmount * Time.deltaTime;

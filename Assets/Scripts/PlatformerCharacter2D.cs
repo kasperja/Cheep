@@ -53,11 +53,14 @@ using System.Collections;
 
 	public float boostOrig = 10f;
 
-	private float acceleration = 2f;
+	private float acceleration = 4f;
 
 	public bool decreaseSpeed = true;
 
 	private GameObject[] gameObjects;
+
+	public AudioSource landingSnow;
+	private bool landOnce = true;
 
         private void Awake()
         {
@@ -88,6 +91,16 @@ using System.Collections;
 
 		void Update(){
 
+
+		if (m_Grounded && landOnce) {
+		
+			landingSnow.Play ();
+
+			trailParticle.Play ();
+
+			landOnce = false;
+		
+		}
 
 		if (boostActivate) {
 		
@@ -148,6 +161,7 @@ using System.Collections;
 				if (colliders [i].gameObject != gameObject) {
 
 					if (playOnce) {
+						landOnce = true;
 						hitSound.Play ();
 					    bumpParticle.Play ();
 						// iTween.PunchRotation (mainCam, new Vector3 (0, 0, 1.5f), 0.5f);
@@ -161,9 +175,11 @@ using System.Collections;
 
 					}
 
+					
 
 					m_Grounded = true;
-					trailParticle.Play ();
+
+					
 
 				}
 								
@@ -185,6 +201,8 @@ using System.Collections;
 		} else if(isDead){
 		
 			m_MaxSpeed = 0f;
+
+			gameObject.GetComponent<TrailRenderer> ().enabled = false;
 		
 		}
 
@@ -252,6 +270,7 @@ using System.Collections;
             {
                 // Add a vertical force to the player.
 
+				
 				jumpSound.Play ();
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
