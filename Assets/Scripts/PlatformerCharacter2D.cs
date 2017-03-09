@@ -102,7 +102,7 @@ using System.Collections;
 		
 		}
 
-		if (boostActivate) {
+		if (/*boostActivate*/false) {
 		
 			DestroyAllObjects ();
 
