@@ -9,7 +9,7 @@ public class TrailSortOrder : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		trail.sortingOrder = 7;
+		trail.sortingOrder = 6;
 
 	}
 }

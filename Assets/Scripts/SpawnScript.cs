@@ -37,7 +37,7 @@ public class SpawnScript : MonoBehaviour {
 
 		Spawn ();
 		coOnce = true;
-		spawnReadyOnce = true;
+		//spawnReadyOnce = true;
 
 	}
 	void OnDisable(){

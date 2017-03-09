@@ -9,7 +9,12 @@ namespace UnityStandardAssets._2D
     {
         private PlatformerCharacter2D m_Character;
         private bool m_Jump;
+		public ParticleSystem spamParticle;
 
+		public LavineMove lavineScript;
+		public GameObject mainCamObj;
+
+		//public bool lavineActive = true;
 
         private void Awake()
         {
@@ -21,13 +26,37 @@ namespace UnityStandardAssets._2D
         {
 			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
 			
-				m_Jump = true;
-			
+				if (!lavineScript.spamActive) {
+					
+					m_Jump = true;
+
+				}else {
+
+					//m_Jump = true;
+					lavineScript.transform.position -= new Vector3(0.5f,0f,0f);
+					lavineScript.touchCounter += 1;
+					if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
+					spamParticle.Play ();
+
+				}
+
 			}
 			if (Input.GetKeyDown (KeyCode.Space)) {
 			
-				m_Jump = true;
-			
+				if (!lavineScript.spamActive) {
+					
+					m_Jump = true;
+
+				} else {
+
+					//m_Jump = true;
+					lavineScript.transform.position -= new Vector3(0.5f,0f,0f);
+					if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
+					lavineScript.touchCounter += 1;
+					spamParticle.Play ();
+				
+				}
+
 			}
 
 			if (!m_Jump)
