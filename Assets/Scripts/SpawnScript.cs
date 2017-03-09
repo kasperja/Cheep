@@ -9,10 +9,9 @@ public class SpawnScript : MonoBehaviour {
 	private float spawnMinTwo = 1f;
 	private float spawnMaxTwo = 2f;
 	public PlatformerCharacter2D pc2D;
-
-	public bool isTree = false;
-	public Transform camTarget;
-
+	private bool spawnReady = false;
+	private bool spawnReadyOnce = true;
+	private bool coOnce = true;
 
 	// Use this for initialization
 	void Start () {
@@ -26,12 +25,19 @@ public class SpawnScript : MonoBehaviour {
 		spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
 		spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
 
-		 
+		if (spawnReady && spawnReadyOnce) {
+			
+			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+			spawnReadyOnce = false;
+
+		}
 	
 	}
 	void OnEnable(){
 
 		Spawn ();
+		coOnce = true;
+		spawnReadyOnce = true;
 
 	}
 	void OnDisable(){
@@ -40,17 +46,24 @@ public class SpawnScript : MonoBehaviour {
 	
 	}
 	public void Spawn(){
-	
-		if (false) {
-			
-			Instantiate (obj [Random.Range (0, obj.Length)], transform.position, new Quaternion(0f,0f, camTarget.rotation.z * 0.9f, 1f));
 
-		} else {
 			
 			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
 		
+		if (coOnce) {
+			StartCoroutine (waitStart ());
+			coOnce = false;
 		}
-		
-			Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
+
+		if(spawnReady)Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
+
 	}
+
+	IEnumerator waitStart(){
+
+		yield return new WaitForSeconds (Random.Range (0f, 1f));
+		spawnReady = true;
+
+	}
+
 }
