@@ -28,14 +28,17 @@ public class LavineMove : MonoBehaviour {
 
 	public bool spamActive = false;
 
-
+	public bool isReady = false;
+	private bool readyOnce = true;
 
 
 	// Use this for initialization
 	void Start () {
 
+
+
 		transform.localPosition = beginPos.localPosition;
-		StartCoroutine (waitForRollStart ());
+		StartCoroutine (setRollingTrue ());
 
 	}
 
@@ -45,9 +48,10 @@ public class LavineMove : MonoBehaviour {
 		/*if (Input.GetKeyDown (KeyCode.Space) || Input.GetTouch (0).phase == TouchPhase.Began) {
 		
 			touchCounter += 1;
-
+	
 		
 		}*/
+
 
 		if(transform.position.x <= beginPos.position.x) {
 			
@@ -59,73 +63,95 @@ public class LavineMove : MonoBehaviour {
 
 
 		if (isRolling) {
+			
 
+			if (pc2D.isDead) {
+
+
+				transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
+
+			}
 
 
 			if (touchCounter >= 15) {
-			
+				
+				deactivateOnce = true;
 				isRolling = false;
+
 			
 			}
 
-			if(transform.position.x < endPos.position.x){
-			if (speed < 9f) {
 
-				transform.position += new Vector3(5f,0,0) * Time.deltaTime;
-				//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed / 200f * 2f * Time.deltaTime);
 
-			} else {
+			if (transform.position.x < endPos.position.x) {
+				if (speed < 9f && !pc2D.isDead) {
 
-				transform.position += new Vector3(5f,0,0) * Time.deltaTime;
-			//	transform.position = Vector3.MoveTowards (transform.position, endPos.position, speed * 200f * Time.deltaTime);
+					transform.position += new Vector3 (5f, 0, 0) * Time.deltaTime;
+					//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed / 200f * 2f * Time.deltaTime);
 
-			}
+				} else if (!pc2D.isDead) {
 
-			if (rollOnce) {
-				StartCoroutine (waitForRoll ());
-					bossSpawn.SetActive (true);
-					normSpawn.SetActive (false);
+					transform.position += new Vector3 (5f, 0, 0) * Time.deltaTime;
+					//	transform.position = Vector3.MoveTowards (transform.position, endPos.position, speed * 200f * Time.deltaTime);
+
+				}
+
+				if (rollOnce && !pc2D.isDead) {
+
+						
+					StartCoroutine (vibrateNum ());
+
+					//StartCoroutine (waitForRoll ());
+
 				
 					deactivateOnce = true;
-					pc2D.DestroyAllObjects ();
+					//pc2D.DestroyAllObjects ();
 					powerUpSpawn.SetActive (false);
 					powerUpSuperSpawn.SetActive (false);
 					powerUpTopSpawn.SetActive (false);
 					rollOnce = false;
 
+				}
 			}
-		}
-
+		
+			
 		} else {
 
 
 
-			if (deactivateOnce) {
-				
+			if (deactivateOnce && !pc2D.isDead) {
+				Debug.Log ("deactivated");
+				//Handheld.Vibrate();
 				powerUpSpawn.SetActive (true);
 				powerUpSuperSpawn.SetActive (true);
 				powerUpTopSpawn.SetActive (true);
 				bossSpawn.SetActive (false);
 				normSpawn.SetActive (true);
 				spamActive = false;
+				//isReady = false;
+				StartCoroutine (setRollingTrue ());
 				deactivateOnce = false;
+					
+
 			}
 
 			touchCounter = 0;
-			
-			if (speed < 9f) {
+			if (transform.position.x > beginPos.position.x) {
+				if (speed < 9f) {
 				
-				transform.position += new Vector3(5f,0,0) * Time.deltaTime;
-				//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed * 2f * Time.deltaTime);
+					transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
+					//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed * 2f * Time.deltaTime);
 
-			} else {
+				} else {
 
-				transform.position -= new Vector3(5f,0,0) * Time.deltaTime;
-				//transform.position = Vector3.MoveTowards (transform.position, beginPos.position, speed * Time.deltaTime);
+					transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
+					//transform.position = Vector3.MoveTowards (transform.position, beginPos.position, speed * Time.deltaTime);
+
+				}
 
 			}
-
 		}
+		
 
 		if (pc2D.isDead) {
 		
@@ -133,37 +159,85 @@ public class LavineMove : MonoBehaviour {
 		
 		}
 
+
 	}
 
 	IEnumerator waitForRoll(){
-		isRolling = true;
+		
+		//deactivateOnce = true;
+		bossSpawn.SetActive (true);
+		normSpawn.SetActive (false);
 
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (6f);
 
-		spamActive = true;
-
-		yield return new WaitForSeconds (Random.Range(15f,20f));
-		rollOnce = true;
-		isRolling = true;
-
-
-
-	}
-	IEnumerator waitForRollStart(){
-		yield return new WaitForSeconds (Random.Range(15f,20f));
 
 		isRolling = true;
 
 		yield return new WaitForSeconds (2f);
 
 		spamActive = true;
+		Handheld.Vibrate();
 
-		yield return new WaitForSeconds (Random.Range(15f,20f));
-		rollOnce = true;
-		isRolling = true;
+		//yield return new WaitForSeconds (Random.Range(25f,35f));
+		//rollOnce = true;
+		//isRolling = true;
 
 
 
 	}
+	/*IEnumerator waitForRollStart(){
+
+		//deactivateOnce = true;
+		yield return new WaitForSeconds (Random.Range(25f,30f));
+
+
+
+
+
+		bossSpawn.SetActive (true);
+		normSpawn.SetActive (false);
+
+		yield return new WaitForSeconds (8f);
+
+
+		isRolling = true;
+
+
+		yield return new WaitForSeconds (2f);
+
+		spamActive = true;
+
+
+		//yield return new WaitForSeconds (Random.Range(25f,35f));
+		//rollOnce = true;
+		//isRolling = true;
+
+
+
+	}*/
+	IEnumerator vibrateNum(){
+
+
+		yield return new WaitForSeconds (0.6f);
+		Handheld.Vibrate ();
+		//if(isRolling)StartCoroutine (vibrateNum ());
+
+	}
+
+	IEnumerator setRollingTrue(){
+	
+		yield return new WaitForSeconds (Random.Range(25f,35f));
+
+		rollOnce = true;
+
+		StartCoroutine (waitForRoll ());
+
+
+		//isRolling = true;
+
+	
+	}
+
+
 
 }
