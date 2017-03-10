@@ -73,7 +73,7 @@ using System.Collections;
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-	void DestroyAllObjects()
+	public void DestroyAllObjects()
 	{
 		gameObjects = GameObject.FindGameObjectsWithTag ("Obstacle");
 
@@ -102,7 +102,7 @@ using System.Collections;
 		
 		}
 
-		if (/*boostActivate*/false) {
+		/*if (boostActivate) {
 		
 			DestroyAllObjects ();
 
@@ -117,7 +117,7 @@ using System.Collections;
 		
 		
 		
-		}
+		}*/
 
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
