@@ -19,7 +19,6 @@ public class RotateCam : MonoBehaviour {
 	public LavineMove lavineScript;
 	public Transform backpos;
 	public Transform normPos;
-
 	// Use this for initialization
 	void Start () {
 
@@ -35,21 +34,46 @@ public class RotateCam : MonoBehaviour {
 
 		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {
 		
-			transform.position -= new Vector3 (0.1f,0f,0f);
+			transform.position -= new Vector3 (4f,0f,0f) * Time.deltaTime;
 		
 		}else if(!lavineScript.spamActive && transform.position.x < normPos.position.x){
 
-			transform.position += new Vector3 (0.1f,0f,0f);
+			transform.position += new Vector3 (4f,0f,0f) * Time.deltaTime;
+
 
 		}
+
+		if (lavineScript.spamActive && transform.position.z < backpos.position.z) {
+
+			transform.position += new Vector3 (0f,0f,4f) * Time.deltaTime;
+
+		}else if(!lavineScript.spamActive && transform.position.z > normPos.position.z){
+
+			transform.position -= new Vector3 (0f,0f,4f) * Time.deltaTime;
+
+
+		}
+
+		if (lavineScript.spamActive && transform.position.y > backpos.position.y) {
+
+			transform.position -= new Vector3 (0f,4f,0f) * Time.deltaTime;
+
+		}else if(!lavineScript.spamActive && transform.position.y < normPos.position.y){
+
+			transform.position += new Vector3 (0f,4f,0f) * Time.deltaTime;
+
+
+		}
+
 		angle = gameObject.transform.rotation.eulerAngles.z;
 
 		if (gameObject.transform.rotation.eulerAngles.z < 40f) {
 			
+
 			pc2D.decreaseSpeed = true;
 
 		} else {
-		
+
 			pc2D.decreaseSpeed = false;
 		
 		}

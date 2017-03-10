@@ -16,7 +16,7 @@ public class HUDScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(!pc2D.isDead && !lavineScript.isRolling) playerScore += Time.deltaTime * scoreOverTimeAmmount;
+		if(!pc2D.isDead && !lavineScript.isRolling && pc2D.m_MaxSpeed > 5f) playerScore += Time.deltaTime * scoreOverTimeAmmount;
 		ScoreTxt.text = "" + (int)( playerScore);
 	
 	}

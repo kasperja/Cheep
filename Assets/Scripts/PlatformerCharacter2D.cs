@@ -62,6 +62,10 @@ using System.Collections;
 	public AudioSource landingSnow;
 	private bool landOnce = true;
 
+	private float animationSpeed = 1f;
+	private float animationMaxSpeed = 2f;
+
+
         private void Awake()
         {
 
@@ -90,6 +94,27 @@ using System.Collections;
 	}
 
 		void Update(){
+
+		if (animationSpeed <= animationMaxSpeed && !decreaseSpeed) {
+		
+			animationSpeed += 0.2f * Time.deltaTime;
+		
+		} else if (animationSpeed > 1f && decreaseSpeed) {
+		
+			animationSpeed -= 0.2f * Time.deltaTime;
+		
+		}
+
+
+		if (m_Grounded) {
+			
+			m_Anim.speed = animationSpeed;
+		
+		} else {
+		
+			m_Anim.speed = 1f;
+		
+		}
 
 
 		if (m_Grounded && landOnce) {
