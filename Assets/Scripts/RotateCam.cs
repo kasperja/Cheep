@@ -16,6 +16,9 @@ public class RotateCam : MonoBehaviour {
 
 	private bool changeDirection = true;
 	private bool down = true;
+	public LavineMove lavineScript;
+	public Transform backpos;
+	public Transform normPos;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +33,15 @@ public class RotateCam : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {
+		
+			transform.position -= new Vector3 (0.1f,0f,0f);
+		
+		}else if(!lavineScript.spamActive && transform.position.x < normPos.position.x){
 
+			transform.position += new Vector3 (0.1f,0f,0f);
+
+		}
 		angle = gameObject.transform.rotation.eulerAngles.z;
 
 		if (gameObject.transform.rotation.eulerAngles.z < 40f) {
