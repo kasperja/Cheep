@@ -47,6 +47,8 @@ public class GameOverScript : MonoBehaviour {
 
 	public bool disableAds = false;
 
+	public FadeOut fadeOutScript;
+
 	void Awake(){
 
 		//Application.targetFrameRate = 60;
@@ -384,7 +386,11 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	IEnumerator waitAndRestart(){
-		
+
+		fadeOutScript.isEnded = true;
+		fadeOutScript.isStarted = false;
+		yield return new WaitForSeconds (1f);
+
 		musicBool = true;
 		//yield return new WaitForSeconds (0.5f);
 		if(!disableAds)Advertisement.Show ();

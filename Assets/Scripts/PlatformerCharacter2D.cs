@@ -65,6 +65,7 @@ using System.Collections;
 	private float animationSpeed = 1f;
 	private float animationMaxSpeed = 2f;
 
+	public FadeOut fadeOutScript;
 
         private void Awake()
         {
@@ -225,6 +226,9 @@ using System.Collections;
 
 		} else if(isDead){
 		
+			fadeOutScript.isEnded = true;
+			fadeOutScript.isStarted = false;
+
 			m_MaxSpeed = 0f;
 
 			gameObject.GetComponent<TrailRenderer> ().enabled = false;
