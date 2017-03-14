@@ -15,6 +15,7 @@ public class DestroyerScript : MonoBehaviour {
 	public bool dieBool = false;
 	private bool dieOnce = true;
 
+
 	public GameObject graphicsPlayer;
 
 	void Update(){

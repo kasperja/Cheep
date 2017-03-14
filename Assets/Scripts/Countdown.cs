@@ -8,6 +8,7 @@ public class Countdown : MonoBehaviour {
 	public AudioSource countdownSound;
 	public AudioSource beginSound;
 	public Animator countdownAnimator;
+	public HUDScript hud;
 	// Use this for initialization
 	void Start () {
 
@@ -36,6 +37,7 @@ public class Countdown : MonoBehaviour {
 		yield return new WaitForSeconds (1f);
 		beginSound.Play ();
 		textM.text = "GO!";
+		hud.goDone = true;
 		countdownAnimator.SetInteger ("countdown", 0);
 		yield return new WaitForSeconds (1f);
 		textM.text = " ";
