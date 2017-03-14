@@ -198,7 +198,7 @@ using System.Collections;
 						//LeanTween.rotateZ(mainCam, 0f, 0.5f);
 						//LeanTween.scale(mainCam, Vector3.one*3f, 0.5f).setEase(LeanTweenType.punch);
 
-					skiingSound.Play ();
+					if(!isDead)skiingSound.Play ();
 						
 						playOnce = false;
 
