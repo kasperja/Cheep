@@ -31,6 +31,10 @@ public class LavineMove : MonoBehaviour {
 	public bool isReady = false;
 	private bool readyOnce = true;
 
+	public DestroyerScript destroyBot;
+
+	private bool isDeadByLavine = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -52,6 +56,11 @@ public class LavineMove : MonoBehaviour {
 		
 		}*/
 
+		if (isDeadByLavine) {
+			
+			transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
+		
+		}
 
 		if(transform.position.x <= beginPos.position.x) {
 			
@@ -63,12 +72,13 @@ public class LavineMove : MonoBehaviour {
 
 
 		if (isRolling) {
-			
+
+
 
 			if (pc2D.isDead) {
 
 
-				transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
+				//transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
 
 			}
 
@@ -98,7 +108,7 @@ public class LavineMove : MonoBehaviour {
 
 				if (rollOnce && !pc2D.isDead) {
 
-						
+					StartCoroutine (waitDeath ());
 					StartCoroutine (vibrateNum ());
 
 					//StartCoroutine (waitForRoll ());
@@ -120,6 +130,7 @@ public class LavineMove : MonoBehaviour {
 
 
 			if (deactivateOnce && !pc2D.isDead) {
+				
 				Debug.Log ("deactivated");
 				//Handheld.Vibrate();
 				powerUpSpawn.SetActive (true);
@@ -185,6 +196,24 @@ public class LavineMove : MonoBehaviour {
 
 
 	}
+
+	IEnumerator waitDeath (){
+		
+		yield return new WaitForSeconds (10f);
+		if (isRolling) {
+
+			StartCoroutine (waitDeathFinal ());
+
+
+			isDeadByLavine = true;
+		}
+	
+	}
+	IEnumerator waitDeathFinal(){
+		yield return new WaitForSeconds (0.5f);
+		destroyBot.dieBool = true;
+	
+	}
 	/*IEnumerator waitForRollStart(){
 
 		//deactivateOnce = true;
@@ -226,7 +255,7 @@ public class LavineMove : MonoBehaviour {
 
 	IEnumerator setRollingTrue(){
 	
-		yield return new WaitForSeconds (Random.Range(25f,35f));
+		yield return new WaitForSeconds (0f/*Random.Range(25f,35f)*/);
 
 		rollOnce = true;
 
