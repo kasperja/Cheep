@@ -67,6 +67,8 @@ using System.Collections;
 
 	public FadeOut fadeOutScript;
 
+	public AudioSource skiingSound;
+
         private void Awake()
         {
 
@@ -113,6 +115,7 @@ using System.Collections;
 		
 		} else {
 		
+			skiingSound.Stop ();
 			m_Anim.speed = 1f;
 		
 		}
@@ -195,8 +198,8 @@ using System.Collections;
 						//LeanTween.rotateZ(mainCam, 0f, 0.5f);
 						//LeanTween.scale(mainCam, Vector3.one*3f, 0.5f).setEase(LeanTweenType.punch);
 
-
-
+					skiingSound.Play ();
+						
 						playOnce = false;
 
 					}
@@ -248,6 +251,7 @@ using System.Collections;
 			}
         
 			if(!m_Grounded){
+			skiingSound.Stop ();
 				trailParticle.Stop ();
 				playOnce = true;
 			}
@@ -302,6 +306,7 @@ using System.Collections;
 				
 				jumpSound.Play ();
                 m_Grounded = false;
+			skiingSound.Stop ();
                 m_Anim.SetBool("Ground", false);
 				
 

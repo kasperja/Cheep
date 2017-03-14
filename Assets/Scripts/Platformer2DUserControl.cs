@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
+
 namespace UnityStandardAssets._2D
 {
     [RequireComponent(typeof (PlatformerCharacter2D))]
@@ -13,6 +14,9 @@ namespace UnityStandardAssets._2D
 
 		public LavineMove lavineScript;
 		public GameObject mainCamObj;
+		public AudioSource lavineSound1;
+		public AudioSource lavineSound2;
+
 
 		//public bool lavineActive = true;
 
@@ -24,6 +28,9 @@ namespace UnityStandardAssets._2D
 
         private void Update()
         {
+
+
+				
 			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
 			
 				if (!lavineScript.spamActive) {
@@ -35,6 +42,17 @@ namespace UnityStandardAssets._2D
 					//m_Jump = true;
 					lavineScript.transform.position -= new Vector3(0.5f,0f,0f);
 					lavineScript.touchCounter += 1;
+
+					if (lavineScript.randomSoundFloat < 0.5f) {
+						
+						lavineSound1.Play ();
+
+					}else{
+						
+					lavineSound2.Play ();
+
+					}
+
 					if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
 					spamParticle.Play ();
 
@@ -53,6 +71,15 @@ namespace UnityStandardAssets._2D
 					lavineScript.transform.position -= new Vector3(0.5f,0f,0f);
 					if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
 					lavineScript.touchCounter += 1;
+					if (lavineScript.randomSoundFloat < 0.5f) {
+
+						lavineSound1.Play ();
+
+					}else{
+
+						lavineSound2.Play ();
+
+					}
 					spamParticle.Play ();
 				
 				}
