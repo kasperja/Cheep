@@ -351,7 +351,7 @@ public class GameOverScript : MonoBehaviour {
 
 		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
 	
-		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) || (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) /*|| (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began*/) {
 		
 			click.Play ();
 			StartCoroutine (waitAndRestart());
