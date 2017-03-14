@@ -37,6 +37,10 @@ public class LavineMove : MonoBehaviour {
 
 	public bool lavineTest = false;
 
+	public AudioSource lavineSoundLoop;
+	public float randomSoundFloat = 0f;
+
+	public ParticleSystem lavineDeathParticle;
 	// Use this for initialization
 	void Start () {
 
@@ -49,7 +53,7 @@ public class LavineMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		randomSoundFloat = Random.Range (0f,1f);
 		/*if (Input.GetKeyDown (KeyCode.Space) || Input.GetTouch (0).phase == TouchPhase.Began) {
 		
 			touchCounter += 1;
@@ -74,7 +78,7 @@ public class LavineMove : MonoBehaviour {
 
 		if (isRolling) {
 
-
+			if(lavineSoundLoop.volume < 0.7f)lavineSoundLoop.volume += 0.5f * Time.deltaTime;
 
 			if (pc2D.isDead) {
 
@@ -128,7 +132,7 @@ public class LavineMove : MonoBehaviour {
 			
 		} else {
 
-
+			if(lavineSoundLoop.volume > 0f)lavineSoundLoop.volume -= 0.5f * Time.deltaTime;
 
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
 				
@@ -200,7 +204,7 @@ public class LavineMove : MonoBehaviour {
 
 	IEnumerator waitDeath (){
 		
-		yield return new WaitForSeconds (10f);
+		yield return new WaitForSeconds (8f);
 		if (isRolling) {
 
 			StartCoroutine (waitDeathFinal ());
@@ -211,8 +215,13 @@ public class LavineMove : MonoBehaviour {
 	
 	}
 	IEnumerator waitDeathFinal(){
+		
+		lavineDeathParticle.Play ();
 		yield return new WaitForSeconds (0.5f);
 		destroyBot.dieBool = true;
+		lavineDeathParticle.Play ();
+		Handheld.Vibrate ();
+
 	
 	}
 	/*IEnumerator waitForRollStart(){
