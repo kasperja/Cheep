@@ -4,6 +4,7 @@ using System.Collections;
 public class StartScript : MonoBehaviour {
 
 	public FadeOut fadeOutScript;
+	public AudioSource buttonSound;
 	// Use this for initialization
 	void Start () {
 	
@@ -31,6 +32,7 @@ public class StartScript : MonoBehaviour {
 
 	public void Retry(){
 
+		buttonSound.Play ();
 		StartCoroutine (retryNum ());
 
 	}
