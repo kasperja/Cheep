@@ -12,6 +12,8 @@ public class FBscript : MonoBehaviour {
 	public GameObject DialogUsername;
 	public GameObject DialogProfilePic;
 
+	public AudioSource buttonSound;
+
 
 	void Awake()
 	{
@@ -24,6 +26,8 @@ public class FBscript : MonoBehaviour {
 
 	public void FBlogin()
 	{
+
+		buttonSound.Play ();
 
 		List<string> permissions = new List<string> ();
 
@@ -133,20 +137,21 @@ public class FBscript : MonoBehaviour {
 
 	public void Share()
 	{
-	
+		buttonSound.Play ();
 		FacebookManager.Instance.Share ();
 	
 	}
 
 	public void Invite()
 	{
-
+		buttonSound.Play ();
 		FacebookManager.Instance.Invite ();
 
 	}
 
 	public void ShareWithUsers(){
-	
+		
+		buttonSound.Play ();
 		FacebookManager.Instance.ShareWithUsers ();
 	
 	}

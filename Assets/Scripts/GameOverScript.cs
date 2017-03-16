@@ -49,6 +49,7 @@ public class GameOverScript : MonoBehaviour {
 
 	public FadeOut fadeOutScript;
 
+
 	void Awake(){
 
 		//Application.targetFrameRate = 60;
@@ -379,7 +380,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 	public void Retry(){
-	
+
 		click.Play ();
 		StartCoroutine (waitAndRestart());
 	

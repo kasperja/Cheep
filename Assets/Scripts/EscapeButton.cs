@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EscapeButton : MonoBehaviour {
 
+	public AudioSource buttonSound;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +18,7 @@ public class EscapeButton : MonoBehaviour {
 
 	public void QuitPressed(){
 	
+		buttonSound.Play ();
 		Application.Quit();
 	
 	}
