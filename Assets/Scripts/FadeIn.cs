@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeOut : MonoBehaviour {
-
+public class FadeIn : MonoBehaviour {
 	public Image image;
 	public bool isStarted = false;
 	public bool isEnded = false;
@@ -28,9 +27,9 @@ public class FadeOut : MonoBehaviour {
 		
 		}*/
 
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -43,16 +42,16 @@ public class FadeOut : MonoBehaviour {
 			t += 2f * Time.deltaTime;
 
 			image.color = Color.Lerp(col1, col2, t);
-		
+
 		}
 		if (isEnded) {
-			
+
 			//if(!isStartScreen)music.volume -= 2f * Time.deltaTime;
 
-			t2 += 2f * Time.deltaTime;
+			//t2 += 2f * Time.deltaTime;
 
-			image.color = Color.Lerp(col2, col1, t2);
-		
+			//image.color = Color.Lerp(col2, col1, t2);
+
 		}
 
 	}

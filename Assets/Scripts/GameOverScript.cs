@@ -47,7 +47,7 @@ public class GameOverScript : MonoBehaviour {
 
 	public bool disableAds = false;
 
-	public FadeOut fadeOutScript;
+	//public FadeOut fadeOutScript;
 
 
 	void Awake(){
@@ -373,7 +373,7 @@ public class GameOverScript : MonoBehaviour {
 		if(musicBool){
 
 
-			music.volume -= 2f * Time.deltaTime;
+			//music.volume -= 2f * Time.deltaTime;
 		}
 	
 	}
@@ -381,16 +381,16 @@ public class GameOverScript : MonoBehaviour {
 
 	public void Retry(){
 
-		click.Play ();
+		//click.Play ();
 		StartCoroutine (waitAndRestart());
 	
 	}
 
 	IEnumerator waitAndRestart(){
 
-		fadeOutScript.isEnded = true;
-		fadeOutScript.isStarted = false;
-		yield return new WaitForSeconds (1f);
+		//fadeOutScript.isEnded = true;
+		//fadeOutScript.isStarted = false;
+		//yield return new WaitForSeconds (0.25f);
 
 		musicBool = true;
 		//yield return new WaitForSeconds (0.5f);
