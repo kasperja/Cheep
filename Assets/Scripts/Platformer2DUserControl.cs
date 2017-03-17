@@ -86,7 +86,7 @@ namespace UnityStandardAssets._2D
 
 			}
 
-			if (!m_Jump)
+			if (!m_Jump && !lavineScript.spamActive)
             {
                 // Read the jump input in Update so button presses aren't missed.
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");

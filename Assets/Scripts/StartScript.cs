@@ -47,5 +47,11 @@ public class StartScript : MonoBehaviour {
 
 	}
 
+	/*void OnApplicationQuit () {
+		PlayerPrefs.SetInt("Screenmanager Resolution Width", 854);
+		PlayerPrefs.SetInt("Screenmanager Resolution Height", 480);
+		PlayerPrefs.SetInt("Screenmanager Is Fullscreen mode", 0);
+	}*/
+
 
 }
