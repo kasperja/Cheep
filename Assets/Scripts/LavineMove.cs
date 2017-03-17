@@ -137,7 +137,7 @@ public class LavineMove : MonoBehaviour {
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
 				
 				Debug.Log ("deactivated");
-				//Handheld.Vibrate();
+				Handheld.Vibrate();
 				powerUpSpawn.SetActive (true);
 				powerUpSuperSpawn.SetActive (true);
 				powerUpTopSpawn.SetActive (true);
@@ -258,7 +258,12 @@ public class LavineMove : MonoBehaviour {
 
 
 		yield return new WaitForSeconds (0.6f);
+
+
 		Handheld.Vibrate ();
+
+
+
 		//if(isRolling)StartCoroutine (vibrateNum ());
 
 	}

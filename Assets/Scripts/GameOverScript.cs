@@ -394,7 +394,13 @@ public class GameOverScript : MonoBehaviour {
 
 		musicBool = true;
 		//yield return new WaitForSeconds (0.5f);
+
+
+
 		if(!disableAds)Advertisement.Show ();
+
+
+
 
 		//yield return new WaitForSeconds (2f);
 		adsDone = true;
