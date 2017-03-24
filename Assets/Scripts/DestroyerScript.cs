@@ -9,7 +9,7 @@ public class DestroyerScript : MonoBehaviour {
 	public AudioSource scream1;
 	public AudioSource scream2;
 	public AudioSource scream3;
-	public AudioSource music;
+	//public AudioSource music;
 	private bool fadeMusic = false;
 
 	public bool dieBool = false;
@@ -20,11 +20,11 @@ public class DestroyerScript : MonoBehaviour {
 
 	void Update(){
 	
-		if (fadeMusic) {
+		/*if (fadeMusic) {
 
 			music.volume -= 0.4f * Time.deltaTime;
 
-		}
+		}*/
 
 
 		if (dieBool && dieOnce) {

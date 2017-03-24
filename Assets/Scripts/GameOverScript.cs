@@ -47,6 +47,9 @@ public class GameOverScript : MonoBehaviour {
 
 	public bool disableAds = false;
 
+	public ParticleSystem konfettiParticle;
+	public AudioSource applause;
+
 	//public FadeOut fadeOutScript;
 
 
@@ -94,6 +97,8 @@ public class GameOverScript : MonoBehaviour {
 
 			if (score >= highscore) {
 
+			applause.Play ();
+			konfettiParticle.Play ();
 				yourScoreIsTxt.text = "It's a new record!";
 
 				highscore10 = highscore9;
