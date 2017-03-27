@@ -37,6 +37,13 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 			//audioFadeOut = true;
 
 		}
+		if (currentScene.name == "CharScene") {
+
+			DontDestroyOnLoad (gameObject);
+			gameObject.GetComponent<AudioSource> ().Play ();
+			//audioFadeOut = true;
+
+		}
 		if (currentScene.name == "Scene01") {
 		
 			Debug.Log ("Scene 1");

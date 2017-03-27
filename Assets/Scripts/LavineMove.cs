@@ -131,6 +131,7 @@ public class LavineMove : MonoBehaviour {
 
 
 
+
 			if (transform.position.x < endPos.position.x) {
 				if (speed < 9f && !pc2D.isDead) {
 
@@ -145,6 +146,7 @@ public class LavineMove : MonoBehaviour {
 				}
 
 				if (rollOnce && !pc2D.isDead) {
+
 
 					StartCoroutine (waitDeath ());
 					StartCoroutine (vibrateNum ());
@@ -173,7 +175,8 @@ public class LavineMove : MonoBehaviour {
 			if(lavineSoundLoop.volume > 0f)lavineSoundLoop.volume -= 0.5f * Time.deltaTime;
 
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
-				
+
+				pc2D.feedbackTap = true;
 				//Debug.Log ("deactivated");
 				Handheld.Vibrate();
 				powerUpSpawn.SetActive (true);
@@ -318,8 +321,10 @@ public class LavineMove : MonoBehaviour {
 	IEnumerator setRollingTrue(){
 	
 		tapTapReady = false;
+
 		pc2D.feedbackOnce = true;
 		pc2D.feedbackOnceTwo = true;
+
 		yield return new WaitForSeconds (3f);
 		feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
 
