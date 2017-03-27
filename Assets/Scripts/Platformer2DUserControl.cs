@@ -41,7 +41,7 @@ namespace UnityStandardAssets._2D
 				} else {
 
 					//m_Jump = true;
-					lavineScript.transform.position -= new Vector3 (0.5f, 0f, 0f);
+					lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
 					lavineScript.touchCounter += 1;
 					lavineScript.tTap = 0f;
 					m_Character.feedbackTap = true;
@@ -73,7 +73,7 @@ namespace UnityStandardAssets._2D
 				} else {
 
 					//m_Jump = true;
-					lavineScript.transform.position -= new Vector3 (0.5f, 0f, 0f);
+					lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
 					//if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
 					lavineScript.touchCounter += 1;
 					lavineScript.tTap = 0f;
