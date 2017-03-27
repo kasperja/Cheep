@@ -123,12 +123,12 @@ using System.Collections;
 
 			} else if (randomFloat >= 1f && randomFloat < 2f) {
 
-				feedbackText.text = "Almost away!";
+				feedbackText.text = "Awesome!";
 				obstacleAvoidedThree.Play();
 
 			} else {
 
-				feedbackText.text = "Hang on!";
+				feedbackText.text = "Nice!";
 				obstacleAvoided.Play();
 
 			}

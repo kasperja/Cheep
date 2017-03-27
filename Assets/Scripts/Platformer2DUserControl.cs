@@ -44,7 +44,9 @@ namespace UnityStandardAssets._2D
 					lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
 					lavineScript.touchCounter += 1;
 					lavineScript.tTap = 0f;
-					m_Character.feedbackTap = true;
+					//m_Character.feedbackTap = true;
+
+
 
 					if (lavineScript.randomSoundFloat < 0.5f) {
 						
@@ -77,7 +79,7 @@ namespace UnityStandardAssets._2D
 					//if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
 					lavineScript.touchCounter += 1;
 					lavineScript.tTap = 0f;
-					m_Character.feedbackTap = true;
+					//m_Character.feedbackTap = true;
 
 					if (lavineScript.randomSoundFloat < 0.5f) {
 
