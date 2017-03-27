@@ -78,6 +78,10 @@ using System.Collections;
 	public MeshRenderer feedbackMesh;
 	public TextMesh feedbackText;
 
+	public bool feedbackTap = false;
+	public bool feedbackOnce = true;
+	public bool feedbackOnceTwo = true;
+
         private void Awake()
         {
 
@@ -107,6 +111,49 @@ using System.Collections;
 	}
 
 		void Update(){
+
+		if(feedbackTap && feedbackOnce){
+			
+			feedbackMesh.gameObject.SetActive (true);
+			if (randomFloat < 1f) {
+
+
+				feedbackText.text = "Great!";
+				obstacleAvoidedTwo.Play();
+
+			} else if (randomFloat >= 1f && randomFloat < 2f) {
+
+				feedbackText.text = "Almost away!";
+				obstacleAvoidedThree.Play();
+
+			} else {
+
+				feedbackText.text = "Hang on!";
+				obstacleAvoided.Play();
+
+			}
+
+			//iTween.PunchScale(this.gameObject,new Vector3(0.2f,0.2f,0.2f), 1f);
+			//this.gameObject.GetComponent<AudioSource>().Play();
+
+
+			feedbackMesh.enabled = true;
+			feedbackAnimator.SetBool ("Avoided", true);
+			StartCoroutine (waitFeedback ());
+			//  particleHit.Play();
+			feedbackOnce = false;
+
+			if (feedbackOnceTwo) {
+			
+				StartCoroutine (waitFeedbackTwo ());
+
+				feedbackOnceTwo = false;
+			
+			}
+
+		}
+
+
 
 		if (animationSpeed <= animationMaxSpeed && !decreaseSpeed) {
 		
@@ -420,7 +467,7 @@ using System.Collections;
 
 			} else {
 
-				feedbackText.text = "Yeah!";
+				feedbackText.text = "Nice!";
 				obstacleAvoided.Play();
 
 			}
@@ -454,11 +501,30 @@ using System.Collections;
 
 		//groundSpawnScript.Spawn();
 
+
+
 		yield return new WaitForSeconds (1f);
 
 		feedbackMesh.enabled = false;
 		feedbackAnimator.SetBool ("Avoided", false);
 		feedbackMesh.gameObject.SetActive (false);
+
+		yield return new WaitForSeconds (0.2f);
+
+
+
+
+	}
+
+	IEnumerator waitFeedbackTwo(){
+
+		yield return new WaitForSeconds (1f);
+
+		feedbackOnce = true;
+
+		yield return new WaitForSeconds (0.5f);
+
+		feedbackOnceTwo = true;
 
 
 	}

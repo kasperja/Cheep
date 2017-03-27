@@ -41,9 +41,19 @@ public class LavineMove : MonoBehaviour {
 	public float randomSoundFloat = 0f;
 
 	public ParticleSystem lavineDeathParticle;
+
+	public float tTap = 0f;
+	public GameObject tapTapObj;
+	public GameObject feedbackTextObj;
+
+	private Color colFeedbackText;
+
+	public bool tapTapReady = false;
 	// Use this for initialization
 	void Start () {
 
+		colFeedbackText = feedbackTextObj.GetComponent<TextMesh> ().color;
+		feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
 
 
 		transform.localPosition = beginPos.localPosition;
@@ -77,6 +87,29 @@ public class LavineMove : MonoBehaviour {
 
 
 		if (isRolling) {
+
+
+
+			if (tapTapReady) {
+				
+				if (tTap < 10f)
+					tTap += 1f * Time.deltaTime;
+
+				if (tTap < 0.5f) {
+
+					tapTapObj.SetActive (false);
+				
+				} else {
+				
+					tapTapObj.SetActive (true);
+
+				
+				}
+			} else {
+			
+				tapTapObj.SetActive (false);
+			
+			}
 
 			if(lavineSoundLoop.volume < 0.7f)lavineSoundLoop.volume += 0.5f * Time.deltaTime;
 
@@ -128,9 +161,14 @@ public class LavineMove : MonoBehaviour {
 
 				}
 			}
-		
+
+			feedbackTextObj.GetComponent<TextMesh> ().color = colFeedbackText;
 			
 		} else {
+
+
+
+			tapTapObj.SetActive (false);
 
 			if(lavineSoundLoop.volume > 0f)lavineSoundLoop.volume -= 0.5f * Time.deltaTime;
 
@@ -147,7 +185,8 @@ public class LavineMove : MonoBehaviour {
 				//isReady = false;
 				StartCoroutine (setRollingTrue ());
 				deactivateOnce = false;
-					
+
+
 
 			}
 
@@ -192,6 +231,9 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (2f);
 
 		spamActive = true;
+
+		tapTapReady = true;
+
 		Handheld.Vibrate();
 
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
@@ -207,6 +249,8 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (8f);
 		if (isRolling) {
 
+			tapTapReady = false;
+
 			StartCoroutine (waitDeathFinal ());
 
 
@@ -218,6 +262,9 @@ public class LavineMove : MonoBehaviour {
 		
 		lavineDeathParticle.Play ();
 		yield return new WaitForSeconds (0.5f);
+
+		tapTapReady = false;
+
 		destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
 		Handheld.Vibrate ();
@@ -270,12 +317,20 @@ public class LavineMove : MonoBehaviour {
 
 	IEnumerator setRollingTrue(){
 	
+		tapTapReady = false;
+		pc2D.feedbackOnce = true;
+		pc2D.feedbackOnceTwo = true;
+		yield return new WaitForSeconds (3f);
+		feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
+
 		if (lavineTest) {
 			yield return new WaitForSeconds (0f);
 		} else {
 			yield return new WaitForSeconds (Random.Range (25f, 35f));
 		}
 		rollOnce = true;
+
+
 
 		StartCoroutine (waitForRoll ());
 

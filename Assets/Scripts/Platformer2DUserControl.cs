@@ -31,60 +31,69 @@ namespace UnityStandardAssets._2D
 
 
 				
-			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began) {
+			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch (0).phase == TouchPhase.Began) {
 			
 				if (!lavineScript.spamActive) {
 					
 					m_Jump = true;
-
-				}else {
-
-					//m_Jump = true;
-					lavineScript.transform.position -= new Vector3(0.5f,0f,0f);
-					lavineScript.touchCounter += 1;
-
-					if (lavineScript.randomSoundFloat < 0.5f) {
-						
-						lavineSound1.Play ();
-
-					}else{
-						
-					lavineSound2.Play ();
-
-					}
-
-					if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
-					spamParticle.Play ();
-
-				}
-
-			}
-			if (Input.GetKeyDown (KeyCode.Space)) {
-			
-				if (!lavineScript.spamActive) {
-					
-					m_Jump = true;
+					m_Character.feedbackTap = false;
 
 				} else {
 
 					//m_Jump = true;
-					lavineScript.transform.position -= new Vector3(0.5f,0f,0f);
-					if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
+					lavineScript.transform.position -= new Vector3 (0.5f, 0f, 0f);
 					lavineScript.touchCounter += 1;
+					lavineScript.tTap = 0f;
+					m_Character.feedbackTap = true;
+
+					if (lavineScript.randomSoundFloat < 0.5f) {
+						
+						lavineSound1.Play ();
+
+					} else {
+						
+						lavineSound2.Play ();
+
+					}
+
+					if (m_Character.m_MaxSpeed < 15f)
+						m_Character.m_MaxSpeed += 0.1f;
+					spamParticle.Play ();
+
+				}
+
+			} 
+			if (Input.GetKeyDown (KeyCode.Space)) {
+
+				if (!lavineScript.spamActive) {
+					
+					m_Jump = true;
+					m_Character.feedbackTap = false;
+
+				} else {
+
+					//m_Jump = true;
+					lavineScript.transform.position -= new Vector3 (0.5f, 0f, 0f);
+					//if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
+					lavineScript.touchCounter += 1;
+					lavineScript.tTap = 0f;
+					m_Character.feedbackTap = true;
+
 					if (lavineScript.randomSoundFloat < 0.5f) {
 
 						lavineSound1.Play ();
 
-					}else{
+					} else {
 
 						lavineSound2.Play ();
 
 					}
+
 					spamParticle.Play ();
 				
 				}
 
-			}
+			} 
 
 			if (!m_Jump && !lavineScript.spamActive)
             {
