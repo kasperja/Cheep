@@ -10,7 +10,8 @@ public class StartScript : MonoBehaviour {
 	
 	}
 	void Awake(){
-		
+
+
 		//Application.targetFrameRate = 60;
 	
 	}
