@@ -26,6 +26,8 @@ using System.Collections;
 
 		public bool isDead = false;
 		public AudioSource jumpSound;
+		public AudioSource jumpSoundTwo;
+		public AudioSource jumpSoundThree;
 		public AudioSource hitSound;
 
 		bool doubleJump = false;
@@ -69,6 +71,17 @@ using System.Collections;
 
 	public AudioSource skiingSound;
 
+	public AudioSource obstacleAvoided;
+	public AudioSource obstacleAvoidedTwo;
+	public AudioSource obstacleAvoidedThree;
+	public Animator feedbackAnimator;
+	public MeshRenderer feedbackMesh;
+	public TextMesh feedbackText;
+
+	public bool feedbackTap = false;
+	public bool feedbackOnce = true;
+	public bool feedbackOnceTwo = true;
+
         private void Awake()
         {
 
@@ -92,11 +105,55 @@ using System.Collections;
 
 	void Start(){
 
+		feedbackMesh.gameObject.SetActive (false);
 		origAmmount = hudScriptPoints.scoreOverTimeAmmount;
 
 	}
 
 		void Update(){
+
+		if(feedbackTap && feedbackOnce){
+			
+			feedbackMesh.gameObject.SetActive (true);
+			if (randomFloat < 1f) {
+
+
+				feedbackText.text = "Great!";
+				obstacleAvoidedTwo.Play();
+
+			} else if (randomFloat >= 1f && randomFloat < 2f) {
+
+				feedbackText.text = "Awesome!";
+				obstacleAvoidedThree.Play();
+
+			} else {
+
+				feedbackText.text = "Nice!";
+				obstacleAvoided.Play();
+
+			}
+
+			//iTween.PunchScale(this.gameObject,new Vector3(0.2f,0.2f,0.2f), 1f);
+			//this.gameObject.GetComponent<AudioSource>().Play();
+
+
+			feedbackMesh.enabled = true;
+			feedbackAnimator.SetBool ("Avoided", true);
+			StartCoroutine (waitFeedback ());
+			//  particleHit.Play();
+			feedbackOnce = false;
+
+			if (feedbackOnceTwo) {
+			
+				StartCoroutine (waitFeedbackTwo ());
+
+				feedbackOnceTwo = false;
+			
+			}
+
+		}
+
+
 
 		if (animationSpeed <= animationMaxSpeed && !decreaseSpeed) {
 		
@@ -303,8 +360,21 @@ using System.Collections;
             {
                 // Add a vertical force to the player.
 
-				
+			if (randomFloat < 1f) {
+
+
 				jumpSound.Play ();
+
+			} else if (randomFloat >= 1f && randomFloat < 2f) {
+
+				jumpSoundTwo.Play ();
+
+			} else {
+
+				jumpSoundThree.Play ();
+
+			}
+				
                 m_Grounded = false;
 			skiingSound.Stop ();
                 m_Anim.SetBool("Ground", false);
@@ -381,6 +451,39 @@ using System.Collections;
 
 		}
 
+		if (other.gameObject.tag == "ObstacleAvoided") {
+
+			feedbackMesh.gameObject.SetActive (true);
+			if (randomFloat < 1f) {
+
+
+				feedbackText.text = "Great!";
+				obstacleAvoidedTwo.Play();
+
+			} else if (randomFloat >= 1f && randomFloat < 2f) {
+				
+				feedbackText.text = "Awesome!";
+				obstacleAvoidedThree.Play();
+
+			} else {
+
+				feedbackText.text = "Nice!";
+				obstacleAvoided.Play();
+
+			}
+
+			//iTween.PunchScale(this.gameObject,new Vector3(0.2f,0.2f,0.2f), 1f);
+			//this.gameObject.GetComponent<AudioSource>().Play();
+
+
+			feedbackMesh.enabled = true;
+			feedbackAnimator.SetBool ("Avoided", true);
+			StartCoroutine (waitFeedback ());
+			//  particleHit.Play();
+
+
+		}
+
 	}
 
 	IEnumerator waitSpawnBooster(){
@@ -392,6 +495,38 @@ using System.Collections;
 
 
 	
+	}
+
+	IEnumerator waitFeedback(){
+
+		//groundSpawnScript.Spawn();
+
+
+
+		yield return new WaitForSeconds (1f);
+
+		feedbackMesh.enabled = false;
+		feedbackAnimator.SetBool ("Avoided", false);
+		feedbackMesh.gameObject.SetActive (false);
+
+		yield return new WaitForSeconds (0.2f);
+
+
+
+
+	}
+
+	IEnumerator waitFeedbackTwo(){
+
+		yield return new WaitForSeconds (1f);
+
+		feedbackOnce = true;
+
+		yield return new WaitForSeconds (0.5f);
+
+		feedbackOnceTwo = true;
+
+
 	}
 
 	}
