@@ -1,5 +1,17 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+- Assets/Textures/Cheep/Fox/foxjump1-0.tpsheet
+- Assets/Textures/Cheep/Fox/foxjump2-0.tpsheet
+- Assets/Textures/Cheep/Fox/foxjump3-0.tpsheet
+- Assets/Textures/Cheep/Fox/skiing-0.tpsheet
 textureFileNames:
+- Assets/Textures/Cheep/Fox/foxjump1-0.png
+- Assets/Textures/Cheep/Fox/foxjump2-0.png
+- Assets/Textures/Cheep/Fox/foxjump3-0.png
+- Assets/Textures/Cheep/Fox/skiing-0.png
 normalmapFileNames:
+- 
+- 
+- 
+- 
