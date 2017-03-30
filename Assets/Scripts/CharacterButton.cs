@@ -8,7 +8,13 @@ public class CharacterButton : MonoBehaviour {
 	// Use this for initialization
 	public int thisChar;
 
+	public ParticleSystem selectedParticle;
+
+	//public ParticleSystem[] otherParticles;
+
 	void Start () {
+
+		//selectedParticle = charSelectScript.gameObject.GetComponentInChildren<ParticleSystem> ();
 		
 	}
 	
@@ -19,8 +25,18 @@ public class CharacterButton : MonoBehaviour {
 
 	public void charSelect(){
 
+		/*for(int i = 0; i < otherParticles.Length; i++){
+
+			otherParticles [i].Stop ();
+
+		}*/
+
+
+
 		charSelectScript.currentChar = thisChar;
 		ES2.Save (charSelectScript.currentChar, "currentChar");
+		selectedParticle.Play ();
+		charSelectScript.SelectParticleFunction (thisChar);
 	
 	}
 }
