@@ -11,6 +11,11 @@ public class TextOutline : MonoBehaviour {
 	private TextMesh textMesh;
 	private MeshRenderer meshRenderer;
 
+	//public Material mat;
+
+	public MeshRenderer meshAlphaObj;
+	//public Animator meshAnimator;
+
 	void Start() {
 		textMesh = GetComponent<TextMesh>();    
 		meshRenderer = GetComponent<MeshRenderer>();
@@ -24,6 +29,7 @@ public class TextOutline : MonoBehaviour {
 
 			MeshRenderer otherMeshRenderer = outline.GetComponent<MeshRenderer>();
 			otherMeshRenderer.material = new Material(meshRenderer.material);
+			//otherMeshRenderer.material = mat;
 			otherMeshRenderer.castShadows = false;
 			otherMeshRenderer.receiveShadows = false;
 			otherMeshRenderer.sortingLayerID = meshRenderer.sortingLayerID;
@@ -34,7 +40,7 @@ public class TextOutline : MonoBehaviour {
 
 	void Update(){
 		
-
+		//mat.color = new Color (outlineColor.r, outlineColor.g, outlineColor.b, meshAlphaObj.material.color.a);
 	
 	}
 
@@ -50,7 +56,7 @@ public class TextOutline : MonoBehaviour {
 		for (int i = 0; i < transform.childCount; i++) {
 
 			TextMesh other = transform.GetChild(i).GetComponent<TextMesh>();
-			other.color = outlineColor;
+			other.color = new Color(outlineColor.r,outlineColor.g, outlineColor.b, meshAlphaObj.material.color.a);
 			other.text = textMesh.text;
 			other.alignment = textMesh.alignment;
 			other.anchor = textMesh.anchor;
@@ -71,7 +77,23 @@ public class TextOutline : MonoBehaviour {
 			MeshRenderer otherMeshRenderer = transform.GetChild(i).GetComponent<MeshRenderer>();
 			otherMeshRenderer.sortingLayerID = meshRenderer.sortingLayerID;
 			otherMeshRenderer.sortingLayerName = meshRenderer.sortingLayerName;
+
+
 		}
+
+
+		/*foreach (MeshRenderer mRend in meshRends) {
+		
+			mRend.material.color = 
+				new Color (outlineColor.r, outlineColor.g , outlineColor.b, meshAlphaObj.material.color.a);
+		
+		}*/
+
+		//while (meshAnimator.isActiveAndEnabled) {
+		
+			
+		//}
+
 	}
 
 	Vector3 GetOffset(int i) {
@@ -87,4 +109,6 @@ public class TextOutline : MonoBehaviour {
 		default: return Vector3.zero;
 		}
 	}
+
+
 }

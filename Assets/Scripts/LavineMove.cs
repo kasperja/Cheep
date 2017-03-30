@@ -53,7 +53,7 @@ public class LavineMove : MonoBehaviour {
 	void Start () {
 
 		colFeedbackText = feedbackTextObj.GetComponent<TextMesh> ().color;
-		feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
+		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
 
 
 		transform.localPosition = beginPos.localPosition;
@@ -164,7 +164,7 @@ public class LavineMove : MonoBehaviour {
 				}
 			}
 
-			feedbackTextObj.GetComponent<TextMesh> ().color = colFeedbackText;
+			//feedbackTextObj.GetComponent<TextMesh> ().color = colFeedbackText;
 			
 		} else {
 
@@ -326,7 +326,7 @@ public class LavineMove : MonoBehaviour {
 		pc2D.feedbackOnceTwo = true;
 
 		yield return new WaitForSeconds (3f);
-		feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
+		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
 
 		if (lavineTest) {
 			yield return new WaitForSeconds (0f);

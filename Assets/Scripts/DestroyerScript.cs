@@ -17,6 +17,7 @@ public class DestroyerScript : MonoBehaviour {
 
 
 	public GameObject graphicsPlayer;
+	public GameObject graphicsLizard;
 
 	void Update(){
 	
@@ -34,6 +35,7 @@ public class DestroyerScript : MonoBehaviour {
 			deathParticle.Play ();
 			StartCoroutine (waitForDeath ());
 			graphicsPlayer.SetActive (false);
+			graphicsLizard.SetActive (false);
 			dieOnce = false;
 			//Application.LoadLevel (2);
 		

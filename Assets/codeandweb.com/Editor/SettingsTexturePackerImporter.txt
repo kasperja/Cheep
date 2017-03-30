@@ -1,5 +1,29 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+- Assets/Resources/Textures/Cheep/Fox/foxjump1-0.tpsheet
+- Assets/Resources/Textures/Cheep/Fox/foxjump2-0.tpsheet
+- Assets/Resources/Textures/Cheep/Fox/foxjump3-0.tpsheet
+- Assets/Resources/Textures/Cheep/Fox/skiing-0.tpsheet
+- Assets/Resources/Textures/Cheep/Lizard/LizardJump01-0.tpsheet
+- Assets/Resources/Textures/Cheep/Lizard/LizardJump02-0.tpsheet
+- Assets/Resources/Textures/Cheep/Lizard/LizardJump03-0.tpsheet
+- Assets/Resources/Textures/Cheep/Lizard/LizardSkiing-0.tpsheet
 textureFileNames:
+- Assets/Resources/Textures/Cheep/Fox/foxjump1-0.png
+- Assets/Resources/Textures/Cheep/Fox/foxjump2-0.png
+- Assets/Resources/Textures/Cheep/Fox/foxjump3-0.png
+- Assets/Resources/Textures/Cheep/Fox/skiing-0.png
+- Assets/Resources/Textures/Cheep/Lizard/LizardJump01-0.png
+- Assets/Resources/Textures/Cheep/Lizard/LizardJump02-0.png
+- Assets/Resources/Textures/Cheep/Lizard/LizardJump03-0.png
+- Assets/Resources/Textures/Cheep/Lizard/LizardSkiing-0.png
 normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 

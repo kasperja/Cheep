@@ -84,6 +84,9 @@ using System.Collections;
 
         private void Awake()
         {
+			Resources.LoadAll ("Textures");
+			Resources.LoadAll ("Sound");
+			Resources.LoadAll ("Prefabs");
 
 			Application.targetFrameRate = 60;
             // Setting up references.
