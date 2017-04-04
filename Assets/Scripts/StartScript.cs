@@ -12,6 +12,9 @@ public class StartScript : MonoBehaviour {
 	void Awake(){
 
 
+		//Resources.LoadAll ("Textures/Menuer");
+		//Resources.LoadAll ("Sound/Music");
+
 		//Application.targetFrameRate = 60;
 	
 	}

@@ -82,6 +82,14 @@ using System.Collections;
 	public bool feedbackOnce = true;
 	public bool feedbackOnceTwo = true;
 
+	public bool groundOnce = true;
+
+	public bool airActive = false;
+
+	public DestroyerScript destroyerScript;
+
+	public bool speedDeathOnce = true;
+
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -114,6 +122,22 @@ using System.Collections;
 	}
 
 		void Update(){
+
+		if (gameObject.GetComponent<Rigidbody2D>().velocity.x < 8f && speedDeathOnce) {
+		
+			StartCoroutine (waitDeathOfSpeed ());
+
+			speedDeathOnce = false;
+		
+		}
+
+		/*if (!m_Grounded && groundOnce) {
+		
+			StartCoroutine (waitGround ());
+
+			groundOnce = false;
+		
+		}*/
 
 		if(feedbackTap && feedbackOnce){
 			
@@ -240,7 +264,13 @@ using System.Collections;
 		}
         private void FixedUpdate()
         {
-            m_Grounded = false;
+		if (groundOnce) {
+			StartCoroutine (waitGround ());
+			groundOnce = false;
+		
+		}
+
+		if(gameObject.GetComponent<Rigidbody2D>().velocity.y < -4f)m_Grounded = false;
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -336,6 +366,8 @@ using System.Collections;
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
+
+			airActive = false;
                 // Reduce the speed if crouching by the crouchSpeed multiplier
                 move = (crouch ? move*m_CrouchSpeed : move);
 
@@ -378,9 +410,12 @@ using System.Collections;
 
 			}
 				
-                m_Grounded = false;
+               // m_Grounded = false;
+
 			skiingSound.Stop ();
-                m_Anim.SetBool("Ground", false);
+
+			StartCoroutine (waitGround ());
+
 				
 
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0);
@@ -528,6 +563,45 @@ using System.Collections;
 		yield return new WaitForSeconds (0.5f);
 
 		feedbackOnceTwo = true;
+
+
+	}
+
+	IEnumerator waitGround(){
+
+		groundOnce = false;
+
+		yield return new WaitForSeconds (0.04f);
+
+		m_Grounded = false;
+		m_Anim.SetBool("Ground", false);
+
+		yield return new WaitForSeconds (0.1f);
+
+		//groundOnce = true;
+
+
+	}
+
+
+
+	IEnumerator waitDeathOfSpeed(){
+
+
+
+		yield return new WaitForSeconds (2f);
+
+		if (gameObject.GetComponent<Rigidbody2D> ().velocity.x < 8f) {
+		
+			destroyerScript.dieBool = true;
+
+		
+		} else {
+		
+			speedDeathOnce = true;
+
+		}
+
 
 
 	}
