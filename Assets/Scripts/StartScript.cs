@@ -43,9 +43,9 @@ public class StartScript : MonoBehaviour {
 
 	IEnumerator retryNum (){
 
-		fadeOutScript.isStarted = true;
-		yield return new WaitForSeconds (1f);
-		Application.LoadLevel (1);
+		//fadeOutScript.isStarted = true;
+		yield return new WaitForSeconds (0f);
+		Application.LoadLevel (3);
 
 
 

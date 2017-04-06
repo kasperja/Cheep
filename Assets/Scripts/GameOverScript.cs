@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
 
 
 public class GameOverScript : MonoBehaviour {
@@ -369,7 +369,7 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone && !Advertisement.isShowing)) {
+		if ((adsDone /*&& !Advertisement.isShowing*/)) {
 			
 			Application.LoadLevel (0);
 		
@@ -402,7 +402,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		if(!disableAds)Advertisement.Show ();
+		//-   if(!disableAds)Advertisement.Show ();
 
 
 
