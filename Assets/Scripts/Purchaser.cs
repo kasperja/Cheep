@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
+
 // Placing the Purchaser class in the CompleteProject namespace allows it to interact with ScoreManager, 
 // one of the existing Survival Shooter scripts.
 namespace CompleteProject
@@ -25,6 +26,7 @@ namespace CompleteProject
 		// specific mapping to Unity Purchasing's AddProduct, below.
 		public static string kProductIDConsumable =    "consumable";   
 		public static string kProductIDNonConsumable = "nonconsumable";
+
 		public static string kProductIDSubscription =  "subscription"; 
 
 		// Apple App Store-specific product identifier for the subscription product.
@@ -65,13 +67,79 @@ namespace CompleteProject
 		public GameObject char7buttonD;
 		public GameObject char8buttonD;
 		//public GameObject char9buttonD;
-
+		public GameObject popup;
 
 		public int thisChar = 0;
+
+		private int highscore = 0;
+
+		public int score1 = 5000;
+		public int score2 = 10000;
+		public int score3 = 15000;
+		public int score4 = 20000;
+		public int score5 = 25000;
+		public int score6 = 30000;
+		public int score7 = 35000;
+		public int score8 = 40000;
 
 
 		void Start()
 		{
+
+			if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
+
+			if (highscore >= score1) {
+
+				char1button.SetActive (true);
+				char1buttonD.SetActive (false);
+
+			}
+			if (highscore >= score2) {
+
+				char2button.SetActive (true);
+				char2buttonD.SetActive (false);
+
+			}
+
+			if (highscore >= score3) {
+
+				char3button.SetActive (true);
+				char3buttonD.SetActive (false);
+
+			}
+
+			if (highscore >= score4) {
+
+				char4button.SetActive (true);
+				char4buttonD.SetActive (false);
+
+			}
+
+			if (highscore >= score5) {
+
+				char5button.SetActive (true);
+				char5buttonD.SetActive (false);
+
+			}
+			if (highscore >= score6) {
+
+				char6button.SetActive (true);
+				char6buttonD.SetActive (false);
+
+			}
+			if (highscore >= score7) {
+
+				char7button.SetActive (true);
+				char7buttonD.SetActive (false);
+
+			}
+			if (highscore >= score8) {
+
+				char8button.SetActive (true);
+				char8buttonD.SetActive (false);
+
+			}
+
 			// If we haven't set up the Unity Purchasing reference
 			if (m_StoreController == null)
 			{
@@ -254,6 +322,9 @@ namespace CompleteProject
 			{
 				Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 				// TODO: The non-consumable item has been successfully purchased, grant this item to the player.
+
+				popup.SetActive (false);
+
 				if (thisChar == 0) {
 
 
