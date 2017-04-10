@@ -420,7 +420,7 @@ using System.Collections;
 
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0);
 
-                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce), ForceMode2D.Impulse);
 
 
 			

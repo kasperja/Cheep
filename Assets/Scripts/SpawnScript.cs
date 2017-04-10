@@ -13,14 +13,20 @@ public class SpawnScript : MonoBehaviour {
 	private bool spawnReadyOnce = true;
 	private bool coOnce = true;
 
+
+	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
 
+
+		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		//Spawn ();
 
 	}
 
 	void Update(){
+
+
 	
 		spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
 		spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
@@ -47,8 +53,9 @@ public class SpawnScript : MonoBehaviour {
 	}
 	public void Spawn(){
 
-			
-			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+
+		Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		
 		if (coOnce) {
 			StartCoroutine (waitStart ());
