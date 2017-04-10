@@ -49,6 +49,9 @@ public class LavineMove : MonoBehaviour {
 	private Color colFeedbackText;
 
 	public bool tapTapReady = false;
+
+	private bool slowMotionBool = false;
+	private float timeScaler = 1f;
 	// Use this for initialization
 	void Start () {
 
@@ -70,6 +73,18 @@ public class LavineMove : MonoBehaviour {
 	
 		
 		}*/
+
+		Time.timeScale = timeScaler;
+
+		if (slowMotionBool) {
+		
+			if(timeScaler > 0.5f) timeScaler -= 1f * Time.deltaTime;
+
+		} else {
+		
+			if(timeScaler < 1f) timeScaler += 1f * Time.deltaTime;
+		
+		}
 
 		if (isDeadByLavine) {
 			
@@ -176,6 +191,7 @@ public class LavineMove : MonoBehaviour {
 
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
 
+				slowMotionBool = true;
 				pc2D.feedbackTap = true;
 				//Debug.Log ("deactivated");
 				//- Handheld.Vibrate();
@@ -319,14 +335,17 @@ public class LavineMove : MonoBehaviour {
 	}
 
 	IEnumerator setRollingTrue(){
-	
+
 		tapTapReady = false;
 
 		pc2D.feedbackOnce = true;
 		pc2D.feedbackOnceTwo = true;
 
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (0.7f);
+		slowMotionBool = false;
+		yield return new WaitForSeconds (2.3f);
 		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
+
 
 		if (lavineTest) {
 			yield return new WaitForSeconds (0f);
