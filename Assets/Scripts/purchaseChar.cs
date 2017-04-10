@@ -10,6 +10,8 @@ public class purchaseChar : MonoBehaviour {
 		public int thisChar = 0;
 
 		public GameObject purchasedButton;
+		public GameObject popup;
+		public BuyThis buyThisScript;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,13 +23,17 @@ public class purchaseChar : MonoBehaviour {
 	}
 	public void OnCliked(){
 	
+			buyThisScript.currentChar = thisChar;
 			purchaserScript.thisChar = thisChar;
+
+			popup.SetActive (true);
 	
 	}
 		public void onConsumed(){
 
 			purchasedButton.SetActive (true);
 			gameObject.SetActive (false);
+			popup.SetActive (false);
 
 		}
 
