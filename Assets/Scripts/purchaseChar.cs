@@ -26,16 +26,28 @@ public class purchaseChar : MonoBehaviour {
 			buyThisScript.currentChar = thisChar;
 			purchaserScript.thisChar = thisChar;
 
+			//Purchaser.Instance.thisChar = thisChar;
+
 			popup.SetActive (true);
 	
 	}
 		public void onConsumed(){
 
-			purchasedButton.SetActive (true);
-			gameObject.SetActive (false);
+			purchaserScript.BuyNonConsumable ();
+
+			//Purchaser.Instance.BuyNonConsumable ();
+
+			//purchasedButton.SetActive (true);
+			//gameObject.SetActive (false);
 			popup.SetActive (false);
 
+
 		}
+
+
+
+
+
 
 
 	}}
