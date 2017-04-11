@@ -112,6 +112,12 @@ namespace CompleteProject
 
 		}
 
+		void Update(){
+		
+
+		
+		}
+
 		void Start()
 		{
 			if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
