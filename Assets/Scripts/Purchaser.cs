@@ -83,7 +83,7 @@ using UnityEngine.UI;
 
 		public int thisChar = 0;
 
-		private int highscore = 0;
+		public int highscore = 0;
 
 		public int score1 = 5000;
 		public int score2 = 10000;
@@ -110,14 +110,14 @@ using UnityEngine.UI;
 	public FindButtons findButtonsScript;
 
 		private void Awake(){
-
+		
+		if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
 		findButtonsScript.FindInActive ();
 		//Instance = this;
 
 		}
 
 		void Update(){
-
 		if (highscore >= score1 || char1Purchased) {
 
 			char1button.SetActive (true);
@@ -176,6 +176,7 @@ using UnityEngine.UI;
 			char8buttonD.SetActive (false);
 
 		}
+
 		
 
 		
