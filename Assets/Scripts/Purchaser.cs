@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
+using UnityEngine.UI;
 
 
 // Placing the Purchaser class in the CompleteProject namespace allows it to interact with ScoreManager, 
 // one of the existing Survival Shooter scripts.
-namespace CompleteProject
-{
+//namespace CompleteProject
+//{
 	// Deriving the Purchaser class from IStoreListener enables it to receive messages from Unity Purchasing.
 	public class Purchaser : MonoBehaviour, IStoreListener
 	{
@@ -57,26 +58,26 @@ namespace CompleteProject
 		public bool char8unlocked = false;
 		public bool char9unlocked = false;*/
 
-		public GameObject char0button;
-		public GameObject char1button;
-		public GameObject char2button;
-		public GameObject char3button;
-		public GameObject char4button;
-		public GameObject char5button;
-		public GameObject char6button;
-		public GameObject char7button;
-		public GameObject char8button;
+	public GameObject char0button;
+	public GameObject char1button;
+	public GameObject char2button;
+	public GameObject char3button;
+	public GameObject char4button;
+	public GameObject char5button;
+	public GameObject char6button;
+	public GameObject char7button;
+	public GameObject char8button;
 		//public GameObject char9button;
 
-		public GameObject char0buttonD;
-		public GameObject char1buttonD;
-		public GameObject char2buttonD;
-		public GameObject char3buttonD;
-		public GameObject char4buttonD;
-		public GameObject char5buttonD;
-		public GameObject char6buttonD;
-		public GameObject char7buttonD;
-		public GameObject char8buttonD;
+	public GameObject char0buttonD;
+	public GameObject char1buttonD;
+	public GameObject char2buttonD;
+	public GameObject char3buttonD;
+	public GameObject char4buttonD;
+	public GameObject char5buttonD;
+	public GameObject char6buttonD;
+	public GameObject char7buttonD;
+	public GameObject char8buttonD;
 		//public GameObject char9buttonD;
 		public GameObject popup;
 
@@ -106,13 +107,75 @@ namespace CompleteProject
 
 		private bool firstStart = true;
 
+	public FindButtons findButtonsScript;
+
 		private void Awake(){
 
+		findButtonsScript.FindInActive ();
 		//Instance = this;
 
 		}
 
 		void Update(){
+
+		if (highscore >= score1 || char1Purchased) {
+
+			char1button.SetActive (true);
+			char1buttonD.SetActive (false);
+
+
+		}
+		if (highscore >= score2 || char2Purchased) {
+
+			char2button.SetActive (true);
+			char2buttonD.SetActive (false);
+
+
+		}
+
+		if (highscore >= score3 || char3Purchased) {
+
+			char3button.SetActive (true);
+			char3buttonD.SetActive (false);
+
+
+		}
+
+		if (highscore >= score4 || char4Purchased) {
+
+			char4button.SetActive (true);
+			char4buttonD.SetActive (false);
+
+
+		}
+
+		if (highscore >= score5 || char5Purchased) {
+
+			char5button.SetActive (true);
+			char5buttonD.SetActive (false);
+
+
+		}
+		if (highscore >= score6 || char6Purchased) {
+
+			char6button.SetActive (true);
+			char6buttonD.SetActive (false);
+
+
+		}
+		if (highscore >= score7 || char7Purchased) {
+
+			char7button.SetActive (true);
+			char7buttonD.SetActive (false);
+
+
+		}
+		if (highscore >= score8 || char8Purchased) {
+
+			char8button.SetActive (true);
+			char8buttonD.SetActive (false);
+
+		}
 		
 
 		
@@ -120,6 +183,8 @@ namespace CompleteProject
 
 		void Start()
 		{
+		
+
 			if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
 
 			if(ES2.Exists("char1Purchased"))char1Purchased = ES2.Load<bool> ("char1Purchased");
@@ -206,11 +271,13 @@ namespace CompleteProject
 					char1button.SetActive (true);
 					char1buttonD.SetActive (false);
 
+
 				}
 				if (highscore >= score2 || char2Purchased) {
 
 					char2button.SetActive (true);
 					char2buttonD.SetActive (false);
+
 
 				}
 
@@ -219,12 +286,14 @@ namespace CompleteProject
 					char3button.SetActive (true);
 					char3buttonD.SetActive (false);
 
+
 				}
 
 				if (highscore >= score4 || char4Purchased) {
 
 					char4button.SetActive (true);
 					char4buttonD.SetActive (false);
+
 
 				}
 
@@ -233,17 +302,20 @@ namespace CompleteProject
 					char5button.SetActive (true);
 					char5buttonD.SetActive (false);
 
+
 				}
 				if (highscore >= score6 || char6Purchased) {
 
 					char6button.SetActive (true);
 					char6buttonD.SetActive (false);
 
+
 				}
 				if (highscore >= score7 || char7Purchased) {
 
 					char7button.SetActive (true);
 					char7buttonD.SetActive (false);
+
 
 				}
 				if (highscore >= score8 || char8Purchased) {
@@ -497,6 +569,7 @@ namespace CompleteProject
 
 		public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args) 
 		{
+		findButtonsScript.FindInActive ();
 			// A consumable product has been purchased by this user.
 			if (String.Equals (args.purchasedProduct.definition.id, kProductIDConsumable, StringComparison.Ordinal)) {
 				Debug.Log (string.Format ("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
@@ -510,8 +583,15 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char1button.SetActive (true);
+
+
+
 				char1buttonD.SetActive (false);
+
+
+
 				char1Purchased = true;
 				ES2.Save (char1Purchased, "char1Purchased");
 
@@ -588,8 +668,12 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char2button.SetActive (true);
 				char2buttonD.SetActive (false);
+
+
+
 				char2Purchased = true;
 				ES2.Save (char2Purchased, "char2Purchased");
 
@@ -600,8 +684,13 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char3button.SetActive (true);
 				char3buttonD.SetActive (false);
+
+
+
+
 				char3Purchased = true;
 				ES2.Save (char3Purchased, "char3Purchased");
 
@@ -612,8 +701,12 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char4button.SetActive (true);
 				char4buttonD.SetActive (false);
+
+		
+
 				char4Purchased = true;
 				ES2.Save (char4Purchased, "char4Purchased");
 
@@ -624,8 +717,13 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char5button.SetActive (true);
 				char5buttonD.SetActive (false);
+
+
+
+
 				char5Purchased = true;
 				ES2.Save (char5Purchased, "char5Purchased");
 
@@ -636,8 +734,13 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char6button.SetActive (true);
 				char6buttonD.SetActive (false);
+
+
+
+
 				char6Purchased = true;
 				ES2.Save (char6Purchased, "char6Purchased");
 
@@ -648,8 +751,14 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char7button.SetActive (true);
 				char7buttonD.SetActive (false);
+
+
+		
+
+
 				char7Purchased = true;
 				ES2.Save (char7Purchased, "char7Purchased");
 
@@ -660,8 +769,12 @@ namespace CompleteProject
 
 				//popup.SetActive (false);
 
+
 				char8button.SetActive (true);
 				char8buttonD.SetActive (false);
+
+
+
 				char8Purchased = true;
 				ES2.Save (char8Purchased, "char8Purchased");
 
@@ -693,4 +806,4 @@ namespace CompleteProject
 			Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}", product.definition.storeSpecificId, failureReason));
 		}
 	}
-}
+//}

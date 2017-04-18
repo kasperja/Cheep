@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace CompleteProject
-{
+//namespace CompleteProject
+//{
 public class BuyThis : MonoBehaviour {
 	
 		
@@ -128,4 +128,4 @@ public class BuyThis : MonoBehaviour {
 		
 	}
 }
-}
+//}

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CompleteProject
-{
+//namespace CompleteProject
+//{
 public class purchaseChar : MonoBehaviour {
 
 	public Purchaser purchaserScript;
@@ -50,4 +50,5 @@ public class purchaseChar : MonoBehaviour {
 
 
 
-	}}
+	}
+//}
