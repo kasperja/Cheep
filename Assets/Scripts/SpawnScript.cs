@@ -12,6 +12,7 @@ public class SpawnScript : MonoBehaviour {
 	private bool spawnReady = false;
 	private bool spawnReadyOnce = true;
 	private bool coOnce = true;
+	public bool spawnBoundsR = true;
 
 
 	//public ObjectPoolManager objm;
@@ -31,7 +32,7 @@ public class SpawnScript : MonoBehaviour {
 		spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
 		spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
 
-		if (spawnReady && spawnReadyOnce) {
+		if (spawnReady && spawnReadyOnce && spawnBoundsR) {
 			
 			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 			spawnReadyOnce = false;
