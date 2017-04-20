@@ -19,6 +19,14 @@ public class RotateCam : MonoBehaviour {
 	public LavineMove lavineScript;
 	public Transform backpos;
 	public Transform normPos;
+
+	public Material curvedMat;
+	public Material curvedTrailMat;
+	public Material curvedTrailMatLizard;
+	private float curvature;
+	private bool now = false;
+	private bool nowOnce = true;
+
 	// Use this for initialization
 	void Start () {
 
@@ -31,6 +39,33 @@ public class RotateCam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (changeDirection) {
+		
+			now = true;
+		
+		}
+		if (now && nowOnce) {
+		
+		
+			StartCoroutine (changeCurvature ());
+			nowOnce = false;
+		}
+
+
+		if (!down && curvature > -0.01f) {
+		
+			curvature -= 0.002f * Time.deltaTime;
+		
+		} else if(down && curvature < 0.01f){
+		
+			curvature += 0.002f * Time.deltaTime;
+		
+		}
+
+		curvedMat.SetFloat("_Curvature", curvature);
+		curvedTrailMat.SetFloat("_Curvature", curvature);
+		curvedTrailMatLizard.SetFloat("_Curvature", curvature);
 
 		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {
 		
@@ -127,5 +162,13 @@ public class RotateCam : MonoBehaviour {
 		changeDirection = true;
 
 	
+	}
+
+	IEnumerator changeCurvature(){
+	
+		yield return new WaitForSeconds (5f);
+		now = false;
+		nowOnce = true;
+				
 	}
 }
