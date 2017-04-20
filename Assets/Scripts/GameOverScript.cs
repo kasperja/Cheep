@@ -50,7 +50,8 @@ public class GameOverScript : MonoBehaviour {
 	public ParticleSystem konfettiParticle;
 	public AudioSource applause;
 
-	//public FadeOut fadeOutScript;
+	public FadeIn fadeOutScript;
+	private bool isQuickRestart = false;
 
 
 	void Awake(){
@@ -371,7 +372,13 @@ public class GameOverScript : MonoBehaviour {
 
 		if ((adsDone /*&& !Advertisement.isShowing*/)) {
 			
-			Application.LoadLevel (0);
+			if (isQuickRestart) {
+				Application.LoadLevel (1);
+			} else {
+			
+				Application.LoadLevel (0);
+			
+			}
 		
 		}
 
@@ -387,10 +394,17 @@ public class GameOverScript : MonoBehaviour {
 	public void Retry(){
 
 		//click.Play ();
+		isQuickRestart = false;
 		StartCoroutine (waitAndRestart());
 	
 	}
+	public void RetryQuick(){
 
+		//click.Play ();
+		isQuickRestart = true;
+		StartCoroutine (waitAndRestart());
+
+	}
 	IEnumerator waitAndRestart(){
 
 		//fadeOutScript.isEnded = true;
@@ -407,7 +421,16 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		//yield return new WaitForSeconds (2f);
+		if (isQuickRestart) {
+			
+			fadeOutScript.isStarted = true;
+			//fadeOutScript.isEnded = true;
+
+			yield return new WaitForSeconds (1f);
+
+		
+		}
+
 		adsDone = true;
 		//Application.LoadLevel (0);
 		yield return null;
