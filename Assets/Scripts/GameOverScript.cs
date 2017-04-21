@@ -20,6 +20,8 @@ public class GameOverScript : MonoBehaviour {
 	public int highscore10 = 0;
 
 	public Text yourScoreIsTxt;
+	public Text yourScoreIsTxt2;
+	public Text yourScoreIsTxt3;
 
 	public Text finalScoreTxt;
 	public Text finalScoreTxt2;
@@ -83,6 +85,12 @@ public class GameOverScript : MonoBehaviour {
 
 		}
 
+		if (!ES2.Exists ("myCurrentScore")) {
+		
+			yourScoreIsTxt.gameObject.SetActive (false);
+
+		
+		}
 
 
 			if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
@@ -98,9 +106,12 @@ public class GameOverScript : MonoBehaviour {
 
 			if (score >= highscore) {
 
-			applause.Play ();
-			konfettiParticle.Play ();
+			if (ES2.Exists ("myCurrentScore")) {
+				applause.Play ();
+				konfettiParticle.Play ();
 				yourScoreIsTxt.text = "It's a new record!";
+			}
+				
 
 				highscore10 = highscore9;
 				highscore9 = highscore8;
@@ -309,7 +320,17 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		yourScoreIsTxt.text = "  " + score;
+		if (ES2.Exists ("myCurrentScore")) {
+			
+			yourScoreIsTxt3.gameObject.SetActive (false);
+			yourScoreIsTxt.text = "  " + score;
+
+		} else {
+			yourScoreIsTxt.gameObject.SetActive (false);
+			yourScoreIsTxt2.gameObject.SetActive (false);
+			yourScoreIsTxt3.gameObject.SetActive (true);
+		
+		}
 
 
 
@@ -416,7 +437,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		//-   if(!disableAds)Advertisement.Show ();
+		//-   if(!disableAds && ES2.Exists ("myCurrentScore"))Advertisement.Show ();
 
 
 
