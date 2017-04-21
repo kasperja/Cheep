@@ -109,6 +109,8 @@ using UnityEngine.UI;
 
 	public FindButtons findButtonsScript;
 
+	public bool noAdsPurchased = false;
+
 		private void Awake(){
 		
 		if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
@@ -196,6 +198,7 @@ using UnityEngine.UI;
 			if(ES2.Exists("char6Purchased"))char6Purchased = ES2.Load<bool> ("char6Purchased");
 			if(ES2.Exists("char7Purchased"))char7Purchased = ES2.Load<bool> ("char7Purchased");
 			if(ES2.Exists("char8Purchased"))char8Purchased = ES2.Load<bool> ("char8Purchased");
+			if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
 
 			InitializePurchasing ();
 
@@ -252,6 +255,12 @@ using UnityEngine.UI;
 							char8Purchased = true;
 							ES2.Save (char8Purchased, "char8Purchased");
 						}
+						if (prod.definition.id == "noAds") {
+
+							noAdsPurchased = true;
+							ES2.Save (noAdsPurchased, "noAds");
+						}
+
 
 
 
@@ -521,6 +530,11 @@ using UnityEngine.UI;
 
 								char8Purchased = true;
 								ES2.Save (char8Purchased, "char8Purchased");
+							}
+							if (prod.definition.id == "noAds") {
+
+								noAdsPurchased = true;
+								ES2.Save (noAdsPurchased, "noAds");
 							}
 
 

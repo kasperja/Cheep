@@ -15,7 +15,7 @@ public class ScoreSceneLoad : MonoBehaviour {
 	}
 	public void LoadScores(){
 	
-	
+		ES2.Delete ("myCurrentScore");
 		Application.LoadLevel (2);
 	
 	}
