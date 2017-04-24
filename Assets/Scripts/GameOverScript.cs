@@ -34,6 +34,8 @@ public class GameOverScript : MonoBehaviour {
 	public Text finalScoreTxt9;
 	public Text finalScoreTxt10;
 
+	public GameObject charUnlockObj;
+
 
 	public Text yourRecordIsTxt;
 
@@ -56,6 +58,25 @@ public class GameOverScript : MonoBehaviour {
 	private bool isQuickRestart = false;
 
 
+	private bool char1UnlockedPointsOnce = true;
+	private bool char2UnlockedPointsOnce = true;
+	private bool char3UnlockedPointsOnce = true;
+	private bool char4UnlockedPointsOnce = true;
+	private bool char5UnlockedPointsOnce = true;
+	private bool char6UnlockedPointsOnce = true;
+	private bool char7UnlockedPointsOnce = true;
+	private bool char8UnlockedPointsOnce = true;
+
+	public GameObject char1pic;
+	public GameObject char2pic;
+	public GameObject char3pic;
+	public GameObject char4pic;
+	public GameObject char5pic;
+	public GameObject char6pic;
+	public GameObject char7pic;
+	public GameObject char8pic;
+
+
 	void Awake(){
 
 		//Application.targetFrameRate = 60;
@@ -63,6 +84,26 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	void Start () {
+
+		if (!ES2.Exists ("myCurrentScore")) {
+
+			yourScoreIsTxt.gameObject.SetActive (false);
+
+			charUnlockObj.SetActive (false);
+
+			char1pic.SetActive (false);
+			char2pic.SetActive (false);
+			char3pic.SetActive (false);
+			char4pic.SetActive (false);
+			char5pic.SetActive (false);
+			char6pic.SetActive (false);
+			char7pic.SetActive (false);
+			char8pic.SetActive (false);
+		}
+
+
+
+
 
 		finalScoreTxt.gameObject.GetComponent<TextFader> ().enabled = false;
 		finalScoreTxt2.gameObject.GetComponent<TextFader> ().enabled = false;
@@ -83,14 +124,135 @@ public class GameOverScript : MonoBehaviour {
 
 			score = ES2.Load<int> ("myCurrentScore");
 
+			if (ES2.Exists ("char1Unlock")) {
+
+				char1UnlockedPointsOnce = ES2.Load<bool> ("char1Unlock");
+			}
+				
+			if (ES2.Exists ("char2Unlock")) {
+
+				char2UnlockedPointsOnce = ES2.Load<bool> ("char2Unlock");
+			}
+				
+			if (ES2.Exists ("char3Unlock")) {
+
+				char3UnlockedPointsOnce = ES2.Load<bool> ("char3Unlock");
+			}
+				
+			if (ES2.Exists ("char4Unlock")) {
+
+				char4UnlockedPointsOnce = ES2.Load<bool> ("char4Unlock");
+			}
+
+			if (ES2.Exists ("char5Unlock")) {
+
+				char5UnlockedPointsOnce = ES2.Load<bool> ("char5Unlock");
+
+			}
+
+			if (ES2.Exists ("char6Unlock")) {
+
+				char6UnlockedPointsOnce = ES2.Load<bool> ("char6Unlock");
+			}
+		
+			if (ES2.Exists ("char7Unlock")) {
+
+				char7UnlockedPointsOnce = ES2.Load<bool> ("char7Unlock");
+
+			}
+
+			if (ES2.Exists ("char8Unlock")) {
+
+				char8UnlockedPointsOnce = ES2.Load<bool> ("char8Unlock");
+
+			}
+
+			if (char8UnlockedPointsOnce && score >= 40000) {
+
+				charUnlockObj.SetActive (true);
+
+				char8UnlockedPointsOnce = false;
+
+				char8pic.SetActive (true);
+
+				ES2.Save (char8UnlockedPointsOnce, "char8Unlock");
+
+			}else if (char7UnlockedPointsOnce && score >= 35000) {
+
+				charUnlockObj.SetActive (true);
+
+				char7UnlockedPointsOnce = false;
+
+				char7pic.SetActive (true);
+
+				ES2.Save (char7UnlockedPointsOnce, "char7Unlock");
+
+			}else if (char6UnlockedPointsOnce && score >= 30000) {
+
+				charUnlockObj.SetActive (true);
+
+				char6UnlockedPointsOnce = false;
+
+				char6pic.SetActive (true);
+
+
+				ES2.Save (char6UnlockedPointsOnce, "char6Unlock");
+
+			} else if (char5UnlockedPointsOnce && score >= 25000) {
+
+				charUnlockObj.SetActive (true);
+
+				char5UnlockedPointsOnce = false;
+
+				char5pic.SetActive (true);
+
+				ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
+
+			} else if (char4UnlockedPointsOnce && score >= 20000) {
+
+				charUnlockObj.SetActive (true);
+
+				char4UnlockedPointsOnce = false;
+
+				char4pic.SetActive (true);
+
+				ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
+
+			}else if (char3UnlockedPointsOnce && score >= 15000) {
+
+				charUnlockObj.SetActive (true);
+
+				char3UnlockedPointsOnce = false;
+
+				char3pic.SetActive (true);
+
+				ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
+
+			} else if (char2UnlockedPointsOnce && score >= 10000) {
+
+				charUnlockObj.SetActive (true);
+
+				char2UnlockedPointsOnce = false;
+
+				char2pic.SetActive (true);
+
+				ES2.Save (char2UnlockedPointsOnce, "char2Unlock");
+
+			}else if (char1UnlockedPointsOnce && score >= 5000) {
+
+				charUnlockObj.SetActive (true);
+
+				char1UnlockedPointsOnce = false;
+
+				char1pic.SetActive (true);
+
+				ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
+
+			}
+
 		}
 
-		if (!ES2.Exists ("myCurrentScore")) {
-		
-			yourScoreIsTxt.gameObject.SetActive (false);
 
-		
-		}
 
 
 			if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
@@ -377,6 +539,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 	}
+
 	void Update(){
 
 		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
