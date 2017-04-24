@@ -76,6 +76,9 @@ public class GameOverScript : MonoBehaviour {
 	public GameObject char7pic;
 	public GameObject char8pic;
 
+	public GameObject tryButton;
+	public GameObject noAdsButton;
+
 
 	void Awake(){
 
@@ -99,6 +102,9 @@ public class GameOverScript : MonoBehaviour {
 			char6pic.SetActive (false);
 			char7pic.SetActive (false);
 			char8pic.SetActive (false);
+
+
+			noAdsButton.SetActive (false);
 		}
 
 
@@ -254,8 +260,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-
-			if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
+			if (ES2.Exists ("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
 			if(ES2.Exists("myHighscore2"))highscore2 = ES2.Load<int> ("myHighscore2");
 			if(ES2.Exists("myHighscore3"))highscore3 = ES2.Load<int> ("myHighscore3");
 			if(ES2.Exists("myHighscore4"))highscore4 = ES2.Load<int> ("myHighscore4");
@@ -537,7 +542,8 @@ public class GameOverScript : MonoBehaviour {
 		if (highscore10 == 0)
 			finalScoreTxt10.text = "";
 
-
+		if(highscore == 0)tryButton.SetActive (false);
+		if(highscore > 0)tryButton.SetActive (true);
 	}
 
 	void Update(){
