@@ -5,8 +5,11 @@ public class StartScript : MonoBehaviour {
 
 	public FadeOut fadeOutScript;
 	public AudioSource buttonSound;
+	public bool deleteSaves = false;
 	// Use this for initialization
 	void Start () {
+
+
 	
 	}
 	void Awake(){
@@ -30,7 +33,7 @@ public class StartScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 	
-		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
+		if(Input.GetKeyDown (KeyCode.O) || deleteSaves)ES2.DeleteDefaultFolder();
 
 	}
 

@@ -27,6 +27,8 @@ public class RotateCam : MonoBehaviour {
 	private bool now = false;
 	private bool nowOnce = true;
 
+	public bool curveEnabled = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -53,13 +55,17 @@ public class RotateCam : MonoBehaviour {
 		}
 
 
-		if (!down && curvature > -0.01f) {
+		if (curveEnabled && !down && curvature > -0.01f) {
 		
 			curvature -= 0.002f * Time.deltaTime;
 		
-		} else if(down && curvature < 0.01f){
+		} else if (curveEnabled && down && curvature < 0.01f) {
 		
 			curvature += 0.002f * Time.deltaTime;
+		
+		} else if(!curveEnabled){
+		
+			curvature = 0f;
 		
 		}
 
