@@ -1,0 +1,10 @@
+Product ID,Published State,Purchase Type,Auto Translate,Locale; Title; Description,Auto Fill Prices,Price,Pricing Template ID
+character1,published,managed_by_android,false,en_US;Character 1;Buy Character 1,true,,4635336781555830235
+character2,published,managed_by_android,false,en_US;Character 2;Buy Character 2,true,,4635336781555830235
+character3,published,managed_by_android,false,en_US;Character 3;Buy Character 3,true,,4635336781555830235
+character4,published,managed_by_android,false,en_US;Character 4;Buy Character 4,true,,4635336781555830235
+character5,published,managed_by_android,false,en_US;Character 5;Buy Character 5,true,,4635336781555830235
+character6,published,managed_by_android,false,en_US;Character 6;Buy Character 6,true,,4635336781555830235
+character7,published,managed_by_android,false,en_US;Character 7;Buy Character 7,true,,4635336781555830235
+character8,published,managed_by_android,false,en_US;Character 8;Buy Character 8,true,,4635336781555830235
+noads,published,managed_by_android,false,en_US;Remove Ads;Remove ads from the game.,true,,4635336781555830235

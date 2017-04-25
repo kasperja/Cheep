@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Advertisements;
 
 public class UnityAdsInitializer : MonoBehaviour
@@ -25,4 +25,4 @@ public class UnityAdsInitializer : MonoBehaviour
 			Advertisement.Initialize(gameId, testMode);
 		}
 	}
-}*/
+}

@@ -255,7 +255,7 @@ using UnityEngine.UI;
 							char8Purchased = true;
 							ES2.Save (char8Purchased, "char8Purchased");
 						}
-						if (prod.definition.id == "noAds") {
+						if (prod.definition.id == "noads") {
 
 							noAdsPurchased = true;
 							ES2.Save (noAdsPurchased, "noAds");
@@ -367,6 +367,7 @@ using UnityEngine.UI;
 			builder.AddProduct(kProductIDCharacter6, ProductType.NonConsumable);
 			builder.AddProduct(kProductIDCharacter7, ProductType.NonConsumable);
 			builder.AddProduct(kProductIDCharacter8, ProductType.NonConsumable);
+			
 
 			// And finish adding the subscription product. Notice this uses store-specific IDs, illustrating
 			// if the Product ID was configured differently between Apple and Google stores. Also note that
@@ -489,49 +490,49 @@ using UnityEngine.UI;
 
 						if (prod.hasReceipt) {
 
-							if (prod.definition.id == "character.1") {
+							if (prod.definition.id == "character1") {
 
 								char1Purchased = true;
 								ES2.Save (char1Purchased, "char1Purchased");
 							}
-							if (prod.definition.id == "character.2") {
+							if (prod.definition.id == "character2") {
 
 								char2Purchased = true;
 								ES2.Save (char2Purchased, "char2Purchased");
 
 							}
-							if (prod.definition.id == "character.3") {
+							if (prod.definition.id == "character3") {
 
 								char3Purchased = true;
 								ES2.Save (char3Purchased, "char3Purchased");
 							}
-							if (prod.definition.id == "character.4") {
+							if (prod.definition.id == "character4") {
 
 								char4Purchased = true;
 								ES2.Save (char4Purchased, "char4Purchased");
 							}
-							if (prod.definition.id == "character.5") {
+							if (prod.definition.id == "character5") {
 
 								char5Purchased = true;
 								ES2.Save (char5Purchased, "char5Purchased");
 							}
-							if (prod.definition.id == "character.6") {
+							if (prod.definition.id == "character6") {
 
 								char6Purchased = true;
 								ES2.Save (char6Purchased, "char6Purchased");
 							}
-							if (prod.definition.id == "character.7") {
+							if (prod.definition.id == "character7") {
 
 								char7Purchased = true;
 								ES2.Save (char7Purchased, "char7Purchased");
 
 							}
-							if (prod.definition.id == "character.8") {
+							if (prod.definition.id == "character8") {
 
 								char8Purchased = true;
 								ES2.Save (char8Purchased, "char8Purchased");
 							}
-							if (prod.definition.id == "noAds") {
+							if (prod.definition.id == "noads") {
 
 								noAdsPurchased = true;
 								ES2.Save (noAdsPurchased, "noAds");

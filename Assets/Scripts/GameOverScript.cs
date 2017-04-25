@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-//using UnityEngine.Advertisements;
+using UnityEngine.Advertisements;
 
 
 public class GameOverScript : MonoBehaviour {
 
 	int score = 0;
+
+
+	private int countPlays = 0;
+	private bool showAdCount = false;
 
 	public int highscore = 0;
 	public int highscore2 = 0;
@@ -87,6 +91,31 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	void Start () {
+
+		if (ES2.Exists ("countPlays")) {
+
+			countPlays =  ES2.Load<int>( "countPlays");
+		}
+
+		countPlays += 1;
+
+		ES2.Save (countPlays, "countPlays");
+
+		if (countPlays >= 3) {
+
+			showAdCount = true;
+
+			countPlays = 1;
+		
+			ES2.Save (countPlays, "countPlays");
+
+		} else {
+		
+			showAdCount = false;
+		
+		}
+
+
 
 		if (!ES2.Exists ("myCurrentScore")) {
 
@@ -560,7 +589,7 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone /*&& !Advertisement.isShowing*/)) {
+		if ((adsDone && !Advertisement.isShowing)) {
 			
 			if (isQuickRestart) {
 				Application.LoadLevel (1);
@@ -606,7 +635,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		//-   if(!disableAds && ES2.Exists ("myCurrentScore"))Advertisement.Show ();
+		if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
 
 
 
