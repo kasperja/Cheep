@@ -38,7 +38,7 @@ public class GameOverScript : MonoBehaviour {
 	public Text finalScoreTxt9;
 	public Text finalScoreTxt10;
 
-	public GameObject charUnlockObj;
+	//public GameObject charUnlockObj;
 
 
 	public Text yourRecordIsTxt;
@@ -121,7 +121,7 @@ public class GameOverScript : MonoBehaviour {
 
 			yourScoreIsTxt.gameObject.SetActive (false);
 
-			charUnlockObj.SetActive (false);
+			//charUnlockObj.SetActive (false);
 
 			char1pic.SetActive (false);
 			char2pic.SetActive (false);
@@ -158,6 +158,8 @@ public class GameOverScript : MonoBehaviour {
 		if (ES2.Exists ("myCurrentScore")) {
 
 			score = ES2.Load<int> ("myCurrentScore");
+
+			/*
 
 			if (ES2.Exists ("char1Unlock")) {
 
@@ -284,6 +286,8 @@ public class GameOverScript : MonoBehaviour {
 				ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
 
 			}
+
+*/
 
 		}
 
