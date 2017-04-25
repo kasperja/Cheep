@@ -74,7 +74,7 @@ public class LavineMove : MonoBehaviour {
 		
 		}*/
 
-		Time.timeScale = timeScaler;
+		//Time.timeScale = timeScaler;
 
 		if (slowMotionBool) {
 		
@@ -253,7 +253,7 @@ public class LavineMove : MonoBehaviour {
 
 		tapTapReady = true;
 
-		//- Handheld.Vibrate();
+		Handheld.Vibrate();
 
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
 		//rollOnce = true;
@@ -286,7 +286,7 @@ public class LavineMove : MonoBehaviour {
 
 		destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
-		//- Handheld.Vibrate ();
+		Handheld.Vibrate ();
 
 	
 	}
@@ -326,7 +326,7 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.6f);
 
 
-		//- Handheld.Vibrate ();
+		Handheld.Vibrate ();
 
 
 
