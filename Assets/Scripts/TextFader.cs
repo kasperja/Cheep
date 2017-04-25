@@ -11,6 +11,11 @@ public class TextFader : MonoBehaviour {
 	public float fadeAmmount = 0.4f;
 	public Color col1;
 	public Color col2;
+	public Color col3;
+
+	public bool fadeOut = false;
+	public float t = 0f;
+	private bool once = true;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,7 +25,20 @@ public class TextFader : MonoBehaviour {
 	void Update () {
 
 
-		txt.color = Color.Lerp (col1, col2, Mathf.PingPong(Time.time, fadeSpeed));
+		if (!fadeOut) {
+			once = true;
+			txt.color = Color.Lerp (col1, col2, Mathf.PingPong (Time.time, fadeSpeed));
+		} else {
+			if (once) {
+				txt.color = col1;
+				t = 0f;
+				once = false;
+			}
+			if(t <= 1f)t += 1f * Time.deltaTime;
+			txt.color = Color.LerpUnclamped (col1, col3, t);
+
+		
+		}
 
 
 		/*if (playOnce) {
