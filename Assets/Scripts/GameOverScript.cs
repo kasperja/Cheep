@@ -71,7 +71,7 @@ public class GameOverScript : MonoBehaviour {
 	private bool char7UnlockedPointsOnce = true;
 	private bool char8UnlockedPointsOnce = true;
 
-	public GameObject char1pic;
+	/*public GameObject char1pic;
 	public GameObject char2pic;
 	public GameObject char3pic;
 	public GameObject char4pic;
@@ -79,9 +79,11 @@ public class GameOverScript : MonoBehaviour {
 	public GameObject char6pic;
 	public GameObject char7pic;
 	public GameObject char8pic;
-
+*/
 	public GameObject tryButton;
-	public GameObject noAdsButton;
+
+
+	//public GameObject noAdsButton;
 
 
 	void Awake(){
@@ -91,6 +93,11 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	void Start () {
+
+		if (ES2.Exists ("noAds")) {
+
+			disableAds =  ES2.Load<bool>( "noAds");
+		}
 
 		if (ES2.Exists ("countPlays")) {
 
@@ -105,7 +112,7 @@ public class GameOverScript : MonoBehaviour {
 
 			showAdCount = true;
 
-			countPlays = 1;
+			countPlays = 0;
 		
 			ES2.Save (countPlays, "countPlays");
 
@@ -117,23 +124,25 @@ public class GameOverScript : MonoBehaviour {
 
 
 
+
+
 		if (!ES2.Exists ("myCurrentScore")) {
 
 			yourScoreIsTxt.gameObject.SetActive (false);
 
 			//charUnlockObj.SetActive (false);
 
-			char1pic.SetActive (false);
-			char2pic.SetActive (false);
-			char3pic.SetActive (false);
-			char4pic.SetActive (false);
-			char5pic.SetActive (false);
-			char6pic.SetActive (false);
-			char7pic.SetActive (false);
-			char8pic.SetActive (false);
+			//char1pic.SetActive (false);
+			//char2pic.SetActive (false);
+			//char3pic.SetActive (false);
+			//char4pic.SetActive (false);
+			//char5pic.SetActive (false);
+			//char6pic.SetActive (false);
+			//char7pic.SetActive (false);
+			//char8pic.SetActive (false);
 
 
-			noAdsButton.SetActive (false);
+			//noAdsButton.SetActive (false);
 		}
 
 
@@ -653,6 +662,8 @@ public class GameOverScript : MonoBehaviour {
 
 		
 		}
+
+		if(countPlays >= 3)yield return new WaitForSeconds (2f);
 
 		adsDone = true;
 		//Application.LoadLevel (0);
