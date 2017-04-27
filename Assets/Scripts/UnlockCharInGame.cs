@@ -138,7 +138,7 @@ public class UnlockCharInGame : MonoBehaviour {
 
 	IEnumerator waitUnlockPopup(GameObject popup, GameObject image) {
 	
-		txtFade.fadeOut = false;
+		//txtFade.fadeOut = false;
 
 		image.SetActive (true);
 		popup.SetActive (true);
@@ -146,15 +146,15 @@ public class UnlockCharInGame : MonoBehaviour {
 		unlockSound.Play ();
 		yield return new WaitForSeconds (2f);
 
-		txtFade.fadeOut = true;
+		//txtFade.fadeOut = true;
 
-		yield return new WaitForSeconds (2f); 
+		yield return new WaitForSeconds (1f); 
 
 
 
 		image.SetActive (false);
 		popup.SetActive (false);
-		txtFade.fadeOut = false;
+		//txtFade.fadeOut = false;
 	
 	}
 }

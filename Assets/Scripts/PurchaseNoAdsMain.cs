@@ -82,7 +82,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 	void Update(){
 
-		if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
+		//if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
 
 		if (noAdsPurchased) {
 
@@ -90,16 +90,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 		}
 
-		if (noAdsPurchased) {
 
-
-			gameObject.SetActive (false);
-
-		} else {
-
-
-
-		}
 
 
 	}

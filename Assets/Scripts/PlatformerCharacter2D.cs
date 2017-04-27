@@ -116,6 +116,8 @@ using System.Collections;
 
 	void Start(){
 
+		ES2.Save (1, "prevScene");
+
 		feedbackMesh.gameObject.SetActive (false);
 		origAmmount = hudScriptPoints.scoreOverTimeAmmount;
 
@@ -578,7 +580,7 @@ using System.Collections;
 
 		yield return new WaitForSeconds (0.1f);
 
-		//groundOnce = true;
+		groundOnce = true;
 
 
 	}
