@@ -580,7 +580,7 @@ using System.Collections;
 
 		yield return new WaitForSeconds (0.1f);
 
-		groundOnce = true;
+		//groundOnce = false;
 
 
 	}

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class IfScenePrevious : MonoBehaviour {
 
 	public AudioSource buttonSound;
+	public bool isStartScreen = false;
 
 	private int prevScene = 0;
 	// Use this for initialization
@@ -17,7 +18,7 @@ public class IfScenePrevious : MonoBehaviour {
 
 		}
 
-		if (prevScene == 0 || prevScene == 2)buttonSound.Play ();
+		if ((prevScene == 0 || prevScene == 2) && !isStartScreen)buttonSound.Play ();
 
 		prevScene = 2;
 

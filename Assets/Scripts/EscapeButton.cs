@@ -25,7 +25,7 @@ public class EscapeButton : MonoBehaviour {
 
 	IEnumerator QuitNum(){
 		buttonSound.Play ();
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.3f);
 		Application.Quit();
 		//yield return null;
 	
