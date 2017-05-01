@@ -31,7 +31,7 @@ namespace UnityStandardAssets._2D
 
 
 				
-			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch (0).phase == TouchPhase.Began) {
+			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch (0).phase == TouchPhase.Began && Time.timeScale <=1.3f) {
 			
 				if (!lavineScript.spamActive) {
 					
@@ -65,7 +65,7 @@ namespace UnityStandardAssets._2D
 				}
 
 			} 
-			if (Input.GetKeyDown (KeyCode.Space)) {
+			if (Input.GetKeyDown (KeyCode.Space) && Time.timeScale <=1.3f) {
 
 				if (!lavineScript.spamActive) {
 					
