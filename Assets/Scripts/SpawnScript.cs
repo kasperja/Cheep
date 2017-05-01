@@ -55,7 +55,7 @@ public class SpawnScript : MonoBehaviour {
 	public void Spawn(){
 
 
-		Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+		if(spawnBoundsR)Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
 		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		
 		if (coOnce) {

@@ -35,7 +35,7 @@ public class GroundNear : MonoBehaviour {
 
 		//Debug.Log ("HI3");
 
-			spawnGroundScript.spawnBoundsR = false;
+			//spawnGroundScript.spawnBoundsR = false;
 
 
 

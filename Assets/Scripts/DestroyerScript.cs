@@ -31,7 +31,7 @@ public class DestroyerScript : MonoBehaviour {
 
 
 		if (dieBool && dieOnce) {
-		
+			Time.timeScale = 1f;
 			pc2d.isDead = true;
 			pc2d.m_MaxSpeed = 0f;
 			deathParticle.Play ();

@@ -90,6 +90,11 @@ using System.Collections;
 
 	public bool speedDeathOnce = true;
 
+	public bool isRocket = false;
+	private bool isRocketOnce = true;
+	public GameObject alwaysGround;
+	public ParticleSystem rocketParticle;
+
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -111,6 +116,16 @@ using System.Collections;
 		for(var i = 0 ; i < gameObjects.Length ; i ++)
 		{
 			Destroy(gameObjects[i]);
+		}
+	}
+
+	public void DisableAllObjects()
+	{
+		gameObjects = GameObject.FindGameObjectsWithTag ("Obstacle");
+
+		for(var i = 0 ; i < gameObjects.Length ; i ++)
+		{
+			gameObjects [i].GetComponent<BoxCollider2D> ().isTrigger = true;
 		}
 	}
 
@@ -140,6 +155,35 @@ using System.Collections;
 			groundOnce = false;
 		
 		}*/
+
+		if (isRocket) {
+
+			if (isRocketOnce) {
+
+				rocketParticle.Play ();
+
+				StartCoroutine (waitRocket());
+
+				isRocketOnce = false;
+
+			}
+
+			alwaysGround.SetActive (true);
+			if (Time.timeScale < 5f)
+				Time.timeScale += 1f * Time.deltaTime;
+		
+		} else {
+		
+
+			if (Time.timeScale > 1f)
+				Time.timeScale -= 0.5f *Time.deltaTime;
+		
+		}
+
+		if (Time.timeScale <= 1f) {
+			alwaysGround.SetActive (false);
+			rocketParticle.Stop ();
+		}
 
 		if(feedbackTap && feedbackOnce){
 			
@@ -306,7 +350,7 @@ using System.Collections;
 								
 				    
             }
-		if (!isDead && !boostActivate) {
+		if (!isDead && !boostActivate && !isRocket) {
 			if (m_MaxSpeed > 10f && decreaseSpeed)
 				boostOrig -= acceleration * 10f *Time.deltaTime;
 
@@ -348,6 +392,8 @@ using System.Collections;
 				playOnce = true;
 			}
 		}
+
+
 
 
         public void Move(float move, bool crouch, bool jump)
@@ -606,6 +652,14 @@ using System.Collections;
 
 
 
+	}
+
+	IEnumerator waitRocket(){
+	
+		yield return new WaitForSeconds (4f);
+
+		isRocket = false;
+		isRocketOnce = true;
 	}
 
 	}
