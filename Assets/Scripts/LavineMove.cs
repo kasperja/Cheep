@@ -64,7 +64,7 @@ public class LavineMove : MonoBehaviour {
 
 
 		transform.localPosition = beginPos.localPosition;
-		StartCoroutine (setRollingTrue ());
+		//StartCoroutine (setRollingTrue ());
 
 	}
 
@@ -117,7 +117,7 @@ public class LavineMove : MonoBehaviour {
 
 		speed = pc2D.m_MaxSpeed;
 
-
+		/*
 		if (transform.position.x > beginPos.position.x && !isDeadByLavine && Time.timeScale > 1f) {
 			if (speed < 9f) {
 
@@ -131,9 +131,9 @@ public class LavineMove : MonoBehaviour {
 
 			}
 
-		}else if (isRolling && Time.timeScale <= 1f) {
+		}else */if (isRolling && Time.timeScale <= 1f) {
 
-
+			pc2D.boostActivate = true;
 
 			if (tapTapReady) {
 				
@@ -197,7 +197,8 @@ public class LavineMove : MonoBehaviour {
 					StartCoroutine (vibrateNum ());
 
 					//StartCoroutine (waitForRoll ());
-
+					bossSpawn.SetActive (true);
+					normSpawn.SetActive (false);
 				
 					deactivateOnce = true;
 					//pc2D.DestroyAllObjects ();
@@ -221,6 +222,8 @@ public class LavineMove : MonoBehaviour {
 
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
 
+				isRolling = false;
+				pc2D.boostActivate = false;
 				slowMotionBool = true;
 				pc2D.feedbackTap = true;
 				//Debug.Log ("deactivated");
@@ -401,7 +404,7 @@ public class LavineMove : MonoBehaviour {
 					if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
 			
 			}
-			//deactivateOnce = true;
+			deactivateOnce = true;
 		
 		}
 
