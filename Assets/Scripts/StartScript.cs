@@ -1,16 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour {
 
 	public FadeOut fadeOutScript;
 	public AudioSource buttonSound;
+	public bool deleteSaves = false;
 	// Use this for initialization
 	void Start () {
+
+		ES2.Save (0, "prevScene");
+
 	
 	}
 	void Awake(){
 
+
+		//Resources.LoadAll ("Textures/Menuer");
+		//Resources.LoadAll ("Sound/Music");
 
 		//Application.targetFrameRate = 60;
 	
@@ -27,7 +35,7 @@ public class StartScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 	
-		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
+		if(Input.GetKeyDown (KeyCode.O) || deleteSaves)ES2.DeleteDefaultFolder();
 
 	}
 
@@ -42,7 +50,7 @@ public class StartScript : MonoBehaviour {
 
 		fadeOutScript.isStarted = true;
 		yield return new WaitForSeconds (1f);
-		Application.LoadLevel (1);
+		Application.LoadLevel (3);
 
 
 

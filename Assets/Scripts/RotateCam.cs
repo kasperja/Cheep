@@ -19,6 +19,18 @@ public class RotateCam : MonoBehaviour {
 	public LavineMove lavineScript;
 	public Transform backpos;
 	public Transform normPos;
+
+	public Material curvedMat;
+	public Material curvedTrailMat;
+	public Material curvedTrailMatLizard;
+	private float curvature;
+	private bool now = false;
+	private bool nowOnce = true;
+
+	private bool curveEnabled = true;
+
+	private bool changeSmooth = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -31,6 +43,38 @@ public class RotateCam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (changeDirection) {
+		
+			now = true;
+		
+		}
+		if (now && nowOnce) {
+		
+		
+			StartCoroutine (changeCurvature ());
+			nowOnce = false;
+		}
+
+
+		if (curveEnabled && !down && curvature > -0.002f) {
+		
+			curvature -= 0.008f * Time.deltaTime;
+		
+		} else if (curveEnabled && down && curvature < 0.002f) {
+		
+			curvature += 0.008f * Time.deltaTime;
+		
+		} else if(!curveEnabled){
+		
+			curvature = 0f;
+		
+		}
+
+		curvedMat.SetFloat("_Curvature", curvature);
+		curvedTrailMat.SetFloat("_Curvature", curvature);
+		curvedTrailMatLizard.SetFloat("_Curvature", curvature);
+
 
 		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {
 		
@@ -88,11 +132,26 @@ public class RotateCam : MonoBehaviour {
 			down = false;
 		}
 
+		if (changeSmooth) {
+		
+			float angleOrig = angleMultiplier;
+			if (angleMultiplier > -angleOrig) {
+			
+				angleMultiplier -= 0.5f * Time.deltaTime;
+			
+			} else {
+			
+				changeSmooth = false;
+			
+			}
+		
+		}
+
 		if(t < 1f)t += 0.5f * Time.deltaTime;
 
 		if (((gameObject.transform.rotation.eulerAngles.z >= maxAngle || gameObject.transform.rotation.eulerAngles.z <= minAngle)) && changeDirection) {
 
-
+			changeSmooth = true;
 			angleMultiplier = -angleMultiplier;
 
 				
@@ -127,5 +186,13 @@ public class RotateCam : MonoBehaviour {
 		changeDirection = true;
 
 	
+	}
+
+	IEnumerator changeCurvature(){
+	
+		yield return new WaitForSeconds (5f);
+		now = false;
+		nowOnce = true;
+				
 	}
 }

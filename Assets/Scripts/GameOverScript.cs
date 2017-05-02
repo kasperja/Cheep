@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.Advertisements;
+//- using UnityEngine.Advertisements;
 
 
 public class GameOverScript : MonoBehaviour {
 
 	int score = 0;
+
+
+	private int countPlays = 0;
+	private bool showAdCount = false;
 
 	public int highscore = 0;
 	public int highscore2 = 0;
@@ -20,6 +24,8 @@ public class GameOverScript : MonoBehaviour {
 	public int highscore10 = 0;
 
 	public Text yourScoreIsTxt;
+	public Text yourScoreIsTxt2;
+	public Text yourScoreIsTxt3;
 
 	public Text finalScoreTxt;
 	public Text finalScoreTxt2;
@@ -31,6 +37,8 @@ public class GameOverScript : MonoBehaviour {
 	public Text finalScoreTxt8;
 	public Text finalScoreTxt9;
 	public Text finalScoreTxt10;
+
+	//public GameObject charUnlockObj;
 
 
 	public Text yourRecordIsTxt;
@@ -50,7 +58,32 @@ public class GameOverScript : MonoBehaviour {
 	public ParticleSystem konfettiParticle;
 	public AudioSource applause;
 
-	//public FadeOut fadeOutScript;
+	public FadeIn fadeOutScript;
+	private bool isQuickRestart = false;
+
+
+	private bool char1UnlockedPointsOnce = true;
+	private bool char2UnlockedPointsOnce = true;
+	private bool char3UnlockedPointsOnce = true;
+	private bool char4UnlockedPointsOnce = true;
+	private bool char5UnlockedPointsOnce = true;
+	private bool char6UnlockedPointsOnce = true;
+	private bool char7UnlockedPointsOnce = true;
+	private bool char8UnlockedPointsOnce = true;
+
+	/*public GameObject char1pic;
+	public GameObject char2pic;
+	public GameObject char3pic;
+	public GameObject char4pic;
+	public GameObject char5pic;
+	public GameObject char6pic;
+	public GameObject char7pic;
+	public GameObject char8pic;
+*/
+	public GameObject tryButton;
+
+
+	//public GameObject noAdsButton;
 
 
 	void Awake(){
@@ -60,6 +93,61 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	void Start () {
+
+		if (ES2.Exists ("noAds")) {
+
+			disableAds =  ES2.Load<bool>( "noAds");
+		}
+
+		if (ES2.Exists ("countPlays")) {
+
+			countPlays =  ES2.Load<int>( "countPlays");
+		}
+
+		countPlays += 1;
+
+		ES2.Save (countPlays, "countPlays");
+
+		if (countPlays >= 3) {
+
+			showAdCount = true;
+
+			countPlays = 0;
+		
+			ES2.Save (countPlays, "countPlays");
+
+		} else {
+		
+			showAdCount = false;
+		
+		}
+
+
+
+
+
+		if (!ES2.Exists ("myCurrentScore")) {
+
+			yourScoreIsTxt.gameObject.SetActive (false);
+
+			//charUnlockObj.SetActive (false);
+
+			//char1pic.SetActive (false);
+			//char2pic.SetActive (false);
+			//char3pic.SetActive (false);
+			//char4pic.SetActive (false);
+			//char5pic.SetActive (false);
+			//char6pic.SetActive (false);
+			//char7pic.SetActive (false);
+			//char8pic.SetActive (false);
+
+
+			//noAdsButton.SetActive (false);
+		}
+
+
+
+
 
 		finalScoreTxt.gameObject.GetComponent<TextFader> ().enabled = false;
 		finalScoreTxt2.gameObject.GetComponent<TextFader> ().enabled = false;
@@ -80,11 +168,141 @@ public class GameOverScript : MonoBehaviour {
 
 			score = ES2.Load<int> ("myCurrentScore");
 
+			/*
+
+			if (ES2.Exists ("char1Unlock")) {
+
+				char1UnlockedPointsOnce = ES2.Load<bool> ("char1Unlock");
+			}
+				
+			if (ES2.Exists ("char2Unlock")) {
+
+				char2UnlockedPointsOnce = ES2.Load<bool> ("char2Unlock");
+			}
+				
+			if (ES2.Exists ("char3Unlock")) {
+
+				char3UnlockedPointsOnce = ES2.Load<bool> ("char3Unlock");
+			}
+				
+			if (ES2.Exists ("char4Unlock")) {
+
+				char4UnlockedPointsOnce = ES2.Load<bool> ("char4Unlock");
+			}
+
+			if (ES2.Exists ("char5Unlock")) {
+
+				char5UnlockedPointsOnce = ES2.Load<bool> ("char5Unlock");
+
+			}
+
+			if (ES2.Exists ("char6Unlock")) {
+
+				char6UnlockedPointsOnce = ES2.Load<bool> ("char6Unlock");
+			}
+		
+			if (ES2.Exists ("char7Unlock")) {
+
+				char7UnlockedPointsOnce = ES2.Load<bool> ("char7Unlock");
+
+			}
+
+			if (ES2.Exists ("char8Unlock")) {
+
+				char8UnlockedPointsOnce = ES2.Load<bool> ("char8Unlock");
+
+			}
+
+			if (char8UnlockedPointsOnce && score >= 40000) {
+
+				charUnlockObj.SetActive (true);
+
+				char8UnlockedPointsOnce = false;
+
+				char8pic.SetActive (true);
+
+				ES2.Save (char8UnlockedPointsOnce, "char8Unlock");
+
+			}else if (char7UnlockedPointsOnce && score >= 35000) {
+
+				charUnlockObj.SetActive (true);
+
+				char7UnlockedPointsOnce = false;
+
+				char7pic.SetActive (true);
+
+				ES2.Save (char7UnlockedPointsOnce, "char7Unlock");
+
+			}else if (char6UnlockedPointsOnce && score >= 30000) {
+
+				charUnlockObj.SetActive (true);
+
+				char6UnlockedPointsOnce = false;
+
+				char6pic.SetActive (true);
+
+
+				ES2.Save (char6UnlockedPointsOnce, "char6Unlock");
+
+			} else if (char5UnlockedPointsOnce && score >= 25000) {
+
+				charUnlockObj.SetActive (true);
+
+				char5UnlockedPointsOnce = false;
+
+				char5pic.SetActive (true);
+
+				ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
+
+			} else if (char4UnlockedPointsOnce && score >= 20000) {
+
+				charUnlockObj.SetActive (true);
+
+				char4UnlockedPointsOnce = false;
+
+				char4pic.SetActive (true);
+
+				ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
+
+			}else if (char3UnlockedPointsOnce && score >= 15000) {
+
+				charUnlockObj.SetActive (true);
+
+				char3UnlockedPointsOnce = false;
+
+				char3pic.SetActive (true);
+
+				ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
+
+			} else if (char2UnlockedPointsOnce && score >= 10000) {
+
+				charUnlockObj.SetActive (true);
+
+				char2UnlockedPointsOnce = false;
+
+				char2pic.SetActive (true);
+
+				ES2.Save (char2UnlockedPointsOnce, "char2Unlock");
+
+			}else if (char1UnlockedPointsOnce && score >= 5000) {
+
+				charUnlockObj.SetActive (true);
+
+				char1UnlockedPointsOnce = false;
+
+				char1pic.SetActive (true);
+
+				ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
+
+			}
+
+*/
+
 		}
 
 
 
-			if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
+			if (ES2.Exists ("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
 			if(ES2.Exists("myHighscore2"))highscore2 = ES2.Load<int> ("myHighscore2");
 			if(ES2.Exists("myHighscore3"))highscore3 = ES2.Load<int> ("myHighscore3");
 			if(ES2.Exists("myHighscore4"))highscore4 = ES2.Load<int> ("myHighscore4");
@@ -97,9 +315,12 @@ public class GameOverScript : MonoBehaviour {
 
 			if (score >= highscore) {
 
-			applause.Play ();
-			konfettiParticle.Play ();
+			if (ES2.Exists ("myCurrentScore")) {
+				applause.Play ();
+				konfettiParticle.Play ();
 				yourScoreIsTxt.text = "It's a new record!";
+			}
+				
 
 				highscore10 = highscore9;
 				highscore9 = highscore8;
@@ -308,7 +529,17 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		yourScoreIsTxt.text = "  " + score;
+		if (ES2.Exists ("myCurrentScore")) {
+			
+			yourScoreIsTxt3.gameObject.SetActive (false);
+			yourScoreIsTxt.text = "  " + score;
+
+		} else {
+			yourScoreIsTxt.gameObject.SetActive (false);
+			yourScoreIsTxt2.gameObject.SetActive (false);
+			yourScoreIsTxt3.gameObject.SetActive (true);
+		
+		}
 
 
 
@@ -353,8 +584,10 @@ public class GameOverScript : MonoBehaviour {
 		if (highscore10 == 0)
 			finalScoreTxt10.text = "";
 
-
+		if(highscore == 0)tryButton.SetActive (false);
+		if(highscore > 0)tryButton.SetActive (true);
 	}
+
 	void Update(){
 
 		if(Input.GetKeyDown (KeyCode.O))ES2.DeleteDefaultFolder();
@@ -362,6 +595,7 @@ public class GameOverScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) /*|| (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began*/) {
 		
 			click.Play ();
+			isQuickRestart = true;
 			StartCoroutine (waitAndRestart());
 
 		}
@@ -369,9 +603,15 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone && !Advertisement.isShowing)) {
+		if ((adsDone /* && !Advertisement.isShowing*/)) {
 			
-			Application.LoadLevel (0);
+			if (isQuickRestart) {
+				Application.LoadLevel (1);
+			} else {
+			
+				Application.LoadLevel (0);
+			
+			}
 		
 		}
 
@@ -387,10 +627,17 @@ public class GameOverScript : MonoBehaviour {
 	public void Retry(){
 
 		//click.Play ();
+		isQuickRestart = false;
 		StartCoroutine (waitAndRestart());
 	
 	}
+	public void RetryQuick(){
 
+		//click.Play ();
+		isQuickRestart = true;
+		StartCoroutine (waitAndRestart());
+
+	}
 	IEnumerator waitAndRestart(){
 
 		//fadeOutScript.isEnded = true;
@@ -402,12 +649,23 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		if(!disableAds)Advertisement.Show ();
+		//- if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
 
 
 
 
-		//yield return new WaitForSeconds (2f);
+		if (isQuickRestart) {
+			
+			fadeOutScript.isStarted = true;
+			//fadeOutScript.isEnded = true;
+
+			yield return new WaitForSeconds (1f);
+
+		
+		}
+
+		if(countPlays >= 3)yield return new WaitForSeconds (2f);
+
 		adsDone = true;
 		//Application.LoadLevel (0);
 		yield return null;

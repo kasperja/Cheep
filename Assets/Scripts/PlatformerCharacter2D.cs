@@ -53,7 +53,7 @@ using System.Collections;
 	public GameObject groundSpawnNorm;
 	public GameObject groundSpawnBoss;
 
-	public float boostOrig = 10f;
+	public float boostOrig = 20f;
 
 	private float acceleration = 4f;
 
@@ -82,6 +82,19 @@ using System.Collections;
 	public bool feedbackOnce = true;
 	public bool feedbackOnceTwo = true;
 
+	public bool groundOnce = true;
+
+	public bool airActive = false;
+
+	public DestroyerScript destroyerScript;
+
+	public bool speedDeathOnce = true;
+
+	public bool isRocket = false;
+	private bool isRocketOnce = true;
+	public GameObject alwaysGround;
+	public ParticleSystem rocketParticle;
+
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -106,7 +119,19 @@ using System.Collections;
 		}
 	}
 
+	public void DisableAllObjects()
+	{
+		gameObjects = GameObject.FindGameObjectsWithTag ("Obstacle");
+
+		for(var i = 0 ; i < gameObjects.Length ; i ++)
+		{
+			gameObjects [i].GetComponent<BoxCollider2D> ().isTrigger = true;
+		}
+	}
+
 	void Start(){
+
+		ES2.Save (1, "prevScene");
 
 		feedbackMesh.gameObject.SetActive (false);
 		origAmmount = hudScriptPoints.scoreOverTimeAmmount;
@@ -114,6 +139,51 @@ using System.Collections;
 	}
 
 		void Update(){
+
+		if (gameObject.GetComponent<Rigidbody2D>().velocity.x < 8f && speedDeathOnce) {
+		
+			StartCoroutine (waitDeathOfSpeed ());
+
+			speedDeathOnce = false;
+		
+		}
+
+		/*if (!m_Grounded && groundOnce) {
+		
+			StartCoroutine (waitGround ());
+
+			groundOnce = false;
+		
+		}*/
+
+		if (isRocket) {
+
+			if (isRocketOnce) {
+
+				rocketParticle.Play ();
+
+				StartCoroutine (waitRocket());
+
+				isRocketOnce = false;
+
+			}
+
+			alwaysGround.SetActive (true);
+			if (Time.timeScale < 5f)
+				Time.timeScale += 1f * Time.deltaTime;
+		
+		} else {
+		
+
+			if (Time.timeScale > 1f)
+				Time.timeScale -= 0.5f *Time.deltaTime;
+		
+		}
+
+		if (Time.timeScale <= 1f) {
+			alwaysGround.SetActive (false);
+			rocketParticle.Stop ();
+		}
 
 		if(feedbackTap && feedbackOnce){
 			
@@ -191,7 +261,7 @@ using System.Collections;
 		
 		}
 
-		/*if (boostActivate) {
+		if (boostActivate) {
 		
 			DestroyAllObjects ();
 
@@ -206,8 +276,8 @@ using System.Collections;
 		
 		
 		
-		}*/
-
+		}
+	
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
 
@@ -240,7 +310,13 @@ using System.Collections;
 		}
         private void FixedUpdate()
         {
-            m_Grounded = false;
+		if (groundOnce) {
+			StartCoroutine (waitGround ());
+			groundOnce = false;
+		
+		}
+
+		if(gameObject.GetComponent<Rigidbody2D>().velocity.y < -4f)m_Grounded = false;
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -274,17 +350,17 @@ using System.Collections;
 								
 				    
             }
-		if (!isDead && !boostActivate) {
-			if (m_MaxSpeed > 10f && decreaseSpeed)
+		if (!isDead && !boostActivate && !isRocket) {
+			if (m_MaxSpeed > 20f && decreaseSpeed)
 				boostOrig -= acceleration * 10f *Time.deltaTime;
 
-			if (boostOrig > 10f && decreaseSpeed)
+			if (boostOrig > 20f && decreaseSpeed)
 				boostOrig -= acceleration * 10f * Time.deltaTime;
 
-			if (m_MaxSpeed < 15f && !decreaseSpeed)
+			if (m_MaxSpeed < 25f && !decreaseSpeed)
 				m_MaxSpeed += acceleration * Time.deltaTime;
 
-			if (boostOrig < 15f && !decreaseSpeed)
+			if (boostOrig < 25f && !decreaseSpeed)
 				boostOrig += acceleration * Time.deltaTime;
 
 		} else if(isDead){
@@ -318,6 +394,8 @@ using System.Collections;
 		}
 
 
+
+
         public void Move(float move, bool crouch, bool jump)
         {
             // If crouching, check to see if the character can stand up
@@ -336,6 +414,8 @@ using System.Collections;
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
+
+			airActive = false;
                 // Reduce the speed if crouching by the crouchSpeed multiplier
                 move = (crouch ? move*m_CrouchSpeed : move);
 
@@ -378,14 +458,17 @@ using System.Collections;
 
 			}
 				
-                m_Grounded = false;
+               // m_Grounded = false;
+
 			skiingSound.Stop ();
-                m_Anim.SetBool("Ground", false);
+
+			StartCoroutine (waitGround ());
+
 				
 
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0);
 
-                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce), ForceMode2D.Impulse);
 
 
 			
@@ -530,6 +613,53 @@ using System.Collections;
 		feedbackOnceTwo = true;
 
 
+	}
+
+	IEnumerator waitGround(){
+
+		groundOnce = false;
+
+		yield return new WaitForSeconds (0.04f);
+
+		m_Grounded = false;
+		m_Anim.SetBool("Ground", false);
+
+		yield return new WaitForSeconds (0.1f);
+
+		//groundOnce = false;
+
+
+	}
+
+
+
+	IEnumerator waitDeathOfSpeed(){
+
+
+
+		yield return new WaitForSeconds (2f);
+
+		if (gameObject.GetComponent<Rigidbody2D> ().velocity.x < 8f) {
+		
+			destroyerScript.dieBool = true;
+
+		
+		} else {
+		
+			speedDeathOnce = true;
+
+		}
+
+
+
+	}
+
+	IEnumerator waitRocket(){
+	
+		yield return new WaitForSeconds (4f);
+
+		isRocket = false;
+		isRocketOnce = true;
 	}
 
 	}

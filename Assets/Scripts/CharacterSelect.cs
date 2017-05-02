@@ -10,8 +10,16 @@ public class CharacterSelect : MonoBehaviour {
 
 	public GameObject char1;
 	public GameObject char2;
+
+	public Transform[] newPos;
+	public ParticleSystem selectParticles;
+
+
 	// Use this for initialization
 	void Start () {
+
+
+
 
 		if (ES2.Exists ("currentChar")) {
 
@@ -24,7 +32,10 @@ public class CharacterSelect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		
+
+
+
+
 	}
 
 	public void SelectChar(){
@@ -33,4 +44,18 @@ public class CharacterSelect : MonoBehaviour {
 
 	
 	}
+	public void SelectParticleFunction(int i){
+
+
+
+
+		selectParticles.transform.position = newPos [i].transform.position;
+
+
+	}
+
+
+
+
+
 }

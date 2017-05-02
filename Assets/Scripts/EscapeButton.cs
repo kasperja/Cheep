@@ -18,8 +18,16 @@ public class EscapeButton : MonoBehaviour {
 
 	public void QuitPressed(){
 	
+		StartCoroutine (QuitNum ());
+
+	
+	}
+
+	IEnumerator QuitNum(){
 		buttonSound.Play ();
+		yield return new WaitForSeconds (0.3f);
 		Application.Quit();
+		//yield return null;
 	
 	}
 }

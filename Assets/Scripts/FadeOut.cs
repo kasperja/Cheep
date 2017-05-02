@@ -12,6 +12,7 @@ public class FadeOut : MonoBehaviour {
 	public Color col2;
 	private float t = 0f;
 	private float t2 = 0f;
+	public float fadeSpeed = 2f;
 	//public AudioSource music;
 	//public MusicStart mStart;
 
@@ -40,7 +41,7 @@ public class FadeOut : MonoBehaviour {
 
 			//if(isStartScreen)music.volume -= 2f * Time.deltaTime;
 
-			t += 2f * Time.deltaTime;
+			t += fadeSpeed * Time.deltaTime;
 
 			image.color = Color.Lerp(col1, col2, t);
 		
@@ -49,7 +50,7 @@ public class FadeOut : MonoBehaviour {
 			
 			//if(!isStartScreen)music.volume -= 2f * Time.deltaTime;
 
-			t2 += 2f * Time.deltaTime;
+			t2 += fadeSpeed * Time.deltaTime;
 
 			image.color = Color.Lerp(col2, col1, t2);
 		

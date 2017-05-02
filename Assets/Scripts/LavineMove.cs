@@ -49,6 +49,13 @@ public class LavineMove : MonoBehaviour {
 	private Color colFeedbackText;
 
 	public bool tapTapReady = false;
+
+	private bool slowMotionBool = false;
+	private float timeScaler = 1f;
+
+	public bool isRocket = false;
+
+	private bool rocketOnce = true;
 	// Use this for initialization
 	void Start () {
 
@@ -57,7 +64,7 @@ public class LavineMove : MonoBehaviour {
 
 
 		transform.localPosition = beginPos.localPosition;
-		StartCoroutine (setRollingTrue ());
+		//StartCoroutine (setRollingTrue ());
 
 	}
 
@@ -71,13 +78,38 @@ public class LavineMove : MonoBehaviour {
 		
 		}*/
 
+		if (Time.timeScale <= 1f && rocketOnce) {
+		
+			StartCoroutine (setRollingTrue ());
+			rocketOnce = false;
+		
+		}
+
+		if (pc2D.isRocket) {
+		
+			rocketOnce = true;
+		
+		}
+
+		//Time.timeScale = timeScaler;
+
+		if (slowMotionBool && !isRocket && Time.timeScale <= 1f) {
+		
+			if(timeScaler > 0.5f) timeScaler -= 1f * Time.deltaTime;
+
+		} else {
+		
+			if(timeScaler < 1f) timeScaler += 1f * Time.deltaTime;
+		
+		}
+
 		if (isDeadByLavine) {
 			
 			transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
 		
 		}
 
-		if(transform.position.x <= beginPos.position.x) {
+		if(transform.position.x <= beginPos.position.x  || Time.timeScale > 1f) {
 			
 			transform.position = beginPos.position;
 		
@@ -85,10 +117,23 @@ public class LavineMove : MonoBehaviour {
 
 		speed = pc2D.m_MaxSpeed;
 
+		/*
+		if (transform.position.x > beginPos.position.x && !isDeadByLavine && Time.timeScale > 1f) {
+			if (speed < 9f) {
 
-		if (isRolling) {
+				transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
+				//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed * 2f * Time.deltaTime);
 
+			} else if(!isDeadByLavine){
 
+				transform.position -= new Vector3 (5f, 0, 0) * Time.deltaTime;
+				//transform.position = Vector3.MoveTowards (transform.position, beginPos.position, speed * Time.deltaTime);
+
+			}
+
+		}else */if (isRolling && Time.timeScale <= 1f) {
+
+			pc2D.boostActivate = true;
 
 			if (tapTapReady) {
 				
@@ -132,15 +177,15 @@ public class LavineMove : MonoBehaviour {
 
 
 
-			if (transform.position.x < endPos.position.x) {
+			if (transform.position.x < endPos.position.x && Time.timeScale <=1f) {
 				if (speed < 9f && !pc2D.isDead) {
 
-					transform.position += new Vector3 (5f, 0, 0) * Time.deltaTime;
+					transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
 					//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed / 200f * 2f * Time.deltaTime);
 
 				} else if (!pc2D.isDead) {
 
-					transform.position += new Vector3 (5f, 0, 0) * Time.deltaTime;
+					transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
 					//	transform.position = Vector3.MoveTowards (transform.position, endPos.position, speed * 200f * Time.deltaTime);
 
 				}
@@ -152,7 +197,8 @@ public class LavineMove : MonoBehaviour {
 					StartCoroutine (vibrateNum ());
 
 					//StartCoroutine (waitForRoll ());
-
+					bossSpawn.SetActive (true);
+					normSpawn.SetActive (false);
 				
 					deactivateOnce = true;
 					//pc2D.DestroyAllObjects ();
@@ -176,9 +222,12 @@ public class LavineMove : MonoBehaviour {
 
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
 
+				isRolling = false;
+				pc2D.boostActivate = false;
+				slowMotionBool = true;
 				pc2D.feedbackTap = true;
 				//Debug.Log ("deactivated");
-				Handheld.Vibrate();
+				//- Handheld.Vibrate();
 				powerUpSpawn.SetActive (true);
 				powerUpSuperSpawn.SetActive (true);
 				powerUpTopSpawn.SetActive (true);
@@ -229,15 +278,15 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (6f);
 
 
-		isRolling = true;
+		if(Time.timeScale <=1f)isRolling = true;
 
 		yield return new WaitForSeconds (2f);
 
-		spamActive = true;
+		if(Time.timeScale <=1f)spamActive = true;
 
-		tapTapReady = true;
+		if(Time.timeScale <=1f)tapTapReady = true;
 
-		Handheld.Vibrate();
+		//- if(Time.timeScale <=1f)Handheld.Vibrate();
 
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
 		//rollOnce = true;
@@ -270,7 +319,7 @@ public class LavineMove : MonoBehaviour {
 
 		destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
-		Handheld.Vibrate ();
+	//-	Handheld.Vibrate ();
 
 	
 	}
@@ -310,7 +359,7 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.6f);
 
 
-		Handheld.Vibrate ();
+//-		Handheld.Vibrate ();
 
 
 
@@ -319,29 +368,49 @@ public class LavineMove : MonoBehaviour {
 	}
 
 	IEnumerator setRollingTrue(){
-	
+
 		tapTapReady = false;
 
 		pc2D.feedbackOnce = true;
 		pc2D.feedbackOnceTwo = true;
 
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (0.7f);
+		slowMotionBool = false;
+		yield return new WaitForSeconds (2.3f);
 		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
+
 
 		if (lavineTest) {
 			yield return new WaitForSeconds (0f);
 		} else {
 			yield return new WaitForSeconds (Random.Range (25f, 35f));
 		}
+
+		if(Time.timeScale <=1f){
+
 		rollOnce = true;
 
 
 
-		StartCoroutine (waitForRoll ());
+		if (!isRocket && Time.timeScale <=1f) {
+				if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
+		} else {
+		
+			yield return new WaitForSeconds (Random.Range (5f, 10f));
+			if (Time.timeScale <= 1f) {
+					if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
+			} else {
+				yield return new WaitForSeconds (Random.Range (5f, 10f));
+					if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
+			
+			}
+			deactivateOnce = true;
+		
+		}
 
 
 		//isRolling = true;
-
+		}
 	
 	}
 

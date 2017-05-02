@@ -1,6 +1,8 @@
 ﻿
 @MenuItem("Project Tools/Make Prefab")
 
+
+
 static function CreatePrefab()
 {
 	var sel = Selection.gameObjects;

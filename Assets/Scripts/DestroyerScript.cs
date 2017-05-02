@@ -19,6 +19,8 @@ public class DestroyerScript : MonoBehaviour {
 	public GameObject graphicsPlayer;
 	public GameObject graphicsLizard;
 
+	//public ObjectPoolManager objm;
+
 	void Update(){
 	
 		/*if (fadeMusic) {
@@ -29,7 +31,7 @@ public class DestroyerScript : MonoBehaviour {
 
 
 		if (dieBool && dieOnce) {
-		
+			Time.timeScale = 1f;
 			pc2d.isDead = true;
 			pc2d.m_MaxSpeed = 0f;
 			deathParticle.Play ();
@@ -57,10 +59,12 @@ public class DestroyerScript : MonoBehaviour {
 
 		if (other.gameObject.transform.parent) {
 
+			//objm.Release (other.gameObject.transform.parent.gameObject);
 			Destroy (other.gameObject.transform.parent.gameObject);
 
 		} else {
 
+			//objm.Release (other.gameObject);
 			Destroy (other.gameObject);
 		
 		}

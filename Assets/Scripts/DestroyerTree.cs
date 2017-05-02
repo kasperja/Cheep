@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyerTree : MonoBehaviour {
 
+	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +19,7 @@ public class DestroyerTree : MonoBehaviour {
 
 		//Debug.Log ("tree!");
 
+		//objm.Release (other.gameObject);
 		Destroy (other.gameObject);
 
 		

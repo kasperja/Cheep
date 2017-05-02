@@ -12,20 +12,28 @@ public class SpawnScript : MonoBehaviour {
 	private bool spawnReady = false;
 	private bool spawnReadyOnce = true;
 	private bool coOnce = true;
+	public bool spawnBoundsR = true;
+	private bool spawnReadyFront = false;
 
+
+	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
 
+
+		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		//Spawn ();
 
 	}
 
 	void Update(){
+
+
 	
 		spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
 		spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
 
-		if (spawnReady && spawnReadyOnce) {
+		if (spawnReady && spawnReadyOnce && spawnBoundsR) {
 			
 			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 			spawnReadyOnce = false;
@@ -47,9 +55,12 @@ public class SpawnScript : MonoBehaviour {
 	}
 	public void Spawn(){
 
-			
-			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-		
+
+		if(spawnBoundsR && spawnReadyFront)Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
+
+		spawnReadyFront = true;
+
 		if (coOnce) {
 			StartCoroutine (waitStart ());
 			coOnce = false;
