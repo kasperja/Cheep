@@ -261,7 +261,7 @@ using System.Collections;
 		
 		}
 
-		/*if (boostActivate) {
+		if (boostActivate) {
 		
 			DestroyAllObjects ();
 
@@ -276,8 +276,8 @@ using System.Collections;
 		
 		
 		
-		}*/
-
+		}
+	
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
 
