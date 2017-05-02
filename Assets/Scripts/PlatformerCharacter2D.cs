@@ -53,7 +53,7 @@ using System.Collections;
 	public GameObject groundSpawnNorm;
 	public GameObject groundSpawnBoss;
 
-	public float boostOrig = 10f;
+	public float boostOrig = 20f;
 
 	private float acceleration = 4f;
 
@@ -351,16 +351,16 @@ using System.Collections;
 				    
             }
 		if (!isDead && !boostActivate && !isRocket) {
-			if (m_MaxSpeed > 10f && decreaseSpeed)
+			if (m_MaxSpeed > 20f && decreaseSpeed)
 				boostOrig -= acceleration * 10f *Time.deltaTime;
 
-			if (boostOrig > 10f && decreaseSpeed)
+			if (boostOrig > 20f && decreaseSpeed)
 				boostOrig -= acceleration * 10f * Time.deltaTime;
 
-			if (m_MaxSpeed < 15f && !decreaseSpeed)
+			if (m_MaxSpeed < 25f && !decreaseSpeed)
 				m_MaxSpeed += acceleration * Time.deltaTime;
 
-			if (boostOrig < 15f && !decreaseSpeed)
+			if (boostOrig < 25f && !decreaseSpeed)
 				boostOrig += acceleration * Time.deltaTime;
 
 		} else if(isDead){

@@ -13,6 +13,7 @@ public class SpawnScript : MonoBehaviour {
 	private bool spawnReadyOnce = true;
 	private bool coOnce = true;
 	public bool spawnBoundsR = true;
+	private bool spawnReadyFront = false;
 
 
 	//public ObjectPoolManager objm;
@@ -55,9 +56,11 @@ public class SpawnScript : MonoBehaviour {
 	public void Spawn(){
 
 
-		if(spawnBoundsR)Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+		if(spawnBoundsR && spawnReadyFront)Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
 		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
-		
+
+		spawnReadyFront = true;
+
 		if (coOnce) {
 			StartCoroutine (waitStart ());
 			coOnce = false;

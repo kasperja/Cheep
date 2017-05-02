@@ -180,12 +180,12 @@ public class LavineMove : MonoBehaviour {
 			if (transform.position.x < endPos.position.x && Time.timeScale <=1f) {
 				if (speed < 9f && !pc2D.isDead) {
 
-					transform.position += new Vector3 (5f, 0, 0) * Time.deltaTime;
+					transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
 					//transform.position = Vector3.MoveTowards (transform.position, endPosDeath.position, speed / 200f * 2f * Time.deltaTime);
 
 				} else if (!pc2D.isDead) {
 
-					transform.position += new Vector3 (5f, 0, 0) * Time.deltaTime;
+					transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
 					//	transform.position = Vector3.MoveTowards (transform.position, endPos.position, speed * 200f * Time.deltaTime);
 
 				}
@@ -283,7 +283,7 @@ public class LavineMove : MonoBehaviour {
 
 		if(Time.timeScale <=1f)tapTapReady = true;
 
-		if(Time.timeScale <=1f)Handheld.Vibrate();
+		//- if(Time.timeScale <=1f)Handheld.Vibrate();
 
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
 		//rollOnce = true;
@@ -316,7 +316,7 @@ public class LavineMove : MonoBehaviour {
 
 		destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
-		Handheld.Vibrate ();
+	//-	Handheld.Vibrate ();
 
 	
 	}
@@ -356,7 +356,7 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.6f);
 
 
-		Handheld.Vibrate ();
+//-		Handheld.Vibrate ();
 
 
 
