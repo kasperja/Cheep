@@ -27,7 +27,9 @@ public class RotateCam : MonoBehaviour {
 	private bool now = false;
 	private bool nowOnce = true;
 
-	public bool curveEnabled = false;
+	private bool curveEnabled = true;
+
+	private bool changeSmooth = false;
 
 	// Use this for initialization
 	void Start () {
@@ -55,13 +57,13 @@ public class RotateCam : MonoBehaviour {
 		}
 
 
-		if (curveEnabled && !down && curvature > -0.01f) {
+		if (curveEnabled && !down && curvature > -0.002f) {
 		
-			curvature -= 0.002f * Time.deltaTime;
+			curvature -= 0.008f * Time.deltaTime;
 		
-		} else if (curveEnabled && down && curvature < 0.01f) {
+		} else if (curveEnabled && down && curvature < 0.002f) {
 		
-			curvature += 0.002f * Time.deltaTime;
+			curvature += 0.008f * Time.deltaTime;
 		
 		} else if(!curveEnabled){
 		
@@ -72,6 +74,7 @@ public class RotateCam : MonoBehaviour {
 		curvedMat.SetFloat("_Curvature", curvature);
 		curvedTrailMat.SetFloat("_Curvature", curvature);
 		curvedTrailMatLizard.SetFloat("_Curvature", curvature);
+
 
 		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {
 		
@@ -129,11 +132,26 @@ public class RotateCam : MonoBehaviour {
 			down = false;
 		}
 
+		if (changeSmooth) {
+		
+			float angleOrig = angleMultiplier;
+			if (angleMultiplier > -angleOrig) {
+			
+				angleMultiplier -= 0.5f * Time.deltaTime;
+			
+			} else {
+			
+				changeSmooth = false;
+			
+			}
+		
+		}
+
 		if(t < 1f)t += 0.5f * Time.deltaTime;
 
 		if (((gameObject.transform.rotation.eulerAngles.z >= maxAngle || gameObject.transform.rotation.eulerAngles.z <= minAngle)) && changeDirection) {
 
-
+			changeSmooth = true;
 			angleMultiplier = -angleMultiplier;
 
 				

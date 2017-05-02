@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.Advertisements;
+//- using UnityEngine.Advertisements;
 
 
 public class GameOverScript : MonoBehaviour {
@@ -595,6 +595,7 @@ public class GameOverScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.Return) /*|| (Input.touchCount > 0) && Input.GetTouch(0).phase == TouchPhase.Began*/) {
 		
 			click.Play ();
+			isQuickRestart = true;
 			StartCoroutine (waitAndRestart());
 
 		}
@@ -602,7 +603,7 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone && !Advertisement.isShowing)) {
+		if ((adsDone /* && !Advertisement.isShowing*/)) {
 			
 			if (isQuickRestart) {
 				Application.LoadLevel (1);
@@ -648,7 +649,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
+		//- if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
 
 
 

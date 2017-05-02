@@ -8,6 +8,7 @@ public class TreeRotation : MonoBehaviour {
 	private Transform target;
 	//public float speed = 10f;
 	//public RotateCam rCam;
+	public bool isFG = false;
 	// Use this for initialization
 	void Start () {
 
@@ -20,7 +21,13 @@ public class TreeRotation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.rotation = new Quaternion(0f, 0f, target.rotation.z - target.rotation.z / 10f, 1f);
+		if (!isFG) {
+			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 10f, 1f);
+		} else {
+		
+			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
+		
+		}
 		//transform.LookAt (new Vector3(transform.position.x, transform.position.z + 1000000f, -transform.position.y), Vector3.up);
 		//transform.RotateAround(gameObject.transform.position, Vector3.forward, target.transform.rotation.z);
 

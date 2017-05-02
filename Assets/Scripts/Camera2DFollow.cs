@@ -16,6 +16,7 @@ namespace UnityStandardAssets._2D
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
 
+		public PlatformerCharacter2D pc2D;
         // Use this for initialization
         private void Start()
         {
@@ -28,6 +29,8 @@ namespace UnityStandardAssets._2D
         // Update is called once per frame
         private void Update()
         {
+			if (pc2D.isDead)
+				damping += 50f * Time.deltaTime;
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - m_LastTargetPosition).x;
 
