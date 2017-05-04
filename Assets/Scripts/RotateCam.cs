@@ -19,6 +19,7 @@ public class RotateCam : MonoBehaviour {
 	public LavineMove lavineScript;
 	public Transform backpos;
 	public Transform normPos;
+	public Transform zoomOutPos;
 
 	public Material curvedMat;
 	public Material curvedTrailMat;
@@ -31,6 +32,9 @@ public class RotateCam : MonoBehaviour {
 
 	private bool changeSmooth = false;
 
+	public bool zoomOut = false;
+	private Transform normOrig;
+
 	// Use this for initialization
 	void Start () {
 
@@ -38,12 +42,62 @@ public class RotateCam : MonoBehaviour {
 		minAngle = Random.Range (-5f, 5f);
 		origMaxAngle = maxAngle;
 		origMinAngle = minAngle;
-	
+		normOrig = normPos;
+		transform.position = normPos.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		if (pc2D.isDead) {
+			
+			transform.position = Vector3.MoveTowards (transform.position, normPos.position, 7f * Time.deltaTime);
+
+
+		} else if(!lavineScript.spamActive){
+		
+			if (zoomOut && !lavineScript.spamActive) {
+
+				//	normPos = zoomOutPos;
+
+				transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, 7f * Time.deltaTime);
+
+				/*if(!lavineScript.spamActive && transform.position.z > zoomOutPos.position.z){
+
+				//transform.position -= new Vector3 (0f,0f,6f) * Time.deltaTime;
+
+
+
+			}*/
+
+				/*
+			if(!lavineScript.spamActive && transform.position.y < zoomOutPos.position.y){
+
+				transform.position += new Vector3 (0f,6f,0f) * Time.deltaTime;
+				//transform.position = Vector3.MoveTowards(transform.position, zoomOutPos, 4f*Time.deltaTime);
+
+			}*/
+
+			} else {
+		
+				//	normPos = normOrig;
+				transform.position = Vector3.MoveTowards (transform.position, normPos.position, 7f * Time.deltaTime);
+				/*if(!lavineScript.spamActive && transform.position.z < normPos.position.z){
+
+				transform.position += new Vector3 (0f,0f,6f) * Time.deltaTime;
+
+
+			}
+			if(!lavineScript.spamActive && transform.position.y > normPos.position.y){
+
+				transform.position -= new Vector3 (0f,6f,0f) * Time.deltaTime;
+
+
+			}*/
+
+
+			}
+		}
 		if (changeDirection) {
 		
 			now = true;
@@ -87,25 +141,22 @@ public class RotateCam : MonoBehaviour {
 
 		}
 
-		if (lavineScript.spamActive && transform.position.z < backpos.position.z) {
 
-			transform.position += new Vector3 (0f,0f,4f) * Time.deltaTime;
+			if (lavineScript.spamActive && transform.position.z < backpos.position.z) {
 
-		}else if(!lavineScript.spamActive && transform.position.z > normPos.position.z){
+				transform.position += new Vector3 (0f, 0f, 4f) * Time.deltaTime;
 
-			transform.position -= new Vector3 (0f,0f,4f) * Time.deltaTime;
+			} /*else if (!lavineScript.spamActive && transform.position.z > normPos.position.z) {
+
+				transform.position -= new Vector3 (0f, 0f, 4f) * Time.deltaTime;
 
 
-		}
+			}*/
+		
 
 		if (lavineScript.spamActive && transform.position.y > backpos.position.y) {
 
 			transform.position -= new Vector3 (0f,4f,0f) * Time.deltaTime;
-
-		}else if(!lavineScript.spamActive && transform.position.y < normPos.position.y){
-
-			transform.position += new Vector3 (0f,4f,0f) * Time.deltaTime;
-
 
 		}
 
