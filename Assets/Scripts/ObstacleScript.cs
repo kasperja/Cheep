@@ -21,7 +21,7 @@ public class ObstacleScript : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") {
 
-			Debug.Log (pc2D.isRocket);
+			//Debug.Log (pc2D.isRocket);
 			
 			//iTween.PunchScale(this.gameObject,new Vector3(0.2f,0.2f,0.2f), 1f);
 			//this.gameObject.GetComponent<AudioSource>().Play();

@@ -95,6 +95,10 @@ using System.Collections;
 	public GameObject alwaysGround;
 	public ParticleSystem rocketParticle;
 
+	public RotateCam rCam;
+	public GameObject feedBackTxt;
+
+	public SpawnScript rocketSpawn;
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -158,7 +162,11 @@ using System.Collections;
 
 		if (isRocket) {
 
+			rocketSpawn.spawnRocketDisable = true;
+
 			if (isRocketOnce) {
+
+
 
 				rocketParticle.Play ();
 
@@ -169,11 +177,11 @@ using System.Collections;
 			}
 
 			alwaysGround.SetActive (true);
-			if (Time.timeScale < 5f)
+			if (Time.timeScale < 4f)
 				Time.timeScale += 1f * Time.deltaTime;
 		
 		} else {
-		
+			rocketSpawn.spawnRocketDisable = false;
 
 			if (Time.timeScale > 1f)
 				Time.timeScale -= 0.5f *Time.deltaTime;
@@ -187,7 +195,7 @@ using System.Collections;
 
 		if(feedbackTap && feedbackOnce){
 			
-			feedbackMesh.gameObject.SetActive (true);
+			if(!isRocket)feedbackMesh.gameObject.SetActive (true);
 			if (randomFloat < 1f) {
 
 
@@ -261,7 +269,7 @@ using System.Collections;
 		
 		}
 
-		if (boostActivate) {
+		/*if (boostActivate) {
 		
 			DestroyAllObjects ();
 
@@ -276,7 +284,7 @@ using System.Collections;
 		
 		
 		
-		}
+		}*/
 	
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
@@ -311,6 +319,7 @@ using System.Collections;
         private void FixedUpdate()
         {
 		if (groundOnce) {
+			
 			StartCoroutine (waitGround ());
 			groundOnce = false;
 		
@@ -343,7 +352,7 @@ using System.Collections;
 					
 
 					m_Grounded = true;
-
+				//rCam.zoomOut = false;
 					
 
 				}
@@ -482,12 +491,14 @@ using System.Collections;
 				//if (!m_Grounded) {
 					
 			if ((!m_Anim.IsInTransition (0) || !m_Anim.IsInTransition (1)||!m_Anim.IsInTransition (2)) && shiftAnimOnce) {
-				
+
+				//rCam.zoomOut = true;
 				m_Anim.SetBool ("doubleJump", true);
 				shiftAnimOnce = false;
 
 			} else {
-				
+
+				//rCam.zoomOut = false;
 				m_Anim.SetBool ("doubleJump", false);
 				shiftAnimOnce = false;
 
@@ -657,6 +668,7 @@ using System.Collections;
 	IEnumerator waitRocket(){
 	
 		yield return new WaitForSeconds (4f);
+
 
 		isRocket = false;
 		isRocketOnce = true;
