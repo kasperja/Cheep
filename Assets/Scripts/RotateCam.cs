@@ -24,6 +24,9 @@ public class RotateCam : MonoBehaviour {
 	public Material curvedMat;
 	public Material curvedTrailMat;
 	public Material curvedTrailMatLizard;
+	public Material curvedTrailMatAlien;
+	public Material curvedTrailMatCat;
+	public Material curvedTrailMatHippo;
 	private float curvature;
 	private bool now = false;
 	private bool nowOnce = true;
@@ -128,6 +131,9 @@ public class RotateCam : MonoBehaviour {
 		curvedMat.SetFloat("_Curvature", curvature);
 		curvedTrailMat.SetFloat("_Curvature", curvature);
 		curvedTrailMatLizard.SetFloat("_Curvature", curvature);
+		curvedTrailMatAlien.SetFloat("_Curvature", curvature);
+		curvedTrailMatCat.SetFloat("_Curvature", curvature);
+		curvedTrailMatHippo.SetFloat("_Curvature", curvature);
 
 
 		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {

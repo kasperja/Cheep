@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: 8019e1f08a3f81648afcd5fc8a53e21a
+timeCreated: 1493970185
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hippo-jump03-0000
+    21300002: hippo-jump03-0001
+    21300004: hippo-jump03-0002
+    21300006: hippo-jump03-0003
+    21300008: hippo-jump03-0004
+    21300010: hippo-jump03-0005
+    21300012: hippo-jump03-0006
+    21300014: hippo-jump03-0007
+    21300016: hippo-jump03-0008
+    21300018: hippo-jump03-0009
+    21300020: hippo-jump03-0010
+    21300022: hippo-jump03-0011
+    21300024: hippo-jump03-0012
+    21300026: hippo-jump03-0013
+    21300028: hippo-jump03-0014
+    21300030: hippo-jump03-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hippo-jump03-0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1599
+        width: 393
+        height: 448
+      alignment: 9
+      pivot: {x: 0.44020355, y: 0.5223214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0001
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1597
+        width: 398
+        height: 450
+      alignment: 9
+      pivot: {x: 0.43467337, y: 0.5222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0002
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1598
+        width: 393
+        height: 449
+      alignment: 9
+      pivot: {x: 0.44020355, y: 0.5233853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0003
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1608
+        width: 399
+        height: 439
+      alignment: 9
+      pivot: {x: 0.43358395, y: 0.5353075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0004
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1609
+        width: 411
+        height: 438
+      alignment: 9
+      pivot: {x: 0.42822385, y: 0.53652966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1149
+        width: 393
+        height: 446
+      alignment: 9
+      pivot: {x: 0.43765903, y: 0.52242154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0006
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1154
+        width: 393
+        height: 441
+      alignment: 9
+      pivot: {x: 0.43765903, y: 0.53968257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0007
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1149
+        width: 393
+        height: 446
+      alignment: 9
+      pivot: {x: 0.43765903, y: 0.5336323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0008
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1158
+        width: 400
+        height: 437
+      alignment: 9
+      pivot: {x: 0.435, y: 0.5331808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0009
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1147
+        width: 393
+        height: 448
+      alignment: 9
+      pivot: {x: 0.43765903, y: 0.53125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0010
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 694
+        width: 393
+        height: 451
+      alignment: 9
+      pivot: {x: 0.43765903, y: 0.52771616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0011
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 703
+        width: 393
+        height: 442
+      alignment: 9
+      pivot: {x: 0.43765903, y: 0.5271493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0012
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 708
+        width: 401
+        height: 437
+      alignment: 9
+      pivot: {x: 0.43890274, y: 0.5354691}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0013
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 706
+        width: 399
+        height: 439
+      alignment: 9
+      pivot: {x: 0.43358395, y: 0.5353075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0014
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 696
+        width: 394
+        height: 449
+      alignment: 9
+      pivot: {x: 0.44162437, y: 0.5233853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0015
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 242
+        width: 398
+        height: 450
+      alignment: 9
+      pivot: {x: 0.43467337, y: 0.5222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
