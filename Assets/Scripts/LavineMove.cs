@@ -236,7 +236,7 @@ public class LavineMove : MonoBehaviour {
 				slowMotionBool = true;
 				pc2D.feedbackTap = true;
 				//Debug.Log ("deactivated");
-				Handheld.Vibrate();
+				//- Handheld.Vibrate();
 				powerUpSpawn.SetActive (true);
 				powerUpSuperSpawn.SetActive (true);
 				powerUpTopSpawn.SetActive (true);
@@ -295,7 +295,7 @@ public class LavineMove : MonoBehaviour {
 
 		if(Time.timeScale <=1f)tapTapReady = true;
 
-		if(Time.timeScale <=1f)Handheld.Vibrate();
+		//- if(Time.timeScale <=1f)Handheld.Vibrate();
 
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
 		//rollOnce = true;
@@ -328,7 +328,7 @@ public class LavineMove : MonoBehaviour {
 
 		destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
-	Handheld.Vibrate ();
+	//- Handheld.Vibrate ();
 
 	
 	}
@@ -368,7 +368,7 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.6f);
 
 
-		Handheld.Vibrate ();
+	//-	Handheld.Vibrate ();
 
 
 
