@@ -11,7 +11,7 @@ public class SpeedBoosterScript : MonoBehaviour {
 	private bool boostActivate = false;
 	private bool boostDeactivate = false;
 
-	private float speedBoostAmmount = 30f;
+	private float speedBoostAmmount = 20f;
 
 	public ParticleSystem boostParticle;
 
@@ -49,8 +49,8 @@ public class SpeedBoosterScript : MonoBehaviour {
 					speedBoostSound.Play ();
 					soundOnce = false;
 				}
-				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 3f && !pc2D.isDead)
-				if (pc2D.m_MaxSpeed < 30f)
+				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 2f && !pc2D.isDead)
+				if (pc2D.m_MaxSpeed < 20f)
 					pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
 			}
 		
@@ -60,10 +60,10 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 
 			if (!pc2D.isDead) {
-				if (pc2D.m_MaxSpeed > 25f)
+				if (pc2D.m_MaxSpeed > 20f)
 					pc2D.m_MaxSpeed -= speedBoostAmmount * Time.deltaTime;
 			}
-			if (pc2D.m_MaxSpeed <= 25f) {
+			if (pc2D.m_MaxSpeed <= 20f) {
 			
 				boostDeactivate = false;
 				pc2D.boostActivate = false;

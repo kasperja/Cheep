@@ -366,10 +366,10 @@ using System.Collections;
 			if (boostOrig > 20f && decreaseSpeed)
 				boostOrig -= acceleration * 10f * Time.deltaTime;
 
-			if (m_MaxSpeed < 25f && !decreaseSpeed)
+			if (m_MaxSpeed < 20f && !decreaseSpeed)
 				m_MaxSpeed += acceleration * Time.deltaTime;
 
-			if (boostOrig < 25f && !decreaseSpeed)
+			if (boostOrig < 20f && !decreaseSpeed)
 				boostOrig += acceleration * Time.deltaTime;
 
 		} else if(isDead){
