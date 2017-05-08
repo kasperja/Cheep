@@ -9,6 +9,8 @@ public class Countdown : MonoBehaviour {
 	public AudioSource beginSound;
 	public Animator countdownAnimator;
 	public HUDScript hud;
+	public bool isRocket = false;
+	private bool isRocketOnce = true;
 	// Use this for initialization
 	void Start () {
 
@@ -18,6 +20,14 @@ public class Countdown : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (isRocket && isRocketOnce) {
+			
+			StartCoroutine (countdownNumRocket ());
+
+			isRocketOnce = false;
+		
+		}
 		
 	}
 
@@ -34,14 +44,47 @@ public class Countdown : MonoBehaviour {
 		countdownSound.Play ();
 		textM.text = "1";
 		countdownAnimator.SetInteger ("countdown", 1);
-		yield return new WaitForSeconds (1f);
-		beginSound.Play ();
-		textM.text = "GO!";
+		if (!isRocket) {
+			yield return new WaitForSeconds (1f);
+			beginSound.Play ();
+			textM.text = "GO!";
+		}
 		hud.goDone = true;
 		countdownAnimator.SetInteger ("countdown", 0);
-		yield return new WaitForSeconds (1f);
+		if(!isRocket)yield return new WaitForSeconds (1f);
 		textM.text = " ";
+		isRocket = false;
+		isRocketOnce = true;
 
 	
+	}
+	IEnumerator countdownNumRocket(){
+		
+		countdownSound.Play ();
+		textM.text = "3";
+
+		countdownAnimator.SetInteger ("countdown", 3);
+		yield return new WaitForSeconds (1f);
+		countdownSound.Play ();
+		textM.text = "2";
+		countdownAnimator.SetInteger ("countdown", 2);
+		yield return new WaitForSeconds (1f);
+		countdownSound.Play ();
+		textM.text = "1";
+		countdownAnimator.SetInteger ("countdown", 1);
+		//if (!isRocket) {
+			yield return new WaitForSeconds (1f);
+			beginSound.Play ();
+			textM.text = "GO!";
+		//}
+		hud.goDone = true;
+		countdownAnimator.SetInteger ("countdown", 0);
+		yield return new WaitForSeconds (2f);
+		textM.text = " ";
+		isRocket = false;
+		isRocketOnce = true;
+
+
+
 	}
 }

@@ -25,7 +25,7 @@ public class ObstacleScript : MonoBehaviour {
 			
 			//iTween.PunchScale(this.gameObject,new Vector3(0.2f,0.2f,0.2f), 1f);
 			//this.gameObject.GetComponent<AudioSource>().Play();
-			if(Time.timeScale<=1f){
+			if(Time.timeScale<=1f && !pc2D.isRocket){
 
 				dScript.dieBool = true;
 			

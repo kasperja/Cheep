@@ -99,6 +99,7 @@ using System.Collections;
 	public GameObject feedBackTxt;
 
 	public SpawnScript rocketSpawn;
+	public bool rocketActivate = false;
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -177,7 +178,7 @@ using System.Collections;
 			}
 
 			alwaysGround.SetActive (true);
-			if (Time.timeScale < 4f)
+			if (Time.timeScale < 4f && rocketActivate)
 				Time.timeScale += 1f * Time.deltaTime;
 		
 		} else {
@@ -188,7 +189,7 @@ using System.Collections;
 		
 		}
 
-		if (Time.timeScale <= 1f) {
+		if (Time.timeScale <= 1f && !isRocket) {
 			alwaysGround.SetActive (false);
 			rocketParticle.Stop ();
 		}
@@ -669,9 +670,11 @@ using System.Collections;
 	
 		yield return new WaitForSeconds (4f);
 
-
+		rocketActivate = true;
+		yield return new WaitForSeconds (8f);
 		isRocket = false;
 		isRocketOnce = true;
+		rocketActivate = false;
 	}
 
 	}
