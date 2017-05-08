@@ -63,7 +63,7 @@ public class RotateCam : MonoBehaviour {
 
 				//	normPos = zoomOutPos;
 
-				transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, 7f * Time.deltaTime);
+				transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, 5f * Time.deltaTime);
 
 				/*if(!lavineScript.spamActive && transform.position.z > zoomOutPos.position.z){
 
@@ -84,7 +84,7 @@ public class RotateCam : MonoBehaviour {
 			} else {
 		
 				//	normPos = normOrig;
-				transform.position = Vector3.MoveTowards (transform.position, normPos.position, 7f * Time.deltaTime);
+				transform.position = Vector3.MoveTowards (transform.position, normPos.position, 5f * Time.deltaTime);
 				/*if(!lavineScript.spamActive && transform.position.z < normPos.position.z){
 
 				transform.position += new Vector3 (0f,0f,6f) * Time.deltaTime;
