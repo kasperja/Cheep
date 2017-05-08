@@ -11,7 +11,9 @@ public class EdgeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		//transform.position = new Vector3(rCam.transform.position.x, transform.position.y, transform.position.z);
+		//transform.rotation = rCam.transform.rotation;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -47,7 +49,7 @@ public class EdgeScript : MonoBehaviour {
 
 	IEnumerator waitNormPos(){
 	
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (0f);
 		rCam.zoomOut = false;
 		//yield return null;
 	}
