@@ -98,6 +98,8 @@ using System.Collections;
 	public RotateCam rCam;
 	public GameObject feedBackTxt;
 
+	public ShaderVariantCollection preloadedShaders;
+
 	public SpawnScript rocketSpawn;
 	public bool rocketActivate = false;
         private void Awake()
@@ -105,6 +107,8 @@ using System.Collections;
 			Resources.LoadAll ("Textures");
 			Resources.LoadAll ("Sound");
 			Resources.LoadAll ("Prefabs");
+
+			preloadedShaders.WarmUp ();
 
 			Application.targetFrameRate = 60;
             // Setting up references.
