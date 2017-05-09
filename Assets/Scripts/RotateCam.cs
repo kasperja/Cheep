@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RotateCam : MonoBehaviour {
 
-	private float angleMultiplier = 3f;
+	private float angleMultiplier = 1f;
 	public PlatformerCharacter2D pc2D;
 
 	public float angle;
@@ -194,7 +194,7 @@ public class RotateCam : MonoBehaviour {
 			float angleOrig = angleMultiplier;
 			if (angleMultiplier > -angleOrig) {
 			
-				angleMultiplier -= 0.5f * Time.deltaTime;
+				angleMultiplier -= 0.1f * Time.deltaTime;
 			
 			} else {
 			
@@ -204,7 +204,7 @@ public class RotateCam : MonoBehaviour {
 		
 		}
 
-		if(t < 1f)t += 0.5f * Time.deltaTime;
+		if(t < 0.2f)t += 0.1f * Time.deltaTime;
 
 		if (((gameObject.transform.rotation.eulerAngles.z >= maxAngle || gameObject.transform.rotation.eulerAngles.z <= minAngle)) && changeDirection) {
 
