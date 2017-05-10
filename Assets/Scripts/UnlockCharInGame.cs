@@ -144,7 +144,7 @@ public class UnlockCharInGame : MonoBehaviour {
 		popup.SetActive (true);
 
 		unlockSound.Play ();
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (3.5f);
 
 		//txtFade.fadeOut = true;
 
