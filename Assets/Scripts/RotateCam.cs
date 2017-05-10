@@ -54,7 +54,7 @@ public class RotateCam : MonoBehaviour {
 
 		if (pc2D.isDead) {
 			
-			transform.position = Vector3.MoveTowards (transform.position, normPos.position, 7f * Time.deltaTime);
+			transform.position = Vector3.MoveTowards (transform.position, normPos.position, 3f * Time.deltaTime);
 
 
 		} else if(!lavineScript.spamActive){
@@ -63,7 +63,7 @@ public class RotateCam : MonoBehaviour {
 
 				//	normPos = zoomOutPos;
 
-				transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, 13f * Time.deltaTime);
+				transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, 10f * Time.deltaTime);
 
 				/*if(!lavineScript.spamActive && transform.position.z > zoomOutPos.position.z){
 
@@ -84,7 +84,7 @@ public class RotateCam : MonoBehaviour {
 			} else {
 		
 				//	normPos = normOrig;
-				transform.position = Vector3.MoveTowards (transform.position, normPos.position, 10f * Time.deltaTime);
+				transform.position = Vector3.MoveTowards (transform.position, normPos.position, 3f * Time.deltaTime);
 				/*if(!lavineScript.spamActive && transform.position.z < normPos.position.z){
 
 				transform.position += new Vector3 (0f,0f,6f) * Time.deltaTime;
