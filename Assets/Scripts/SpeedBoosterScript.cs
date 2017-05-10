@@ -49,8 +49,8 @@ public class SpeedBoosterScript : MonoBehaviour {
 					speedBoostSound.Play ();
 					soundOnce = false;
 				}
-				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 2f && !pc2D.isDead)
-				if (pc2D.m_MaxSpeed < 20f)
+				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 3f && !pc2D.isDead)
+				if (pc2D.m_MaxSpeed < 25f)
 					pc2D.m_MaxSpeed += speedBoostAmmount * Time.deltaTime;
 			}
 		
@@ -60,10 +60,10 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 
 			if (!pc2D.isDead) {
-				if (pc2D.m_MaxSpeed > 20f)
+				if (pc2D.m_MaxSpeed > 17f)
 					pc2D.m_MaxSpeed -= speedBoostAmmount * Time.deltaTime;
 			}
-			if (pc2D.m_MaxSpeed <= 20f) {
+			if (pc2D.m_MaxSpeed <= 17f) {
 			
 				boostDeactivate = false;
 				pc2D.boostActivate = false;

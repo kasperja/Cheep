@@ -148,7 +148,13 @@ using System.Collections;
 	}
 
 		void Update(){
+		if (!boostActivate) {
+			if (!isDead) {
+				if (m_MaxSpeed > 17f)
+					m_MaxSpeed -= 20f * Time.deltaTime;
+			}
 
+		}
 		if (gameObject.GetComponent<Rigidbody2D>().velocity.x < 8f && speedDeathOnce) {
 		
 			StartCoroutine (waitDeathOfSpeed ());
