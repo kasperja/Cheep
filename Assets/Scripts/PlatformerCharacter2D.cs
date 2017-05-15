@@ -102,6 +102,8 @@ using System.Collections;
 
 	public SpawnScript rocketSpawn;
 	public bool rocketActivate = false;
+	public float jumpCount = 0f;
+
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -259,6 +261,8 @@ using System.Collections;
 
 
 		if (m_Grounded) {
+
+			jumpCount = 0f;
 			
 			m_Anim.speed = animationSpeed;
 		
@@ -400,6 +404,8 @@ using System.Collections;
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 			if (m_Grounded) {
+
+
 			
 				doubleJump = false;
 			m_Anim.SetBool("doubleJump", false);
@@ -463,6 +469,8 @@ using System.Collections;
             {
                 // Add a vertical force to the player.
 
+
+
 			if (randomFloat < 1f) {
 
 
@@ -486,9 +494,17 @@ using System.Collections;
 
 				
 
-				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0);
+			m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0);
 
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce), ForceMode2D.Impulse);
+
+				
+			if (jumpCount > 0f) {
+				m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce / 1.5f), ForceMode2D.Impulse);
+			} else {
+				m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce), ForceMode2D.Impulse);
+			}
+
+			
 
 
 			
@@ -504,10 +520,12 @@ using System.Collections;
 			if ((!m_Anim.IsInTransition (0) || !m_Anim.IsInTransition (1)||!m_Anim.IsInTransition (2)) && shiftAnimOnce) {
 
 				//rCam.zoomOut = true;
+
 				m_Anim.SetBool ("doubleJump", true);
 				shiftAnimOnce = false;
 
 			} else {
+
 
 				//rCam.zoomOut = false;
 				m_Anim.SetBool ("doubleJump", false);
@@ -515,8 +533,11 @@ using System.Collections;
 
 			}
 
+
+
 					doubleJump = true;
 				
+
 				//} else {
 				
 				//	doubleJump = false;
@@ -648,6 +669,7 @@ using System.Collections;
 
 		yield return new WaitForSeconds (0.1f);
 
+		jumpCount = 0f;
 		//groundOnce = false;
 
 

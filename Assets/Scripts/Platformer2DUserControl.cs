@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -33,8 +33,11 @@ namespace UnityStandardAssets._2D
 				
 			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch (0).phase == TouchPhase.Began && Time.timeScale <=1.3f) {
 			
+
+
 				if (!lavineScript.spamActive) {
 					
+					StartCoroutine (waitCountOne ());
 					m_Jump = true;
 					m_Character.feedbackTap = false;
 
@@ -67,8 +70,11 @@ namespace UnityStandardAssets._2D
 			} 
 			if (Input.GetKeyDown (KeyCode.Space) && Time.timeScale <=1.3f) {
 
+
+
 				if (!lavineScript.spamActive) {
-					
+
+					StartCoroutine (waitCountOne ());
 					m_Jump = true;
 					m_Character.feedbackTap = false;
 
@@ -115,5 +121,17 @@ namespace UnityStandardAssets._2D
             m_Character.Move(1, false, m_Jump);
             m_Jump = false;
         }
+
+		IEnumerator waitCountOne(){
+			yield return new WaitForSeconds (0.2f);
+
+			m_Character.jumpCount += 1f;
+
+
+		}
+
+
     }
+
+
 }

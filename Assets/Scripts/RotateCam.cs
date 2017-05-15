@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RotateCam : MonoBehaviour {
 
-	private float angleMultiplier = 1f;
+	private float angleMultiplier = 3f;
 	public PlatformerCharacter2D pc2D;
 
 	public float angle;
@@ -37,9 +37,14 @@ public class RotateCam : MonoBehaviour {
 
 	public bool zoomOut = false;
 	private Transform normOrig;
+	private float zoomSpeed = 0f;
+	public Camera2DFollow c2D;
+	private float origDamp;
 
 	// Use this for initialization
 	void Start () {
+		origDamp = c2D.damping;
+
 
 		maxAngle = Random.Range (50f, 30f);
 		minAngle = Random.Range (-5f, 5f);
@@ -53,17 +58,24 @@ public class RotateCam : MonoBehaviour {
 	void Update () {
 
 		if (pc2D.isDead) {
-			
-			transform.position = Vector3.MoveTowards (transform.position, normPos.position, 3f * Time.deltaTime);
+
+			c2D.damping = 0.5f;
+			c2D.target = zoomOutPos;
+			//transform.position = Vector3.MoveTowards (transform.position, normPos.position, 3f * Time.deltaTime);
 
 
 		} else if(!lavineScript.spamActive){
 		
+			if(!pc2D.isDead)c2D.damping = origDamp;
+
 			if (zoomOut && !lavineScript.spamActive) {
 
+				c2D.target = zoomOutPos;
 				//	normPos = zoomOutPos;
 
-				transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, 10f * Time.deltaTime);
+				if(zoomSpeed < 1f)zoomSpeed += 60f * Time.deltaTime;
+
+				//transform.position = Vector3.MoveTowards (transform.position, zoomOutPos.position, zoomSpeed * Time.deltaTime);
 
 				/*if(!lavineScript.spamActive && transform.position.z > zoomOutPos.position.z){
 
@@ -84,7 +96,11 @@ public class RotateCam : MonoBehaviour {
 			} else {
 		
 				//	normPos = normOrig;
-				transform.position = Vector3.MoveTowards (transform.position, normPos.position, 3f * Time.deltaTime);
+				c2D.target = normPos;
+				if(zoomSpeed > 1f)zoomSpeed -= 10f * Time.deltaTime;
+
+
+				//transform.position = Vector3.MoveTowards (transform.position, normPos.position, zoomSpeed * Time.deltaTime);
 				/*if(!lavineScript.spamActive && transform.position.z < normPos.position.z){
 
 				transform.position += new Vector3 (0f,0f,6f) * Time.deltaTime;
@@ -101,6 +117,8 @@ public class RotateCam : MonoBehaviour {
 
 			}
 		}
+
+
 		if (changeDirection) {
 		
 			now = true;
@@ -136,35 +154,15 @@ public class RotateCam : MonoBehaviour {
 		curvedTrailMatHippo.SetFloat("_Curvature", curvature);
 
 
-		if (lavineScript.spamActive && transform.position.x > backpos.position.x) {
-		
-			transform.position -= new Vector3 (4f,0f,0f) * Time.deltaTime;
-		
-		}else if(!lavineScript.spamActive && transform.position.x < normPos.position.x){
+		if (lavineScript.spamActive) {
+			
 
-			transform.position += new Vector3 (4f,0f,0f) * Time.deltaTime;
+			if(!pc2D.isDead)c2D.damping = 0.9f;
+			
+			
+			c2D.target = backpos;
 
-
-		}
-
-
-			if (lavineScript.spamActive && transform.position.z < backpos.position.z) {
-
-				transform.position += new Vector3 (0f, 0f, 4f) * Time.deltaTime;
-
-			} /*else if (!lavineScript.spamActive && transform.position.z > normPos.position.z) {
-
-				transform.position -= new Vector3 (0f, 0f, 4f) * Time.deltaTime;
-
-
-			}*/
-		
-
-		if (lavineScript.spamActive && transform.position.y > backpos.position.y) {
-
-			transform.position -= new Vector3 (0f,4f,0f) * Time.deltaTime;
-
-		}
+		} 
 
 		angle = gameObject.transform.rotation.eulerAngles.z;
 
