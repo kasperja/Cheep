@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace UnityStandardAssets._2D
-{
+
     public class Camera2DFollow : MonoBehaviour
     {
         public Transform target;
@@ -29,8 +28,8 @@ namespace UnityStandardAssets._2D
         // Update is called once per frame
         private void Update()
         {
-			if (pc2D.isDead)
-				damping += 50f * Time.deltaTime;
+		if (pc2D.isDead)
+				damping = 0.5f;
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - m_LastTargetPosition).x;
 
@@ -53,4 +52,4 @@ namespace UnityStandardAssets._2D
             m_LastTargetPosition = target.position;
         }
     }
-}
+
