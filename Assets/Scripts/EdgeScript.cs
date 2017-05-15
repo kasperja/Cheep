@@ -6,7 +6,7 @@ public class EdgeScript : MonoBehaviour {
 	public RotateCam rCam;
 	// Use this for initialization
 	void Start () {
-		
+		rCam.zoomOut = false;
 	}
 	
 	// Update is called once per frame
@@ -49,7 +49,7 @@ public class EdgeScript : MonoBehaviour {
 
 	IEnumerator waitNormPos(){
 	
-		yield return new WaitForSeconds (0f);
+		yield return new WaitForSeconds (0.2f);
 		rCam.zoomOut = false;
 		//yield return null;
 	}
