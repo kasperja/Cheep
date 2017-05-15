@@ -18,6 +18,9 @@ public class DestroyerScript : MonoBehaviour {
 
 	public GameObject graphicsPlayer;
 	public GameObject graphicsLizard;
+	public GameObject graphicsAlien;
+	public GameObject graphicsCat;
+	public GameObject graphicsHippo;
 
 	//public ObjectPoolManager objm;
 
@@ -38,6 +41,10 @@ public class DestroyerScript : MonoBehaviour {
 			StartCoroutine (waitForDeath ());
 			graphicsPlayer.SetActive (false);
 			graphicsLizard.SetActive (false);
+			graphicsAlien.SetActive (false);
+			graphicsCat.SetActive (false);
+			graphicsHippo.SetActive (false);
+
 			dieOnce = false;
 			//Application.LoadLevel (2);
 		

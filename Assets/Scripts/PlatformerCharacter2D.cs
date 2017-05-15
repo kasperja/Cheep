@@ -95,11 +95,20 @@ using System.Collections;
 	public GameObject alwaysGround;
 	public ParticleSystem rocketParticle;
 
+	public RotateCam rCam;
+	public GameObject feedBackTxt;
+
+	public ShaderVariantCollection preloadedShaders;
+
+	public SpawnScript rocketSpawn;
+	public bool rocketActivate = false;
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
 			Resources.LoadAll ("Sound");
 			Resources.LoadAll ("Prefabs");
+
+			preloadedShaders.WarmUp ();
 
 			Application.targetFrameRate = 60;
             // Setting up references.
@@ -139,7 +148,13 @@ using System.Collections;
 	}
 
 		void Update(){
+		if (!boostActivate) {
+			if (!isDead) {
+				if (m_MaxSpeed > 17f)
+					m_MaxSpeed -= 20f * Time.deltaTime;
+			}
 
+		}
 		if (gameObject.GetComponent<Rigidbody2D>().velocity.x < 8f && speedDeathOnce) {
 		
 			StartCoroutine (waitDeathOfSpeed ());
@@ -158,7 +173,11 @@ using System.Collections;
 
 		if (isRocket) {
 
+			rocketSpawn.spawnRocketDisable = true;
+
 			if (isRocketOnce) {
+
+
 
 				rocketParticle.Play ();
 
@@ -169,25 +188,25 @@ using System.Collections;
 			}
 
 			alwaysGround.SetActive (true);
-			if (Time.timeScale < 5f)
+			if (Time.timeScale < 4f && rocketActivate)
 				Time.timeScale += 1f * Time.deltaTime;
 		
 		} else {
-		
+			rocketSpawn.spawnRocketDisable = false;
 
 			if (Time.timeScale > 1f)
 				Time.timeScale -= 0.5f *Time.deltaTime;
 		
 		}
 
-		if (Time.timeScale <= 1f) {
+		if (Time.timeScale <= 1f && !isRocket) {
 			alwaysGround.SetActive (false);
 			rocketParticle.Stop ();
 		}
 
 		if(feedbackTap && feedbackOnce){
 			
-			feedbackMesh.gameObject.SetActive (true);
+			if(!isRocket)feedbackMesh.gameObject.SetActive (true);
 			if (randomFloat < 1f) {
 
 
@@ -261,7 +280,7 @@ using System.Collections;
 		
 		}
 
-		if (boostActivate) {
+		/*if (boostActivate) {
 		
 			DestroyAllObjects ();
 
@@ -276,7 +295,7 @@ using System.Collections;
 		
 		
 		
-		}
+		}*/
 	
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
@@ -311,6 +330,7 @@ using System.Collections;
         private void FixedUpdate()
         {
 		if (groundOnce) {
+			
 			StartCoroutine (waitGround ());
 			groundOnce = false;
 		
@@ -343,7 +363,7 @@ using System.Collections;
 					
 
 					m_Grounded = true;
-
+				//rCam.zoomOut = false;
 					
 
 				}
@@ -357,10 +377,10 @@ using System.Collections;
 			if (boostOrig > 20f && decreaseSpeed)
 				boostOrig -= acceleration * 10f * Time.deltaTime;
 
-			if (m_MaxSpeed < 25f && !decreaseSpeed)
+			if (m_MaxSpeed < 20f && !decreaseSpeed)
 				m_MaxSpeed += acceleration * Time.deltaTime;
 
-			if (boostOrig < 25f && !decreaseSpeed)
+			if (boostOrig < 20f && !decreaseSpeed)
 				boostOrig += acceleration * Time.deltaTime;
 
 		} else if(isDead){
@@ -482,12 +502,14 @@ using System.Collections;
 				//if (!m_Grounded) {
 					
 			if ((!m_Anim.IsInTransition (0) || !m_Anim.IsInTransition (1)||!m_Anim.IsInTransition (2)) && shiftAnimOnce) {
-				
+
+				//rCam.zoomOut = true;
 				m_Anim.SetBool ("doubleJump", true);
 				shiftAnimOnce = false;
 
 			} else {
-				
+
+				//rCam.zoomOut = false;
 				m_Anim.SetBool ("doubleJump", false);
 				shiftAnimOnce = false;
 
@@ -658,8 +680,11 @@ using System.Collections;
 	
 		yield return new WaitForSeconds (4f);
 
+		rocketActivate = true;
+		yield return new WaitForSeconds (8f);
 		isRocket = false;
 		isRocketOnce = true;
+		rocketActivate = false;
 	}
 
 	}

@@ -603,7 +603,7 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone /* && !Advertisement.isShowing*/)) {
+		if ((adsDone /*- && !Advertisement.isShowing*/)) {
 			
 			if (isQuickRestart) {
 				Application.LoadLevel (1);

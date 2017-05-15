@@ -25,5 +25,4 @@ public class UnityAdsInitializer : MonoBehaviour
 			Advertisement.Initialize(gameId, testMode);
 		}
 	}
-}
-*/
+}*/

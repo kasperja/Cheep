@@ -56,6 +56,7 @@ public class LavineMove : MonoBehaviour {
 	public bool isRocket = false;
 
 	private bool rocketOnce = true;
+
 	// Use this for initialization
 	void Start () {
 
@@ -64,7 +65,7 @@ public class LavineMove : MonoBehaviour {
 
 
 		transform.localPosition = beginPos.localPosition;
-		//StartCoroutine (setRollingTrue ());
+		StartCoroutine (setRollingTrue ());
 
 	}
 
@@ -78,16 +79,24 @@ public class LavineMove : MonoBehaviour {
 		
 		}*/
 
-		if (Time.timeScale <= 1f && rocketOnce) {
+		if (rocketOnce) {
 		
-			StartCoroutine (setRollingTrue ());
+			//StartCoroutine (setRollingTrue ());
 			rocketOnce = false;
 		
 		}
 
 		if (pc2D.isRocket) {
 		
+
 			rocketOnce = true;
+			bossSpawn.SetActive (false);
+			normSpawn.SetActive (true);
+
+		
+		} else {
+		
+			//plusTxt.SetActive (true);
 		
 		}
 
@@ -319,7 +328,7 @@ public class LavineMove : MonoBehaviour {
 
 		destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
-	//-	Handheld.Vibrate ();
+	//- Handheld.Vibrate ();
 
 	
 	}
@@ -359,7 +368,7 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.6f);
 
 
-//-		Handheld.Vibrate ();
+	//- Handheld.Vibrate ();
 
 
 
