@@ -41,6 +41,12 @@ public class RotateCam : MonoBehaviour {
 	public Camera2DFollow c2D;
 	private float origDamp;
 
+	public CameraBoxFollow cbf;
+
+	public bool isSteep = false;
+
+
+
 	// Use this for initialization
 	void Start () {
 		origDamp = c2D.damping;
@@ -65,6 +71,8 @@ public class RotateCam : MonoBehaviour {
 
 
 		} else if(!lavineScript.spamActive){
+
+			//if(cbf.horizontalOffset < 2f)cbf.horizontalOffset += 1f * Time.deltaTime;
 		
 			if(!pc2D.isDead)c2D.damping = origDamp;
 
@@ -155,7 +163,8 @@ public class RotateCam : MonoBehaviour {
 
 
 		if (lavineScript.spamActive) {
-			
+
+			if(cbf.horizontalOffset > -2f)cbf.horizontalOffset -= 1f * Time.deltaTime;
 
 			if(!pc2D.isDead)c2D.damping = 0.9f;
 			
@@ -203,6 +212,77 @@ public class RotateCam : MonoBehaviour {
 		}
 
 		if(t < 0.2f)t += 0.1f * Time.deltaTime;
+
+		if (!lavineScript.spamActive) {
+		
+			if (gameObject.transform.rotation.eulerAngles.z > 20f) {
+		
+
+				cbf.isSteep = true;
+
+					
+				cbf.verticalOffset = Mathf.MoveTowards (cbf.verticalOffset, 1f, 1.5f * Time.deltaTime);
+
+
+				cbf.horizontalOffset = Mathf.MoveTowards (cbf.horizontalOffset, 1f, 1.5f * Time.deltaTime );
+
+				/*
+
+				if (cbf.verticalOffset < 1f) {
+					cbf.verticalOffset += 5f * Time.deltaTime; 
+
+				} else {
+				
+					cbf.verticalOffset -= 5f * Time.deltaTime; 
+				
+				}
+				if (cbf.horizontalOffset > 1f) {
+					cbf.horizontalOffset -= 5f * Time.deltaTime; 
+
+				} else {
+					
+					cbf.horizontalOffset += 5f * Time.deltaTime; 
+				
+				}
+
+				*/
+		
+			} else {
+
+
+				cbf.isSteep = true;
+
+				cbf.verticalOffset = Mathf.MoveTowards (cbf.verticalOffset, 0.7f, 1.5f * Time.deltaTime);
+
+
+				cbf.horizontalOffset = Mathf.MoveTowards (cbf.horizontalOffset, 2f, 1.5f * Time.deltaTime );
+
+
+
+				/*cbf.isSteep = false;
+
+				if (cbf.verticalOffset > 0f) {
+					cbf.verticalOffset -= 5f * Time.deltaTime; 
+				} 
+
+				if (cbf.horizontalOffset < 2f) {
+					cbf.horizontalOffset += 5f * Time.deltaTime; 
+				} */
+		
+			}
+		} else {
+		
+			cbf.verticalOffset = Mathf.MoveTowards (cbf.verticalOffset, 0f, 5f * Time.deltaTime);
+
+
+			cbf.horizontalOffset = Mathf.MoveTowards (cbf.horizontalOffset, -4f, 5f * Time.deltaTime );
+
+
+
+
+		
+		}
+
 
 		if (((gameObject.transform.rotation.eulerAngles.z >= maxAngle || gameObject.transform.rotation.eulerAngles.z <= minAngle)) && changeDirection) {
 
