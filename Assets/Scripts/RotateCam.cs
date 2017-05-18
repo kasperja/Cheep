@@ -168,7 +168,6 @@ public class RotateCam : MonoBehaviour {
 
 			if(!pc2D.isDead)c2D.damping = 0.9f;
 			
-			
 			c2D.target = backpos;
 
 		} 

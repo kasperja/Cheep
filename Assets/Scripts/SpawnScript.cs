@@ -58,7 +58,7 @@ public class SpawnScript : MonoBehaviour {
 	public void Spawn(){
 		if (isFG) {
 			if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
-				Instantiate (obj [Random.Range (0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y+1f, transform.position.y -3f),transform.position.z), Quaternion.identity);
+				Instantiate (obj [Random.Range (0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y+1f, transform.position.y -1.2f),transform.position.z), Quaternion.identity);
 		}else{
 			if(spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
 				Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);

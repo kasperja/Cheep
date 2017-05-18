@@ -21,6 +21,11 @@ public class CameraBoxFollow : MonoBehaviour {
 
 	private bool groundOnce = false;
 
+	public LavineMove lavineScript;
+
+	private float zoomInPos = 4f;
+	private float zoomOutPos = 0f;
+
 	void Awake(){
 	
 		colliderBox = target.GetComponent<BoxCollider2D> ();
@@ -30,7 +35,7 @@ public class CameraBoxFollow : MonoBehaviour {
 	void Start(){
 
 		focusArea = new FocusArea (colliderBox.bounds, focusAreaSize);
-	
+		
 	
 	}
 
@@ -49,8 +54,12 @@ public class CameraBoxFollow : MonoBehaviour {
 
 		if (!belowGround) {
 			
+			if (lavineScript.spamActive) {
+				transform.position = (Vector3)new Vector3 (target.transform.position.x + horizontalOffset, Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), 0f) + Vector3.forward * -10;
 
-			transform.position = (Vector3)new Vector3 (target.transform.position.x + horizontalOffset, Mathf.MoveTowards(transform.position.y, focusPosition.y,10f * Time.deltaTime), 0f) + Vector3.forward * -10;
+			} else {
+				transform.position = (Vector3)new Vector3 (target.transform.position.x + horizontalOffset, Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), 0f) + Vector3.forward * -10;
+			}
 		} else {
 			groundOnce = true;
 			transform.position = (Vector3)new Vector3(target.transform.position.x + horizontalOffset, transform.position.y, 0f) + Vector3.forward * -10;
