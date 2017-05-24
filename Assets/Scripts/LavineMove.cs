@@ -206,7 +206,7 @@ public class LavineMove : MonoBehaviour {
 				isSnowball = false;
 				isYeti = false;
 
-
+				//ABC = true;
 				AB = true;
 
 			} else if (randomBoss >= 3f && randomBoss < 6f) {
@@ -219,6 +219,7 @@ public class LavineMove : MonoBehaviour {
 				isSnowball = true;
 				isYeti = false;
 
+				//ABC = true;
 				BA = true;
 
 
@@ -234,6 +235,8 @@ public class LavineMove : MonoBehaviour {
 			isLavine = true;
 			isSnowball = false;
 			isYeti = false;
+
+			//ABC = true;
 
 		}
 
@@ -317,7 +320,9 @@ public class LavineMove : MonoBehaviour {
 
 			}
 
-		}else */if (isRolling && Time.timeScale <= 1f) {
+		}else */
+
+		if (isRolling) {
 
 			pc2D.boostActivate = true;
 
@@ -363,7 +368,7 @@ public class LavineMove : MonoBehaviour {
 
 
 
-			if (transform.position.x < endPos.position.x && Time.timeScale <=1f) {
+			if (transform.position.x < endPos.position.x) {
 				if (speed < 9f && !pc2D.isDead) {
 
 					transform.position += new Vector3 (10f, 0, 0) * Time.deltaTime;
@@ -376,7 +381,7 @@ public class LavineMove : MonoBehaviour {
 
 				} 
 				
-
+			}
 				if (rollOnce && !pc2D.isDead) {
 
 
@@ -786,7 +791,7 @@ public class LavineMove : MonoBehaviour {
 					bossSpawn.SetActive (true);
 					normSpawn.SetActive (false);
 				
-					deactivateOnce = true;
+					//deactivateOnce = true;
 					//pc2D.DestroyAllObjects ();
 					powerUpSpawn.SetActive (false);
 					powerUpSuperSpawn.SetActive (false);
@@ -794,7 +799,7 @@ public class LavineMove : MonoBehaviour {
 					rollOnce = false;
 
 				}
-			}
+			
 
 			//feedbackTextObj.GetComponent<TextMesh> ().color = colFeedbackText;
 			
@@ -868,16 +873,17 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (6f);
 
 
-		if(Time.timeScale <=1f)isRolling = true;
+		isRolling = true;
 
 		yield return new WaitForSeconds (2f);
 
-		if(Time.timeScale <=1f)spamActive = true;
+		spamActive = true;
 
-		if(Time.timeScale <=1f)tapTapReady = true;
+		tapTapReady = true;
 
-		 if(Time.timeScale <=1f)Handheld.Vibrate();
+		Handheld.Vibrate();
 
+		deactivateOnce = true;
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
 		//rollOnce = true;
 		//isRolling = true;
@@ -973,34 +979,28 @@ public class LavineMove : MonoBehaviour {
 		if (lavineTest) {
 			yield return new WaitForSeconds (0f);
 		} else {
-			yield return new WaitForSeconds (Random.Range (15f, 20f));
+			yield return new WaitForSeconds (Random.Range (20f, 25f));
 		}
 
-		if(Time.timeScale <=1f){
+
 
 		rollOnce = true;
 
 
 
-		if (!isRocket && Time.timeScale <=1f) {
-				if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
-		} else {
+		StartCoroutine (waitForRoll ());
+
 		
-			yield return new WaitForSeconds (Random.Range (5f, 10f));
-			if (Time.timeScale <= 1f) {
-					if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
-			} else {
-				yield return new WaitForSeconds (Random.Range (5f, 10f));
-					if(Time.timeScale <=1f)StartCoroutine (waitForRoll ());
 			
-			}
-			deactivateOnce = true;
+			
+			
+		//deactivateOnce = true;
 		
-		}
 
 
-		//isRolling = true;
-		}
+
+
+		
 	
 	}
 
