@@ -973,7 +973,7 @@ public class LavineMove : MonoBehaviour {
 		if (lavineTest) {
 			yield return new WaitForSeconds (0f);
 		} else {
-			yield return new WaitForSeconds (Random.Range (25f, 35f));
+			yield return new WaitForSeconds (Random.Range (15f, 20f));
 		}
 
 		if(Time.timeScale <=1f){
