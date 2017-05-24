@@ -26,6 +26,9 @@ public class CameraBoxFollow : MonoBehaviour {
 	private float zoomInPos = 4f;
 	private float zoomOutPos = 0f;
 
+	public Transform zoomPos;
+	public Transform normPos;
+
 	void Awake(){
 	
 		colliderBox = target.GetComponent<BoxCollider2D> ();
@@ -55,10 +58,10 @@ public class CameraBoxFollow : MonoBehaviour {
 		if (!belowGround) {
 			
 			if (lavineScript.spamActive) {
-				transform.position = (Vector3)new Vector3 (target.transform.position.x + horizontalOffset, Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), 0f) + Vector3.forward * -10;
+				transform.position = (Vector3)new Vector3 (Mathf.MoveTowards(transform.position.x, target.transform.position.x + horizontalOffset-1f, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y+1f, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, zoomPos.position.z, 5f * Time.deltaTime)) /*+ Vector3.forward * -10*/;
 
 			} else {
-				transform.position = (Vector3)new Vector3 (target.transform.position.x + horizontalOffset, Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), 0f) + Vector3.forward * -10;
+				transform.position = (Vector3)new Vector3 (Mathf.MoveTowards(transform.position.x, target.transform.position.x + horizontalOffset, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, normPos.position.z, 1f * Time.deltaTime)) /*+ Vector3.forward * -10*/;
 			}
 		} else {
 			groundOnce = true;
