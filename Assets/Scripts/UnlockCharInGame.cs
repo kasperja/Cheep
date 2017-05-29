@@ -27,6 +27,8 @@ public class UnlockCharInGame : MonoBehaviour {
 
 	public TextFader txtFade;
 
+	public SpawnScriptUnlocker spawnUnlocker;
+
 	// Use this for initialization
 	void Start () {
 
@@ -80,7 +82,9 @@ public class UnlockCharInGame : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (hudScript.playerScore >= 5000f && char1UnlockedPointsOnce) {
+
+
+		if (spawnUnlocker.char1UnlockedPointsOnceThisGame && char1UnlockedPointsOnce) {
 		
 			
 
@@ -89,10 +93,10 @@ public class UnlockCharInGame : MonoBehaviour {
 
 			char1UnlockedPointsOnce = false;
 
-			ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
+			//ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
 		}
 
-		if (hudScript.playerScore >= 10000f && char2UnlockedPointsOnce) {
+		if (spawnUnlocker.char2UnlockedPointsOnceThisGame && char2UnlockedPointsOnce) {
 
 
 
@@ -101,10 +105,10 @@ public class UnlockCharInGame : MonoBehaviour {
 
 			char2UnlockedPointsOnce = false;
 
-			ES2.Save (char2UnlockedPointsOnce, "char2Unlock");
+			//ES2.Save (char2UnlockedPointsOnce, "char2Unlock");
 		}
 
-		if (hudScript.playerScore >= 15000f && char3UnlockedPointsOnce) {
+		if (spawnUnlocker.char3UnlockedPointsOnceThisGame && char3UnlockedPointsOnce) {
 
 
 
@@ -113,25 +117,25 @@ public class UnlockCharInGame : MonoBehaviour {
 
 			char3UnlockedPointsOnce = false;
 
-			ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
+			//ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
 		}
 
-		if (hudScript.playerScore >= 20000f && char4UnlockedPointsOnce) {
+		if (spawnUnlocker.char4UnlockedPointsOnceThisGame && char4UnlockedPointsOnce) {
 
 			StartCoroutine (waitUnlockPopup (charText, char4Image));
 
 			char4UnlockedPointsOnce = false;
 
-			ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
+			//ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
 		}
 
-		if (hudScript.playerScore >= 25000f && char5UnlockedPointsOnce) {
+		if (spawnUnlocker.char5UnlockedPointsOnceThisGame && char5UnlockedPointsOnce) {
 
 			StartCoroutine (waitUnlockPopup (charText, char5Image));
 
 			char5UnlockedPointsOnce = false;
 
-			ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
+			//ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
 		}
 		
 	}
