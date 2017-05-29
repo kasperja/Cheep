@@ -13,6 +13,7 @@ public class ParallaxScript : MonoBehaviour {
 	private bool moveOnce = true;
 	public float firstMove = -13f;
 	public float startNumber;
+	public float distanceBetween = 590f;
 
 	void Start(){
 
@@ -21,7 +22,7 @@ public class ParallaxScript : MonoBehaviour {
 		pc2D = GameObject.Find ("CharacterRobotBoy").GetComponent<PlatformerCharacter2D> ();
 
 
-		firstMove =( -590f )* startNumber;
+		firstMove =( -distanceBetween )* startNumber;
 
 	}
 
@@ -33,7 +34,7 @@ public class ParallaxScript : MonoBehaviour {
 
 		if ((transform.localPosition.x - origPosLocal.x) < firstMove) {
 		
-			transform.localPosition += new Vector3(780f+400f+590f,0f,0f);
+			transform.localPosition += new Vector3(distanceBetween*3f,0f,0f);
 
 		
 		}

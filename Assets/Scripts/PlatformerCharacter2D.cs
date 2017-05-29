@@ -14,7 +14,7 @@ using System.Collections;
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-        private bool m_Grounded;            // Whether or not the player is grounded.
+        public bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
@@ -104,6 +104,8 @@ using System.Collections;
 	public bool rocketActivate = false;
 	public float jumpCount = 0f;
 
+	public CameraBoxFollow cbf;
+
         private void Awake()
         {
 			Resources.LoadAll ("Textures");
@@ -150,6 +152,18 @@ using System.Collections;
 	}
 
 		void Update(){
+
+		if (transform.position.y < -4.5f) {
+		
+			cbf.belowGround = true;
+		
+		} else {
+		
+
+			cbf.belowGround = false;
+		
+		}
+
 		if (!boostActivate) {
 			if (!isDead) {
 				if (m_MaxSpeed > 17f)
@@ -499,7 +513,7 @@ using System.Collections;
 
 				
 			if (jumpCount > 0f) {
-				m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce / 1.5f), ForceMode2D.Impulse);
+				m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce / 1.3f), ForceMode2D.Impulse);
 			} else {
 				m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce), ForceMode2D.Impulse);
 			}
@@ -567,8 +581,14 @@ using System.Collections;
 			LeanTween.rotateZ(mainCam, 0f, 0.5f);
 
     	}*/
+
+
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
+
+
+
 		if (other.gameObject.tag == "SpeedBooster") {
 
 

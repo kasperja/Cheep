@@ -17,18 +17,34 @@ namespace UnityStandardAssets._2D
 		public AudioSource lavineSound1;
 		public AudioSource lavineSound2;
 
-
+		public GameObject lavineEndPos;
+		public GameObject lavineEndPosOrig;
 		//public bool lavineActive = true;
+		public bool moveBackSpam = false;
 
         private void Awake()
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
         }
 
+		void Start(){
+
+
+
+		}
 
         private void Update()
         {
-
+			if (moveBackSpam && lavineScript.spamActive && !lavineScript.isDeadByLavine) {
+				
+				lavineScript.transform.position = Vector3.MoveTowards (lavineScript.transform.position, lavineEndPos.transform.position, 3f * Time.deltaTime);
+			
+			} else if(!moveBackSpam && lavineScript.spamActive && !lavineScript.isDeadByLavine){
+				
+				lavineScript.transform.position = Vector3.MoveTowards(lavineScript.transform.position, lavineEndPosOrig.transform.position, 5f * Time.deltaTime);
+			
+			
+			}
 
 				
 			if (!m_Jump && (Input.touchCount > 0) && Input.GetTouch (0).phase == TouchPhase.Began && Time.timeScale <=1.3f) {
@@ -44,7 +60,14 @@ namespace UnityStandardAssets._2D
 				} else {
 
 					//m_Jump = true;
-					lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
+					/*if (lavineScript.isLavine) {
+						lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
+					} else {*/
+					lavineEndPos.transform.position -= new Vector3 (1f, 0f, 0f);
+					moveBackSpam = true;
+					StartCoroutine (waitMoveBackSpam ());
+
+					//}
 					lavineScript.touchCounter += 1;
 					lavineScript.tTap = 0f;
 					//m_Character.feedbackTap = true;
@@ -81,7 +104,14 @@ namespace UnityStandardAssets._2D
 				} else {
 
 					//m_Jump = true;
-					lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
+					/*if (lavineScript.isLavine) {
+						lavineScript.transform.position -= new Vector3 (1f, 0f, 0f);
+					} else {*/
+						lavineEndPos.transform.position -= new Vector3 (1f, 0f, 0f);
+						moveBackSpam = true;
+						StartCoroutine (waitMoveBackSpam ());
+
+					//}
 					//if(m_Character.m_MaxSpeed < 15f)m_Character.m_MaxSpeed += 0.1f;
 					lavineScript.touchCounter += 1;
 					lavineScript.tTap = 0f;
@@ -126,6 +156,13 @@ namespace UnityStandardAssets._2D
 			yield return new WaitForSeconds (0.2f);
 
 			m_Character.jumpCount += 1f;
+
+
+		}
+
+		IEnumerator waitMoveBackSpam(){
+			yield return new WaitForSeconds (1f);
+			moveBackSpam = false;
 
 
 		}

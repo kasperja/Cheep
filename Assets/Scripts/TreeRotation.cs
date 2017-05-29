@@ -22,7 +22,7 @@ public class TreeRotation : MonoBehaviour {
 	void Update () {
 
 		if (!isFG) {
-			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 10f, 1f);
+			transform.rotation = new Quaternion (0f, 0f, target.rotation.z /*- target.rotation.z / 10f*/, 1f);
 		} else {
 		
 			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
