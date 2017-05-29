@@ -151,36 +151,36 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 		if (!char1UnlockedPointsOnce) {
 			
-			Instantiate (obj [0], transform.position, Quaternion.identity);
+			Instantiate (obj [0],new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 1 spawn");
 
 		} else if (char1UnlockedPointsOnce && !char2UnlockedPointsOnce) {
 		
-			Instantiate (obj [1], transform.position, Quaternion.identity);
+			Instantiate (obj [1], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 2 spawn");
 		}else if (char1UnlockedPointsOnce && char2UnlockedPointsOnce && !char3UnlockedPointsOnce) {
 
-			Instantiate (obj [2], transform.position, Quaternion.identity);
+			Instantiate (obj [2], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 3 spawn");
 		}else if (char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && !char4UnlockedPointsOnce) {
 
-			Instantiate (obj [3], transform.position, Quaternion.identity);
+			Instantiate (obj [3], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 4 spawn");
 		}else if (char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && char4UnlockedPointsOnce &&  !char5UnlockedPointsOnce) {
 
-			Instantiate (obj [4], transform.position, Quaternion.identity);
+			Instantiate (obj [4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 5 spawn");
 		}else if (char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && char4UnlockedPointsOnce && char5UnlockedPointsOnce && !char6UnlockedPointsOnce) {
 
-			//Instantiate (obj [5], transform.position, Quaternion.identity);
+			//Instantiate (obj [5], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 6 spawn");
 		}else if (char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && char4UnlockedPointsOnce && char5UnlockedPointsOnce && char6UnlockedPointsOnce && !char7UnlockedPointsOnce) {
 
-			//Instantiate (obj [6], transform.position, Quaternion.identity);
+			//Instantiate (obj [6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 7 spawn");
 		}else if (char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && char4UnlockedPointsOnce && char5UnlockedPointsOnce && char6UnlockedPointsOnce && char7UnlockedPointsOnce && !char8UnlockedPointsOnce) {
 
-			//Instantiate (obj [7], transform.position, Quaternion.identity);
+			//Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
 			Debug.Log ("p 8 spawn");
 		}
 
