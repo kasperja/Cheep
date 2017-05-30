@@ -14,6 +14,7 @@ public class ParallaxScript : MonoBehaviour {
 	public float firstMove = -13f;
 	public float startNumber;
 	public float distanceBetween = 590f;
+	public float numberOfTiles = 4f;
 
 	void Start(){
 
@@ -34,7 +35,7 @@ public class ParallaxScript : MonoBehaviour {
 
 		if ((transform.localPosition.x - origPosLocal.x) < firstMove) {
 		
-			transform.localPosition += new Vector3(distanceBetween*3f,0f,0f);
+			transform.localPosition += new Vector3(distanceBetween*numberOfTiles,0f,0f);
 
 		
 		}
