@@ -15,13 +15,17 @@ public class ParallaxScript : MonoBehaviour {
 	public float startNumber;
 	public float distanceBetween = 590f;
 	public float numberOfTiles = 4f;
+	private Rigidbody2D rbPlayer;
 
 	void Start(){
+
+
 
 		origPosLocal = transform.localPosition;
 
 		pc2D = GameObject.Find ("CharacterRobotBoy").GetComponent<PlatformerCharacter2D> ();
 
+		rbPlayer = pc2D.gameObject.GetComponent<Rigidbody2D> ();
 
 		firstMove =( -distanceBetween )* startNumber;
 
@@ -42,7 +46,7 @@ public class ParallaxScript : MonoBehaviour {
 	
 		realSpeed = speed / 100f;
 
-		transform.localPosition -= new Vector3(pc2D.m_MaxSpeed * realSpeed,0f,0f);
+		transform.localPosition -= new Vector3(rbPlayer.velocity.x * realSpeed,0f,0f);
 
 	
 	}

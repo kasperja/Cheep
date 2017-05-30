@@ -282,7 +282,7 @@ public class LavineMove : MonoBehaviour {
 
 		//Time.timeScale = timeScaler;
 
-		if (slowMotionBool && !isRocket && Time.timeScale <= 1f) {
+		if (slowMotionBool && !isRocket) {
 		
 			if(timeScaler > 0.5f) timeScaler -= 1f * Time.deltaTime;
 
@@ -298,9 +298,9 @@ public class LavineMove : MonoBehaviour {
 		
 		}
 
-		if(transform.position.x <= beginPos.position.x  || Time.timeScale > 1f) {
+		if(transform.position.x <= beginPos.position.x) {
 			
-			transform.position = beginPos.position;
+			transform.position = new Vector3(beginPos.position.x , beginPos.position.y, transform.position.z);
 		
 		}
 
