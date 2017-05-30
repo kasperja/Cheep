@@ -28,6 +28,7 @@ public class CameraBoxFollow : MonoBehaviour {
 
 	public Transform zoomPos;
 	public Transform normPos;
+	private Rigidbody2D rbPlayer;
 
 	void Awake(){
 	
@@ -38,7 +39,7 @@ public class CameraBoxFollow : MonoBehaviour {
 	void Start(){
 
 		focusArea = new FocusArea (colliderBox.bounds, focusAreaSize);
-		
+		rbPlayer = target.gameObject.GetComponent<Rigidbody2D> ();
 	
 	}
 
@@ -58,10 +59,16 @@ public class CameraBoxFollow : MonoBehaviour {
 		if (!belowGround) {
 			
 			if (lavineScript.spamActive) {
-				transform.position = (Vector3)new Vector3 (Mathf.MoveTowards(transform.position.x, target.transform.position.x + horizontalOffset-1f, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y+1f, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, zoomPos.position.z, 5f * Time.deltaTime)) /*+ Vector3.forward * -10*/;
+				transform.position = (Vector3)new Vector3 (Mathf.MoveTowards(transform.position.x, target.transform.position.x + horizontalOffset-0.5f, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y+1f, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, zoomPos.position.z, 5f * Time.deltaTime)) /*+ Vector3.forward * -10*/;
 
 			} else {
-				transform.position = (Vector3)new Vector3 (Mathf.MoveTowards(transform.position.x, target.transform.position.x + horizontalOffset, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, normPos.position.z, 1f * Time.deltaTime)) /*+ Vector3.forward * -10*/;
+				if(rbPlayer.velocity.y + 1f < 0f){
+					transform.position = (Vector3)new Vector3 (Mathf.MoveTowards (transform.position.x, target.transform.position.x + horizontalOffset, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, normPos.position.z, 0.5f * Time.deltaTime));
+				} else{
+					transform.position = (Vector3)new Vector3 (Mathf.MoveTowards (transform.position.x, target.transform.position.x + horizontalOffset, 5f * Time.deltaTime), Mathf.MoveTowards (transform.position.y, focusPosition.y, 10f * Time.deltaTime), Mathf.MoveTowards (transform.position.z, normPos.position.z, 5f * Time.deltaTime));
+						
+
+				} /*+ Vector3.forward * -10*/;
 			}
 		} else {
 			groundOnce = true;
