@@ -106,7 +106,7 @@ public class LavineMove : MonoBehaviour {
 
 			boss2Unlocked =  ES2.Load<bool>( "boss2Unlocked");
 		}
-		if (ES2.Exists ("boss2Unlocked")) {
+		if (ES2.Exists ("boss3Unlocked")) {
 
 			boss3Unlocked =  ES2.Load<bool>( "boss3Unlocked");
 
