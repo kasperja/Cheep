@@ -10,7 +10,7 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 	public float scoreInterval = 1000f;
 	public float multiplier = 1f;
 
-	public float numberOfPickups = 0f;
+	public float numberOfPickups = 1f;
 
 	private bool char1UnlockedPointsOnce = false;
 	private bool char2UnlockedPointsOnce = false;
