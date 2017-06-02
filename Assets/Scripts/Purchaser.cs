@@ -94,6 +94,15 @@ using UnityEngine.UI;
 		public int score7 = 35000;
 		public int score8 = 40000;
 
+	private bool char1Unlocked = false;
+	private bool char2Unlocked = false;
+	private bool char3Unlocked = false;
+	private bool char4Unlocked = false;
+	private bool char5Unlocked = false;
+	private bool char6Unlocked = false;
+	private bool char7Unlocked = false;
+	private bool char8Unlocked = false;
+
 		public Product cata1;
 
 		public bool char1Purchased = false;
@@ -120,14 +129,14 @@ using UnityEngine.UI;
 		}
 
 		void Update(){
-		if (highscore >= score1 || char1Purchased) {
+		if (char1Unlocked || char1Purchased) {
 
 			char1button.SetActive (true);
 			char1buttonD.SetActive (false);
 
 
 		}
-		if (highscore >= score2 || char2Purchased) {
+		if (char2Unlocked || char2Purchased) {
 
 			char2button.SetActive (true);
 			char2buttonD.SetActive (false);
@@ -135,7 +144,7 @@ using UnityEngine.UI;
 
 		}
 
-		if (highscore >= score3 || char3Purchased) {
+		if (char3Unlocked || char3Purchased) {
 
 			char3button.SetActive (true);
 			char3buttonD.SetActive (false);
@@ -143,7 +152,7 @@ using UnityEngine.UI;
 
 		}
 
-		if (highscore >= score4 || char4Purchased) {
+		if (char4Unlocked || char4Purchased) {
 
 			char4button.SetActive (true);
 			char4buttonD.SetActive (false);
@@ -151,28 +160,28 @@ using UnityEngine.UI;
 
 		}
 
-		if (highscore >= score5 || char5Purchased) {
+		if (char5Unlocked || char5Purchased) {
 
 			char5button.SetActive (true);
 			char5buttonD.SetActive (false);
 
 
 		}
-		if (highscore >= score6 || char6Purchased) {
+		if (char6Unlocked || char6Purchased) {
 
 			char6button.SetActive (true);
 			char6buttonD.SetActive (false);
 
 
 		}
-		if (highscore >= score7 || char7Purchased) {
+		if (char7Unlocked || char7Purchased) {
 
 			char7button.SetActive (true);
 			char7buttonD.SetActive (false);
 
 
 		}
-		if (highscore >= score8 || char8Purchased) {
+		if (char8Unlocked || char8Purchased) {
 
 			char8button.SetActive (true);
 			char8buttonD.SetActive (false);
@@ -186,7 +195,48 @@ using UnityEngine.UI;
 
 		void Start()
 		{
-		
+		if (ES2.Exists ("char1Unlock")) {
+
+			char1Unlocked = ES2.Load<bool> ("char1Unlock");
+		}
+
+		if (ES2.Exists ("char2Unlock")) {
+
+			char2Unlocked = ES2.Load<bool> ("char2Unlock");
+		}
+
+		if (ES2.Exists ("char3Unlock")) {
+
+			char3Unlocked = ES2.Load<bool> ("char3Unlock");
+		}
+
+		if (ES2.Exists ("char4Unlock")) {
+
+			char4Unlocked = ES2.Load<bool> ("char4Unlock");
+		}
+
+		if (ES2.Exists ("char5Unlock")) {
+
+			char5Unlocked = ES2.Load<bool> ("char5Unlock");
+
+		}
+
+		if (ES2.Exists ("char6Unlock")) {
+
+			char6Unlocked = ES2.Load<bool> ("char6Unlock");
+		}
+
+		if (ES2.Exists ("char7Unlock")) {
+
+			char7Unlocked = ES2.Load<bool> ("char7Unlock");
+
+		}
+
+		if (ES2.Exists ("char8Unlock")) {
+
+			char8Unlocked = ES2.Load<bool> ("char8Unlock");
+
+		}
 
 			if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
 
@@ -276,14 +326,14 @@ using UnityEngine.UI;
 
 				if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
 
-				if (highscore >= score1 || char1Purchased) {
+		if (char1Unlocked || char1Purchased) {
 
 					char1button.SetActive (true);
 					char1buttonD.SetActive (false);
 
 
 				}
-				if (highscore >= score2 || char2Purchased) {
+		if (char2Unlocked || char2Purchased) {
 
 					char2button.SetActive (true);
 					char2buttonD.SetActive (false);
@@ -291,7 +341,7 @@ using UnityEngine.UI;
 
 				}
 
-				if (highscore >= score3 || char3Purchased) {
+		if (char3Unlocked || char3Purchased) {
 
 					char3button.SetActive (true);
 					char3buttonD.SetActive (false);
@@ -299,7 +349,7 @@ using UnityEngine.UI;
 
 				}
 
-				if (highscore >= score4 || char4Purchased) {
+		if (char4Unlocked || char4Purchased) {
 
 					char4button.SetActive (true);
 					char4buttonD.SetActive (false);
@@ -307,28 +357,28 @@ using UnityEngine.UI;
 
 				}
 
-				if (highscore >= score5 || char5Purchased) {
+		if (char5Unlocked || char5Purchased) {
 
 					char5button.SetActive (true);
 					char5buttonD.SetActive (false);
 
 
 				}
-				if (highscore >= score6 || char6Purchased) {
+		if (char6Unlocked || char6Purchased) {
 
 					char6button.SetActive (true);
 					char6buttonD.SetActive (false);
 
 
 				}
-				if (highscore >= score7 || char7Purchased) {
+		if (char7Unlocked || char7Purchased) {
 
 					char7button.SetActive (true);
 					char7buttonD.SetActive (false);
 
 
 				}
-				if (highscore >= score8 || char8Purchased) {
+		if (char8Unlocked || char8Purchased) {
 
 					char8button.SetActive (true);
 					char8buttonD.SetActive (false);
