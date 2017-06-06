@@ -44,7 +44,7 @@ public class ParallaxScript : MonoBehaviour {
 		
 		}
 	
-		realSpeed = speed / 100f;
+		realSpeed = speed / 1.8f * Time.deltaTime;
 
 		transform.localPosition -= new Vector3(rbPlayer.velocity.x * realSpeed,0f,0f);
 

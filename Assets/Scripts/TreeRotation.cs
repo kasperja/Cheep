@@ -13,20 +13,26 @@ public class TreeRotation : MonoBehaviour {
 	void Start () {
 
 		target = GameObject.Find ("Main Camera").GetComponent<Transform>();
+		if (!isFG) {
+			transform.rotation = new Quaternion (0f, 0f, target.rotation.z /*- target.rotation.z / 10f*/, 1f);
+		} else {
 
+			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
+
+		}
 		//rCam = target.GetComponent<RotateCam> ();
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 
 		if (!isFG) {
 			transform.rotation = new Quaternion (0f, 0f, target.rotation.z /*- target.rotation.z / 10f*/, 1f);
 		} else {
-		
+
 			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
-		
+
 		}
 		//transform.LookAt (new Vector3(transform.position.x, transform.position.z + 1000000f, -transform.position.y), Vector3.up);
 		//transform.RotateAround(gameObject.transform.position, Vector3.forward, target.transform.rotation.z);
