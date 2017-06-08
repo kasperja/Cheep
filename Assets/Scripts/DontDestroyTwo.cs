@@ -10,15 +10,59 @@ public class DontDestroyTwo : MonoBehaviour {
 	private Scene currentScene; 
 	public static DontDestroyTwo instanceTwo;
 
+	public PlatformerCharacter2D pc2D;
+
 	private bool musicDisabled = false;
 
 	public AudioSource music;
+	public AudioSource introGame;
+	public AudioSource levelOne;
+	public AudioSource levelTwo;
+	public AudioSource levelThree;
+	public AudioSource dangerOne;
+	public AudioSource dangerTwo;
+	public AudioSource dangerThree;
+	public AudioSource crash1;
+	public AudioSource crash2;
+	public AudioSource crash3;
+	public AudioSource crash4;
+	public AudioSource crash5;
+
+	public float randomCrash = 0f;
+
+	private bool introOnce = true;
+
+//	public LavineMove lavineScript;
+	private float bossCount = 1f;
+
+	public bool dangerOnce = true;
+	public bool levelOnce = true;
+	public bool levelOnceFinal = true;
+	public bool levelOnceFinalTwo = true;
+
+	private bool shiftReady = false;
+	private bool shiftReadyTwo = false;
+	private bool shiftReadyThree = false;
+
+	private bool normShiftReady = false;
+	private bool normShiftReady2 = false;
+	private bool normShiftReady3 = false;
+
+
+	public bool isRollingMusic = false;
+
+	private bool dieOnce = true;
+
 
 	void Awake(){
 
+		//lavineScript = GameObject.Find ("Lavine").GetComponent<LavineMove>();
+
+		introOnce = true;
+
 		MusicDisable ();
 		
-		DontDestroyOnLoad (gameObject);
+		//DontDestroyOnLoad (gameObject);
 
 		if (instanceTwo == null) {
 
@@ -35,7 +79,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		if (currentScene.name == "GameOverScene") {
 
-			DontDestroyOnLoad (gameObject);
+			//DontDestroyOnLoad (gameObject);
 			//gameObject.GetComponent<AudioSource> ().Play ();
 			Debug.Log ("Scene 1");
 			audioFadeOut = true;
@@ -43,7 +87,7 @@ public class DontDestroyTwo : MonoBehaviour {
 		}
 		if (currentScene.name == "StartScene") {
 
-			DontDestroyOnLoad (gameObject);
+			//DontDestroyOnLoad (gameObject);
 			//audioFadeOut = true;
 			Debug.Log ("Scene 1");
 			audioFadeOut = true;
@@ -51,7 +95,7 @@ public class DontDestroyTwo : MonoBehaviour {
 		}
 		if (currentScene.name == "Scene01") {
 
-			DontDestroyOnLoad (gameObject);
+			//DontDestroyOnLoad (gameObject);
 			gameObject.GetComponent<AudioSource> ().Play ();
 
 
@@ -60,6 +104,12 @@ public class DontDestroyTwo : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+
+
+		introOnce = true;
+
+
+
 
 		if (ES2.Exists ("musicDisabled")) {
 
@@ -82,6 +132,120 @@ public class DontDestroyTwo : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (pc2D.isDead && dieOnce) {
+		
+			randomCrash = Random.Range (0f, 5f);
+
+			music.Stop ();
+			dangerOne.Stop ();
+			dangerTwo.Stop ();
+			dangerThree.Stop ();
+			if (randomCrash <= 1f) {
+				crash1.Play ();
+			} else if (randomCrash <= 2f) {
+				crash2.Play ();
+			}else if (randomCrash <= 3f) {
+				crash3.Play ();
+			}else if (randomCrash <= 4f) {
+				crash4.Play ();
+			}else if (randomCrash <= 5f) {
+				crash5.Play ();
+			}
+		
+			dieOnce = false;
+
+		}
+
+		if (introGame.time >= 2.4f && introOnce) {
+		
+			music.Stop ();
+			music = levelOne;
+			music.Play ();
+			introOnce = false;
+			StartCoroutine (musicIntervals ());
+		
+		}
+
+		if (bossCount == 2f && !isRollingMusic && levelOnce && shiftReady) {
+		
+			music.Stop ();
+			music = levelTwo;
+			music.Play ();
+			dangerOne.Stop ();
+			StartCoroutine (musicIntervalsTwo ());
+
+			
+			levelOnce = false;
+
+		}
+
+		if (bossCount == 3f && !isRollingMusic && levelOnceFinal && shiftReadyTwo) {
+
+			music.Stop ();
+			music = levelThree;
+			music.Play ();
+			dangerTwo.Stop ();
+			dangerThree.Stop ();
+			StartCoroutine (musicIntervalsThree ());
+
+			levelOnceFinal = false;
+
+		} else if (bossCount == 3f && !isRollingMusic && levelOnceFinal && shiftReadyThree) {
+
+			//music.Stop ();
+			//music = levelThree;
+			//music.Play ();
+			dangerTwo.Stop ();
+			dangerThree.Stop ();
+			//StartCoroutine (musicIntervalsThree ());
+
+			levelOnceFinal = false;
+
+		}/* else if (bossCount == 3f && !isRollingMusic && levelOnceFinalTwo) {
+
+			music.Stop ();
+			music = levelThree;
+			music.Play ();
+			dangerThree.Stop ();
+			StartCoroutine (musicIntervalsThree ());
+
+			levelOnceFinalTwo = false;
+
+		}*/
+
+		if (isRollingMusic && bossCount == 1f && dangerOnce && shiftReady) {
+
+
+			dangerOne.Play();
+			dangerOne.time = music.time;
+			dangerOnce = false;
+			bossCount = 2f;
+
+		
+		} 
+
+		if (isRollingMusic && bossCount == 2f && dangerOnce && shiftReadyTwo) {
+		
+			dangerTwo.Play();
+			dangerTwo.time = music.time;
+			dangerOnce = false;
+			bossCount = 3f;
+		
+		} 
+
+		if (isRollingMusic && bossCount == 3f && dangerOnce && shiftReadyThree) {
+		
+			dangerThree.Play ();
+			dangerThree.time = music.time;
+			dangerOnce = false;
+			bossCount = 3f;
+			levelOnceFinal = true;
+			levelOnceFinalTwo = true;
+
+		}
+
+
 
 		if (ES2.Exists ("musicDisabled")) {
 
@@ -111,24 +275,39 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		if (musicDisabled) {
 
-			gameObject.GetComponent<AudioSource> ().volume = 0f;
+			music.volume = 0f;
+			introGame.volume = 0f;
+			levelOne.volume = 0f;
+			levelTwo.volume = 0f;
+			levelThree.volume = 0f;
+			dangerOne.volume = 0f;
+			dangerTwo.volume = 0f;
+			dangerThree.volume = 0f;
+			crash1.volume = 0f;
+			crash2.volume = 0f;
+			crash3.volume = 0f;
+			crash4.volume = 0f;
+			crash5.volume = 0f;
+
 
 			//ES2.Save (musicDisabled, "musicDisabled");
 
 		}else if (audioFadeOut && !musicDisabled) {
 
-			if(gameObject.GetComponent<AudioSource> ().volume > 0f)gameObject.GetComponent<AudioSource> ().volume -= 1f * Time.deltaTime;
+			if(music.volume > 0f)music.volume -= 1f * Time.deltaTime;
 
 		} else if(!musicDisabled) {
 
-			if(gameObject.GetComponent<AudioSource> ().volume < 1f)gameObject.GetComponent<AudioSource> ().volume += 1f * Time.deltaTime;
+			if(music.volume < 1f)music.volume += 1f * Time.deltaTime;
 
 		}
 	}
 
 	public void MusicDisable () {
 
-		music = gameObject.GetComponent<AudioSource> ();
+		music = introGame;
+
+		//music = gameObject.GetComponent<AudioSource> ();
 
 		if (ES2.Exists ("musicDisabled")) {
 
@@ -156,4 +335,57 @@ public class DontDestroyTwo : MonoBehaviour {
 		Destroy (this.gameObject);
 
 	}
+
+	IEnumerator musicIntervals(){
+	
+
+
+		yield return new WaitForSeconds (1.2f);
+
+		shiftReady = true;
+
+
+		StartCoroutine (intervalShiftFalse ());
+		StartCoroutine (musicIntervals ());
+
+	}
+
+	IEnumerator musicIntervalsTwo(){
+
+
+
+		yield return new WaitForSeconds (1.091f);
+
+		shiftReadyTwo = true;
+
+
+		StartCoroutine (intervalShiftFalse ());
+		StartCoroutine (musicIntervalsTwo ());
+
+	}
+
+	IEnumerator musicIntervalsThree(){
+
+
+
+		yield return new WaitForSeconds (1f);
+
+		shiftReadyThree = true;
+
+
+		StartCoroutine (intervalShiftFalse ());
+		StartCoroutine (musicIntervalsThree ());
+
+	}
+
+	IEnumerator intervalShiftFalse(){
+	
+		yield return new WaitForSeconds (0.1f);
+		shiftReady = false;
+		shiftReadyTwo = false;
+		shiftReadyThree = false;
+
+	
+	}
+
 }

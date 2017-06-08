@@ -1,0 +1,27 @@
+Menu Intro (120 bpm)
+- Cue Menu loop at 4:00 sec
+
+Menu Loop (120 bpm)
+- Music cue beats every 2:000 sec (if needed)
+
+Menu End (120)
+
+
+Level 01 Intro (200 bpm)
+- Cue loop at 2:400 sec
+
+Level 01 Loop (200 bpm)
+- Music cues every 1:200 sec
+- Danger loop overlay should sync with loop
+
+Level 02 Loop (220 bpm)
+- Music cue every 1:091 sec
+- Danger loop overlay should sync with loop
+
+Level 03 Loop (240 bpm)
+- Music cue every 1:000 sec
+- Danger loop overlay should sync with loop
+
+
+Crash cue 01-05
+- Cash be played randomly and instantly when player crashes

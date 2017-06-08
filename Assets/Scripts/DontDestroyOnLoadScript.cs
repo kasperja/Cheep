@@ -10,11 +10,19 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 	public static DontDestroyOnLoadScript instance;
 	private bool musicDisabled = false;
 
+	public bool isIntro = true;
 	public AudioSource music;
+	public AudioSource musicIntro;
+	public AudioSource musicLoop;
+	public AudioSource musicEnd;
 
 	void Awake(){
 
+
+
 		MusicDisable ();
+
+
 
 		if (instance == null) {
 		
@@ -30,7 +38,7 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 		currentScene = SceneManager.GetActiveScene();
 
 		if (currentScene.name == "GameOverScene") {
-		
+
 			//DontDestroyOnLoad (gameObject);
 			//gameObject.GetComponent<AudioSource> ().Play ();
 		
@@ -38,14 +46,14 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 		if (currentScene.name == "StartScene") {
 
 			DontDestroyOnLoad (gameObject);
-			gameObject.GetComponent<AudioSource> ().Play ();
+			music.Play ();
 			//audioFadeOut = true;
 
 		}
 		if (currentScene.name == "CharScene") {
 
 			DontDestroyOnLoad (gameObject);
-			gameObject.GetComponent<AudioSource> ().Play ();
+			music.Play ();
 			//audioFadeOut = true;
 
 		}
@@ -83,6 +91,16 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (music.time >= 4f && isIntro) {
+
+			music.Stop ();
+			music = musicLoop;
+			music.Play ();
+			isIntro = false;
+
+
+		}
+
 		if (ES2.Exists ("musicDisabled")) {
 
 			musicDisabled = ES2.Load<bool> ("musicDisabled");
@@ -111,24 +129,36 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 
 		if (musicDisabled) {
 
-			gameObject.GetComponent<AudioSource> ().volume = 0f;
+			music.volume = 0f;
+			music.volume = 0f;
+			musicEnd.volume = 0f;
+			musicLoop.volume = 0f;
+			musicIntro.volume = 0f;
 
 			//ES2.Save (musicDisabled, "musicDisabled");
 
 		}else if (audioFadeOut || musicDisabled) {
 		
-			if(gameObject.GetComponent<AudioSource> ().volume > 0f)gameObject.GetComponent<AudioSource> ().volume -= 1f * Time.deltaTime;
+			if(music.volume > 0f)music.volume -= 1f * Time.deltaTime;
+			if(musicEnd.volume > 0f)musicEnd.volume -= 1f * Time.deltaTime;
+			if(musicLoop.volume > 0f)musicLoop.volume -= 1f * Time.deltaTime;
+			if(musicIntro.volume > 0f)musicIntro.volume -= 1f * Time.deltaTime;
 		
 		} else if(!musicDisabled) {
 		
-			if(gameObject.GetComponent<AudioSource> ().volume < 1f)gameObject.GetComponent<AudioSource> ().volume += 1f * Time.deltaTime;
+			if(music.volume < 1f)music.volume += 1f * Time.deltaTime;
+			if(musicEnd.volume < 1f)musicEnd.volume += 1f * Time.deltaTime;
+			if(musicLoop.volume < 1f)musicLoop.volume += 1f * Time.deltaTime;
+			if(musicIntro.volume < 1f)musicIntro.volume += 1f * Time.deltaTime;
+
+
 		
 		}
 	}
 
 	public void MusicDisable () {
 
-		music = gameObject.GetComponent<AudioSource> ();
+		//music = gameObject.GetComponent<AudioSource> ();
 
 		if (ES2.Exists ("musicDisabled")) {
 
@@ -138,11 +168,17 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 
 		if (musicDisabled) {
 
-			music.volume = 0f;;
+			music.volume = 0f;
+			musicEnd.volume = 0f;
+			musicLoop.volume = 0f;
+			musicIntro.volume = 0f;
 
 		} else {
 
 			music.volume = 1f;
+			musicEnd.volume = 1f;
+			musicLoop.volume = 1f;
+			musicIntro.volume = 1f;
 
 		}
 		//ES2.Save (musicDisabled, "musicDisabled");

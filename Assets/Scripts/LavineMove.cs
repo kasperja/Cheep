@@ -71,6 +71,8 @@ public class LavineMove : MonoBehaviour {
 
 	public bool randomBossEnabled = false;
 
+	public bool dangerOver = false;
+
 	public bool boss1Unlocked = true;
 	public bool boss2Unlocked = false;
 	public bool boss3Unlocked = false;
@@ -93,8 +95,12 @@ public class LavineMove : MonoBehaviour {
 
 	private Vector3 lavineEndPosOrig;
 
+	public DontDestroyTwo musicScript;
+
 	// Use this for initialization
 	void Start () {
+
+		musicScript = GameObject.Find ("Music").GetComponent<DontDestroyTwo> ();
 
 		lavineEndPosOrig = endPos.transform.localPosition;
 
@@ -323,6 +329,8 @@ public class LavineMove : MonoBehaviour {
 		}else */
 
 		if (isRolling) {
+
+			musicScript.isRollingMusic = true;
 
 			pc2D.boostActivate = true;
 
@@ -805,7 +813,7 @@ public class LavineMove : MonoBehaviour {
 			
 		} else {
 
-
+			musicScript.isRollingMusic = false;
 
 			tapTapObj.SetActive (false);
 
@@ -832,6 +840,8 @@ public class LavineMove : MonoBehaviour {
 				//isReady = false;
 				StartCoroutine (setRollingTrue ());
 				deactivateOnce = false;
+
+				musicScript.dangerOnce = true;
 
 
 
@@ -973,6 +983,8 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.7f);
 		slowMotionBool = false;
 		yield return new WaitForSeconds (2.3f);
+
+		dangerOver = false;
 		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
 
 

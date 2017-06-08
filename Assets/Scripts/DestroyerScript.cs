@@ -25,7 +25,8 @@ public class DestroyerScript : MonoBehaviour {
 	//public ObjectPoolManager objm;
 
 	void Update(){
-	
+		
+		if(scream1.time >= 1.1f)scream1.volume = 0f;
 		/*if (fadeMusic) {
 
 			music.volume -= 0.4f * Time.deltaTime;
@@ -82,14 +83,13 @@ public class DestroyerScript : MonoBehaviour {
 	IEnumerator waitForDeath(){
 		particlesObj.SetActive (false);
 		fadeMusic = true;
-		if (pc2d.scream1)scream1.Play ();
-
-		if(pc2d.scream2)scream2.Play ();
-
-		if(pc2d.scream3)scream3.Play ();
+		scream1.Play ();
 
 
-		yield return new WaitForSeconds (1f);
+
+
+
+		yield return new WaitForSeconds (3f);
 		Application.LoadLevel (2);
 		//return;
 
