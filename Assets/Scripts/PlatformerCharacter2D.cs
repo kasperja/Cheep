@@ -108,9 +108,9 @@ using System.Collections;
 
         private void Awake()
         {
-			Resources.LoadAll ("Textures");
-			Resources.LoadAll ("Sound");
-			Resources.LoadAll ("Prefabs");
+			//Resources.LoadAll ("Textures");
+			//Resources.LoadAll ("Sound");
+			//Resources.LoadAll ("Prefabs");
 
 			preloadedShaders.WarmUp ();
 
