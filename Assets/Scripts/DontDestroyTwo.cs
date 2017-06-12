@@ -14,6 +14,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 	private bool musicDisabled = false;
 
+	public RotateCam rCam;
 	public AudioSource music;
 	public AudioSource introGame;
 	public AudioSource levelOne;
@@ -52,7 +53,9 @@ public class DontDestroyTwo : MonoBehaviour {
 	public bool isRollingMusic = false;
 
 	private bool dieOnce = true;
-
+	private bool dangerIncreaseOnce = true;
+	private bool increaseVolDanger = false;
+	private bool decreaseVolDanger = true;
 
 	void Awake(){
 
@@ -133,6 +136,21 @@ public class DontDestroyTwo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (increaseVolDanger) {
+		
+			dangerOne.volume += 1f * Time.deltaTime;
+			dangerTwo.volume += 1f * Time.deltaTime;
+			dangerThree.volume += 1f * Time.deltaTime;
+
+		
+		} else {
+		
+			dangerOne.volume -= 1f * Time.deltaTime;
+			dangerTwo.volume -= 1f * Time.deltaTime;
+			dangerThree.volume -= 1f * Time.deltaTime;
+		
+		}
+
 		if (pc2D.isDead && dieOnce) {
 		
 			randomCrash = Random.Range (0f, 5f);
@@ -172,10 +190,10 @@ public class DontDestroyTwo : MonoBehaviour {
 			music.Stop ();
 			music = levelTwo;
 			music.Play ();
-			dangerOne.Stop ();
+			//dangerOne.Stop ();
 			StartCoroutine (musicIntervalsTwo ());
-
-			
+			increaseVolDanger = false;
+			dangerIncreaseOnce = true;
 			levelOnce = false;
 
 		}
@@ -185,10 +203,11 @@ public class DontDestroyTwo : MonoBehaviour {
 			music.Stop ();
 			music = levelThree;
 			music.Play ();
-			dangerTwo.Stop ();
-			dangerThree.Stop ();
+			//dangerTwo.Stop ();
+			//dangerThree.Stop ();
 			StartCoroutine (musicIntervalsThree ());
-
+			increaseVolDanger = false;
+			dangerIncreaseOnce = true;
 			levelOnceFinal = false;
 
 		} else if (bossCount == 3f && !isRollingMusic && levelOnceFinal && shiftReadyThree) {
@@ -196,10 +215,11 @@ public class DontDestroyTwo : MonoBehaviour {
 			//music.Stop ();
 			//music = levelThree;
 			//music.Play ();
-			dangerTwo.Stop ();
-			dangerThree.Stop ();
+			//dangerTwo.Stop ();
+			//dangerThree.Stop ();
 			//StartCoroutine (musicIntervalsThree ());
-
+			increaseVolDanger = false;
+			dangerIncreaseOnce = true;
 			levelOnceFinal = false;
 
 		}/* else if (bossCount == 3f && !isRollingMusic && levelOnceFinalTwo) {
@@ -217,7 +237,14 @@ public class DontDestroyTwo : MonoBehaviour {
 		if (isRollingMusic && bossCount == 1f && dangerOnce && shiftReady) {
 
 
+			if (dangerIncreaseOnce) {
+				dangerOne.volume = 0f;
+				dangerIncreaseOnce = false;
+			}
 			dangerOne.Play();
+			dangerTwo.Stop ();
+			dangerThree.Stop ();
+			increaseVolDanger = true;
 			dangerOne.time = music.time;
 			dangerOnce = false;
 			bossCount = 2f;
@@ -227,7 +254,14 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		if (isRollingMusic && bossCount == 2f && dangerOnce && shiftReadyTwo) {
 		
+			if (dangerIncreaseOnce) {
+				dangerOne.volume = 0f;
+				dangerIncreaseOnce = false;
+			}
 			dangerTwo.Play();
+			dangerOne.Stop ();
+			dangerThree.Stop ();
+			increaseVolDanger = true;
 			dangerTwo.time = music.time;
 			dangerOnce = false;
 			bossCount = 3f;
@@ -236,7 +270,15 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		if (isRollingMusic && bossCount == 3f && dangerOnce && shiftReadyThree) {
 		
+			if (dangerIncreaseOnce) {
+				dangerOne.volume = 0f;
+				dangerIncreaseOnce = false;
+			}
 			dangerThree.Play ();
+			dangerOne.Stop ();
+			dangerTwo.Stop ();
+			increaseVolDanger = true;
+
 			dangerThree.time = music.time;
 			dangerOnce = false;
 			bossCount = 3f;
@@ -298,7 +340,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		} else if(!musicDisabled) {
 
-			if(music.volume < 1f)music.volume += 1f * Time.deltaTime;
+			if(music.volume < 0.6f)music.volume += 1f * Time.deltaTime;
 
 		}
 	}
@@ -321,7 +363,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		} else {
 
-			music.volume = 1f;
+			music.volume = 0.6f;
 
 		}
 		//ES2.Save (musicDisabled, "musicDisabled");

@@ -45,6 +45,10 @@ public class RotateCam : MonoBehaviour {
 
 	public bool isSteep = false;
 
+	public bool shiftMusicTo1 = true;
+	public bool shiftMusicTo2 = true;
+	public bool shiftMusicTo3 = true;
+
 
 
 	// Use this for initialization
@@ -184,6 +188,27 @@ public class RotateCam : MonoBehaviour {
 			pc2D.decreaseSpeed = false;
 		
 		}
+
+		if (gameObject.transform.rotation.eulerAngles.z <= 40f && gameObject.transform.rotation.eulerAngles.z >= 20f ) {
+
+			shiftMusicTo1 = false;
+			shiftMusicTo2 = true;
+			shiftMusicTo3 = false;
+
+		} else if(gameObject.transform.rotation.eulerAngles.z < 20f){
+
+			shiftMusicTo1 = true;
+			shiftMusicTo2 = false;
+			shiftMusicTo3 = false;
+
+		}else if(gameObject.transform.rotation.eulerAngles.z > 40f ){
+
+			shiftMusicTo1 = false;
+			shiftMusicTo2 = false;
+			shiftMusicTo3 = true;
+
+		}
+
 		angleMultiplier += 0.0f * Time.deltaTime;
 
 		if (angleMultiplier < 0f && changeDirection) {
