@@ -7,6 +7,8 @@ public class PowerupUnlockerScript : MonoBehaviour {
 	//HUDScript hud;
 	//Text plusText;
 
+	Text TextPickup;
+
 	SpawnScriptUnlocker spawnUnlocker;
 
 	public float pickupAmmount = 1f;
@@ -15,7 +17,8 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 	//public HUDScript hudScript;
 
-	void Update(){
+	void Start(){
+
 
 		/*if (transform.rotation.z >= -90f) {
 			transform.Rotate (Vector3.forward * 100f * Time.deltaTime, Space.Self);
@@ -30,6 +33,8 @@ public class PowerupUnlockerScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 		if (other.tag == "Player") {
+
+
 
 			spawnUnlocker = GameObject.Find ("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker> ();
 

@@ -105,6 +105,7 @@ using System.Collections;
 	public float jumpCount = 0f;
 
 	public CameraBoxFollow cbf;
+	public bool pickupFeedBack = false;
 
         private void Awake()
         {
@@ -223,6 +224,9 @@ using System.Collections;
 		if(feedbackTap && feedbackOnce){
 			
 			if(!isRocket)feedbackMesh.gameObject.SetActive (true);
+
+
+
 			if (randomFloat < 1f) {
 
 

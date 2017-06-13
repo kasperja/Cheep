@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpawnScriptUnlocker : MonoBehaviour {
 
@@ -7,10 +8,18 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 	public HUDScript hud;
 	//public PlatformerCharacter2D pc2D;
 
+	public Text textPickup;
+
 	public float scoreInterval = 1000f;
 	public float multiplier = 1f;
 
-	public float numberOfPickups = 1f;
+	public float numberOfPickups = 0f;
+	private float origNumberOfPickups = 0f;
+
+	private bool startOnce = true;
+	private bool startTextOnce = false;
+
+	public float finalNumber = 5f;
 
 	private bool char1UnlockedPointsOnce = false;
 	private bool char2UnlockedPointsOnce = false;
@@ -33,6 +42,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
+
+
 
 		if (ES2.Exists ("char1Unlock")) {
 
@@ -77,6 +88,7 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 		}
 
+
 		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		//Spawn ();
 
@@ -84,6 +96,21 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 	void Update(){
 
+		if (!char5UnlockedPointsOnce) {
+			
+			if ((numberOfPickups > origNumberOfPickups) || startTextOnce) {
+				textPickup.text = "" + (int)numberOfPickups + "/" + (int)finalNumber + " ";
+
+
+				origNumberOfPickups = numberOfPickups;
+				startTextOnce = false;
+			}
+
+		} else {
+		
+			textPickup.text = "";
+		
+		}
 		if (hud.playerScore >= ( scoreInterval * multiplier)) {
 			
 			multiplier += 1f;
@@ -96,48 +123,122 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 			
 		}
+		if (char5UnlockedPointsOnce) {
+
+			finalNumber = 30f;
+			if (startOnce) {
+
+				startTextOnce = true;
+				startOnce = false;
+			
+			}
+
+		} else if (char4UnlockedPointsOnce) {
+
+			finalNumber = 25f;
+			if (startOnce) {
+
+				startTextOnce = true;
+				startOnce = false;
+
+			}
+
+		} else if (char3UnlockedPointsOnce) {
+
+			finalNumber = 20f;
+			if (startOnce) {
+
+				startTextOnce = true;
+				startOnce = false;
+
+			}
+
+		} else if (char2UnlockedPointsOnce) {
+
+			finalNumber = 15f;
+			if (startOnce) {
+
+				startTextOnce = true;
+				startOnce = false;
+
+			}
+
+		} else if (char1UnlockedPointsOnce) {
+		
+			finalNumber = 10f;
+			if (startOnce) {
+
+				startTextOnce = true;
+				startOnce = false;
+
+			}
+		
+		} else {
+			if (startOnce) {
+
+				startTextOnce = true;
+				startOnce = false;
+
+			}
+		
+		}
+
+
+
+
+
 
 		if (numberOfPickups >= 5 && !char1UnlockedPointsOnce) {
 
+			finalNumber = 10f;
 			numberOfPickups = 0f;
 			char1UnlockedPointsOnce = true;
 			char1UnlockedPointsOnceThisGame = true;
 			ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
+			startTextOnce = true;
 
 		}
 		if (numberOfPickups >= 10 && char1UnlockedPointsOnce && !char2UnlockedPointsOnce) {
 
+			finalNumber = 15f;
 			numberOfPickups = 0f;
 			char2UnlockedPointsOnce = true;
 			char2UnlockedPointsOnceThisGame = true;
 			ES2.Save (char2UnlockedPointsOnce, "char2Unlock");
+			startTextOnce = true;
 
 
 		}
 		if (numberOfPickups >= 15 && char1UnlockedPointsOnce && char2UnlockedPointsOnce && !char3UnlockedPointsOnce) {
 
+			finalNumber = 20f;
 			numberOfPickups = 0f;
 			char3UnlockedPointsOnce = true;
 			char3UnlockedPointsOnceThisGame = true;
 			ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
+			startTextOnce = true;
 
 
 		}
 		if (numberOfPickups >= 20 && char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && !char4UnlockedPointsOnce) {
 
+			finalNumber = 25f;
 			numberOfPickups = 0f;
 			char4UnlockedPointsOnce = true;
 			char4UnlockedPointsOnceThisGame = true;
 			ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
+			startTextOnce = true;
 
 
 		}
 		if (numberOfPickups >= 25 && char1UnlockedPointsOnce && char2UnlockedPointsOnce && char3UnlockedPointsOnce && char4UnlockedPointsOnce && !char5UnlockedPointsOnce) {
 
+			finalNumber = 30f;
 			numberOfPickups = 0f;
 			char5UnlockedPointsOnce = true;
 			char5UnlockedPointsOnceThisGame = true;
 			ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
+			startTextOnce = true;
 
 
 		}
