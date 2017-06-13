@@ -49,7 +49,7 @@ public class RotateCam : MonoBehaviour {
 	public bool shiftMusicTo2 = true;
 	public bool shiftMusicTo3 = true;
 
-
+	public bool musicShiftReady = true;
 
 	// Use this for initialization
 	void Start () {
@@ -188,27 +188,31 @@ public class RotateCam : MonoBehaviour {
 			pc2D.decreaseSpeed = false;
 		
 		}
+		if (musicShiftReady) {
+			if (gameObject.transform.rotation.eulerAngles.z <= 40f && gameObject.transform.rotation.eulerAngles.z >= 20f) {
 
-		if (gameObject.transform.rotation.eulerAngles.z <= 40f && gameObject.transform.rotation.eulerAngles.z >= 20f ) {
+				shiftMusicTo1 = false;
+				shiftMusicTo2 = true;
+				shiftMusicTo3 = false;
 
-			shiftMusicTo1 = false;
-			shiftMusicTo2 = true;
-			shiftMusicTo3 = false;
+			} else if (gameObject.transform.rotation.eulerAngles.z < 20f) {
 
-		} else if(gameObject.transform.rotation.eulerAngles.z < 20f){
+				shiftMusicTo1 = true;
+				shiftMusicTo2 = false;
+				shiftMusicTo3 = false;
 
-			shiftMusicTo1 = true;
-			shiftMusicTo2 = false;
-			shiftMusicTo3 = false;
+			} else if (gameObject.transform.rotation.eulerAngles.z > 40f) {
 
-		}else if(gameObject.transform.rotation.eulerAngles.z > 40f ){
+				shiftMusicTo1 = false;
+				shiftMusicTo2 = false;
+				shiftMusicTo3 = true;
 
-			shiftMusicTo1 = false;
-			shiftMusicTo2 = false;
-			shiftMusicTo3 = true;
+			}
+
+			StartCoroutine (musicShiftSetReady ());
+			musicShiftReady = false;
 
 		}
-
 		angleMultiplier += 0.0f * Time.deltaTime;
 
 		if (angleMultiplier < 0f && changeDirection) {
@@ -353,5 +357,13 @@ public class RotateCam : MonoBehaviour {
 		now = false;
 		nowOnce = true;
 				
+	}
+
+	IEnumerator musicShiftSetReady(){
+	
+		yield return new WaitForSeconds (8f);
+	
+		musicShiftReady = true;
+
 	}
 }
