@@ -112,7 +112,7 @@ using System.Collections;
 			//Resources.LoadAll ("Sound");
 			//Resources.LoadAll ("Prefabs");
 
-			preloadedShaders.WarmUp ();
+			//preloadedShaders.WarmUp ();
 
 			Application.targetFrameRate = 60;
             // Setting up references.
