@@ -57,6 +57,8 @@ public class DontDestroyTwo : MonoBehaviour {
 	private bool increaseVolDanger = false;
 	private bool decreaseVolDanger = true;
 
+	public float pointInTime = 0f;
+
 	void Awake(){
 
 		//lavineScript = GameObject.Find ("Lavine").GetComponent<LavineMove>();
@@ -181,16 +183,18 @@ public class DontDestroyTwo : MonoBehaviour {
 			music = levelOne;
 			music.Play ();
 			introOnce = false;
+			StopCoroutine(musicIntervals ());
 			StartCoroutine (musicIntervals ());
 		
 		}
 
-		if (bossCount == 2f && !isRollingMusic && levelOnce && shiftReady) {
+		if (/*bossCount == 2f &&*/ !isRollingMusic && levelOnce && shiftReady && (rCam.shiftMusicTo2|| rCam.shiftMusicTo1)) {
 		
 			music.Stop ();
 			music = levelTwo;
 			music.Play ();
 			//dangerOne.Stop ();
+			StopCoroutine(musicIntervalsTwo ());
 			StartCoroutine (musicIntervalsTwo ());
 			increaseVolDanger = false;
 			dangerIncreaseOnce = true;
@@ -198,19 +202,20 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		}
 
-		if (bossCount == 3f && !isRollingMusic && levelOnceFinal && shiftReadyTwo) {
+		if (/*bossCount == 3f && */!isRollingMusic && levelOnceFinal && shiftReadyTwo && rCam.shiftMusicTo3) {
 
 			music.Stop ();
 			music = levelThree;
 			music.Play ();
 			//dangerTwo.Stop ();
 			//dangerThree.Stop ();
+			StopCoroutine(musicIntervalsThree ());
 			StartCoroutine (musicIntervalsThree ());
 			increaseVolDanger = false;
 			dangerIncreaseOnce = true;
 			levelOnceFinal = false;
 
-		} else if (bossCount == 3f && !isRollingMusic && levelOnceFinal && shiftReadyThree) {
+		} else if (/*bossCount == 3f && */!isRollingMusic && levelOnceFinal && shiftReadyThree && rCam.shiftMusicTo3) {
 
 			//music.Stop ();
 			//music = levelThree;
@@ -234,7 +239,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		}*/
 
-		if (isRollingMusic && bossCount == 1f && dangerOnce && shiftReady) {
+		if (isRollingMusic /*&& bossCount == 1f*/ && dangerOnce && shiftReady && rCam.shiftMusicTo1) {
 
 
 			if (dangerIncreaseOnce) {
@@ -247,12 +252,15 @@ public class DontDestroyTwo : MonoBehaviour {
 			increaseVolDanger = true;
 			dangerOne.time = music.time;
 			dangerOnce = false;
+			levelOnce = true;
+			levelOnceFinal = true;
+			levelOnceFinalTwo = true;
 			bossCount = 2f;
 
 		
 		} 
 
-		if (isRollingMusic && bossCount == 2f && dangerOnce && shiftReadyTwo) {
+		if (isRollingMusic /*&& bossCount == 2f*/ && dangerOnce && shiftReadyTwo && rCam.shiftMusicTo2) {
 		
 			if (dangerIncreaseOnce) {
 				dangerOne.volume = 0f;
@@ -264,11 +272,14 @@ public class DontDestroyTwo : MonoBehaviour {
 			increaseVolDanger = true;
 			dangerTwo.time = music.time;
 			dangerOnce = false;
+			levelOnce = true;
+			levelOnceFinal = true;
+			levelOnceFinalTwo = true;
 			bossCount = 3f;
 		
 		} 
 
-		if (isRollingMusic && bossCount == 3f && dangerOnce && shiftReadyThree) {
+		if (isRollingMusic /*&& bossCount == 3f*/ && dangerOnce && shiftReadyThree && rCam.shiftMusicTo3) {
 		
 			if (dangerIncreaseOnce) {
 				dangerOne.volume = 0f;
@@ -282,6 +293,7 @@ public class DontDestroyTwo : MonoBehaviour {
 			dangerThree.time = music.time;
 			dangerOnce = false;
 			bossCount = 3f;
+			levelOnce = true;
 			levelOnceFinal = true;
 			levelOnceFinalTwo = true;
 
@@ -383,6 +395,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 
 		yield return new WaitForSeconds (1.2f);
+		pointInTime += 1f;
 
 		shiftReady = true;
 
@@ -398,6 +411,8 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		yield return new WaitForSeconds (1.091f);
 
+		pointInTime += 1f;
+
 		shiftReadyTwo = true;
 
 
@@ -411,6 +426,8 @@ public class DontDestroyTwo : MonoBehaviour {
 
 
 		yield return new WaitForSeconds (1f);
+
+		pointInTime += 1f;
 
 		shiftReadyThree = true;
 
