@@ -158,6 +158,9 @@ public class DontDestroyTwo : MonoBehaviour {
 			randomCrash = Random.Range (0f, 5f);
 
 			music.Stop ();
+			levelOne.Stop ();
+			levelTwo.Stop ();
+			levelThree.Stop ();
 			dangerOne.Stop ();
 			dangerTwo.Stop ();
 			dangerThree.Stop ();
