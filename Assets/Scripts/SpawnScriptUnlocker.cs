@@ -338,7 +338,44 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 	void Update(){
 
-		if (!allCharsUnlocked) {
+        if (char1UnlockedPointsOnce &&
+            char2UnlockedPointsOnce &&
+            char3UnlockedPointsOnce &&
+            char4UnlockedPointsOnce &&
+            char5UnlockedPointsOnce &&
+            char6UnlockedPointsOnce &&
+            char7UnlockedPointsOnce &&
+            char8UnlockedPointsOnce &&
+            char9UnlockedPointsOnce &&
+            char10UnlockedPointsOnce &&
+            char11UnlockedPointsOnce &&
+            char12UnlockedPointsOnce &&
+            char13UnlockedPointsOnce &&
+            char14UnlockedPointsOnce &&
+            char15UnlockedPointsOnce &&
+            char16UnlockedPointsOnce &&
+            char17UnlockedPointsOnce &&
+            char18UnlockedPointsOnce &&
+            char19UnlockedPointsOnce &&
+            char20UnlockedPointsOnce &&
+            char21UnlockedPointsOnce &&
+            char22UnlockedPointsOnce &&
+            char23UnlockedPointsOnce &&
+            char24UnlockedPointsOnce &&
+            char25UnlockedPointsOnce &&
+            char26UnlockedPointsOnce &&
+            char27UnlockedPointsOnce &&
+            char28UnlockedPointsOnce &&
+            char29UnlockedPointsOnce &&
+            char30UnlockedPointsOnce)
+        {
+
+            allCharsUnlocked = true;
+
+
+        }
+
+        if (!allCharsUnlocked) {
 			
 			if ((numberOfPickups > origNumberOfPickups) || startTextOnce) {
 				textPickup.text = "" + (int)numberOfPickups + "/" + (int)finalNumber + " ";
@@ -353,7 +390,7 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			textPickup.text = "";
 		
 		}
-		if (hud.playerScore >= ( scoreInterval * multiplier)) {
+		if (!allCharsUnlocked && (hud.playerScore >= ( scoreInterval * multiplier))) {
 			
 			multiplier += 1f;
 			Spawn ();
@@ -684,7 +721,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			startOnce = false;
 		}
 
-		if (!char1UnlockedPointsOnce) {
+		if (!char1UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 			
 			if (numberOfPickups >= char1PointsToUnlock) {
 				finalNumber = char2PointsToUnlock;
@@ -702,7 +740,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 		}
 		if (char1UnlockedPointsOnce && 
-            !char2UnlockedPointsOnce) {
+            !char2UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 			
 			if (numberOfPickups >= char2PointsToUnlock) {
 				finalNumber = char3PointsToUnlock;
@@ -720,7 +759,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 		}
 		if (char1UnlockedPointsOnce && 
             char2UnlockedPointsOnce && 
-            !char3UnlockedPointsOnce) {
+            !char3UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 				
 			if (numberOfPickups >= char3PointsToUnlock) {
 				finalNumber = char4PointsToUnlock;
@@ -739,7 +779,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 		if (char1UnlockedPointsOnce && 
             char2UnlockedPointsOnce && 
             char3UnlockedPointsOnce && 
-            !char4UnlockedPointsOnce) {
+            !char4UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 					
 			if (numberOfPickups >= char4PointsToUnlock) {
 				finalNumber = char5PointsToUnlock;
@@ -759,7 +800,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char2UnlockedPointsOnce && 
             char3UnlockedPointsOnce && 
             char4UnlockedPointsOnce && 
-            !char5UnlockedPointsOnce) {
+            !char5UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 						
 			if (numberOfPickups >= char5PointsToUnlock) {
 				finalNumber = char6PointsToUnlock;
@@ -780,7 +822,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char3UnlockedPointsOnce && 
             char4UnlockedPointsOnce &&
             char5UnlockedPointsOnce &&
-            !char6UnlockedPointsOnce) {
+            !char6UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 			
 			if (numberOfPickups >= char6PointsToUnlock) {
 				finalNumber = char7PointsToUnlock;
@@ -802,7 +845,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char4UnlockedPointsOnce && 
 			char5UnlockedPointsOnce &&
             char6UnlockedPointsOnce &&
-            !char7UnlockedPointsOnce) {
+            !char7UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char7PointsToUnlock) {
 				finalNumber = char8PointsToUnlock;
@@ -825,7 +869,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char5UnlockedPointsOnce &&
             char6UnlockedPointsOnce &&
             char7UnlockedPointsOnce &&
-            !char8UnlockedPointsOnce) {
+            !char8UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char8PointsToUnlock) {
 				finalNumber = char9PointsToUnlock;
@@ -849,7 +894,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char6UnlockedPointsOnce &&
             char7UnlockedPointsOnce &&
             char8UnlockedPointsOnce &&
-            !char9UnlockedPointsOnce) {
+            !char9UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char9PointsToUnlock) {
 				finalNumber = char10PointsToUnlock;
@@ -874,7 +920,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char7UnlockedPointsOnce && 
             char8UnlockedPointsOnce && 
             char9UnlockedPointsOnce &&
-            !char10UnlockedPointsOnce) {
+            !char10UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char10PointsToUnlock) {
 				finalNumber = char11PointsToUnlock;
@@ -900,7 +947,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char8UnlockedPointsOnce &&
             char9UnlockedPointsOnce &&
             char10UnlockedPointsOnce &&
-            !char11UnlockedPointsOnce) {
+            !char11UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char11PointsToUnlock) {
 				finalNumber = char12PointsToUnlock;
@@ -927,7 +975,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char9UnlockedPointsOnce &&
             char10UnlockedPointsOnce &&
             char11UnlockedPointsOnce &&
-            !char12UnlockedPointsOnce) {
+            !char12UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char12PointsToUnlock) {
 				finalNumber = char13PointsToUnlock;
@@ -955,7 +1004,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char10UnlockedPointsOnce &&
             char11UnlockedPointsOnce &&
             char12UnlockedPointsOnce &&
-            !char13UnlockedPointsOnce) {
+            !char13UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char13PointsToUnlock) {
 				finalNumber = char14PointsToUnlock;
@@ -984,7 +1034,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char11UnlockedPointsOnce &&
             char12UnlockedPointsOnce &&
             char13UnlockedPointsOnce &&
-            !char14UnlockedPointsOnce) {
+            !char14UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char14PointsToUnlock) {
 				finalNumber = char15PointsToUnlock;
@@ -1014,7 +1065,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char12UnlockedPointsOnce &&
             char13UnlockedPointsOnce &&
             char14UnlockedPointsOnce &&
-            !char15UnlockedPointsOnce) {
+            !char15UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char15PointsToUnlock) {
 				finalNumber = char16PointsToUnlock;
@@ -1045,7 +1097,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
             char13UnlockedPointsOnce &&
             char14UnlockedPointsOnce &&
             char15UnlockedPointsOnce &&
-            !char16UnlockedPointsOnce) {
+            !char16UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char16PointsToUnlock) {
 				finalNumber = char17PointsToUnlock;
@@ -1110,7 +1163,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char15UnlockedPointsOnce && 
 			char16UnlockedPointsOnce &&
             char17UnlockedPointsOnce &&
-            !char18UnlockedPointsOnce) {
+            !char18UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char18PointsToUnlock) {
 				finalNumber = char19PointsToUnlock;
@@ -1144,7 +1198,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char16UnlockedPointsOnce && 
 			char17UnlockedPointsOnce &&
             char18UnlockedPointsOnce &&
-            !char19UnlockedPointsOnce) {
+            !char19UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char19PointsToUnlock) {
 				finalNumber = char20PointsToUnlock;
@@ -1179,7 +1234,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char17UnlockedPointsOnce && 
 			char18UnlockedPointsOnce &&
             char19UnlockedPointsOnce &&
-            !char20UnlockedPointsOnce) {
+            !char20UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char20PointsToUnlock) {
 				finalNumber = char21PointsToUnlock;
@@ -1215,7 +1271,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char18UnlockedPointsOnce && 
 			char19UnlockedPointsOnce &&
             char20UnlockedPointsOnce && 
-            !char21UnlockedPointsOnce) {
+            !char21UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char21PointsToUnlock) {
 				finalNumber = char22PointsToUnlock;
@@ -1252,7 +1309,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char19UnlockedPointsOnce && 
 			char20UnlockedPointsOnce &&
             char21UnlockedPointsOnce &&
-            !char22UnlockedPointsOnce) {
+            !char22UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char22PointsToUnlock) {
 				finalNumber = char23PointsToUnlock;
@@ -1290,7 +1348,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char20UnlockedPointsOnce && 
 			char21UnlockedPointsOnce &&
             char22UnlockedPointsOnce &&
-            !char23UnlockedPointsOnce) {
+            !char23UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char23PointsToUnlock) {
 				finalNumber = char24PointsToUnlock;
@@ -1329,7 +1388,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char21UnlockedPointsOnce && 
 			char22UnlockedPointsOnce &&
             char23UnlockedPointsOnce &&
-            !char24UnlockedPointsOnce) {
+            !char24UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char24PointsToUnlock) {
 				finalNumber = char25PointsToUnlock;
@@ -1369,7 +1429,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char22UnlockedPointsOnce && 
 			char23UnlockedPointsOnce &&
             char24UnlockedPointsOnce &&
-            !char25UnlockedPointsOnce) {
+            !char25UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char26PointsToUnlock) {
 				finalNumber = char27PointsToUnlock;
@@ -1410,7 +1471,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char23UnlockedPointsOnce && 
 			char24UnlockedPointsOnce &&
             char25UnlockedPointsOnce &&
-            !char26UnlockedPointsOnce) {
+            !char26UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char26PointsToUnlock) {
 				finalNumber = char27PointsToUnlock;
@@ -1452,7 +1514,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char24UnlockedPointsOnce && 
 			char25UnlockedPointsOnce &&
             char26UnlockedPointsOnce &&
-            !char27UnlockedPointsOnce) {
+            !char27UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char27PointsToUnlock) {
 				finalNumber = char28PointsToUnlock;
@@ -1495,7 +1558,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char25UnlockedPointsOnce && 
 			char26UnlockedPointsOnce &&
             char27UnlockedPointsOnce &&
-            !char28UnlockedPointsOnce) {
+            !char28UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char28PointsToUnlock) {
 				finalNumber = char29PointsToUnlock;
@@ -1539,7 +1603,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char26UnlockedPointsOnce && 
 			char27UnlockedPointsOnce &&
             char28UnlockedPointsOnce &&
-            !char29UnlockedPointsOnce) {
+            !char29UnlockedPointsOnce &&
+            !allCharsUnlocked) {
 
 			if (numberOfPickups >= char29PointsToUnlock) {
 				finalNumber = char30PointsToUnlock;
@@ -1588,7 +1653,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 
 			if (numberOfPickups >= char30PointsToUnlock) {
 				finalNumber = 30f;
-                textPickup.text = "";
+                
+                textPickup.text = " ";
                 numberOfPickups = 0f;
 				char30UnlockedPointsOnce = true;
 				char30UnlockedPointsOnceThisGame = true;
@@ -2233,7 +2299,7 @@ public class SpawnScriptUnlocker : MonoBehaviour {
              char29UnlockedPointsOnce &&
              !char30UnlockedPointsOnce)
         {
-            
+            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
             Debug.Log("p 30 spawn");
         }
 
