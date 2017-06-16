@@ -115,10 +115,21 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 	public float char30PointsToUnlock = 12f;
 
 	public bool allCharsUnlocked = false;
- 
-	//public ObjectPoolManager objm;
-	// Use this for initialization
-	void Start () {
+
+    private GameObject[] gameObjects;
+    //public ObjectPoolManager objm;
+    // Use this for initialization
+    public void DestroyAllObjects()
+    {
+        gameObjects = GameObject.FindGameObjectsWithTag("Unlocker");
+
+        for (var i = 0; i < gameObjects.Length; i++)
+        {
+            Destroy(gameObjects[i]);
+        }
+    }
+
+    void Start () {
 
 
 
@@ -681,6 +692,7 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char1UnlockedPointsOnce = true;
 				char1UnlockedPointsOnceThisGame = true;
 				ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
+                DestroyAllObjects();
 				startTextOnce = true;
 
 			} else {
@@ -698,7 +710,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char2UnlockedPointsOnce = true;
 			char2UnlockedPointsOnceThisGame = true;
 			ES2.Save (char2UnlockedPointsOnce, "char2Unlock");
-			startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 			} else {
 
 				finalNumber = char2PointsToUnlock;
@@ -715,7 +728,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char3UnlockedPointsOnce = true;
 			char3UnlockedPointsOnceThisGame = true;
 			ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
-			startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 			} else {
 
 				finalNumber = char3PointsToUnlock;
@@ -733,7 +747,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char4UnlockedPointsOnce = true;
 				char4UnlockedPointsOnceThisGame = true;
 				ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 			} else {
 
 				finalNumber = char4PointsToUnlock;
@@ -752,7 +767,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 			char5UnlockedPointsOnce = true;
 			char5UnlockedPointsOnceThisGame = true;
 			ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
-			startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 			} else {
 
 				finalNumber = char5PointsToUnlock;
@@ -772,7 +788,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char6UnlockedPointsOnce = true;
 				char6UnlockedPointsOnceThisGame = true;
 				ES2.Save (char6UnlockedPointsOnce, "char6Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -793,7 +810,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char7UnlockedPointsOnce = true;
 				char7UnlockedPointsOnceThisGame = true;
 				ES2.Save (char7UnlockedPointsOnce, "char7Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -815,7 +833,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char8UnlockedPointsOnce = true;
 				char8UnlockedPointsOnceThisGame = true;
 				ES2.Save (char8UnlockedPointsOnce, "char8Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -838,7 +857,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char9UnlockedPointsOnce = true;
 				char9UnlockedPointsOnceThisGame = true;
 				ES2.Save (char9UnlockedPointsOnce, "char9Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -862,7 +882,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char10UnlockedPointsOnce = true;
 				char10UnlockedPointsOnceThisGame = true;
 				ES2.Save (char10UnlockedPointsOnce, "char10Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -887,7 +908,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char11UnlockedPointsOnce = true;
 				char11UnlockedPointsOnceThisGame = true;
 				ES2.Save (char11UnlockedPointsOnce, "char11Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -913,7 +935,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char12UnlockedPointsOnce = true;
 				char12UnlockedPointsOnceThisGame = true;
 				ES2.Save (char12UnlockedPointsOnce, "char12Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -940,7 +963,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char13UnlockedPointsOnce = true;
 				char13UnlockedPointsOnceThisGame = true;
 				ES2.Save (char13UnlockedPointsOnce, "char13Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -968,7 +992,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char14UnlockedPointsOnce = true;
 				char14UnlockedPointsOnceThisGame = true;
 				ES2.Save (char14UnlockedPointsOnce, "char14Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -997,7 +1022,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char15UnlockedPointsOnce = true;
 				char15UnlockedPointsOnceThisGame = true;
 				ES2.Save (char15UnlockedPointsOnce, "char15Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1027,7 +1053,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char16UnlockedPointsOnce = true;
 				char16UnlockedPointsOnceThisGame = true;
 				ES2.Save (char16UnlockedPointsOnce, "char16Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1058,7 +1085,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char17UnlockedPointsOnce = true;
 				char17UnlockedPointsOnceThisGame = true;
 				ES2.Save (char17UnlockedPointsOnce, "char17Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1090,7 +1118,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char18UnlockedPointsOnce = true;
 				char18UnlockedPointsOnceThisGame = true;
 				ES2.Save (char18UnlockedPointsOnce, "char18Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1123,7 +1152,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char19UnlockedPointsOnce = true;
 				char19UnlockedPointsOnceThisGame = true;
 				ES2.Save (char19UnlockedPointsOnce, "char19Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1157,7 +1187,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char20UnlockedPointsOnce = true;
 				char20UnlockedPointsOnceThisGame = true;
 				ES2.Save (char20UnlockedPointsOnce, "char20Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1192,7 +1223,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char21UnlockedPointsOnce = true;
 				char21UnlockedPointsOnceThisGame = true;
 				ES2.Save (char21UnlockedPointsOnce, "char21Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1228,7 +1260,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char22UnlockedPointsOnce = true;
 				char22UnlockedPointsOnceThisGame = true;
 				ES2.Save (char22UnlockedPointsOnce, "char22Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1265,7 +1298,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char23UnlockedPointsOnce = true;
 				char23UnlockedPointsOnceThisGame = true;
 				ES2.Save (char23UnlockedPointsOnce, "char23Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1303,7 +1337,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char24UnlockedPointsOnce = true;
 				char24UnlockedPointsOnceThisGame = true;
 				ES2.Save (char24UnlockedPointsOnce, "char24Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1342,7 +1377,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char25UnlockedPointsOnce = true;
 				char25UnlockedPointsOnceThisGame = true;
 				ES2.Save (char25UnlockedPointsOnce, "char25Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1382,7 +1418,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char26UnlockedPointsOnce = true;
 				char26UnlockedPointsOnceThisGame = true;
 				ES2.Save (char26UnlockedPointsOnce, "char26Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1423,7 +1460,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char27UnlockedPointsOnce = true;
 				char27UnlockedPointsOnceThisGame = true;
 				ES2.Save (char27UnlockedPointsOnce, "char27Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1465,7 +1503,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char28UnlockedPointsOnce = true;
 				char28UnlockedPointsOnceThisGame = true;
 				ES2.Save (char28UnlockedPointsOnce, "char28Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1508,7 +1547,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char29UnlockedPointsOnce = true;
 				char29UnlockedPointsOnceThisGame = true;
 				ES2.Save (char29UnlockedPointsOnce, "char29Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
@@ -1553,7 +1593,8 @@ public class SpawnScriptUnlocker : MonoBehaviour {
 				char30UnlockedPointsOnce = true;
 				char30UnlockedPointsOnceThisGame = true;
 				ES2.Save (char30UnlockedPointsOnce, "char30Unlock");
-				startTextOnce = true;
+                DestroyAllObjects();
+                startTextOnce = true;
 
 			} else {
 
