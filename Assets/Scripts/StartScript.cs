@@ -6,7 +6,7 @@ public class StartScript : MonoBehaviour {
 
 	public FadeOut fadeOutScript;
 	public AudioSource buttonSound;
-	private bool deleteSaves = false;
+	public bool deleteSaves = false;
 	// Use this for initialization
 	void Start () {
 
