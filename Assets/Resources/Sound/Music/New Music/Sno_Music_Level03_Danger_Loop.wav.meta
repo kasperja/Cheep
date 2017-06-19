@@ -7,9 +7,9 @@ AudioImporter:
   defaultSettings:
     loadType: 2
     sampleRateSetting: 2
-    sampleRateOverride: 22050
+    sampleRateOverride: 11025
     compressionFormat: 1
-    quality: 0.5
+    quality: 0.19999999
     conversionMode: 0
   platformSettingOverrides: {}
   forceToMono: 0

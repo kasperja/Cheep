@@ -26,7 +26,7 @@ public class DestroyerScript : MonoBehaviour {
 
 	void Update(){
 		
-		if(scream1.time >= 1.1f)scream1.volume = 0f;
+		if(scream1.time >= 0.9f)scream1.volume = 0f;
 		/*if (fadeMusic) {
 
 			music.volume -= 0.4f * Time.deltaTime;

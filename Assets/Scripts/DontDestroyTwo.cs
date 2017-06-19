@@ -152,8 +152,17 @@ public class DontDestroyTwo : MonoBehaviour {
 			dangerThree.volume -= 1f * Time.deltaTime;
 		
 		}
-
-		if (pc2D.isDead && dieOnce) {
+        if (pc2D.isDead) {
+            music.Stop();
+            levelOne.Stop();
+            levelTwo.Stop();
+            levelThree.Stop();
+            dangerOne.Stop();
+            dangerTwo.Stop();
+            dangerThree.Stop();
+        }
+        
+        if (pc2D.isDead && dieOnce) {
 		
 			randomCrash = Random.Range (0f, 5f);
 
