@@ -51,7 +51,38 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private bool char27UnlockedPointsOnce = false;
     private bool char28UnlockedPointsOnce = false;
     private bool char29UnlockedPointsOnce = false;
-    private bool char30UnlockedPointsOnce = false;
+   
+
+    private bool char1UnlockedPointsOnce2 = false;
+    private bool char2UnlockedPointsOnce2 = false;
+    private bool char3UnlockedPointsOnce2 = false;
+    private bool char4UnlockedPointsOnce2 = false;
+    private bool char5UnlockedPointsOnce2 = false;
+    private bool char6UnlockedPointsOnce2 = false;
+    private bool char7UnlockedPointsOnce2 = false;
+    private bool char8UnlockedPointsOnce2 = false;
+    private bool char9UnlockedPointsOnce2 = false;
+    private bool char10UnlockedPointsOnce2 = false;
+    private bool char11UnlockedPointsOnce2 = false;
+    private bool char12UnlockedPointsOnce2 = false;
+    private bool char13UnlockedPointsOnce2 = false;
+    private bool char14UnlockedPointsOnce2 = false;
+    private bool char15UnlockedPointsOnce2 = false;
+    private bool char16UnlockedPointsOnce2 = false;
+    private bool char17UnlockedPointsOnce2 = false;
+    private bool char18UnlockedPointsOnce2 = false;
+    private bool char19UnlockedPointsOnce2 = false;
+    private bool char20UnlockedPointsOnce2 = false;
+    private bool char21UnlockedPointsOnce2 = false;
+    private bool char22UnlockedPointsOnce2 = false;
+    private bool char23UnlockedPointsOnce2 = false;
+    private bool char24UnlockedPointsOnce2 = false;
+    private bool char25UnlockedPointsOnce2 = false;
+    private bool char26UnlockedPointsOnce2 = false;
+    private bool char27UnlockedPointsOnce2 = false;
+    private bool char28UnlockedPointsOnce2 = false;
+    private bool char29UnlockedPointsOnce2 = false;
+  
 
     public bool char1UnlockedPointsOnceThisGame = false;
     public bool char2UnlockedPointsOnceThisGame = false;
@@ -82,7 +113,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
     public bool char27UnlockedPointsOnceThisGame = false;
     public bool char28UnlockedPointsOnceThisGame = false;
     public bool char29UnlockedPointsOnceThisGame = false;
-    public bool char30UnlockedPointsOnceThisGame = false;
+    
 
     public float char1PointsToUnlock = 3f;
     public float char2PointsToUnlock = 6f;
@@ -319,38 +350,222 @@ public class SpawnScriptUnlocker : MonoBehaviour
             char29UnlockedPointsOnce = ES2.Load<bool>("char29Unlock");
 
         }
+        if (ES2.Exists("char1Purchased"))
+        {
+
+            char1UnlockedPointsOnce2 = ES2.Load<bool>("char1Purchased");
+        }
+
+        if (ES2.Exists("char2Purchased"))
+        {
+
+            char2UnlockedPointsOnce2 = ES2.Load<bool>("char2Purchased");
+        }
+
+        if (ES2.Exists("char3Purchased"))
+        {
+
+            char3UnlockedPointsOnce2 = ES2.Load<bool>("char3Purchased");
+        }
+
+        if (ES2.Exists("char4Purchased"))
+        {
+
+            char4UnlockedPointsOnce2 = ES2.Load<bool>("char4Purchased");
+        }
+
+        if (ES2.Exists("char5Purchased"))
+        {
+
+            char5UnlockedPointsOnce2 = ES2.Load<bool>("char5Purchased");
+
+        }
+
+        if (ES2.Exists("char6Purchased"))
+        {
+
+            char6UnlockedPointsOnce2 = ES2.Load<bool>("char6Purchased");
+        }
+
+        if (ES2.Exists("char7Purchased"))
+        {
+
+            char7UnlockedPointsOnce2 = ES2.Load<bool>("char7Purchased");
+
+        }
+
+        if (ES2.Exists("char8Purchased"))
+        {
+
+            char8UnlockedPointsOnce2 = ES2.Load<bool>("char8Purchased");
+
+        }
+
+        if (ES2.Exists("char9Purchased"))
+        {
+
+            char9UnlockedPointsOnce2 = ES2.Load<bool>("char9Purchased");
+        }
+
+        if (ES2.Exists("char10Purchased"))
+        {
+
+            char10UnlockedPointsOnce2 = ES2.Load<bool>("char10Purchased");
+        }
+
+        if (ES2.Exists("char11Purchased"))
+        {
+
+            char11UnlockedPointsOnce2 = ES2.Load<bool>("char11Purchased");
+        }
+
+        if (ES2.Exists("char12Purchased"))
+        {
+
+            char12UnlockedPointsOnce2 = ES2.Load<bool>("char12Purchased");
+        }
+
+        if (ES2.Exists("char13Purchased"))
+        {
+
+            char13UnlockedPointsOnce2 = ES2.Load<bool>("char13Purchased");
+
+        }
+
+        if (ES2.Exists("char14Purchased"))
+        {
+
+            char14UnlockedPointsOnce2 = ES2.Load<bool>("char14Purchased");
+        }
+
+        if (ES2.Exists("char15Purchased"))
+        {
+
+            char15UnlockedPointsOnce2 = ES2.Load<bool>("char15Purchased");
+
+        }
+
+        if (ES2.Exists("char16Purchased"))
+        {
+
+            char16UnlockedPointsOnce2 = ES2.Load<bool>("char16Purchased");
+
+        }
+
+        if (ES2.Exists("char17Purchased"))
+        {
+
+            char17UnlockedPointsOnce2 = ES2.Load<bool>("char17Purchased");
+        }
+
+        if (ES2.Exists("char18Purchased"))
+        {
+
+            char18UnlockedPointsOnce2 = ES2.Load<bool>("char18Purchased");
+        }
+
+        if (ES2.Exists("char19Purchased"))
+        {
+
+            char19UnlockedPointsOnce2 = ES2.Load<bool>("char19Purchased");
+
+        }
+
+        if (ES2.Exists("char20Purchased"))
+        {
+
+            char20UnlockedPointsOnce2 = ES2.Load<bool>("char20Purchased");
+        }
+
+        if (ES2.Exists("char21Purchased"))
+        {
+
+            char21UnlockedPointsOnce2 = ES2.Load<bool>("char21Purchased");
+
+        }
+
+        if (ES2.Exists("char22Purchased"))
+        {
+
+            char22UnlockedPointsOnce2 = ES2.Load<bool>("char22Purchased");
+
+        }
+
+        if (ES2.Exists("char23Purchased"))
+        {
+
+            char23UnlockedPointsOnce2 = ES2.Load<bool>("char23Purchased");
+        }
+
+        if (ES2.Exists("char24Purchased"))
+        {
+
+            char24UnlockedPointsOnce2 = ES2.Load<bool>("char24Purchased");
+        }
+
+        if (ES2.Exists("char25Purchased"))
+        {
+
+            char25UnlockedPointsOnce2 = ES2.Load<bool>("char25Purchased");
+        }
+
+        if (ES2.Exists("char26Purchased"))
+        {
+
+            char26UnlockedPointsOnce2 = ES2.Load<bool>("char26Purchased");
+        }
+
+        if (ES2.Exists("char27Purchased"))
+        {
+
+            char27UnlockedPointsOnce2 = ES2.Load<bool>("char27Purchased");
+
+        }
+
+        if (ES2.Exists("char28Purchased"))
+        {
+
+            char28UnlockedPointsOnce2 = ES2.Load<bool>("char28Purchased");
+        }
+
+        if (ES2.Exists("char29Purchased"))
+        {
+
+            char29UnlockedPointsOnce2 = ES2.Load<bool>("char29Purchased");
+
+        }
 
 
 
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            char25UnlockedPointsOnce &&
-            char26UnlockedPointsOnce &&
-            char27UnlockedPointsOnce &&
-            char28UnlockedPointsOnce &&
-            char29UnlockedPointsOnce)
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+            (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+            (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+            (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
+            (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
+            (char29UnlockedPointsOnce || char29UnlockedPointsOnce2))
         {
 
             allCharsUnlocked = true;
@@ -369,8 +584,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if (char1UnlockedPointsOnce &&
             char2UnlockedPointsOnce &&
             char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
+            char4UnlockedPointsOnce /*&&
+           char5UnlockedPointsOnce &&
             char6UnlockedPointsOnce &&
             char7UnlockedPointsOnce &&
             char8UnlockedPointsOnce &&
@@ -394,7 +609,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             char26UnlockedPointsOnce &&
             char27UnlockedPointsOnce &&
             char28UnlockedPointsOnce &&
-            char29UnlockedPointsOnce)
+            char29UnlockedPointsOnce*/)
         {
 
             allCharsUnlocked = true;
@@ -754,7 +969,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             startOnce = false;
         }
 
-        if (!char1UnlockedPointsOnce &&
+        if ((!char1UnlockedPointsOnce && !char1UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -776,8 +991,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
 
         }
-        if (char1UnlockedPointsOnce &&
-            !char2UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (!char2UnlockedPointsOnce && !char2UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -798,9 +1013,9 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
 
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            !char3UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (!char3UnlockedPointsOnce && !char3UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -821,10 +1036,10 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
 
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            !char4UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (!char4UnlockedPointsOnce && !char4UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -845,11 +1060,11 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
 
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            !char5UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (!char5UnlockedPointsOnce && !char5UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -870,12 +1085,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
 
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            !char6UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (!char6UnlockedPointsOnce && !char6UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -896,13 +1111,13 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char6PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            !char7UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (!char7UnlockedPointsOnce && !char7UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -923,14 +1138,14 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char7PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            !char8UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (!char8UnlockedPointsOnce && !char8UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -951,15 +1166,15 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char8PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            !char9UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -980,16 +1195,16 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char9PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            !char10UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (!char10UnlockedPointsOnce && !char10UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1010,17 +1225,17 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char10PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            !char11UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (!char11UnlockedPointsOnce && !char11UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1041,18 +1256,18 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char11PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            !char12UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (!char12UnlockedPointsOnce && !char12UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1073,19 +1288,19 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char12PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            !char13UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (!char13UnlockedPointsOnce && !char13UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1106,20 +1321,20 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char13PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            !char14UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (!char14UnlockedPointsOnce && !char14UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1140,21 +1355,21 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char14PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            !char15UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (!char15UnlockedPointsOnce && !char15UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1175,22 +1390,22 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char15PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            !char16UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (!char16UnlockedPointsOnce && !char16UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1211,23 +1426,24 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char16PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            !char17UnlockedPointsOnce)
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (!char17UnlockedPointsOnce && !char17UnlockedPointsOnce2) &&
+                !allCharsUnlocked)
         {
 
             if (numberOfPickups >= char17PointsToUnlock)
@@ -1247,24 +1463,24 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char17PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            !char18UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (!char18UnlockedPointsOnce && !char18UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1285,25 +1501,25 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char18PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            !char19UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (!char19UnlockedPointsOnce && !char19UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1324,26 +1540,26 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char19PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            !char20UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (!char20UnlockedPointsOnce && !char20UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1364,27 +1580,27 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char20PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            !char21UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (!char21UnlockedPointsOnce && !char21UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1405,28 +1621,28 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char21PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            !char22UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (!char22UnlockedPointsOnce && !char22UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1447,29 +1663,29 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char22PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            !char23UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (!char23UnlockedPointsOnce && !char23UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1490,30 +1706,30 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char23PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            !char24UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (!char24UnlockedPointsOnce && !char24UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1534,31 +1750,31 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char24PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            !char25UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+          (!char25UnlockedPointsOnce && !char25UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1579,32 +1795,32 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char26PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            char25UnlockedPointsOnce &&
-            !char26UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+            (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+           (!char26UnlockedPointsOnce && !char26UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1625,33 +1841,33 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char26PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            char25UnlockedPointsOnce &&
-            char26UnlockedPointsOnce &&
-            !char27UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+            (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+            (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+           (!char27UnlockedPointsOnce && !char27UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1672,34 +1888,34 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char27PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            char25UnlockedPointsOnce &&
-            char26UnlockedPointsOnce &&
-            char27UnlockedPointsOnce &&
-            !char28UnlockedPointsOnce &&
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+            (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+            (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+            (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
+            (!char28UnlockedPointsOnce && !char28UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
 
@@ -1720,35 +1936,36 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 finalNumber = char28PointsToUnlock;
             }
         }
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            char25UnlockedPointsOnce &&
-            char26UnlockedPointsOnce &&
-            char27UnlockedPointsOnce &&
-            char28UnlockedPointsOnce &&
-            !char29UnlockedPointsOnce
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+            (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+            (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+            (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
+            (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
+            (!char29UnlockedPointsOnce && !char29UnlockedPointsOnce2) 
+                
             )
         {
 
@@ -1778,620 +1995,620 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     public void Spawn()
     {
+        if (!allCharsUnlocked) { 
+            if ((!char1UnlockedPointsOnce && !char1UnlockedPointsOnce2))
+            {
 
-        if (!char1UnlockedPointsOnce)
-        {
+                Instantiate(obj[0], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 1 spawn");
 
-            Instantiate(obj[0], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 1 spawn");
+            }
+            else if (
+              (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+              (!char2UnlockedPointsOnce && !char2UnlockedPointsOnce2))
+            {
 
-        }
-        else if (
-          char1UnlockedPointsOnce &&
-          !char2UnlockedPointsOnce)
-        {
+                Instantiate(obj[1], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 2 spawn");
+            }
+            else if (
+               (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+               (!char3UnlockedPointsOnce && !char3UnlockedPointsOnce2))
+            {
 
-            Instantiate(obj[1], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 2 spawn");
-        }
-        else if (
-           char1UnlockedPointsOnce &&
-           char2UnlockedPointsOnce &&
-           !char3UnlockedPointsOnce)
-        {
+                Instantiate(obj[2], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 3 spawn");
+            }
+            else if (
+               (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+               (!char4UnlockedPointsOnce && !char4UnlockedPointsOnce2))
+            {
 
-            Instantiate(obj[2], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 3 spawn");
-        }
-        else if (
-           char1UnlockedPointsOnce &&
-           char2UnlockedPointsOnce &&
-           char3UnlockedPointsOnce &&
-           !char4UnlockedPointsOnce)
-        {
+                Instantiate(obj[3], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 4 spawn");
+            }
+            else if (
+               (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+               (!char5UnlockedPointsOnce && !char5UnlockedPointsOnce2))
+            {
 
-            Instantiate(obj[3], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 4 spawn");
-        }
-        else if (
-           char1UnlockedPointsOnce &&
-           char2UnlockedPointsOnce &&
-           char3UnlockedPointsOnce &&
-           char4UnlockedPointsOnce &&
-           !char5UnlockedPointsOnce)
-        {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 5 spawn");
+            }
+            else if (
+               (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+               (!char6UnlockedPointsOnce && !char6UnlockedPointsOnce2))
+            {
 
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 5 spawn");
-        }
-        else if (
-           char1UnlockedPointsOnce &&
-           char2UnlockedPointsOnce &&
-           char3UnlockedPointsOnce &&
-           char4UnlockedPointsOnce &&
-           char5UnlockedPointsOnce &&
-           !char6UnlockedPointsOnce)
-        {
-
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 6 spawn");
-        }
-        else if (
-           char1UnlockedPointsOnce &&
-           char2UnlockedPointsOnce &&
-           char3UnlockedPointsOnce &&
-           char4UnlockedPointsOnce &&
-           char5UnlockedPointsOnce &&
-           char6UnlockedPointsOnce &&
-           !char7UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 7 spawn");
-        }
-        else if (
-           char1UnlockedPointsOnce &&
-           char2UnlockedPointsOnce &&
-           char3UnlockedPointsOnce &&
-           char4UnlockedPointsOnce &&
-           char5UnlockedPointsOnce &&
-           char6UnlockedPointsOnce &&
-           char7UnlockedPointsOnce &&
-           !char8UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 8 spawn");
-        }
-        else if (
-            char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            !char9UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 9 spawn");
-        }
-        else if (
-            char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            !char10UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 10 spawn");
-        }
-        else if (
-            char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            !char11UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 11 spawn");
-        }
-        else if (
-            char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            !char12UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 12 spawn");
-        }
-        else if (
-            char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce &&
-            char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            !char13UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 13 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             !char14UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 14 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             !char15UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 15 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             !char16UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 16 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             !char17UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 17 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             !char18UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 18 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             !char19UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 19 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             !char20UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 20 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             !char21UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 21 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             !char22UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 22 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             !char23UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 23 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             char23UnlockedPointsOnce &&
-             !char24UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 24 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             char23UnlockedPointsOnce &&
-             char24UnlockedPointsOnce &&
-             !char25UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 25 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             char23UnlockedPointsOnce &&
-             char24UnlockedPointsOnce &&
-             char25UnlockedPointsOnce &&
-             !char26UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 26 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             char23UnlockedPointsOnce &&
-             char24UnlockedPointsOnce &&
-             char25UnlockedPointsOnce &&
-             char26UnlockedPointsOnce &&
-             !char27UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 27 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             char23UnlockedPointsOnce &&
-             char24UnlockedPointsOnce &&
-             char25UnlockedPointsOnce &&
-             char26UnlockedPointsOnce &&
-             char27UnlockedPointsOnce &&
-             !char28UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 28 spawn");
-        }
-        else if (
-             char1UnlockedPointsOnce &&
-             char2UnlockedPointsOnce &&
-             char3UnlockedPointsOnce &&
-             char4UnlockedPointsOnce &&
-             char5UnlockedPointsOnce &&
-             char6UnlockedPointsOnce &&
-             char7UnlockedPointsOnce &&
-             char8UnlockedPointsOnce &&
-             char9UnlockedPointsOnce &&
-             char10UnlockedPointsOnce &&
-             char11UnlockedPointsOnce &&
-             char12UnlockedPointsOnce &&
-             char13UnlockedPointsOnce &&
-             char14UnlockedPointsOnce &&
-             char15UnlockedPointsOnce &&
-             char16UnlockedPointsOnce &&
-             char17UnlockedPointsOnce &&
-             char18UnlockedPointsOnce &&
-             char19UnlockedPointsOnce &&
-             char20UnlockedPointsOnce &&
-             char21UnlockedPointsOnce &&
-             char22UnlockedPointsOnce &&
-             char23UnlockedPointsOnce &&
-             char24UnlockedPointsOnce &&
-             char25UnlockedPointsOnce &&
-             char26UnlockedPointsOnce &&
-             char27UnlockedPointsOnce &&
-             char28UnlockedPointsOnce &&
-             !char29UnlockedPointsOnce)
-        {
-            Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
-            Debug.Log("p 29 spawn");
-        }
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 6 spawn");
+            }
+            else if (
+              (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+               (!char7UnlockedPointsOnce && !char7UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 7 spawn");
+            }
+            else if (
+               (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+               (!char8UnlockedPointsOnce && !char8UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 8 spawn");
+            }
+            else if (
+                (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 9 spawn");
+            }
+            else if (
+                (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (!char10UnlockedPointsOnce && !char10UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 10 spawn");
+            }
+            else if (
+                (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (!char11UnlockedPointsOnce && !char11UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 11 spawn");
+            }
+            else if (
+                (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (!char12UnlockedPointsOnce && !char12UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 12 spawn");
+            }
+            else if (
+                (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (!char13UnlockedPointsOnce && !char13UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 13 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                 (!char14UnlockedPointsOnce && !char14UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 14 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                 (!char15UnlockedPointsOnce && !char15UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 15 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                 (!char16UnlockedPointsOnce && !char16UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 16 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                 (!char17UnlockedPointsOnce && !char17UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 17 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                 (!char18UnlockedPointsOnce && !char18UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 18 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                 (!char19UnlockedPointsOnce && !char19UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 19 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                 (!char20UnlockedPointsOnce && !char20UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 20 spawn");
+            }
+            else if (
+                (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                 (!char21UnlockedPointsOnce && !char21UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 21 spawn");
+            }
+            else if (
+                   (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                 (!char22UnlockedPointsOnce && !char22UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 22 spawn");
+            }
+            else if (
+                  (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                 (!char23UnlockedPointsOnce && !char23UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 23 spawn");
+            }
+            else if (
+                  (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+                 (!char24UnlockedPointsOnce && !char24UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 24 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+                (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+                 (!char25UnlockedPointsOnce && !char25UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 25 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+                (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+                (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+                 (!char26UnlockedPointsOnce && !char26UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 26 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+                (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+                (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+                (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+                 (!char27UnlockedPointsOnce && !char27UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 27 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+                (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+                (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+                (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+                (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
+                 (!char28UnlockedPointsOnce && !char28UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 28 spawn");
+            }
+            else if (
+                 (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+                (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+                (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+                (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+                (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+                (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+                (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+                (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+                (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+                (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+                (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+                (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+                (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+                (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+                (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+                (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+                (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+                (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+                (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
+                (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
+                 (!char29UnlockedPointsOnce && !char29UnlockedPointsOnce2))
+            {
+                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("p 29 spawn");
+            }
+    
 
 
-
-
+    }
 
 
     }

@@ -702,7 +702,7 @@ using UnityEngine.UI;
 
 			
 					
-				foreach (Product prod in m_StoreController.products.all) {
+			/*	foreach (Product prod in m_StoreController.products.all) {
 
 					if (prod.hasReceipt) {
 
@@ -892,7 +892,7 @@ using UnityEngine.UI;
 
 					}
 
-				}
+				}*/
 			
 
 				firstStart = false;
