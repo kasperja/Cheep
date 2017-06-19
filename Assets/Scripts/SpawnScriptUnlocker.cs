@@ -540,7 +540,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
             (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
             (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
-            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2)/* &&
             (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
             (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
             (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
@@ -565,7 +565,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
             (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
             (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
-            (char29UnlockedPointsOnce || char29UnlockedPointsOnce2))
+            (char29UnlockedPointsOnce || char29UnlockedPointsOnce2)*/)
         {
 
             allCharsUnlocked = true;
@@ -581,35 +581,35 @@ public class SpawnScriptUnlocker : MonoBehaviour
     void Update()
     {
 
-        if (char1UnlockedPointsOnce &&
-            char2UnlockedPointsOnce &&
-            char3UnlockedPointsOnce &&
-            char4UnlockedPointsOnce /*&&
-           char5UnlockedPointsOnce &&
-            char6UnlockedPointsOnce &&
-            char7UnlockedPointsOnce &&
-            char8UnlockedPointsOnce &&
-            char9UnlockedPointsOnce &&
-            char10UnlockedPointsOnce &&
-            char11UnlockedPointsOnce &&
-            char12UnlockedPointsOnce &&
-            char13UnlockedPointsOnce &&
-            char14UnlockedPointsOnce &&
-            char15UnlockedPointsOnce &&
-            char16UnlockedPointsOnce &&
-            char17UnlockedPointsOnce &&
-            char18UnlockedPointsOnce &&
-            char19UnlockedPointsOnce &&
-            char20UnlockedPointsOnce &&
-            char21UnlockedPointsOnce &&
-            char22UnlockedPointsOnce &&
-            char23UnlockedPointsOnce &&
-            char24UnlockedPointsOnce &&
-            char25UnlockedPointsOnce &&
-            char26UnlockedPointsOnce &&
-            char27UnlockedPointsOnce &&
-            char28UnlockedPointsOnce &&
-            char29UnlockedPointsOnce*/)
+        if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+            (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+            (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) /*&&
+            (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+            (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+            (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+            (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
+            (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
+            (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
+            (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
+            (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
+            (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
+            (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
+            (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
+            (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
+            (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
+            (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
+            (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
+            (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
+            (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
+            (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
+            (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
+            (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
+            (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
+            (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
+            (char29UnlockedPointsOnce || char29UnlockedPointsOnce2)*/)
         {
 
             allCharsUnlocked = true;
