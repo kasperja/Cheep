@@ -540,12 +540,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
             (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
             (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
-            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2)/* &&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
             (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
             (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
             (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
             (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
-            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) /*&&
             (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
             (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
             (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
@@ -584,12 +584,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
             (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
             (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
-            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) /*&&
+            (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
             (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
             (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
             (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
             (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
-            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
+            (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) /* &&
             (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
             (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
             (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
@@ -1180,6 +1180,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char9PointsToUnlock)
             {
+                scoreInterval = 1000f;
                 finalNumber = char10PointsToUnlock;
                 numberOfPickups = 0f;
                 char9UnlockedPointsOnce = true;
@@ -1191,7 +1192,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                scoreInterval = 500f;
                 finalNumber = char9PointsToUnlock;
             }
         }

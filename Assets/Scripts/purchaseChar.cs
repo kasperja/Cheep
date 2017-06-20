@@ -12,8 +12,10 @@ public class purchaseChar : MonoBehaviour {
 		public GameObject purchasedButton;
 		public GameObject popup;
 		public BuyThis buyThisScript;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    
+
+    void Start () {
 		
 	}
 	
