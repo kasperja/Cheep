@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: 88242a01c758ce941a62884d949a6797
+timeCreated: 1497947139
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tacoJump1-0000
+    21300002: tacoJump1-0001
+    21300004: tacoJump1-0002
+    21300006: tacoJump1-0003
+    21300008: tacoJump1-0004
+    21300010: tacoJump1-0005
+    21300012: tacoJump1-0006
+    21300014: tacoJump1-0007
+    21300016: tacoJump1-0008
+    21300018: tacoJump1-0009
+    21300020: tacoJump1-0010
+    21300022: tacoJump1-0011
+    21300024: tacoJump1-0012
+    21300026: tacoJump1-0013
+    21300028: tacoJump1-0014
+    21300030: tacoJump1-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tacoJump1-0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1584
+        width: 359
+        height: 463
+      alignment: 9
+      pivot: {x: 0.6462396, y: 0.5053996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0001
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1582
+        width: 366
+        height: 465
+      alignment: 9
+      pivot: {x: 0.636612, y: 0.51182795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0002
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1585
+        width: 355
+        height: 462
+      alignment: 9
+      pivot: {x: 0.66760564, y: 0.51082253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0003
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1588
+        width: 351
+        height: 459
+      alignment: 9
+      pivot: {x: 0.67236465, y: 0.5206972}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0004
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1588
+        width: 376
+        height: 459
+      alignment: 9
+      pivot: {x: 0.6515958, y: 0.5076253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1116
+        width: 378
+        height: 464
+      alignment: 9
+      pivot: {x: 0.66137564, y: 0.5086207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0006
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1117
+        width: 370
+        height: 463
+      alignment: 9
+      pivot: {x: 0.68378377, y: 0.50323975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0007
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1123
+        width: 367
+        height: 457
+      alignment: 9
+      pivot: {x: 0.6784741, y: 0.50765866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0008
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1121
+        width: 371
+        height: 459
+      alignment: 9
+      pivot: {x: 0.6819407, y: 0.5054466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0009
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1124
+        width: 369
+        height: 456
+      alignment: 9
+      pivot: {x: 0.6802168, y: 0.50877196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0010
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 657
+        width: 373
+        height: 457
+      alignment: 9
+      pivot: {x: 0.6863271, y: 0.5098468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0011
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 648
+        width: 378
+        height: 466
+      alignment: 9
+      pivot: {x: 0.66137564, y: 0.5064378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0012
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 651
+        width: 379
+        height: 463
+      alignment: 9
+      pivot: {x: 0.65435356, y: 0.50323975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0013
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 651
+        width: 359
+        height: 463
+      alignment: 9
+      pivot: {x: 0.67966574, y: 0.5161987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0014
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 651
+        width: 362
+        height: 463
+      alignment: 9
+      pivot: {x: 0.67403316, y: 0.5075594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tacoJump1-0015
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 186
+        width: 372
+        height: 460
+      alignment: 9
+      pivot: {x: 0.6424731, y: 0.5173913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

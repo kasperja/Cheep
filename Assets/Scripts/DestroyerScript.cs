@@ -17,14 +17,19 @@ public class DestroyerScript : MonoBehaviour {
 
 
 	public GameObject graphicsPlayer;
-	public GameObject graphicsLizard;
 	public GameObject graphicsAlien;
 	public GameObject graphicsCat;
-	public GameObject graphicsHippo;
+    public GameObject graphicsPanda;
+    public GameObject graphicsLizard;
+    public GameObject graphicsTaco;
+    public GameObject graphicsHippo;
+    public GameObject graphicsRobby;
+    public GameObject graphicsBugo;
+    public GameObject graphicsHrumpf;
 
-	//public ObjectPoolManager objm;
+    //public ObjectPoolManager objm;
 
-	void Update(){
+    void Update(){
 		
 		if(scream1.time >= 0.9f)scream1.volume = 0f;
 		/*if (fadeMusic) {
@@ -41,12 +46,18 @@ public class DestroyerScript : MonoBehaviour {
 			deathParticle.Play ();
 			StartCoroutine (waitForDeath ());
 			graphicsPlayer.SetActive (false);
-			graphicsLizard.SetActive (false);
 			graphicsAlien.SetActive (false);
 			graphicsCat.SetActive (false);
-			graphicsHippo.SetActive (false);
+			graphicsPanda.SetActive (false);
+			graphicsLizard.SetActive (false);
+            graphicsTaco.SetActive(false);
+            graphicsHippo.SetActive(false);
+            graphicsRobby.SetActive(false);
+            graphicsBugo.SetActive(false);
+            graphicsHrumpf.SetActive(false);
+           
 
-			dieOnce = false;
+            dieOnce = false;
 			//Application.LoadLevel (2);
 		
 		}

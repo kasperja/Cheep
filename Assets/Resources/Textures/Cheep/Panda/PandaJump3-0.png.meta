@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: bef000e16c9e3f1409fbbb19cd55b562
+timeCreated: 1497947194
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pandaJump3-0000
+    21300002: pandaJump3-0001
+    21300004: pandaJump3-0002
+    21300006: pandaJump3-0003
+    21300008: pandaJump3-0004
+    21300010: pandaJump3-0005
+    21300012: pandaJump3-0006
+    21300014: pandaJump3-0007
+    21300016: pandaJump3-0008
+    21300018: pandaJump3-0009
+    21300020: pandaJump3-0010
+    21300022: pandaJump3-0011
+    21300024: pandaJump3-0012
+    21300026: pandaJump3-0013
+    21300028: pandaJump3-0014
+    21300030: pandaJump3-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pandaJump3-0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1644
+        width: 326
+        height: 403
+      alignment: 9
+      pivot: {x: 0.71472394, y: 0.4739454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0001
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1638
+        width: 322
+        height: 409
+      alignment: 9
+      pivot: {x: 0.7173913, y: 0.46943766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0002
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 1641
+        width: 326
+        height: 406
+      alignment: 9
+      pivot: {x: 0.72392637, y: 0.4729064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0003
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1644
+        width: 318
+        height: 403
+      alignment: 9
+      pivot: {x: 0.7232704, y: 0.4739454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0004
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 1637
+        width: 322
+        height: 410
+      alignment: 9
+      pivot: {x: 0.7236025, y: 0.47317073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0005
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1638
+        width: 319
+        height: 409
+      alignment: 9
+      pivot: {x: 0.7241379, y: 0.46699268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1232
+        width: 325
+        height: 403
+      alignment: 9
+      pivot: {x: 0.72923076, y: 0.46898264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0007
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1227
+        width: 320
+        height: 408
+      alignment: 9
+      pivot: {x: 0.721875, y: 0.46568626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0008
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1193
+        width: 323
+        height: 442
+      alignment: 9
+      pivot: {x: 0.72136223, y: 0.4321267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0009
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1194
+        width: 321
+        height: 441
+      alignment: 9
+      pivot: {x: 0.7227414, y: 0.430839}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0010
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1230
+        width: 328
+        height: 405
+      alignment: 9
+      pivot: {x: 0.73170733, y: 0.46666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0011
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 1227
+        width: 319
+        height: 408
+      alignment: 9
+      pivot: {x: 0.7241379, y: 0.46813726}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 767
+        width: 324
+        height: 424
+      alignment: 9
+      pivot: {x: 0.7191358, y: 0.45754716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0013
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 782
+        width: 320
+        height: 409
+      alignment: 9
+      pivot: {x: 0.721875, y: 0.46943766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0014
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 786
+        width: 325
+        height: 405
+      alignment: 9
+      pivot: {x: 0.72615385, y: 0.47407407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: pandaJump3-0015
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 781
+        width: 323
+        height: 410
+      alignment: 9
+      pivot: {x: 0.71517026, y: 0.46829268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
