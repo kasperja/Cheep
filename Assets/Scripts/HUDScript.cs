@@ -15,10 +15,16 @@ public class HUDScript : MonoBehaviour {
 
 	public Text ScoreTxt;
 	// Update is called once per frame
-	void Update () {
+
+    void Start()
+    {
+        StartCoroutine(textUpdator());
+
+    }
+	void LateUpdate () {
 
 		if(goDone && !pc2D.isDead && !lavineScript.isRolling && pc2D.m_MaxSpeed > 5f) playerScore += Time.deltaTime * scoreOverTimeAmmount;
-		ScoreTxt.text = "" + (int)( playerScore);
+		
 	
 	}
 
@@ -35,6 +41,14 @@ public class HUDScript : MonoBehaviour {
 		PlayerPrefs.SetInt ("Score", (int)(playerScore));
 
 	}
+
+    IEnumerator textUpdator() {
+
+        yield return new WaitForSeconds(0.01f);
+        ScoreTxt.text = "" + (int)(playerScore);
+        StartCoroutine(textUpdator());
+
+    }
 
 	/*void OnGUI()
 	{

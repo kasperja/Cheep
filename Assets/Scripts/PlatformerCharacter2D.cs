@@ -109,6 +109,7 @@ using System.Collections;
 
         private void Awake()
         {
+        Resources.UnloadUnusedAssets();
 			//Resources.LoadAll ("Textures");
 			//Resources.LoadAll ("Sound");
 			//Resources.LoadAll ("Prefabs");
