@@ -65,7 +65,7 @@ using System.Collections;
 	private bool landOnce = true;
 
 	private float animationSpeed = 1f;
-	private float animationMaxSpeed = 2f;
+	private float animationMaxSpeed = 1.6f;
 
 	public FadeOut fadeOutScript;
 
