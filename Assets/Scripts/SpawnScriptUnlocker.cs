@@ -83,7 +83,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private bool char28UnlockedPointsOnce2 = false;
     private bool char29UnlockedPointsOnce2 = false;
   
-
+    private bool OneCharUnlockedThisGame = false;
+    public Image pickupImg;
     public bool char1UnlockedPointsOnceThisGame = false;
     public bool char2UnlockedPointsOnceThisGame = false;
     public bool char3UnlockedPointsOnceThisGame = false;
@@ -163,7 +164,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Start()
     {
-
+       
 
 
         if (ES2.Exists("char1Unlock"))
@@ -573,6 +574,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
         }
 
+        if (OneCharUnlockedThisGame) {
+
+            allCharsUnlocked = true;
+            
+        }
+
         //objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
         //Spawn ();
 
@@ -580,6 +587,11 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Update()
     {
+        if (OneCharUnlockedThisGame)
+        {
+            
+            allCharsUnlocked = true;
+        }
 
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
             (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
@@ -613,7 +625,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         {
 
             allCharsUnlocked = true;
-
+            
 
         }
 
@@ -622,7 +634,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if ((numberOfPickups > origNumberOfPickups) || startTextOnce)
             {
-                textPickup.text = "" + (int)numberOfPickups + "/" + (int)finalNumber + " ";
+                textPickup.text = "" + (int)numberOfPickups + "/" + (int)finalNumber + "       ";
 
 
                 origNumberOfPickups = numberOfPickups;
@@ -632,7 +644,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         }
         else
         {
-
+            pickupImg.gameObject.SetActive(false);
             textPickup.text = "";
 
         }
@@ -975,6 +987,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char1PointsToUnlock)
             {
+                
                 finalNumber = char2PointsToUnlock;
                 numberOfPickups = 0f;
                 char1UnlockedPointsOnce = true;
@@ -982,6 +995,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char1UnlockedPointsOnce, "char1Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -998,6 +1012,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char2PointsToUnlock)
             {
+                
                 finalNumber = char3PointsToUnlock;
                 numberOfPickups = 0f;
                 char2UnlockedPointsOnce = true;
@@ -1005,6 +1020,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char2UnlockedPointsOnce, "char2Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1021,6 +1037,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char3PointsToUnlock)
             {
+                
                 finalNumber = char4PointsToUnlock;
                 numberOfPickups = 0f;
                 char3UnlockedPointsOnce = true;
@@ -1028,6 +1045,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char3UnlockedPointsOnce, "char3Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1045,6 +1063,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char4PointsToUnlock)
             {
+                
                 finalNumber = char5PointsToUnlock;
                 numberOfPickups = 0f;
                 char4UnlockedPointsOnce = true;
@@ -1052,6 +1071,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char4UnlockedPointsOnce, "char4Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1070,6 +1090,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char5PointsToUnlock)
             {
+                
                 finalNumber = char6PointsToUnlock;
                 numberOfPickups = 0f;
                 char5UnlockedPointsOnce = true;
@@ -1077,6 +1098,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char5UnlockedPointsOnce, "char5Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1096,6 +1118,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char6PointsToUnlock)
             {
+                
                 finalNumber = char7PointsToUnlock;
                 numberOfPickups = 0f;
                 char6UnlockedPointsOnce = true;
@@ -1103,6 +1126,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char6UnlockedPointsOnce, "char6Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1123,6 +1147,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char7PointsToUnlock)
             {
+                
                 finalNumber = char8PointsToUnlock;
                 numberOfPickups = 0f;
                 char7UnlockedPointsOnce = true;
@@ -1130,6 +1155,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char7UnlockedPointsOnce, "char7Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1151,6 +1177,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char8PointsToUnlock)
             {
+                
                 finalNumber = char9PointsToUnlock;
                 numberOfPickups = 0f;
                 char8UnlockedPointsOnce = true;
@@ -1158,6 +1185,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char8UnlockedPointsOnce, "char8Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1180,6 +1208,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char9PointsToUnlock)
             {
+                
                 scoreInterval = 1000f;
                 finalNumber = char10PointsToUnlock;
                 numberOfPickups = 0f;
@@ -1188,6 +1217,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char9UnlockedPointsOnce, "char9Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1211,6 +1241,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char10PointsToUnlock)
             {
+                
                 finalNumber = char11PointsToUnlock;
                 numberOfPickups = 0f;
                 char10UnlockedPointsOnce = true;
@@ -1218,6 +1249,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char10UnlockedPointsOnce, "char10Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1242,6 +1274,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char11PointsToUnlock)
             {
+                
                 finalNumber = char12PointsToUnlock;
                 numberOfPickups = 0f;
                 char11UnlockedPointsOnce = true;
@@ -1249,6 +1282,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char11UnlockedPointsOnce, "char11Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1274,6 +1308,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char12PointsToUnlock)
             {
+                
                 finalNumber = char13PointsToUnlock;
                 numberOfPickups = 0f;
                 char12UnlockedPointsOnce = true;
@@ -1281,6 +1316,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char12UnlockedPointsOnce, "char12Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1307,6 +1343,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char13PointsToUnlock)
             {
+                
                 finalNumber = char14PointsToUnlock;
                 numberOfPickups = 0f;
                 char13UnlockedPointsOnce = true;
@@ -1314,6 +1351,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char13UnlockedPointsOnce, "char13Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1341,6 +1379,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char14PointsToUnlock)
             {
+                
                 finalNumber = char15PointsToUnlock;
                 numberOfPickups = 0f;
                 char14UnlockedPointsOnce = true;
@@ -1348,6 +1387,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char14UnlockedPointsOnce, "char14Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1376,6 +1416,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char15PointsToUnlock)
             {
+                
                 finalNumber = char16PointsToUnlock;
                 numberOfPickups = 0f;
                 char15UnlockedPointsOnce = true;
@@ -1383,6 +1424,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char15UnlockedPointsOnce, "char15Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1412,6 +1454,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char16PointsToUnlock)
             {
+                
                 finalNumber = char17PointsToUnlock;
                 numberOfPickups = 0f;
                 char16UnlockedPointsOnce = true;
@@ -1419,6 +1462,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char16UnlockedPointsOnce, "char16Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1449,6 +1493,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char17PointsToUnlock)
             {
+                
                 finalNumber = char18PointsToUnlock;
                 numberOfPickups = 0f;
                 char17UnlockedPointsOnce = true;
@@ -1456,6 +1501,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char17UnlockedPointsOnce, "char17Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1487,6 +1533,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char18PointsToUnlock)
             {
+                
                 finalNumber = char19PointsToUnlock;
                 numberOfPickups = 0f;
                 char18UnlockedPointsOnce = true;
@@ -1494,6 +1541,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char18UnlockedPointsOnce, "char18Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1526,6 +1574,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char19PointsToUnlock)
             {
+                
                 finalNumber = char20PointsToUnlock;
                 numberOfPickups = 0f;
                 char19UnlockedPointsOnce = true;
@@ -1533,6 +1582,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char19UnlockedPointsOnce, "char19Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1566,6 +1616,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char20PointsToUnlock)
             {
+                
                 finalNumber = char21PointsToUnlock;
                 numberOfPickups = 0f;
                 char20UnlockedPointsOnce = true;
@@ -1573,6 +1624,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char20UnlockedPointsOnce, "char20Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1607,6 +1659,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char21PointsToUnlock)
             {
+                
                 finalNumber = char22PointsToUnlock;
                 numberOfPickups = 0f;
                 char21UnlockedPointsOnce = true;
@@ -1614,6 +1667,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char21UnlockedPointsOnce, "char21Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1649,6 +1703,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char22PointsToUnlock)
             {
+                
                 finalNumber = char23PointsToUnlock;
                 numberOfPickups = 0f;
                 char22UnlockedPointsOnce = true;
@@ -1656,6 +1711,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char22UnlockedPointsOnce, "char22Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1692,6 +1748,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char23PointsToUnlock)
             {
+                
                 finalNumber = char24PointsToUnlock;
                 numberOfPickups = 0f;
                 char23UnlockedPointsOnce = true;
@@ -1699,6 +1756,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char23UnlockedPointsOnce, "char23Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1736,6 +1794,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char24PointsToUnlock)
             {
+                
                 finalNumber = char25PointsToUnlock;
                 numberOfPickups = 0f;
                 char24UnlockedPointsOnce = true;
@@ -1743,6 +1802,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char24UnlockedPointsOnce, "char24Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1781,6 +1841,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char26PointsToUnlock)
             {
+                
                 finalNumber = char27PointsToUnlock;
                 numberOfPickups = 0f;
                 char25UnlockedPointsOnce = true;
@@ -1788,6 +1849,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char25UnlockedPointsOnce, "char25Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1827,6 +1889,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char26PointsToUnlock)
             {
+                
                 finalNumber = char27PointsToUnlock;
                 numberOfPickups = 0f;
                 char26UnlockedPointsOnce = true;
@@ -1834,6 +1897,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char26UnlockedPointsOnce, "char26Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1874,6 +1938,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char27PointsToUnlock)
             {
+                
                 finalNumber = char28PointsToUnlock;
                 numberOfPickups = 0f;
                 char27UnlockedPointsOnce = true;
@@ -1881,6 +1946,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char27UnlockedPointsOnce, "char27Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1922,6 +1988,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char28PointsToUnlock)
             {
+                
                 finalNumber = char29PointsToUnlock;
                 numberOfPickups = 0f;
                 char28UnlockedPointsOnce = true;
@@ -1929,6 +1996,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char28UnlockedPointsOnce, "char28Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1972,6 +2040,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char29PointsToUnlock)
             {
+                
                 finalNumber = 30f;
                 textPickup.text = " ";
                 numberOfPickups = 0f;
@@ -1980,6 +2049,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char29UnlockedPointsOnce, "char29Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else

@@ -7,12 +7,12 @@ public class StartScript : MonoBehaviour {
 	public FadeOut fadeOutScript;
 	public AudioSource buttonSound;
 	public bool deleteSaves = false;
-    private bool char1UnlockedPointsOnce = true;
+    //private bool char1UnlockedPointsOnce = true;
     // Use this for initialization
     void Start () {
 
 		ES2.Save (0, "prevScene");
-        ES2.Save(char1UnlockedPointsOnce, "char1Unlock");
+       // ES2.Save(char1UnlockedPointsOnce, "char1Unlock");
 
 
     }
