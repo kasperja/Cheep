@@ -1209,7 +1209,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             if (numberOfPickups >= char9PointsToUnlock)
             {
                 
-                scoreInterval = 1000f;
+                //scoreInterval = 1000f;
                 finalNumber = char10PointsToUnlock;
                 numberOfPickups = 0f;
                 char9UnlockedPointsOnce = true;
@@ -1222,7 +1222,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-                scoreInterval = 500f;
+                //scoreInterval = 500f;
                 finalNumber = char9PointsToUnlock;
             }
         }

@@ -97,8 +97,8 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 	void Start()
 	{
-
-		if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
+        RestorePurchases();
+        if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
 
 		if(ES2.Exists("char1Purchased"))char1Purchased = ES2.Load<bool> ("char1Purchased");
 		if(ES2.Exists("char2Purchased"))char2Purchased = ES2.Load<bool> ("char2Purchased");
@@ -114,10 +114,10 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 		//cata1 = m_StoreController.products.WithID (kProductIDCharacter1);
 
-		if (firstStart)
+		//if (firstStart)
 			RestorePurchases ();
 
-		if(firstStart){
+		//if(firstStart){
 
 			foreach (Product prod in m_StoreController.products.all) {
 
@@ -176,7 +176,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 				}
 
-			}
+			//}
 		}
 
 		firstStart = false;
