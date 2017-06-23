@@ -64,8 +64,9 @@ public class PurchaseNoAds : MonoBehaviour, IStoreListener
 
 
 	private void Awake(){
+        
 
-		if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
+        if (ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
 
 	}
 
@@ -100,7 +101,8 @@ public class PurchaseNoAds : MonoBehaviour, IStoreListener
 		if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
 
 
-		
+
+        RestorePurchases();
 
 
 
@@ -109,9 +111,8 @@ public class PurchaseNoAds : MonoBehaviour, IStoreListener
 
 
 
-
-		// If we haven't set up the Unity Purchasing reference
-		if (m_StoreController == null)
+        // If we haven't set up the Unity Purchasing reference
+        if (m_StoreController == null)
 		{
 			// Begin to configure our connection to Purchasing
 			InitializePurchasing();

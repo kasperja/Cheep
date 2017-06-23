@@ -480,7 +480,10 @@ using UnityEngine.UI;
 
 		void Start()
 		{
-		if (ES2.Exists ("char1Unlock")) {
+
+        RestorePurchases();
+
+        if (ES2.Exists ("char1Unlock")) {
 
 			char1Unlocked = ES2.Load<bool> ("char1Unlock");
 		}
@@ -698,7 +701,7 @@ using UnityEngine.UI;
 			//cata1 = m_StoreController.products.WithID (kProductIDCharacter1);
 
 			
-				RestorePurchases ();
+				
 
 			
 					
