@@ -6,7 +6,7 @@ public class StartScript : MonoBehaviour {
 
 	public FadeOut fadeOutScript;
 	public AudioSource buttonSound;
-	public bool deleteSaves = false;
+	private bool deleteSaves = false;
     //private bool char1UnlockedPointsOnce = true;
     // Use this for initialization
     void Start () {
@@ -37,7 +37,7 @@ public class StartScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 	
-		if(Input.GetKeyDown (KeyCode.O) || deleteSaves)ES2.DeleteDefaultFolder();
+		//if(Input.GetKeyDown (KeyCode.O) || deleteSaves)ES2.DeleteDefaultFolder();
 
 	}
 
@@ -47,6 +47,14 @@ public class StartScript : MonoBehaviour {
 		StartCoroutine (retryNum ());
 
 	}
+
+    public void DeleteSaves() {
+
+        ES2.DeleteDefaultFolder();
+
+
+    }
+
 
 	IEnumerator retryNum (){
 
