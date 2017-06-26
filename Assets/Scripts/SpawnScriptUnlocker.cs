@@ -2121,7 +2121,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                (!char6UnlockedPointsOnce && !char6UnlockedPointsOnce2))
             {
 
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[5], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 6 spawn");
             }
             else if (
@@ -2133,7 +2133,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
                (!char7UnlockedPointsOnce && !char7UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 7 spawn");
             }
@@ -2147,7 +2147,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
                (!char8UnlockedPointsOnce && !char8UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 8 spawn");
             }
@@ -2162,7 +2162,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
                 (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[8], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 9 spawn");
             }
@@ -2178,7 +2178,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
                 (!char10UnlockedPointsOnce && !char10UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[9], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 10 spawn");
             }
@@ -2195,7 +2195,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
                 (!char11UnlockedPointsOnce && !char11UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[10], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 11 spawn");
             }
@@ -2213,7 +2213,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
                 (!char12UnlockedPointsOnce && !char12UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[11], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 12 spawn");
             }
@@ -2232,7 +2232,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
                 (!char13UnlockedPointsOnce && !char13UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[12], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 13 spawn");
             }
@@ -2252,7 +2252,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
                  (!char14UnlockedPointsOnce && !char14UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[13], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 14 spawn");
             }
@@ -2273,7 +2273,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
                  (!char15UnlockedPointsOnce && !char15UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[14], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 15 spawn");
             }
@@ -2295,7 +2295,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
                  (!char16UnlockedPointsOnce && !char16UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[15], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 16 spawn");
             }
@@ -2318,7 +2318,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
                  (!char17UnlockedPointsOnce && !char17UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[16], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 17 spawn");
             }
@@ -2342,7 +2342,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
                  (!char18UnlockedPointsOnce && !char18UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[17], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 18 spawn");
             }
@@ -2367,7 +2367,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
                  (!char19UnlockedPointsOnce && !char19UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[18], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 19 spawn");
             }
@@ -2393,7 +2393,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
                  (!char20UnlockedPointsOnce && !char20UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[19], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 20 spawn");
             }
@@ -2420,7 +2420,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
                  (!char21UnlockedPointsOnce && !char21UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[20], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 21 spawn");
             }
@@ -2448,7 +2448,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
                  (!char22UnlockedPointsOnce && !char22UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[21], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 22 spawn");
             }
@@ -2477,7 +2477,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
                  (!char23UnlockedPointsOnce && !char23UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[22], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 23 spawn");
             }
@@ -2507,7 +2507,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
                  (!char24UnlockedPointsOnce && !char24UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[23], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 24 spawn");
             }
@@ -2538,7 +2538,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
                  (!char25UnlockedPointsOnce && !char25UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[24], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 25 spawn");
             }
@@ -2570,7 +2570,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
                  (!char26UnlockedPointsOnce && !char26UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[25], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 26 spawn");
             }
@@ -2603,7 +2603,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
                  (!char27UnlockedPointsOnce && !char27UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[26], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 27 spawn");
             }
@@ -2637,7 +2637,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
                  (!char28UnlockedPointsOnce && !char28UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[27], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 28 spawn");
             }
@@ -2672,7 +2672,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
                  (!char29UnlockedPointsOnce && !char29UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[28], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 29 spawn");
             }
