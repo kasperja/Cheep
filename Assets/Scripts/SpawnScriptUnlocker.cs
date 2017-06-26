@@ -6,6 +6,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 {
 
     public GameObject[] obj;
+    public GameObject[] objHUD;
     public HUDScript hud;
     //public PlatformerCharacter2D pc2D;
 
@@ -589,7 +590,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
     {
         if (OneCharUnlockedThisGame)
         {
-            
+            for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
             allCharsUnlocked = true;
         }
 
@@ -987,7 +988,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char1PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char2PointsToUnlock;
                 numberOfPickups = 0f;
                 char1UnlockedPointsOnce = true;
@@ -1000,6 +1001,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
+                
+                objHUD[0].SetActive(true);
 
                 finalNumber = char1PointsToUnlock;
             }
@@ -1012,7 +1015,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char2PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char3PointsToUnlock;
                 numberOfPickups = 0f;
                 char2UnlockedPointsOnce = true;
@@ -1024,7 +1027,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[1].SetActive(true);
                 finalNumber = char2PointsToUnlock;
             }
 
@@ -1037,7 +1040,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char3PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char4PointsToUnlock;
                 numberOfPickups = 0f;
                 char3UnlockedPointsOnce = true;
@@ -1049,7 +1052,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[2].SetActive(true);
                 finalNumber = char3PointsToUnlock;
             }
 
@@ -1063,7 +1066,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char4PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char5PointsToUnlock;
                 numberOfPickups = 0f;
                 char4UnlockedPointsOnce = true;
@@ -1075,7 +1078,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[3].SetActive(true);
                 finalNumber = char4PointsToUnlock;
             }
 
@@ -1090,7 +1093,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char5PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char6PointsToUnlock;
                 numberOfPickups = 0f;
                 char5UnlockedPointsOnce = true;
@@ -1102,7 +1105,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[4].SetActive(true);
                 finalNumber = char5PointsToUnlock;
             }
 
@@ -1118,7 +1121,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char6PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char7PointsToUnlock;
                 numberOfPickups = 0f;
                 char6UnlockedPointsOnce = true;
@@ -1131,7 +1134,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[5].SetActive(true);
                 finalNumber = char6PointsToUnlock;
             }
         }
@@ -1147,7 +1150,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char7PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char8PointsToUnlock;
                 numberOfPickups = 0f;
                 char7UnlockedPointsOnce = true;
@@ -1160,7 +1163,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[6].SetActive(true);
                 finalNumber = char7PointsToUnlock;
             }
         }
@@ -1177,7 +1180,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char8PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char9PointsToUnlock;
                 numberOfPickups = 0f;
                 char8UnlockedPointsOnce = true;
@@ -1190,7 +1193,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[7].SetActive(true);
                 finalNumber = char8PointsToUnlock;
             }
         }
@@ -1208,7 +1211,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char9PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 //scoreInterval = 1000f;
                 finalNumber = char10PointsToUnlock;
                 numberOfPickups = 0f;
@@ -1222,6 +1225,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
+                objHUD[8].SetActive(true);
                 //scoreInterval = 500f;
                 finalNumber = char9PointsToUnlock;
             }
@@ -1241,7 +1245,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char10PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char11PointsToUnlock;
                 numberOfPickups = 0f;
                 char10UnlockedPointsOnce = true;
@@ -1254,7 +1258,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[9].SetActive(true);
                 finalNumber = char10PointsToUnlock;
             }
         }
@@ -1274,7 +1278,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char11PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char12PointsToUnlock;
                 numberOfPickups = 0f;
                 char11UnlockedPointsOnce = true;
@@ -1287,7 +1291,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[10].SetActive(true);
                 finalNumber = char11PointsToUnlock;
             }
         }
@@ -1308,7 +1312,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char12PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char13PointsToUnlock;
                 numberOfPickups = 0f;
                 char12UnlockedPointsOnce = true;
@@ -1321,7 +1325,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[11].SetActive(true);
                 finalNumber = char12PointsToUnlock;
             }
         }
@@ -1343,7 +1347,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char13PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char14PointsToUnlock;
                 numberOfPickups = 0f;
                 char13UnlockedPointsOnce = true;
@@ -1356,7 +1360,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[12].SetActive(true);
                 finalNumber = char13PointsToUnlock;
             }
         }
@@ -1379,7 +1383,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char14PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char15PointsToUnlock;
                 numberOfPickups = 0f;
                 char14UnlockedPointsOnce = true;
@@ -1392,7 +1396,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[13].SetActive(true);
                 finalNumber = char14PointsToUnlock;
             }
         }
@@ -1416,7 +1420,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char15PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char16PointsToUnlock;
                 numberOfPickups = 0f;
                 char15UnlockedPointsOnce = true;
@@ -1429,7 +1433,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[14].SetActive(true);
                 finalNumber = char15PointsToUnlock;
             }
         }
@@ -1454,7 +1458,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char16PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char17PointsToUnlock;
                 numberOfPickups = 0f;
                 char16UnlockedPointsOnce = true;
@@ -1467,7 +1471,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[15].SetActive(true);
                 finalNumber = char16PointsToUnlock;
             }
         }
@@ -1493,7 +1497,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char17PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char18PointsToUnlock;
                 numberOfPickups = 0f;
                 char17UnlockedPointsOnce = true;
@@ -1506,7 +1510,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[16].SetActive(true);
                 finalNumber = char17PointsToUnlock;
             }
         }
@@ -1533,7 +1537,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char18PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char19PointsToUnlock;
                 numberOfPickups = 0f;
                 char18UnlockedPointsOnce = true;
@@ -1546,7 +1550,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[17].SetActive(true);
                 finalNumber = char18PointsToUnlock;
             }
         }
@@ -1574,7 +1578,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char19PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char20PointsToUnlock;
                 numberOfPickups = 0f;
                 char19UnlockedPointsOnce = true;
@@ -1587,7 +1591,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[18].SetActive(true);
                 finalNumber = char19PointsToUnlock;
             }
         }
@@ -1616,7 +1620,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char20PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char21PointsToUnlock;
                 numberOfPickups = 0f;
                 char20UnlockedPointsOnce = true;
@@ -1629,7 +1633,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[19].SetActive(true);
                 finalNumber = char20PointsToUnlock;
             }
         }
@@ -1659,7 +1663,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char21PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char22PointsToUnlock;
                 numberOfPickups = 0f;
                 char21UnlockedPointsOnce = true;
@@ -1672,7 +1676,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[20].SetActive(true);
                 finalNumber = char21PointsToUnlock;
             }
         }
@@ -1703,7 +1707,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char22PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char23PointsToUnlock;
                 numberOfPickups = 0f;
                 char22UnlockedPointsOnce = true;
@@ -1716,7 +1720,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[21].SetActive(true);
                 finalNumber = char22PointsToUnlock;
             }
         }
@@ -1748,7 +1752,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char23PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char24PointsToUnlock;
                 numberOfPickups = 0f;
                 char23UnlockedPointsOnce = true;
@@ -1761,7 +1765,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[22].SetActive(true);
                 finalNumber = char23PointsToUnlock;
             }
         }
@@ -1794,7 +1798,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char24PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char25PointsToUnlock;
                 numberOfPickups = 0f;
                 char24UnlockedPointsOnce = true;
@@ -1807,7 +1811,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[23].SetActive(true);
                 finalNumber = char24PointsToUnlock;
             }
         }
@@ -1841,7 +1845,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char26PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char27PointsToUnlock;
                 numberOfPickups = 0f;
                 char25UnlockedPointsOnce = true;
@@ -1854,7 +1858,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[24].SetActive(true);
                 finalNumber = char26PointsToUnlock;
             }
         }
@@ -1889,7 +1893,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char26PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char27PointsToUnlock;
                 numberOfPickups = 0f;
                 char26UnlockedPointsOnce = true;
@@ -1902,7 +1906,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[25].SetActive(true);
                 finalNumber = char26PointsToUnlock;
             }
         }
@@ -1938,7 +1942,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char27PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char28PointsToUnlock;
                 numberOfPickups = 0f;
                 char27UnlockedPointsOnce = true;
@@ -1951,7 +1955,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[26].SetActive(true);
                 finalNumber = char27PointsToUnlock;
             }
         }
@@ -1988,7 +1992,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char28PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char29PointsToUnlock;
                 numberOfPickups = 0f;
                 char28UnlockedPointsOnce = true;
@@ -2001,7 +2005,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[27].SetActive(true);
                 finalNumber = char28PointsToUnlock;
             }
         }
@@ -2040,7 +2044,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char29PointsToUnlock)
             {
-                
+                for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = 30f;
                 textPickup.text = " ";
                 numberOfPickups = 0f;
@@ -2054,7 +2058,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
-
+                objHUD[28].SetActive(true);
                 finalNumber = char29PointsToUnlock;
             }
         }
