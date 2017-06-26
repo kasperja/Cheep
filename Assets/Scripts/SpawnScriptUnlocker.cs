@@ -83,7 +83,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private bool char28UnlockedPointsOnce2 = false;
     private bool char29UnlockedPointsOnce2 = false;
   
-
+    private bool OneCharUnlockedThisGame = false;
+    public Image pickupImg;
     public bool char1UnlockedPointsOnceThisGame = false;
     public bool char2UnlockedPointsOnceThisGame = false;
     public bool char3UnlockedPointsOnceThisGame = false;
@@ -163,7 +164,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Start()
     {
-
+       
 
 
         if (ES2.Exists("char1Unlock"))
@@ -573,6 +574,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
         }
 
+        if (OneCharUnlockedThisGame) {
+
+            allCharsUnlocked = true;
+            
+        }
+
         //objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
         //Spawn ();
 
@@ -580,6 +587,11 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Update()
     {
+        if (OneCharUnlockedThisGame)
+        {
+            
+            allCharsUnlocked = true;
+        }
 
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
             (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
@@ -613,7 +625,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         {
 
             allCharsUnlocked = true;
-
+            
 
         }
 
@@ -622,7 +634,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if ((numberOfPickups > origNumberOfPickups) || startTextOnce)
             {
-                textPickup.text = "" + (int)numberOfPickups + "/" + (int)finalNumber + " ";
+                textPickup.text = "" + (int)numberOfPickups + "/" + (int)finalNumber + "       ";
 
 
                 origNumberOfPickups = numberOfPickups;
@@ -632,7 +644,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         }
         else
         {
-
+            pickupImg.gameObject.SetActive(false);
             textPickup.text = "";
 
         }
@@ -975,6 +987,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char1PointsToUnlock)
             {
+                
                 finalNumber = char2PointsToUnlock;
                 numberOfPickups = 0f;
                 char1UnlockedPointsOnce = true;
@@ -982,6 +995,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char1UnlockedPointsOnce, "char1Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -998,6 +1012,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char2PointsToUnlock)
             {
+                
                 finalNumber = char3PointsToUnlock;
                 numberOfPickups = 0f;
                 char2UnlockedPointsOnce = true;
@@ -1005,6 +1020,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char2UnlockedPointsOnce, "char2Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1021,6 +1037,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char3PointsToUnlock)
             {
+                
                 finalNumber = char4PointsToUnlock;
                 numberOfPickups = 0f;
                 char3UnlockedPointsOnce = true;
@@ -1028,6 +1045,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char3UnlockedPointsOnce, "char3Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1045,6 +1063,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char4PointsToUnlock)
             {
+                
                 finalNumber = char5PointsToUnlock;
                 numberOfPickups = 0f;
                 char4UnlockedPointsOnce = true;
@@ -1052,6 +1071,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char4UnlockedPointsOnce, "char4Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1070,6 +1090,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char5PointsToUnlock)
             {
+                
                 finalNumber = char6PointsToUnlock;
                 numberOfPickups = 0f;
                 char5UnlockedPointsOnce = true;
@@ -1077,6 +1098,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char5UnlockedPointsOnce, "char5Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
             }
             else
             {
@@ -1096,6 +1118,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char6PointsToUnlock)
             {
+                
                 finalNumber = char7PointsToUnlock;
                 numberOfPickups = 0f;
                 char6UnlockedPointsOnce = true;
@@ -1103,6 +1126,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char6UnlockedPointsOnce, "char6Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1123,6 +1147,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char7PointsToUnlock)
             {
+                
                 finalNumber = char8PointsToUnlock;
                 numberOfPickups = 0f;
                 char7UnlockedPointsOnce = true;
@@ -1130,6 +1155,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char7UnlockedPointsOnce, "char7Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1151,6 +1177,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char8PointsToUnlock)
             {
+                
                 finalNumber = char9PointsToUnlock;
                 numberOfPickups = 0f;
                 char8UnlockedPointsOnce = true;
@@ -1158,6 +1185,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char8UnlockedPointsOnce, "char8Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1180,7 +1208,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char9PointsToUnlock)
             {
-                scoreInterval = 1000f;
+                
+                //scoreInterval = 1000f;
                 finalNumber = char10PointsToUnlock;
                 numberOfPickups = 0f;
                 char9UnlockedPointsOnce = true;
@@ -1188,11 +1217,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char9UnlockedPointsOnce, "char9Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
             {
-                scoreInterval = 500f;
+                //scoreInterval = 500f;
                 finalNumber = char9PointsToUnlock;
             }
         }
@@ -1211,6 +1241,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char10PointsToUnlock)
             {
+                
                 finalNumber = char11PointsToUnlock;
                 numberOfPickups = 0f;
                 char10UnlockedPointsOnce = true;
@@ -1218,6 +1249,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char10UnlockedPointsOnce, "char10Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1242,6 +1274,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char11PointsToUnlock)
             {
+                
                 finalNumber = char12PointsToUnlock;
                 numberOfPickups = 0f;
                 char11UnlockedPointsOnce = true;
@@ -1249,6 +1282,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char11UnlockedPointsOnce, "char11Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1274,6 +1308,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char12PointsToUnlock)
             {
+                
                 finalNumber = char13PointsToUnlock;
                 numberOfPickups = 0f;
                 char12UnlockedPointsOnce = true;
@@ -1281,6 +1316,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char12UnlockedPointsOnce, "char12Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1307,6 +1343,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char13PointsToUnlock)
             {
+                
                 finalNumber = char14PointsToUnlock;
                 numberOfPickups = 0f;
                 char13UnlockedPointsOnce = true;
@@ -1314,6 +1351,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char13UnlockedPointsOnce, "char13Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1341,6 +1379,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char14PointsToUnlock)
             {
+                
                 finalNumber = char15PointsToUnlock;
                 numberOfPickups = 0f;
                 char14UnlockedPointsOnce = true;
@@ -1348,6 +1387,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char14UnlockedPointsOnce, "char14Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1376,6 +1416,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char15PointsToUnlock)
             {
+                
                 finalNumber = char16PointsToUnlock;
                 numberOfPickups = 0f;
                 char15UnlockedPointsOnce = true;
@@ -1383,6 +1424,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char15UnlockedPointsOnce, "char15Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1412,6 +1454,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char16PointsToUnlock)
             {
+                
                 finalNumber = char17PointsToUnlock;
                 numberOfPickups = 0f;
                 char16UnlockedPointsOnce = true;
@@ -1419,6 +1462,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char16UnlockedPointsOnce, "char16Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1449,6 +1493,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char17PointsToUnlock)
             {
+                
                 finalNumber = char18PointsToUnlock;
                 numberOfPickups = 0f;
                 char17UnlockedPointsOnce = true;
@@ -1456,6 +1501,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char17UnlockedPointsOnce, "char17Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1487,6 +1533,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char18PointsToUnlock)
             {
+                
                 finalNumber = char19PointsToUnlock;
                 numberOfPickups = 0f;
                 char18UnlockedPointsOnce = true;
@@ -1494,6 +1541,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char18UnlockedPointsOnce, "char18Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1526,6 +1574,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char19PointsToUnlock)
             {
+                
                 finalNumber = char20PointsToUnlock;
                 numberOfPickups = 0f;
                 char19UnlockedPointsOnce = true;
@@ -1533,6 +1582,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char19UnlockedPointsOnce, "char19Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1566,6 +1616,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char20PointsToUnlock)
             {
+                
                 finalNumber = char21PointsToUnlock;
                 numberOfPickups = 0f;
                 char20UnlockedPointsOnce = true;
@@ -1573,6 +1624,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char20UnlockedPointsOnce, "char20Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1607,6 +1659,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char21PointsToUnlock)
             {
+                
                 finalNumber = char22PointsToUnlock;
                 numberOfPickups = 0f;
                 char21UnlockedPointsOnce = true;
@@ -1614,6 +1667,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char21UnlockedPointsOnce, "char21Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1649,6 +1703,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char22PointsToUnlock)
             {
+                
                 finalNumber = char23PointsToUnlock;
                 numberOfPickups = 0f;
                 char22UnlockedPointsOnce = true;
@@ -1656,6 +1711,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char22UnlockedPointsOnce, "char22Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1692,6 +1748,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char23PointsToUnlock)
             {
+                
                 finalNumber = char24PointsToUnlock;
                 numberOfPickups = 0f;
                 char23UnlockedPointsOnce = true;
@@ -1699,6 +1756,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char23UnlockedPointsOnce, "char23Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1736,6 +1794,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char24PointsToUnlock)
             {
+                
                 finalNumber = char25PointsToUnlock;
                 numberOfPickups = 0f;
                 char24UnlockedPointsOnce = true;
@@ -1743,6 +1802,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char24UnlockedPointsOnce, "char24Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1781,6 +1841,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char26PointsToUnlock)
             {
+                
                 finalNumber = char27PointsToUnlock;
                 numberOfPickups = 0f;
                 char25UnlockedPointsOnce = true;
@@ -1788,6 +1849,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char25UnlockedPointsOnce, "char25Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1827,6 +1889,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char26PointsToUnlock)
             {
+                
                 finalNumber = char27PointsToUnlock;
                 numberOfPickups = 0f;
                 char26UnlockedPointsOnce = true;
@@ -1834,6 +1897,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char26UnlockedPointsOnce, "char26Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1874,6 +1938,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char27PointsToUnlock)
             {
+                
                 finalNumber = char28PointsToUnlock;
                 numberOfPickups = 0f;
                 char27UnlockedPointsOnce = true;
@@ -1881,6 +1946,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char27UnlockedPointsOnce, "char27Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1922,6 +1988,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char28PointsToUnlock)
             {
+                
                 finalNumber = char29PointsToUnlock;
                 numberOfPickups = 0f;
                 char28UnlockedPointsOnce = true;
@@ -1929,6 +1996,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char28UnlockedPointsOnce, "char28Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -1972,6 +2040,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (numberOfPickups >= char29PointsToUnlock)
             {
+                
                 finalNumber = 30f;
                 textPickup.text = " ";
                 numberOfPickups = 0f;
@@ -1980,6 +2049,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 ES2.Save(char29UnlockedPointsOnce, "char29Unlock");
                 DestroyAllObjects();
                 startTextOnce = true;
+                OneCharUnlockedThisGame = true;
 
             }
             else
@@ -2051,7 +2121,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                (!char6UnlockedPointsOnce && !char6UnlockedPointsOnce2))
             {
 
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[5], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 6 spawn");
             }
             else if (
@@ -2063,7 +2133,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
                (!char7UnlockedPointsOnce && !char7UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [6], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 7 spawn");
             }
@@ -2077,7 +2147,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
                (!char8UnlockedPointsOnce && !char8UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 8 spawn");
             }
@@ -2092,7 +2162,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
                 (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[8], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 9 spawn");
             }
@@ -2108,7 +2178,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
                 (!char10UnlockedPointsOnce && !char10UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[9], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 10 spawn");
             }
@@ -2125,7 +2195,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char10UnlockedPointsOnce || char10UnlockedPointsOnce2) &&
                 (!char11UnlockedPointsOnce && !char11UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[10], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 11 spawn");
             }
@@ -2143,7 +2213,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char11UnlockedPointsOnce || char11UnlockedPointsOnce2) &&
                 (!char12UnlockedPointsOnce && !char12UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[11], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 12 spawn");
             }
@@ -2162,7 +2232,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char12UnlockedPointsOnce || char12UnlockedPointsOnce2) &&
                 (!char13UnlockedPointsOnce && !char13UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[12], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 13 spawn");
             }
@@ -2182,7 +2252,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char13UnlockedPointsOnce || char13UnlockedPointsOnce2) &&
                  (!char14UnlockedPointsOnce && !char14UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[13], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 14 spawn");
             }
@@ -2203,7 +2273,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char14UnlockedPointsOnce || char14UnlockedPointsOnce2) &&
                  (!char15UnlockedPointsOnce && !char15UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[14], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 15 spawn");
             }
@@ -2225,7 +2295,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char15UnlockedPointsOnce || char15UnlockedPointsOnce2) &&
                  (!char16UnlockedPointsOnce && !char16UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[15], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 16 spawn");
             }
@@ -2248,7 +2318,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char16UnlockedPointsOnce || char16UnlockedPointsOnce2) &&
                  (!char17UnlockedPointsOnce && !char17UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[16], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 17 spawn");
             }
@@ -2272,7 +2342,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char17UnlockedPointsOnce || char17UnlockedPointsOnce2) &&
                  (!char18UnlockedPointsOnce && !char18UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[17], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 18 spawn");
             }
@@ -2297,7 +2367,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char18UnlockedPointsOnce || char18UnlockedPointsOnce2) &&
                  (!char19UnlockedPointsOnce && !char19UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[18], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 19 spawn");
             }
@@ -2323,7 +2393,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char19UnlockedPointsOnce || char19UnlockedPointsOnce2) &&
                  (!char20UnlockedPointsOnce && !char20UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[19], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 20 spawn");
             }
@@ -2350,7 +2420,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char20UnlockedPointsOnce || char20UnlockedPointsOnce2) &&
                  (!char21UnlockedPointsOnce && !char21UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[20], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 21 spawn");
             }
@@ -2378,7 +2448,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char21UnlockedPointsOnce || char21UnlockedPointsOnce2) &&
                  (!char22UnlockedPointsOnce && !char22UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[21], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 22 spawn");
             }
@@ -2407,7 +2477,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char22UnlockedPointsOnce || char22UnlockedPointsOnce2) &&
                  (!char23UnlockedPointsOnce && !char23UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[22], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 23 spawn");
             }
@@ -2437,7 +2507,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char23UnlockedPointsOnce || char23UnlockedPointsOnce2) &&
                  (!char24UnlockedPointsOnce && !char24UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[23], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 24 spawn");
             }
@@ -2468,7 +2538,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char24UnlockedPointsOnce || char24UnlockedPointsOnce2) &&
                  (!char25UnlockedPointsOnce && !char25UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[24], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 25 spawn");
             }
@@ -2500,7 +2570,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char25UnlockedPointsOnce || char25UnlockedPointsOnce2) &&
                  (!char26UnlockedPointsOnce && !char26UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[25], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 26 spawn");
             }
@@ -2533,7 +2603,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char26UnlockedPointsOnce || char26UnlockedPointsOnce2) &&
                  (!char27UnlockedPointsOnce && !char27UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[26], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 27 spawn");
             }
@@ -2567,7 +2637,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char27UnlockedPointsOnce || char27UnlockedPointsOnce2) &&
                  (!char28UnlockedPointsOnce && !char28UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[27], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 28 spawn");
             }
@@ -2602,7 +2672,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char28UnlockedPointsOnce || char28UnlockedPointsOnce2) &&
                  (!char29UnlockedPointsOnce && !char29UnlockedPointsOnce2))
             {
-                Instantiate(obj[4], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Instantiate(obj[28], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 29 spawn");
             }
