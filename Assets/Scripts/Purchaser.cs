@@ -233,7 +233,7 @@ using UnityEngine.UI;
 		private void Awake(){
 		
 		if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
-		//findButtonsScript.FindInActive ();
+		findButtonsScript.FindInActive ();
 		//Instance = this;
 
 		}

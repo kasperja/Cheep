@@ -29,18 +29,18 @@ public class CharacterApply : MonoBehaviour {
 
 		if (currentChara == 0) {
 
-            graphicsAlien.SetActive(true);
+            graphicsAlien.SetActive(false);
             graphics.SetActive (false);
             graphicsCat.SetActive(false);
             graphicsPanda.SetActive(false);
-			graphicsLizard.SetActive (false);
+			graphicsLizard.SetActive (true);
             graphicsTaco.SetActive(false);
             graphicsHippo.SetActive (false);
             graphicsRobby.SetActive(false);
             graphicsBugo.SetActive(false);
             graphicsHrumpf.SetActive(false);
 
-            m_Anim.SetBool("isAlien", true);
+            m_Anim.SetBool("isLizard", true);
 
         } else if (currentChara == 1) {
 
@@ -60,6 +60,21 @@ public class CharacterApply : MonoBehaviour {
         }
         else if (currentChara == 2) {
 
+            graphicsAlien.SetActive(true);
+            graphics.SetActive(false);
+            graphicsCat.SetActive(false);
+            graphicsPanda.SetActive(false);
+            graphicsLizard.SetActive(false);
+            graphicsTaco.SetActive(false);
+            graphicsHippo.SetActive(false);
+            graphicsRobby.SetActive(false);
+            graphicsBugo.SetActive(false);
+            graphicsHrumpf.SetActive(false);
+            m_Anim.SetBool ("isAlien", true);
+
+
+		}else if (currentChara == 3) {
+
             graphicsAlien.SetActive(false);
             graphics.SetActive(false);
             graphicsCat.SetActive(true);
@@ -73,7 +88,7 @@ public class CharacterApply : MonoBehaviour {
             m_Anim.SetBool ("isCat", true);
 
 
-		}else if (currentChara == 3) {
+		}else if (currentChara == 4) {
 
             graphicsAlien.SetActive(false);
             graphics.SetActive(false);
@@ -86,21 +101,6 @@ public class CharacterApply : MonoBehaviour {
             graphicsBugo.SetActive(false);
             graphicsHrumpf.SetActive(false);
             m_Anim.SetBool ("isPanda", true);
-
-
-		}else if (currentChara == 4) {
-
-            graphicsAlien.SetActive(false);
-            graphics.SetActive(false);
-            graphicsCat.SetActive(false);
-            graphicsPanda.SetActive(false);
-            graphicsLizard.SetActive(true);
-            graphicsTaco.SetActive(false);
-            graphicsHippo.SetActive(false);
-            graphicsRobby.SetActive(false);
-            graphicsBugo.SetActive(false);
-            graphicsHrumpf.SetActive(false);
-            m_Anim.SetBool ("isLizard", true);
 
 
 		}
