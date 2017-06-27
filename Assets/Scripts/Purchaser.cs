@@ -480,7 +480,7 @@ using UnityEngine.UI;
 
 		void Start()
 		{
-
+        findButtonsScript.FindInActive();
         RestorePurchases();
 
         if (ES2.Exists ("char1Unlock")) {
