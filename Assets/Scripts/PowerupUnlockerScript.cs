@@ -19,8 +19,10 @@ public class PowerupUnlockerScript : MonoBehaviour {
 	//public HUDScript hudScript;
 
 	void Start(){
+
         spawnUnlocker = GameObject.Find("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker>();
 
+        spawnUnlocker.UIanimator.SetBool("pickedup", false);
         /*if (transform.rotation.z >= -90f) {
 			transform.Rotate (Vector3.forward * 100f * Time.deltaTime, Space.Self);
 		} else if(transform.rotation.z <= 90f){
@@ -57,12 +59,12 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
             spawnUnlocker.UIanimator.SetBool("pickedup", true);
 
-            spawnUnlocker.pickupUnlockerSound.Play();
+           if(!spawnUnlocker.allCharsUnlocked) spawnUnlocker.pickupUnlockerSound.Play();
 
 
             
 
-            StartCoroutine(waitFalseUI());
+           // StartCoroutine(waitFalseUI());
 
             //hud = GameObject.Find ("Main Camera").GetComponent<HUDScript> ();
 
@@ -84,14 +86,14 @@ public class PowerupUnlockerScript : MonoBehaviour {
 		}
 	}
 
-    IEnumerator waitFalseUI() {
+   /* IEnumerator waitFalseUI() {
 
         yield return new WaitForSeconds(0.1f);
         setFalse = true;
         
 
 
-    }
+    }*/
 
 	/*IEnumerator deactivatePlus(){
 
