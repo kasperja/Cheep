@@ -22,7 +22,7 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
         spawnUnlocker = GameObject.Find("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker>();
 
-        spawnUnlocker.UIanimator.SetBool("pickedup", false);
+        if (!spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).IsName("PickupAnimUI")) spawnUnlocker.UIanimator.SetBool("pickedup", false);
         /*if (transform.rotation.z >= -90f) {
 			transform.Rotate (Vector3.forward * 100f * Time.deltaTime, Space.Self);
 		} else if(transform.rotation.z <= 90f){
@@ -38,7 +38,7 @@ public class PowerupUnlockerScript : MonoBehaviour {
         if (spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).IsName("PickupAnimUI")) {
 
 
-            if (spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+            if (spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
             {
                 spawnUnlocker.UIanimator.SetBool("pickedup", false);
                 
