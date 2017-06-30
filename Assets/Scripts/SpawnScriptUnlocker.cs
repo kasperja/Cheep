@@ -150,6 +150,9 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     public bool allCharsUnlocked = false;
 
+    public AudioSource pickupUnlockerSound;
+
+
     private GameObject[] gameObjects;
     //public ObjectPoolManager objm;
     // Use this for initialization
