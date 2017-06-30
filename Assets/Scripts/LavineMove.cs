@@ -885,7 +885,7 @@ public class LavineMove : MonoBehaviour {
 
 		isRolling = true;
 
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (1.5f);
 
 		spamActive = true;
 
