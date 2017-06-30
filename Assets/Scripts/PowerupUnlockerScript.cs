@@ -15,12 +15,13 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 	public float scoreIncreaseAmmount = 1000f;
 
+    public bool setFalse = false;
 	//public HUDScript hudScript;
 
 	void Start(){
+        spawnUnlocker = GameObject.Find("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker>();
 
-
-		/*if (transform.rotation.z >= -90f) {
+        /*if (transform.rotation.z >= -90f) {
 			transform.Rotate (Vector3.forward * 100f * Time.deltaTime, Space.Self);
 		} else if(transform.rotation.z <= 90f){
 			
@@ -28,7 +29,21 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 		}*/
 
-	}
+    }
+
+    void Update() {
+
+        if (spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).IsName("PickupAnimUI")) {
+
+
+            if (spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+            {
+                spawnUnlocker.UIanimator.SetBool("pickedup", false);
+                
+            }
+        }
+
+    }
 
 	void OnTriggerEnter2D(Collider2D other){
 
@@ -36,30 +51,47 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 
 
-			spawnUnlocker = GameObject.Find ("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker> ();
+			//spawnUnlocker = GameObject.Find ("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker> ();
 
 			spawnUnlocker.numberOfPickups += 1f;
 
+            spawnUnlocker.UIanimator.SetBool("pickedup", true);
+
             spawnUnlocker.pickupUnlockerSound.Play();
 
-			//hud = GameObject.Find ("Main Camera").GetComponent<HUDScript> ();
 
-			//plusText = GameObject.Find ("TextPlus").GetComponent<Text> ();
+            
 
-			//plusText.text = "+ " + scoreIncreaseAmmount;
+            StartCoroutine(waitFalseUI());
 
-			//plusText.color = plusText.gameObject.GetComponent<TextFadeOut> ().col1;
+            //hud = GameObject.Find ("Main Camera").GetComponent<HUDScript> ();
 
-			//plusText.gameObject.GetComponent<TextFadeOut> ().txtFadeActivate = true;
+            //plusText = GameObject.Find ("TextPlus").GetComponent<Text> ();
 
-			//StartCoroutine (deactivatePlus ());
+            //plusText.text = "+ " + scoreIncreaseAmmount;
 
-			//hud.IncreaseScore (scoreIncreaseAmmount);
+            //plusText.color = plusText.gameObject.GetComponent<TextFadeOut> ().col1;
 
-			Destroy (this.gameObject);
+            //plusText.gameObject.GetComponent<TextFadeOut> ().txtFadeActivate = true;
+
+            //StartCoroutine (deactivatePlus ());
+
+            //hud.IncreaseScore (scoreIncreaseAmmount);
+            
+
+            Destroy (this.gameObject);
 
 		}
 	}
+
+    IEnumerator waitFalseUI() {
+
+        yield return new WaitForSeconds(0.1f);
+        setFalse = true;
+        
+
+
+    }
 
 	/*IEnumerator deactivatePlus(){
 
