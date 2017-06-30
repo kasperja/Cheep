@@ -40,6 +40,8 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 			spawnUnlocker.numberOfPickups += 1f;
 
+            spawnUnlocker.pickupUnlockerSound.Play();
+
 			//hud = GameObject.Find ("Main Camera").GetComponent<HUDScript> ();
 
 			//plusText = GameObject.Find ("TextPlus").GetComponent<Text> ();
