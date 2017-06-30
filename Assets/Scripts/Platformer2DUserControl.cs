@@ -22,6 +22,8 @@ namespace UnityStandardAssets._2D
 		//public bool lavineActive = true;
 		public bool moveBackSpam = false;
 
+        public DisableJumpBelow disableJumpScript;
+
         private void Awake()
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
@@ -51,7 +53,7 @@ namespace UnityStandardAssets._2D
 			
 
 
-				if (!lavineScript.spamActive) {
+				if (!lavineScript.spamActive && !disableJumpScript.disableJump) {
 					
 					StartCoroutine (waitCountOne ());
 					m_Jump = true;
@@ -95,7 +97,7 @@ namespace UnityStandardAssets._2D
 
 
 
-				if (!lavineScript.spamActive) {
+				if (!lavineScript.spamActive && !disableJumpScript.disableJump) {
 
 					StartCoroutine (waitCountOne ());
 					m_Jump = true;
