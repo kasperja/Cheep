@@ -36,6 +36,7 @@ public class ExitPopup : MonoBehaviour {
     public GameObject buyButton27;
     public GameObject buyButton28;
     public GameObject buyButton29;
+    public Animator scrollViewAnimator;
     // Use this for initialization
     void Start () {
 		
@@ -46,7 +47,9 @@ public class ExitPopup : MonoBehaviour {
 		
 	}
 	public void ExitPopupScreen(){
-		
+
+        scrollViewAnimator.SetBool("startOver", true);
+
 		buttonSound.Play ();
 
         buyButton0.SetActive(false);
