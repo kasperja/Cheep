@@ -5,6 +5,7 @@ using UnityEngine;
 public class HideCharSelect : MonoBehaviour {
 
     public GameObject popupObj;
+    public GameObject popup1Obj;
     public GameObject menuObj;
     public GameObject xButtonTopObj;
 	// Use this for initialization
@@ -17,7 +18,7 @@ public class HideCharSelect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (popupObj.activeSelf)
+        if (popupObj.activeSelf || popup1Obj.activeSelf)
         {
 
             menuObj.SetActive(true);
