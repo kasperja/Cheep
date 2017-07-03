@@ -31,7 +31,7 @@ public class RotateCam : MonoBehaviour {
 	private bool now = false;
 	private bool nowOnce = true;
 
-	private bool curveEnabled = true;
+	private bool curveEnabled = false;
 
 	private bool changeSmooth = false;
 

@@ -12,6 +12,9 @@ public class CharacterButton : MonoBehaviour {
 	public AudioSource buttonSound;
 
 	private FadeOut fadeOutScript;
+
+    public GameObject popupObj;
+    public BuyThis buyThisScript;
 	//public ParticleSystem selectedParticle;
 
 	//public ParticleSystem[] otherParticles;
@@ -35,6 +38,14 @@ public class CharacterButton : MonoBehaviour {
 		}
 		
 	}
+
+    public void showPopup() {
+
+        buyThisScript.currentChar = thisChar;
+        popupObj.SetActive(true);
+
+
+    }
 
 	public void charSelect(){
 

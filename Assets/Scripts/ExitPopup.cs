@@ -6,6 +6,7 @@ public class ExitPopup : MonoBehaviour {
 	public AudioSource buttonSound;
 	public GameObject popup;
 
+    public GameObject buyButton0;
     public GameObject buyButton1;
     public GameObject buyButton2;
     public GameObject buyButton3;
@@ -48,6 +49,7 @@ public class ExitPopup : MonoBehaviour {
 		
 		buttonSound.Play ();
 
+        buyButton0.SetActive(false);
         buyButton1.SetActive(false);
         buyButton2.SetActive(false);
         buyButton3.SetActive(false);
