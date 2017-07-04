@@ -42,8 +42,10 @@ public class CharacterSelect : MonoBehaviour {
 
 		currentChar = thisChar;
 
-	
-	}
+        ES2.Save(currentChar, "currentChar");
+
+
+    }
 	public void SelectParticleFunction(int i){
 
 
