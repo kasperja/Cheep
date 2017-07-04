@@ -41,6 +41,8 @@ public class CharacterButton : MonoBehaviour {
 
     public void showPopup() {
 
+        charSelectScript.currentChar = thisChar;
+        ES2.Save(charSelectScript.currentChar, "currentChar");
         buyThisScript.currentChar = thisChar;
         popupObj.SetActive(true);
 

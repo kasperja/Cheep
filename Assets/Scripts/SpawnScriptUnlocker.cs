@@ -6,8 +6,15 @@ public class SpawnScriptUnlocker : MonoBehaviour
 {
 
     public GameObject[] obj;
+    public GameObject[] objAchievements;
     public GameObject[] objHUD;
+    public GameObject[] objHUDAchievements;
     public HUDScript hud;
+
+    public int currentChar = 0;
+
+    public float achievementIncreaseInterval = 1f;
+    
     //public PlatformerCharacter2D pc2D;
 
     public Text textPickup;
@@ -158,6 +165,16 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private GameObject[] gameObjects;
 
     public GameObject UIimages;
+
+    public bool achiementsActivated = false;
+    public float[] achievementMaxPoints;
+    public bool achievemntUnlockedThisGame = false;
+
+    private bool falseOnceUI = true;
+
+    public GameObject popupAchievement;
+
+    public float[] currentLvlAchievements;
     //public ObjectPoolManager objm;
     // Use this for initialization
     public void DestroyAllObjects()
@@ -172,8 +189,26 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Start()
     {
-       
 
+        if (ES2.Exists("currentChar"))
+        {
+
+            currentChar = ES2.Load<int>("currentChar");
+
+        }
+
+        if (ES2.Exists("a"+currentChar))
+        {
+
+            currentLvlAchievements[currentChar] = ES2.Load<float>("a"+currentChar);
+
+        }
+
+        if (currentLvlAchievements[currentChar] >= achievementMaxPoints[currentChar]) {
+
+            achievementMaxPoints[currentChar] = currentLvlAchievements[currentChar] + achievementIncreaseInterval;
+
+        }
 
         if (ES2.Exists("char1Unlock"))
         {
@@ -578,7 +613,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         {
 
             allCharsUnlocked = true;
-
+            if(!OneCharUnlockedThisGame)achiementsActivated = true;
 
         }
 
@@ -653,11 +688,56 @@ public class SpawnScriptUnlocker : MonoBehaviour
         else
         {
             
-            pickupImg.gameObject.SetActive(false);
-            textPickup.text = "";
+           
+
+            if (achievemntUnlockedThisGame && achiementsActivated)
+            {
+                pickupImg.gameObject.SetActive(false);
+                textPickup.text = "";
+                UIimages.SetActive(false);
+            }
+            else if (achiementsActivated)
+            {
+                if (falseOnceUI) {
+
+                    for (int i = 0; i < objHUDAchievements.Length; i++) { objHUDAchievements[i].SetActive(false); }
+                    falseOnceUI = false;
+
+                }
+
+                
+                //pickupImg.gameObject.SetActive(true);
+                UIimages.SetActive(true);
+                objHUDAchievements[currentChar].SetActive(true);
+                float addOne = achievementMaxPoints[currentChar] + 1f;
+                textPickup.text = numberOfPickups + "/" + addOne + "       ";
+
+
+            }
+            else
+            {
+                pickupImg.gameObject.SetActive(false);
+                textPickup.text = "";
+                UIimages.SetActive(false);
+
+
+            }
 
         }
-        if (!allCharsUnlocked && (hud.playerScore >= (scoreInterval * multiplier)))
+
+        if (achiementsActivated && numberOfPickups >= achievementMaxPoints[currentChar] + 1f)
+        {
+
+            achievemntUnlockedThisGame = true;
+            DestroyAllObjects();
+            popupAchievement.SetActive(true);
+
+            ES2.Save(achievementMaxPoints[currentChar], "a" + currentChar);
+
+        }
+
+
+        if ((!allCharsUnlocked || (achiementsActivated && !achievemntUnlockedThisGame)) && (hud.playerScore >= (scoreInterval * multiplier)))
         {
 
             multiplier += 1f;
@@ -983,6 +1063,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
 
     */
+
+        
 
         if (startOnce)
         {
@@ -2106,7 +2188,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     public void Spawn()
     {
-        if (!allCharsUnlocked) { 
+        if (!allCharsUnlocked)
+        {
             if ((!char1UnlockedPointsOnce && !char1UnlockedPointsOnce2))
             {
 
@@ -2716,10 +2799,21 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 29 spawn");
             }
-    
 
 
-    }
+
+        }
+        else if (achiementsActivated && !achievemntUnlockedThisGame) {
+
+            
+
+                Instantiate(objAchievements[currentChar], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
+                Debug.Log("a "+ currentChar +" spawn");
+
+            
+
+
+        }
 
 
     }
