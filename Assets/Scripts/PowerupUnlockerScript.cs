@@ -59,7 +59,9 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
             spawnUnlocker.UIanimator.SetBool("pickedup", true);
 
-           if(!spawnUnlocker.allCharsUnlocked) spawnUnlocker.pickupUnlockerSound.Play();
+           //if(!spawnUnlocker.allCharsUnlocked)
+
+            spawnUnlocker.pickupUnlockerSound.Play();
 
 
             
