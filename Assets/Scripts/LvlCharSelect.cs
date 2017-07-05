@@ -46,7 +46,7 @@ public class LvlCharSelect : MonoBehaviour {
 
         }
 
-        nameAndLvlTxt.text = nameOnly + " - lvl " + lvl;
+        nameAndLvlTxt.text = "Level " + lvl;
 
         lvlTxt.text = "Next level:  Get " + nextLvl + " ";
 

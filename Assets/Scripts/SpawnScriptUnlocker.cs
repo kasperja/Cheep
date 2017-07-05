@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class SpawnScriptUnlocker : MonoBehaviour
 {
 
+
+
     public GameObject[] obj;
     public GameObject[] objAchievements;
     public GameObject[] objHUD;
@@ -20,6 +22,9 @@ public class SpawnScriptUnlocker : MonoBehaviour
     public Text textPickup;
 
     public float scoreInterval = 1000f;
+    public float timeInterval = 15f;
+    private bool spawnReady = true;
+
     public float multiplier = 1f;
 
     public float numberOfPickups = 0f;
@@ -687,8 +692,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
         }
         else
         {
-            
-           
+
+            timeInterval = 5f;
 
             if (achievemntUnlockedThisGame && achiementsActivated)
             {
@@ -737,14 +742,14 @@ public class SpawnScriptUnlocker : MonoBehaviour
         }
 
 
-        if ((!allCharsUnlocked || (achiementsActivated && !achievemntUnlockedThisGame)) && (hud.playerScore >= (scoreInterval * multiplier)))
+        if ((!allCharsUnlocked || (achiementsActivated && !achievemntUnlockedThisGame)) && spawnReady /* && (hud.playerScore >= (scoreInterval * multiplier)) */)
         {
 
             multiplier += 1f;
-            Spawn();
+            //Spawn();
+            StartCoroutine(SpawnNum(timeInterval));
 
-
-
+            spawnReady = false;
             //numberOfPickups += 1f;
 
 
@@ -2184,7 +2189,15 @@ public class SpawnScriptUnlocker : MonoBehaviour
     }
 
 
+    IEnumerator SpawnNum(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
 
+        Spawn();
+
+        spawnReady = true;
+
+    }
 
     public void Spawn()
     {
