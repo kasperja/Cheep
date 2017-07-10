@@ -146,7 +146,7 @@ public class FacebookManager : MonoBehaviour {
 		
 		} else {
 		
-			AppLinkURL = "https://play.google.com/store/apps/details?id=com.SNOE.Victoryisland";
+			AppLinkURL = "https://snoplay.wordpress.com/";
 		
 		}
 	
