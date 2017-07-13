@@ -97,6 +97,8 @@ public class LavineMove : MonoBehaviour {
 
 	public DontDestroyTwo musicScript;
 
+    public AudioSource yetiSound;
+
 	// Use this for initialization
 	void Start () {
 
@@ -879,15 +881,18 @@ public class LavineMove : MonoBehaviour {
 		//deactivateOnce = true;
 		bossSpawn.SetActive (true);
 		normSpawn.SetActive (false);
-
-		yield return new WaitForSeconds (6f);
+        //if (yetiObj.activeSelf) yetiSound.Play();
+        yield return new WaitForSeconds (6f);
 
 
 		isRolling = true;
+        
+
 
 		yield return new WaitForSeconds (1.5f);
+        if (yetiObj.activeSelf) yetiSound.Play();
 
-		spamActive = true;
+        spamActive = true;
 
 		tapTapReady = true;
 
@@ -922,8 +927,8 @@ public class LavineMove : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 
 		tapTapReady = false;
-
-		destroyBot.dieBool = true;
+        
+        destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
 	 Handheld.Vibrate ();
 
