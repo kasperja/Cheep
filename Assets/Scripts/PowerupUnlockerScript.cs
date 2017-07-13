@@ -49,21 +49,54 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 
-		if (other.tag == "Player") {
+        if (other.tag == "Player")
+        {
 
 
 
-			//spawnUnlocker = GameObject.Find ("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker> ();
+            //spawnUnlocker = GameObject.Find ("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker> ();
 
-			spawnUnlocker.numberOfPickups += 1f;
+            spawnUnlocker.numberOfPickups += 1f;
 
             spawnUnlocker.UIanimator.SetBool("pickedup", true);
 
-           //if(!spawnUnlocker.allCharsUnlocked)
+            //if(!spawnUnlocker.allCharsUnlocked)
+            if (spawnUnlocker.achiementsActivated)
+            {
+                if (spawnUnlocker.numberOfPickups >= spawnUnlocker.achievementMaxPoints[spawnUnlocker.currentChar]+1f)
+                {
 
-            spawnUnlocker.pickupUnlockerSound.Play();
+
+                    spawnUnlocker.pickupUnlockerSound.Stop();
+                    spawnUnlocker.pickupUnlockerSound.volume = 0f;
+                    spawnUnlocker.unlockSound.Play();
+                }
+                else
+                {
+                    spawnUnlocker.pickupUnlockerSound.Play();
+
+                }
+
+            }
+            else {
+
+                if (spawnUnlocker.numberOfPickups >= spawnUnlocker.finalNumber)
+                {
 
 
+                    spawnUnlocker.pickupUnlockerSound.Stop();
+                    spawnUnlocker.pickupUnlockerSound.volume = 0f;
+                    spawnUnlocker.unlockSound.Play();
+                }
+                else
+                {
+                    spawnUnlocker.pickupUnlockerSound.Play();
+
+                }
+
+
+
+            }
             
 
            // StartCoroutine(waitFalseUI());

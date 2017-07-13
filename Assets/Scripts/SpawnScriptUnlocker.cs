@@ -22,7 +22,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
     public Text textPickup;
 
     public float scoreInterval = 1000f;
-    public float timeInterval = 15f;
+    public float timeInterval = 10f;
+    public float hrumpfTimeInterval = 2f;
     private bool spawnReady = true;
 
     public float multiplier = 1f;
@@ -96,7 +97,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private bool char28UnlockedPointsOnce2 = false;
     private bool char29UnlockedPointsOnce2 = false;
   
-    private bool OneCharUnlockedThisGame = false;
+    public bool OneCharUnlockedThisGame = false;
     public Image pickupImg;
     public bool char1UnlockedPointsOnceThisGame = false;
     public bool char2UnlockedPointsOnceThisGame = false;
@@ -177,6 +178,9 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     private bool falseOnceUI = true;
 
+    public AudioSource unlockSound;
+    private bool soundOnce = true;
+
     public GameObject popupAchievement;
 
     public float[] currentLvlAchievements;
@@ -194,6 +198,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Start()
     {
+        
 
         if (ES2.Exists("currentChar"))
         {
@@ -586,6 +591,21 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
 
 
+
+        if (
+                   (char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
+                   (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
+                   (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
+                   (char4UnlockedPointsOnce || char4UnlockedPointsOnce2) &&
+                   (char5UnlockedPointsOnce || char5UnlockedPointsOnce2) &&
+                   (char6UnlockedPointsOnce || char6UnlockedPointsOnce2) &&
+                   (char7UnlockedPointsOnce || char7UnlockedPointsOnce2) &&
+                   (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
+                   (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2))
+        {
+            timeInterval = hrumpfTimeInterval;
+
+        }
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
             (char2UnlockedPointsOnce || char2UnlockedPointsOnce2) &&
             (char3UnlockedPointsOnce || char3UnlockedPointsOnce2) &&
@@ -639,6 +659,12 @@ public class SpawnScriptUnlocker : MonoBehaviour
         {
             for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
             allCharsUnlocked = true;
+
+            if (soundOnce)
+            {
+                unlockSound.Play();
+                soundOnce = false;
+            }
         }
 
         if ((char1UnlockedPointsOnce || char1UnlockedPointsOnce2) &&
@@ -714,6 +740,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 //pickupImg.gameObject.SetActive(true);
                 UIimages.SetActive(true);
                 objHUDAchievements[currentChar].SetActive(true);
+                
                 float addOne = achievementMaxPoints[currentChar] + 1f;
                 textPickup.text = numberOfPickups + "/" + addOne + "       ";
 
@@ -733,6 +760,11 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if (achiementsActivated && numberOfPickups >= achievementMaxPoints[currentChar] + 1f)
         {
 
+            if (soundOnce)
+            {
+                unlockSound.Play();
+                soundOnce = false;
+            }
             achievemntUnlockedThisGame = true;
             DestroyAllObjects();
             popupAchievement.SetActive(true);
@@ -1315,7 +1347,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             {
                 UIimages.SetActive(false);
                 for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
-                //scoreInterval = 1000f;
+                
+                
                 finalNumber = char10PointsToUnlock;
                 numberOfPickups = 0f;
                 char9UnlockedPointsOnce = true;
@@ -1329,7 +1362,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             else
             {
                 objHUD[8].SetActive(true);
-                //scoreInterval = 500f;
+               
                 finalNumber = char9PointsToUnlock;
             }
         }
@@ -1349,6 +1382,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             if (numberOfPickups >= char10PointsToUnlock)
             {
                 UIimages.SetActive(false);
+                
                 for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
                 finalNumber = char11PointsToUnlock;
                 numberOfPickups = 0f;
@@ -1362,6 +1396,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             else
             {
+                
                 objHUD[9].SetActive(true);
                 finalNumber = char10PointsToUnlock;
             }
@@ -2298,6 +2333,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char8UnlockedPointsOnce || char8UnlockedPointsOnce2) &&
                 (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2))
             {
+                //timeInterval = 0.5f;
                 Instantiate(obj[8], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 9 spawn");
@@ -2314,6 +2350,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 (char9UnlockedPointsOnce || char9UnlockedPointsOnce2) &&
                 (!char10UnlockedPointsOnce && !char10UnlockedPointsOnce2))
             {
+                
                 Instantiate(obj[9], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 //Instantiate (obj [7], new Vector3(transform.position.x, Random.Range(transform.position.y, transform.position.y + 5.5f), transform.position.z), Quaternion.identity);
                 Debug.Log("p 10 spawn");

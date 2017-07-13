@@ -57,8 +57,9 @@ public class GameOverScript : MonoBehaviour {
 
 	public ParticleSystem konfettiParticle;
 	public AudioSource applause;
+    public AudioSource rewardSound;
 
-	public FadeIn fadeOutScript;
+    public FadeIn fadeOutScript;
 	private bool isQuickRestart = false;
 
 
@@ -317,6 +318,7 @@ public class GameOverScript : MonoBehaviour {
 
 			if (ES2.Exists ("myCurrentScore")) {
 				applause.Play ();
+                rewardSound.Play();
 				konfettiParticle.Play ();
 				yourScoreIsTxt.text = "It's a new record!";
 			}
