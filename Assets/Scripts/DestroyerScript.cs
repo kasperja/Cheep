@@ -31,7 +31,7 @@ public class DestroyerScript : MonoBehaviour {
 
     void Update(){
 		
-		if(scream1.time >= 0.9f)scream1.volume = 0f;
+		if(scream1.time >= scream1.clip.length)scream1.volume = 0f;
 		/*if (fadeMusic) {
 
 			music.volume -= 0.4f * Time.deltaTime;
@@ -70,7 +70,8 @@ public class DestroyerScript : MonoBehaviour {
 			pc2d.isDead = true;
 			pc2d.m_MaxSpeed = 0f;
 			deathParticle.Play ();
-			StartCoroutine (waitForDeath ());
+            //StartCoroutine (waitForDeath ());
+            dieBool = true;
 			//Application.LoadLevel (2);
 			return;
 		

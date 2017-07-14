@@ -30,6 +30,8 @@ using System.Collections;
 		public AudioSource jumpSoundThree;
 		public AudioSource hitSound;
 
+    public AudioSource doubleJumpSound;
+
 		bool doubleJump = false;
 
 		public GameObject mainCam;
@@ -323,28 +325,40 @@ using System.Collections;
 		
 		randomFloat = UnityEngine.Random.Range(0f,3f);
 
-		if (randomFloat < 1f) {
+        float randomScream = UnityEngine.Random.Range(0f, 2f);
+
+        if (randomScream < 1f)
+        {
+                      
+            scream1 = true;
+            scream2 = false;
+          
+        }
+        else
+        {
+
+           
+            scream1 = false;
+            scream2 = true;
+           
+        }
+
+        if (randomFloat < 1f) {
 			
 			m_Anim.SetInteger ("jumpInt", 0);
-			scream1 = true;
-			scream2 = false;
-			scream3 = false;
+			
 
 
 		} else if (randomFloat >= 1f && randomFloat < 2f) {
 			
 			m_Anim.SetInteger ("jumpInt", 1);
-			scream1 = false;
-			scream2 = true;
-			scream3 = false;
+			
 
 		
 		} else {
 		
 			m_Anim.SetInteger ("jumpInt", 2);
-			scream1 = false;
-			scream2 = false;
-			scream3 = true;
+			
 
 		
 		}
@@ -483,28 +497,40 @@ using System.Collections;
                     Flip();
                 }
             }
-            // If the player should jump...
-		if (((m_Grounded || !doubleJump) && !isDead) && jump /*&& m_Anim.GetBool("Ground")*/)
+        // If the player should jump...
+        if (((m_Grounded || !doubleJump) && !isDead) && jump /*&& m_Anim.GetBool("Ground")*/)
+        {
+            // Add a vertical force to the player.
+
+
+            if (jumpCount == 0f)
             {
-                // Add a vertical force to the player.
+                if (randomFloat < 1f)
+                {
 
 
+                    jumpSound.Play();
 
-			if (randomFloat < 1f) {
+                }
+                else if (randomFloat >= 1f && randomFloat < 2f)
+                {
+
+                    jumpSoundTwo.Play();
+
+                }
+                else
+                {
+
+                    jumpSoundThree.Play();
+
+                }
+            }
+            else {
 
 
-				jumpSound.Play ();
+                doubleJumpSound.Play();
 
-			} else if (randomFloat >= 1f && randomFloat < 2f) {
-
-				jumpSoundTwo.Play ();
-
-			} else {
-
-				jumpSoundThree.Play ();
-
-			}
-				
+            }
                // m_Grounded = false;
 
 			skiingSound.Stop ();
