@@ -357,7 +357,16 @@ public class LavineMove : MonoBehaviour {
 			
 			}
 
-			if(lavineSoundLoop.volume < 0.7f)lavineSoundLoop.volume += 0.5f * Time.deltaTime;
+            if (lavineSoundLoop.volume < 1f && !isYeti)
+            {
+                lavineSoundLoop.volume += 1f * Time.deltaTime;
+
+            }
+            else if(isYeti){
+
+
+                lavineSoundLoop.volume -= 1f * Time.deltaTime;
+            }
 
 			if (pc2D.isDead) {
 
@@ -395,8 +404,8 @@ public class LavineMove : MonoBehaviour {
 				if (rollOnce && !pc2D.isDead) {
 
 
-
-					if (randomBossEnabled) {
+                lavineSoundLoop.Play();
+                if (randomBossEnabled) {
 
 						if (bossCount == 1) {
 
@@ -819,7 +828,9 @@ public class LavineMove : MonoBehaviour {
 
 			tapTapObj.SetActive (false);
 
-			if(lavineSoundLoop.volume > 0f)lavineSoundLoop.volume -= 0.5f * Time.deltaTime;
+			if(lavineSoundLoop.volume >= 0f)lavineSoundLoop.volume -= 0.5f * Time.deltaTime;
+
+            if (lavineSoundLoop.volume <= 0f) lavineSoundLoop.Stop();
 
 			if (deactivateOnce && !pc2D.isDead && !isDeadByLavine) {
 

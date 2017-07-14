@@ -179,6 +179,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private bool falseOnceUI = true;
 
     public AudioSource unlockSound;
+    public AudioSource unlockSoundApplause;
     private bool soundOnce = true;
 
     public GameObject popupAchievement;
@@ -663,6 +664,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             if (soundOnce)
             {
                 unlockSound.Play();
+                unlockSoundApplause.Play();
                 soundOnce = false;
             }
         }
@@ -762,6 +764,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (soundOnce)
             {
+                unlockSoundApplause.Play();
                 unlockSound.Play();
                 soundOnce = false;
             }

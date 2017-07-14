@@ -70,6 +70,7 @@ public class PowerupUnlockerScript : MonoBehaviour {
                     spawnUnlocker.pickupUnlockerSound.Stop();
                     spawnUnlocker.pickupUnlockerSound.volume = 0f;
                     spawnUnlocker.unlockSound.Play();
+                    spawnUnlocker.unlockSoundApplause.Play();
                 }
                 else
                 {
@@ -87,6 +88,7 @@ public class PowerupUnlockerScript : MonoBehaviour {
                     spawnUnlocker.pickupUnlockerSound.Stop();
                     spawnUnlocker.pickupUnlockerSound.volume = 0f;
                     spawnUnlocker.unlockSound.Play();
+                    spawnUnlocker.unlockSoundApplause.Play();
                 }
                 else
                 {
