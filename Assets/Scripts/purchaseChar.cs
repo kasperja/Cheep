@@ -12,12 +12,16 @@ public class purchaseChar : MonoBehaviour {
 		public GameObject purchasedButton;
 		public GameObject popup;
 		public BuyThis buyThisScript;
+        public bool isLock = false;
+    private AudioSource lockedSound;
     // Use this for initialization
     
 
     void Start () {
-		
-	}
+
+        lockedSound = GameObject.Find("LockedSound").GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,9 +32,20 @@ public class purchaseChar : MonoBehaviour {
 			buyThisScript.currentChar = thisChar;
 			purchaserScript.thisChar = thisChar;
 
-			//Purchaser.Instance.thisChar = thisChar;
+        //Purchaser.Instance.thisChar = thisChar;
 
-			popup.SetActive (true);
+        if (!isLock)
+        {
+
+            popup.SetActive(true);
+
+        }
+        else {
+
+            lockedSound.Play();
+
+
+        }
 	
 	}
 		public void onConsumed(){
