@@ -31,8 +31,10 @@ using System.Collections;
 		public AudioSource hitSound;
 
     public AudioSource doubleJumpSound;
+    public AudioSource doubleJumpSoundTwo;
+    public AudioSource doubleJumpSoundThree;
 
-		bool doubleJump = false;
+    bool doubleJump = false;
 
 		public GameObject mainCam;
 
@@ -534,8 +536,27 @@ using System.Collections;
             }
             else {
 
+                if(randomFloat < 1f)
+                {
 
-                doubleJumpSound.Play();
+
+                    doubleJumpSound.Play();
+
+                }
+                else if (randomFloat >= 1f && randomFloat < 2f)
+                {
+
+                    doubleJumpSoundTwo.Play();
+
+                }
+                else
+                {
+
+                    doubleJumpSoundThree.Play();
+
+                }
+
+               
 
             }
                // m_Grounded = false;
