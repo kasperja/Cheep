@@ -79,8 +79,11 @@ using System.Collections;
 	public Animator feedbackAnimator;
 	public MeshRenderer feedbackMesh;
 	public TextMesh feedbackText;
+    public AudioSource applauseSound;
+    public AudioSource applauseSoundTwo;
+    public AudioSource applauseSoundThree;
 
-	public bool feedbackTap = false;
+    public bool feedbackTap = false;
 	public bool feedbackOnce = true;
 	public bool feedbackOnceTwo = true;
 
@@ -227,23 +230,25 @@ using System.Collections;
 		if(feedbackTap && feedbackOnce){
 			
 			if(!isRocket)feedbackMesh.gameObject.SetActive (true);
+           
 
 
+            if (randomFloat < 1f) {
 
-			if (randomFloat < 1f) {
-
-
-				feedbackText.text = "Great!";
+                applauseSoundTwo.Play();
+                feedbackText.text = "Great!";
 				obstacleAvoidedTwo.Play();
 
 			} else if (randomFloat >= 1f && randomFloat < 2f) {
+                applauseSoundThree.Play();
 
-				feedbackText.text = "Awesome!";
+                feedbackText.text = "Awesome!";
 				obstacleAvoidedThree.Play();
 
 			} else {
 
-				feedbackText.text = "Nice!";
+                applauseSound.Play();
+                feedbackText.text = "Nice!";
 				obstacleAvoided.Play();
 
 			}
@@ -255,8 +260,10 @@ using System.Collections;
 			feedbackMesh.enabled = true;
 			feedbackAnimator.SetBool ("Avoided", true);
 			StartCoroutine (waitFeedback ());
-			//  particleHit.Play();
-			feedbackOnce = false;
+            //  particleHit.Play();
+            
+            feedbackOnce = false;
+            
 
 			if (feedbackOnceTwo) {
 			
@@ -632,21 +639,22 @@ using System.Collections;
 		}
 
 		if (other.gameObject.tag == "ObstacleAvoided") {
+            
 
-			feedbackMesh.gameObject.SetActive (true);
+            feedbackMesh.gameObject.SetActive (true);
 			if (randomFloat < 1f) {
+                applauseSound.Play();
 
-
-				feedbackText.text = "Great!";
+                feedbackText.text = "Great!";
 				obstacleAvoidedTwo.Play();
 
 			} else if (randomFloat >= 1f && randomFloat < 2f) {
-				
-				feedbackText.text = "Awesome!";
+                applauseSoundTwo.Play();
+                feedbackText.text = "Awesome!";
 				obstacleAvoidedThree.Play();
 
 			} else {
-
+                applauseSoundThree.Play();
 				feedbackText.text = "Nice!";
 				obstacleAvoided.Play();
 

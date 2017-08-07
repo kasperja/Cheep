@@ -16,11 +16,15 @@ public class PowerupUnlockerScript : MonoBehaviour {
 	public float scoreIncreaseAmmount = 1000f;
 
     public bool setFalse = false;
+
+    private ParticleSystem pickupParticle; 
 	//public HUDScript hudScript;
 
 	void Start(){
 
         spawnUnlocker = GameObject.Find("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker>();
+
+        pickupParticle = GameObject.Find("PwrupParticleUnlocker").GetComponent<ParticleSystem>();
 
         if (!spawnUnlocker.UIanimator.GetCurrentAnimatorStateInfo(0).IsName("PickupAnimUI")) spawnUnlocker.UIanimator.SetBool("pickedup", false);
         /*if (transform.rotation.z >= -90f) {
@@ -59,6 +63,8 @@ public class PowerupUnlockerScript : MonoBehaviour {
             spawnUnlocker.numberOfPickups += 1f;
 
             spawnUnlocker.UIanimator.SetBool("pickedup", true);
+
+            pickupParticle.Play();
 
             //if(!spawnUnlocker.allCharsUnlocked)
             if (spawnUnlocker.achiementsActivated)

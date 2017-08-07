@@ -71,8 +71,9 @@ public class UnlockCharInGame : MonoBehaviour {
     
 
     public AudioSource unlockSound;
+    public AudioSource unlockSoundApplause;
 
-	public TextFader txtFade;
+    public TextFader txtFade;
 
 	public SpawnScriptUnlocker spawnUnlocker;
 
@@ -617,6 +618,7 @@ public class UnlockCharInGame : MonoBehaviour {
 		popup.SetActive (true);
 
 		unlockSound.Play ();
+        unlockSoundApplause.Play();
 		yield return new WaitForSeconds (3.5f);
 
 		//txtFade.fadeOut = true;
