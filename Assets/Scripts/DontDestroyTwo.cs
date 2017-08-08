@@ -364,7 +364,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		} else if(!musicDisabled) {
 
-			if(music.volume < 0.6f)music.volume += 1f * Time.deltaTime;
+			if(music.volume < 0.45f)music.volume += 1f * Time.deltaTime;
 
 		}
 	}
@@ -387,7 +387,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		} else {
 
-			music.volume = 0.6f;
+			music.volume = 0.45f;
 
 		}
 		//ES2.Save (musicDisabled, "musicDisabled");
