@@ -71,7 +71,7 @@ public class CharacterButton : MonoBehaviour {
 	IEnumerator waitAndStart(){
 	
 		fadeOutScript.isStarted = true;
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.15f);
 		Application.LoadLevel (1);
 	
 	}

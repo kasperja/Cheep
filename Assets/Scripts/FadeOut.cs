@@ -12,7 +12,7 @@ public class FadeOut : MonoBehaviour {
 	public Color col2;
 	private float t = 0f;
 	private float t2 = 0f;
-	public float fadeSpeed = 2f;
+	public float fadeSpeed = 4f;
 	//public AudioSource music;
 	//public MusicStart mStart;
 
