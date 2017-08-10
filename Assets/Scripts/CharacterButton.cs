@@ -15,9 +15,10 @@ public class CharacterButton : MonoBehaviour {
 
     public GameObject popupObj;
     public BuyThis buyThisScript;
-	//public ParticleSystem selectedParticle;
+    //public ParticleSystem selectedParticle;
 
-	//public ParticleSystem[] otherParticles;
+    //public ParticleSystem[] otherParticles;
+    public GameObject loadingText;
 
 	void Start () {
 
@@ -72,6 +73,7 @@ public class CharacterButton : MonoBehaviour {
 	
 		fadeOutScript.isStarted = true;
 		yield return new WaitForSeconds (0.15f);
+        loadingText.SetActive(true);
 		Application.LoadLevel (1);
 	
 	}
