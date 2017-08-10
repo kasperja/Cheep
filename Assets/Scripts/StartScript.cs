@@ -10,13 +10,20 @@ public class StartScript : MonoBehaviour {
     //private bool char1UnlockedPointsOnce = true;
     // Use this for initialization
     void Start () {
-
-		ES2.Save (0, "prevScene");
-       // ES2.Save(char1UnlockedPointsOnce, "char1Unlock");
-
+        
+        ES2.Save (0, "prevScene");
+        // ES2.Save(char1UnlockedPointsOnce, "char1Unlock");
+        
 
     }
-	void Awake(){
+
+    IEnumerator StartAsync()
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync("CharScene", LoadSceneMode.Single);
+        yield return async;
+        Debug.Log("Loading complete");
+    }
+    void Awake(){
 
 
 		//Resources.LoadAll ("Textures/Menuer");
@@ -59,7 +66,8 @@ public class StartScript : MonoBehaviour {
 	IEnumerator retryNum (){
 
 		fadeOutScript.isStarted = true;
-		yield return new WaitForSeconds (1f);
+        //StartCoroutine(StartAsync());
+        yield return new WaitForSeconds (0.15f);
 		Application.LoadLevel (3);
 
 
