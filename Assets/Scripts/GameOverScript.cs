@@ -8,6 +8,7 @@ public class GameOverScript : MonoBehaviour {
 
 	int score = 0;
 
+    public GameObject getReadyObj;
 
 	private int countPlays = 0;
 	private bool showAdCount = false;
@@ -608,6 +609,7 @@ public class GameOverScript : MonoBehaviour {
 		if ((adsDone && !Advertisement.isShowing)) {
 			
 			if (isQuickRestart) {
+                getReadyObj.SetActive(true);
 				Application.LoadLevel (1);
 			} else {
 			
@@ -661,7 +663,7 @@ public class GameOverScript : MonoBehaviour {
 			fadeOutScript.isStarted = true;
 			//fadeOutScript.isEnded = true;
 
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (0.5f);
 
 		
 		}
