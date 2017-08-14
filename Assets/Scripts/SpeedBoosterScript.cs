@@ -6,7 +6,9 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 	private PlatformerCharacter2D pc2D;
 	private AudioSource speedBoostSound;
-	private bool soundOnce = true;
+    private AudioSource speedBoostSoundTwo;
+    private AudioSource speedBoostSoundThree;
+    private bool soundOnce = true;
 
 	private bool boostActivate = false;
 	private bool boostDeactivate = false;
@@ -18,6 +20,7 @@ public class SpeedBoosterScript : MonoBehaviour {
 
 
 	private ParticleSystem boostTextPart;
+    private float randomFloat;
 
 
 
@@ -27,14 +30,16 @@ public class SpeedBoosterScript : MonoBehaviour {
 		pc2D = GameObject.Find ("CharacterRobotBoy").GetComponent<PlatformerCharacter2D> ();
 		boostTextPart = GameObject.Find ("BoostTextPart").GetComponent<ParticleSystem> ();
 		speedBoostSound = GameObject.Find ("SpeedBoostSound").GetComponent<AudioSource> ();
+        speedBoostSoundTwo = GameObject.Find("SpeedBoostSound2").GetComponent<AudioSource>();
+        speedBoostSoundThree = GameObject.Find("SpeedBoostSound3").GetComponent<AudioSource>();
 
 
 
-	}
+    }
 	// Update is called once per frame
 	void Update () {
 
-
+        randomFloat = Random.Range(0f, 3f);
 
 
 		if (boostActivate) {
@@ -45,8 +50,26 @@ public class SpeedBoosterScript : MonoBehaviour {
 			if (!pc2D.isDead) {
 
 				if (soundOnce) {
-					
-					speedBoostSound.Play ();
+
+                    if (randomFloat < 1f)
+                    {
+
+                        speedBoostSound.Play();
+
+                    }
+                    else if (randomFloat >= 1f && randomFloat < 2f)
+                    {
+
+                        speedBoostSoundTwo.Play();
+                    }
+                    else
+                    {
+
+                        speedBoostSoundThree.Play();
+
+                    }
+
+                    
 					soundOnce = false;
 				}
 				if (pc2D.m_MaxSpeed < pc2D.boostOrig * 3f && !pc2D.isDead)
