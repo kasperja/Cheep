@@ -66,7 +66,9 @@ using System.Collections;
 	private GameObject[] gameObjects;
 
 	public AudioSource landingSnow;
-	private bool landOnce = true;
+    public AudioSource landingSnowTwo;
+    public AudioSource landingSnowThree;
+    private bool landOnce = true;
 
 	private float animationSpeed = 1f;
 	private float animationMaxSpeed = 1.6f;
@@ -306,7 +308,33 @@ using System.Collections;
 
 		if (m_Grounded && landOnce) {
 		
-			landingSnow.Play ();
+            
+
+                if (randomFloat < 1f)
+                {
+
+                    landingSnow.Play();
+
+
+
+                }
+                else if (randomFloat >= 1f && randomFloat < 2f)
+                {
+
+                landingSnowTwo.Play();
+
+
+
+                }
+                else
+                {
+
+                landingSnowThree.Play();
+
+
+
+                }
+            
 
 			trailParticle.Play ();
 
