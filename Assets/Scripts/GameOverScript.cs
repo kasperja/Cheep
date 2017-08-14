@@ -1,7 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-//using UnityEngine.Advertisements;
+#if UNITY_IOS
+using UnityEngine.Advertisements;
+#endif
+#if UNITY_ANDROID
+using UnityEngine.Advertisements;
+#endif
+
+
 
 
 public class GameOverScript : MonoBehaviour {
@@ -606,7 +613,17 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone /*&& !Advertisement.isShowing*/)) {
+		if ((adsDone
+
+#if UNITY_IOS
+&& !Advertisement.isShowing
+#endif
+#if UNITY_ANDROID
+&& !Advertisement.isShowing
+#endif
+
+
+            )) {
 			
 			if (isQuickRestart) {
                 getReadyObj.SetActive(true);
@@ -649,16 +666,21 @@ public class GameOverScript : MonoBehaviour {
 		//yield return new WaitForSeconds (0.25f);
 
 		musicBool = true;
-		//yield return new WaitForSeconds (0.5f);
+        //yield return new WaitForSeconds (0.5f);
+
+
+#if UNITY_IOS
+        if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
+#endif
+#if UNITY_ANDROID
+        if (!disableAds && ES2.Exists("myCurrentScore") && showAdCount) Advertisement.Show();
+#endif
 
 
 
-		//if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
 
 
-
-
-		if (isQuickRestart) {
+        if (isQuickRestart) {
 			
 			fadeOutScript.isStarted = true;
 			//fadeOutScript.isEnded = true;

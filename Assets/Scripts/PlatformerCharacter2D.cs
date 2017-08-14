@@ -406,7 +406,8 @@ using System.Collections;
 		if (groundOnce) {
 			
 			StartCoroutine (waitGround ());
-			groundOnce = false;
+            trailParticle.Play();
+            groundOnce = false;
 		
 		}
 
@@ -484,7 +485,7 @@ using System.Collections;
         
 			if(!m_Grounded){
 			skiingSound.Stop ();
-				trailParticle.Stop ();
+				trailParticle.Pause ();
 				playOnce = true;
 			}
 		}
