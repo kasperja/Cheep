@@ -842,9 +842,14 @@ public class LavineMove : MonoBehaviour {
 				pc2D.boostActivate = false;
 				slowMotionBool = true;
 				pc2D.feedbackTap = true;
-				//Debug.Log ("deactivated");
-				//- Handheld.Vibrate();
-				powerUpSpawn.SetActive (true);
+                //Debug.Log ("deactivated");
+#if UNITY_IOS
+        Handheld.Vibrate();
+#endif
+#if UNITY_ANDROID
+                Handheld.Vibrate();
+#endif
+                powerUpSpawn.SetActive (true);
 				powerUpSuperSpawn.SetActive (true);
 				powerUpTopSpawn.SetActive (true);
 				bossSpawn.SetActive (false);
@@ -907,9 +912,13 @@ public class LavineMove : MonoBehaviour {
 
 		tapTapReady = true;
 
-		//-Handheld.Vibrate();
-
-		deactivateOnce = true;
+#if UNITY_IOS
+        Handheld.Vibrate();
+#endif
+#if UNITY_ANDROID
+        Handheld.Vibrate();
+#endif
+        deactivateOnce = true;
 		//yield return new WaitForSeconds (Random.Range(25f,35f));
 		//rollOnce = true;
 		//isRolling = true;
@@ -941,11 +950,16 @@ public class LavineMove : MonoBehaviour {
         
         destroyBot.dieBool = true;
 		lavineDeathParticle.Play ();
-	 //-Handheld.Vibrate ();
+#if UNITY_IOS
+        Handheld.Vibrate();
+#endif
+#if UNITY_ANDROID
+        Handheld.Vibrate();
+#endif
 
-	
-	}
-	/*IEnumerator waitForRollStart(){
+
+    }
+    /*IEnumerator waitForRollStart(){
 
 		//deactivateOnce = true;
 		yield return new WaitForSeconds (Random.Range(25f,30f));
@@ -975,21 +989,25 @@ public class LavineMove : MonoBehaviour {
 
 
 	}*/
-	IEnumerator vibrateNum(){
+    IEnumerator vibrateNum(){
 
 
 		yield return new WaitForSeconds (0.6f);
 
+#if UNITY_IOS
+        Handheld.Vibrate();
+#endif
+#if UNITY_ANDROID
+        Handheld.Vibrate();
+#endif
 
-//-	 Handheld.Vibrate ();
 
 
+        //if(isRolling)StartCoroutine (vibrateNum ());
 
-		//if(isRolling)StartCoroutine (vibrateNum ());
+    }
 
-	}
-
-	IEnumerator setRollingTrue(){
+    IEnumerator setRollingTrue(){
 
 		tapTapReady = false;
 
