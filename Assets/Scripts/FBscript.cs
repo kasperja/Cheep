@@ -18,6 +18,8 @@ public class FBscript : MonoBehaviour {
 	void Awake()
 	{
 
+       
+
 		FacebookManager.Instance.InitFB ();
 
 		DealWithFBMenus (FB.IsLoggedIn);

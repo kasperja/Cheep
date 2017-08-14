@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
 
 
 public class GameOverScript : MonoBehaviour {
@@ -606,7 +606,7 @@ public class GameOverScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 
-		if ((adsDone && !Advertisement.isShowing)) {
+		if ((adsDone /*&& !Advertisement.isShowing*/)) {
 			
 			if (isQuickRestart) {
                 getReadyObj.SetActive(true);
@@ -653,7 +653,7 @@ public class GameOverScript : MonoBehaviour {
 
 
 
-		if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
+		//if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
 
 
 
