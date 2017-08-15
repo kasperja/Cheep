@@ -59,7 +59,7 @@ using UnityEngine.UI;
         public static string kProductIDCharacter28 = "character28";
         public static string kProductIDCharacter29 = "character29";
 
-
+    public float[] pointsForNextChar;
 
     public static string kProductIDSubscription =  "subscription"; 
 
@@ -230,6 +230,10 @@ using UnityEngine.UI;
 
 	public bool noAdsPurchased = false;
 
+    public bool allCharsUnlocked = false;
+
+    public int nextChar = 1;
+
 		private void Awake(){
 		
 		if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
@@ -239,6 +243,27 @@ using UnityEngine.UI;
 		}
 
 		void Update(){
+
+        if (ES2.Exists("nextChar")) nextChar = ES2.Load<int>("nextChar");
+
+        if ((char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased))
+        {
+
+            allCharsUnlocked = true;
+
+
+        }
+
+
+
 		if (char1Unlocked || char1Purchased) {
 
 			char1button.SetActive (true);
@@ -474,11 +499,622 @@ using UnityEngine.UI;
         }
 
 
+        if ((!char1Unlocked || !char1Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 1;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if ((char1Unlocked || char1Purchased) &&
+            (!char2Unlocked && !char2Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 2;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (!char3Unlocked && !char3Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 3;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (!char4Unlocked && !char4Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 4;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (!char5Unlocked && !char5Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 5;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (!char6Unlocked && !char6Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 6;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (!char7Unlocked && !char7Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 7;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (!char8Unlocked && !char8Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 8;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (!char9Unlocked && !char9Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 9;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (!char10Unlocked && !char10Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 10;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (!char11Unlocked && !char11Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 11;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (char11Unlocked || char11Purchased) &&
+            (!char12Unlocked && !char12Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 12;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (char11Unlocked || char11Purchased) &&
+            (char12Unlocked || char12Purchased) &&
+            (!char13Unlocked && !char13Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 13;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (char11Unlocked || char11Purchased) &&
+            (char12Unlocked || char12Purchased) &&
+            (char13Unlocked || char13Purchased) &&
+            (!char14Unlocked && !char14Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 14;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (char11Unlocked || char11Purchased) &&
+            (char12Unlocked || char12Purchased) &&
+            (char13Unlocked || char13Purchased) &&
+            (char14Unlocked || char14Purchased) &&
+            (!char15Unlocked && !char15Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 15;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (char11Unlocked || char11Purchased) &&
+            (char12Unlocked || char12Purchased) &&
+            (char13Unlocked || char13Purchased) &&
+            (char14Unlocked || char14Purchased) &&
+            (char15Unlocked || char15Purchased) &&
+            (!char16Unlocked && !char16Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 16;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+            (char1Unlocked || char1Purchased) &&
+            (char2Unlocked || char2Purchased) &&
+            (char3Unlocked || char3Purchased) &&
+            (char4Unlocked || char4Purchased) &&
+            (char5Unlocked || char5Purchased) &&
+            (char6Unlocked || char6Purchased) &&
+            (char7Unlocked || char7Purchased) &&
+            (char8Unlocked || char8Purchased) &&
+            (char9Unlocked || char9Purchased) &&
+            (char10Unlocked || char10Purchased) &&
+            (char11Unlocked || char11Purchased) &&
+            (char12Unlocked || char12Purchased) &&
+            (char13Unlocked || char13Purchased) &&
+            (char14Unlocked || char14Purchased) &&
+            (char15Unlocked || char15Purchased) &&
+            (char16Unlocked || char16Purchased) &&
+            (!char17Unlocked && !char17Purchased) &&
+            !allCharsUnlocked)
+        {
+            nextChar = 17;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+          (char1Unlocked || char1Purchased) &&
+          (char2Unlocked || char2Purchased) &&
+          (char3Unlocked || char3Purchased) &&
+          (char4Unlocked || char4Purchased) &&
+          (char5Unlocked || char5Purchased) &&
+          (char6Unlocked || char6Purchased) &&
+          (char7Unlocked || char7Purchased) &&
+          (char8Unlocked || char8Purchased) &&
+          (char9Unlocked || char9Purchased) &&
+          (char10Unlocked || char10Purchased) &&
+          (char11Unlocked || char11Purchased) &&
+          (char12Unlocked || char12Purchased) &&
+          (char13Unlocked || char13Purchased) &&
+          (char14Unlocked || char14Purchased) &&
+          (char15Unlocked || char15Purchased) &&
+          (char16Unlocked || char16Purchased) &&
+          (char17Unlocked || char17Purchased) &&
+          (!char18Unlocked && !char18Purchased) &&
+          !allCharsUnlocked)
+        {
+            nextChar = 18;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+          (char1Unlocked || char1Purchased) &&
+          (char2Unlocked || char2Purchased) &&
+          (char3Unlocked || char3Purchased) &&
+          (char4Unlocked || char4Purchased) &&
+          (char5Unlocked || char5Purchased) &&
+          (char6Unlocked || char6Purchased) &&
+          (char7Unlocked || char7Purchased) &&
+          (char8Unlocked || char8Purchased) &&
+          (char9Unlocked || char9Purchased) &&
+          (char10Unlocked || char10Purchased) &&
+          (char11Unlocked || char11Purchased) &&
+          (char12Unlocked || char12Purchased) &&
+          (char13Unlocked || char13Purchased) &&
+          (char14Unlocked || char14Purchased) &&
+          (char15Unlocked || char15Purchased) &&
+          (char16Unlocked || char16Purchased) &&
+          (char17Unlocked || char17Purchased) &&
+          (char18Unlocked || char18Purchased) &&
+          (!char19Unlocked && !char19Purchased) &&
+          !allCharsUnlocked)
+        {
+            nextChar = 19;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (!char20Unlocked && !char20Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 20;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (!char21Unlocked && !char21Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 21;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (!char22Unlocked && !char22Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 22;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (!char23Unlocked && !char23Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 23;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (char23Unlocked || char23Purchased) &&
+         (!char24Unlocked && !char24Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 24;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (char23Unlocked || char23Purchased) &&
+         (char24Unlocked || char24Purchased) &&
+         (!char25Unlocked && !char25Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 25;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (char23Unlocked || char23Purchased) &&
+         (char24Unlocked || char24Purchased) &&
+         (char25Unlocked || char25Purchased) &&
+         (!char26Unlocked && !char26Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 26;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (char23Unlocked || char23Purchased) &&
+         (char24Unlocked || char24Purchased) &&
+         (char25Unlocked || char25Purchased) &&
+         (char26Unlocked || char26Purchased) &&
+         (!char27Unlocked && !char27Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 27;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (char23Unlocked || char23Purchased) &&
+         (char24Unlocked || char24Purchased) &&
+         (char25Unlocked || char25Purchased) &&
+         (char26Unlocked || char26Purchased) &&
+         (char27Unlocked || char27Purchased) &&
+         (!char28Unlocked && !char28Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 28;
+            ES2.Save(nextChar, "nextChar");
+        }
+        if (
+         (char1Unlocked || char1Purchased) &&
+         (char2Unlocked || char2Purchased) &&
+         (char3Unlocked || char3Purchased) &&
+         (char4Unlocked || char4Purchased) &&
+         (char5Unlocked || char5Purchased) &&
+         (char6Unlocked || char6Purchased) &&
+         (char7Unlocked || char7Purchased) &&
+         (char8Unlocked || char8Purchased) &&
+         (char9Unlocked || char9Purchased) &&
+         (char10Unlocked || char10Purchased) &&
+         (char11Unlocked || char11Purchased) &&
+         (char12Unlocked || char12Purchased) &&
+         (char13Unlocked || char13Purchased) &&
+         (char14Unlocked || char14Purchased) &&
+         (char15Unlocked || char15Purchased) &&
+         (char16Unlocked || char16Purchased) &&
+         (char17Unlocked || char17Purchased) &&
+         (char18Unlocked || char18Purchased) &&
+         (char19Unlocked || char19Purchased) &&
+         (char20Unlocked || char20Purchased) &&
+         (char21Unlocked || char21Purchased) &&
+         (char22Unlocked || char22Purchased) &&
+         (char23Unlocked || char23Purchased) &&
+         (char24Unlocked || char24Purchased) &&
+         (char25Unlocked || char25Purchased) &&
+         (char26Unlocked || char26Purchased) &&
+         (char27Unlocked || char27Purchased) &&
+         (char28Unlocked || char28Purchased) &&
+         (!char29Unlocked && !char29Purchased) &&
+         !allCharsUnlocked)
+        {
+            nextChar = 29;
+            ES2.Save(nextChar, "nextChar");
+        }
+       
+
+
+
 
 
     }
 
-		void Start()
+    void Start()
 		{
         findButtonsScript.FindInActive();
         RestorePurchases();
