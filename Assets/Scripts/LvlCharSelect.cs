@@ -59,7 +59,16 @@ public class LvlCharSelect : MonoBehaviour {
         }
         else {
 
-            nameAndLvlTxt.text = " ";
+            if (lvl > 1)
+            {
+                nameAndLvlTxt.text = "Level " + lvl;
+
+            }
+            else {
+
+                nameAndLvlTxt.text = " ";
+
+            }
 
             lvlTxt.text = "Next character get " + purchaserScript.pointsForNextChar[purchaserScript.nextChar-1] + " ";
 
