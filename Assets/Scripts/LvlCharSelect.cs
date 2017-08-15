@@ -14,6 +14,9 @@ public class LvlCharSelect : MonoBehaviour {
     public Text nameAndLvlTxt;
     private string nameAndLvl;
     public string nameOnly;
+    public Purchaser purchaserScript;
+
+    
 
     // Use this for initialization
     void Start () {
@@ -23,9 +26,9 @@ public class LvlCharSelect : MonoBehaviour {
        // nameOnly = nameAndLvlTxt.text;
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
 
 
         if (ES2.Exists("currentChar"))
@@ -38,19 +41,29 @@ public class LvlCharSelect : MonoBehaviour {
         if (ES2.Exists("a" + currentChar))
         {
 
-           cLvl =  ES2.Load<float>("a" + currentChar);
+            cLvl = ES2.Load<float>("a" + currentChar);
 
-           lvl = cLvl / 1f + 1f;
+            lvl = cLvl / 1f + 1f;
 
             nextLvl = cLvl + 2f;
 
         }
 
-        nameAndLvlTxt.text = "Level " + lvl;
+        if (purchaserScript.allCharsUnlocked)
+        {
 
-        lvlTxt.text = "Next level:  Get " + nextLvl + " ";
+            nameAndLvlTxt.text = "Level " + lvl;
 
+            lvlTxt.text = "Next level:  Get " + nextLvl + " ";
 
+        }
+        else {
+
+            nameAndLvlTxt.text = " ";
+
+            lvlTxt.text = "Next character get " + purchaserScript.pointsForNextChar[purchaserScript.nextChar-1] + " ";
+
+        }
         
 
     }

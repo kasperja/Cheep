@@ -184,6 +184,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     public GameObject popupAchievement;
 
+    private int nextChar = 1;
+
     public float[] currentLvlAchievements;
     //public ObjectPoolManager objm;
     // Use this for initialization
@@ -199,7 +201,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     void Start()
     {
-        
+        if (ES2.Exists("nextChar")) nextChar = ES2.Load<int>("nextChar");
 
         if (ES2.Exists("currentChar"))
         {
@@ -1115,7 +1117,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if ((!char1UnlockedPointsOnce && !char1UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 1;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char1PointsToUnlock)
             {
                 for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
@@ -1127,6 +1130,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 2;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1142,6 +1147,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char2UnlockedPointsOnce && !char2UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
+            nextChar = 2;
+            ES2.Save(nextChar, "nextChar");
 
             if (numberOfPickups >= char2PointsToUnlock)
             {
@@ -1155,6 +1162,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 3;
+                ES2.Save(nextChar, "nextChar");
             }
             else
             {
@@ -1168,7 +1177,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char3UnlockedPointsOnce && !char3UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 3;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char3PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1181,6 +1191,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 4;
+                ES2.Save(nextChar, "nextChar");
             }
             else
             {
@@ -1195,7 +1207,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char4UnlockedPointsOnce && !char4UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 4;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char4PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1208,6 +1221,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 5;
+                ES2.Save(nextChar, "nextChar");
             }
             else
             {
@@ -1223,7 +1238,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char5UnlockedPointsOnce && !char5UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 5;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char5PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1236,6 +1252,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 6;
+                ES2.Save(nextChar, "nextChar");
             }
             else
             {
@@ -1252,7 +1270,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char6UnlockedPointsOnce && !char6UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 6;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char6PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1265,6 +1284,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 7;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1282,7 +1303,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char7UnlockedPointsOnce && !char7UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 7;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char7PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1295,6 +1317,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 8;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1313,7 +1337,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char8UnlockedPointsOnce && !char8UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 8;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char8PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1326,6 +1351,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 9;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1345,7 +1372,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char9UnlockedPointsOnce && !char9UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 9;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char9PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1360,6 +1388,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 10;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1381,7 +1411,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char10UnlockedPointsOnce && !char10UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 10;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char10PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1395,6 +1426,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 11;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1417,7 +1450,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char11UnlockedPointsOnce && !char11UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 11;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char11PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1430,6 +1464,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 12;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1452,7 +1488,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char12UnlockedPointsOnce && !char12UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 12;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char12PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1465,6 +1502,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 13;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1488,7 +1527,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char13UnlockedPointsOnce && !char13UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 13;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char13PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1501,6 +1541,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 14;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1525,7 +1567,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char14UnlockedPointsOnce && !char14UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 14;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char14PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1538,6 +1581,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 15;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1563,7 +1608,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char15UnlockedPointsOnce && !char15UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 15;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char15PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1576,6 +1622,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 16;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1602,7 +1650,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char16UnlockedPointsOnce && !char16UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 16;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char16PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1615,6 +1664,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 17;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1642,7 +1693,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char17UnlockedPointsOnce && !char17UnlockedPointsOnce2) &&
                 !allCharsUnlocked)
         {
-
+            nextChar = 17;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char17PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1655,6 +1707,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 18;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1683,7 +1737,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char18UnlockedPointsOnce && !char18UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 18;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char18PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1696,6 +1751,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 19;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1725,7 +1782,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char19UnlockedPointsOnce && !char19UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 19;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char19PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1738,6 +1796,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 20;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1768,7 +1828,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char20UnlockedPointsOnce && !char20UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 20;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char20PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1781,6 +1842,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 21;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1812,7 +1875,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char21UnlockedPointsOnce && !char21UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 21;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char21PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1825,6 +1889,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 22;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1857,7 +1923,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char22UnlockedPointsOnce && !char22UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 22;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char22PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1870,6 +1937,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 23;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1903,7 +1972,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char23UnlockedPointsOnce && !char23UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 23;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char23PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1916,6 +1986,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 24;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1950,7 +2022,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char24UnlockedPointsOnce && !char24UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 24;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char24PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -1963,6 +2036,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 25;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -1998,8 +2073,9 @@ public class SpawnScriptUnlocker : MonoBehaviour
           (!char25UnlockedPointsOnce && !char25UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
-            if (numberOfPickups >= char26PointsToUnlock)
+            nextChar = 25;
+            ES2.Save(nextChar, "nextChar");
+            if (numberOfPickups >= char25PointsToUnlock)
             {
                 UIimages.SetActive(false);
                 for (int i = 0; i < objHUD.Length; i++) { objHUD[i].SetActive(false); }
@@ -2011,6 +2087,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 26;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -2047,7 +2125,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
            (!char26UnlockedPointsOnce && !char26UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 26;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char26PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -2060,6 +2139,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 27;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -2097,7 +2178,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
            (!char27UnlockedPointsOnce && !char27UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 27;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char27PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -2110,6 +2192,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 28;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -2148,7 +2232,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             (!char28UnlockedPointsOnce && !char28UnlockedPointsOnce2) &&
             !allCharsUnlocked)
         {
-
+            nextChar = 28;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char28PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -2161,6 +2246,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 29;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
@@ -2202,6 +2289,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
             )
         {
 
+            nextChar = 29;
+            ES2.Save(nextChar, "nextChar");
             if (numberOfPickups >= char29PointsToUnlock)
             {
                 UIimages.SetActive(false);
@@ -2215,6 +2304,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
                 DestroyAllObjects();
                 startTextOnce = true;
                 OneCharUnlockedThisGame = true;
+                nextChar = 30;
+                ES2.Save(nextChar, "nextChar");
 
             }
             else
