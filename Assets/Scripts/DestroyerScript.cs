@@ -32,15 +32,21 @@ public class DestroyerScript : MonoBehaviour {
     void Update(){
 		
 		if(scream1.time >= scream1.clip.length)scream1.volume = 0f;
-		/*if (fadeMusic) {
+        /*if (fadeMusic) {
 
 			music.volume -= 0.4f * Time.deltaTime;
 
 		}*/
 
+        if (Input.GetKeyDown(KeyCode.U)) {
+
+            EZCameraShake.CameraShaker.Instance.ShakeOnce(pc2d.shakeMagnitude, pc2d.shakeRoughness, pc2d.shakeFadeIn, pc2d.shakeFadeOut);
+
+        }
 
 		if (dieBool && dieOnce) {
-			Time.timeScale = 1f;
+            EZCameraShake.CameraShaker.Instance.ShakeOnce(pc2d.shakeMagnitude, pc2d.shakeRoughness, pc2d.shakeFadeIn, pc2d.shakeFadeOut);
+            Time.timeScale = 1f;
 			pc2d.isDead = true;
 			pc2d.m_MaxSpeed = 0f;
 			deathParticle.Play ();

@@ -6,11 +6,18 @@ using System.Collections;
 //{
     public class PlatformerCharacter2D : MonoBehaviour
     {
+
         [SerializeField] public float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+
+
+    public float shakeMagnitude = 2f;
+    public float shakeRoughness = 5f;
+        public float shakeFadeIn = 0.1f;
+    public float shakeFadeOut = 1f;
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -337,8 +344,8 @@ using System.Collections;
             
 
 			trailParticle.Play ();
-
-			landOnce = false;
+            //EZCameraShake.CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeIn, shakeFadeOut);
+            landOnce = false;
 		
 		}
 

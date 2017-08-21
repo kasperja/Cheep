@@ -54,8 +54,9 @@ namespace UnityStandardAssets._2D
 
 
 				if (!lavineScript.spamActive && !disableJumpScript.disableJump) {
-					
-					StartCoroutine (waitCountOne ());
+
+                   // EZCameraShake.CameraShaker.Instance.ShakeOnce(m_Character.shakeMagnitude, m_Character.shakeRoughness, m_Character.shakeFadeIn, m_Character.shakeFadeOut);
+                    StartCoroutine (waitCountOne ());
 					m_Jump = true;
 					m_Character.feedbackTap = false;
 
@@ -99,7 +100,8 @@ namespace UnityStandardAssets._2D
 
 				if (!lavineScript.spamActive && !disableJumpScript.disableJump) {
 
-					StartCoroutine (waitCountOne ());
+                   // EZCameraShake.CameraShaker.Instance.ShakeOnce(m_Character.shakeMagnitude, m_Character.shakeRoughness, m_Character.shakeFadeIn, m_Character.shakeFadeOut);
+                    StartCoroutine (waitCountOne ());
 					m_Jump = true;
 					m_Character.feedbackTap = false;
 
