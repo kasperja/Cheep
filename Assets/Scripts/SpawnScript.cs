@@ -16,7 +16,7 @@ public class SpawnScript : MonoBehaviour {
 	private bool spawnReadyFront = false;
 	public bool spawnRocketDisable = false;
 	public bool isFG = false;
-
+    public bool isSuper = false;
 
 	//public ObjectPoolManager objm;
 	// Use this for initialization
@@ -60,8 +60,16 @@ public class SpawnScript : MonoBehaviour {
 			if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
 				Instantiate (obj [Random.Range (0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y+1f, transform.position.y -1.2f),transform.position.z), Quaternion.identity);
 		}else{
-			if(spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
-				Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+            if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
+
+                if (isSuper)
+                {
+                    Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y -3f, transform.position.y +1f), transform.position.z), Quaternion.identity);
+                }
+                else {
+
+                    Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+                }
 		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		}
 		spawnReadyFront = true;
