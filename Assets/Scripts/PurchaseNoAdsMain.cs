@@ -156,6 +156,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 	void Start()
 	{
+        InitializePurchasing();
         RestorePurchases();
         if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
 
@@ -169,12 +170,12 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 		if(ES2.Exists("char8Purchased"))char8Purchased = ES2.Load<bool> ("char8Purchased");
 		if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
 
-		InitializePurchasing ();
+		
 
 		//cata1 = m_StoreController.products.WithID (kProductIDCharacter1);
 
 		//if (firstStart)
-			RestorePurchases ();
+			//RestorePurchases ();
 
 		//if(firstStart){
 

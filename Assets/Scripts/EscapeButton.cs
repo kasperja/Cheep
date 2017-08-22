@@ -5,6 +5,7 @@ using UnityEngine;
 public class EscapeButton : MonoBehaviour {
 
 	public AudioSource buttonSound;
+    private bool isFirstStart = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -24,7 +25,10 @@ public class EscapeButton : MonoBehaviour {
 	}
 
 	IEnumerator QuitNum(){
-		buttonSound.Play ();
+
+        isFirstStart = true;
+        ES2.Save(isFirstStart, "firstStart");
+        buttonSound.Play ();
 		yield return new WaitForSeconds (0.3f);
 		Application.Quit();
 		//yield return null;
