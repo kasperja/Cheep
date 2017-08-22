@@ -37,16 +37,19 @@ public class Countdown : MonoBehaviour {
 		textM.text = "3";
 		countdownAnimator.SetInteger ("countdown", 3);
 		yield return new WaitForSeconds (1f);
-		countdownSound.Play ();
+        textM.text = " ";
+        countdownSound.Play ();
 		textM.text = "2";
 		countdownAnimator.SetInteger ("countdown", 2);
 		yield return new WaitForSeconds (1f);
-		countdownSound.Play ();
+        textM.text = " ";
+        countdownSound.Play ();
 		textM.text = "1";
 		countdownAnimator.SetInteger ("countdown", 1);
 		if (!isRocket) {
 			yield return new WaitForSeconds (1f);
-			beginSound.Play ();
+            textM.text = " ";
+            beginSound.Play ();
 			textM.text = "GO!";
 		}
 		hud.goDone = true;

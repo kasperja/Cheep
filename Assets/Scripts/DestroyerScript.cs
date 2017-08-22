@@ -27,6 +27,7 @@ public class DestroyerScript : MonoBehaviour {
     public GameObject graphicsBugo;
     public GameObject graphicsHrumpf;
 
+    private bool fadeEnabled = true;
     //public ObjectPoolManager objm;
 
     void Update(){
@@ -45,6 +46,7 @@ public class DestroyerScript : MonoBehaviour {
         }
 
 		if (dieBool && dieOnce) {
+            ES2.Save(fadeEnabled, "fadeEnabled");
             EZCameraShake.CameraShaker.Instance.ShakeOnce(pc2d.shakeMagnitude, pc2d.shakeRoughness, pc2d.shakeFadeIn, pc2d.shakeFadeOut);
             Time.timeScale = 1f;
 			pc2d.isDead = true;
