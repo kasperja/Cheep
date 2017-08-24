@@ -105,11 +105,11 @@ public class DestroyerScript : MonoBehaviour {
 		fadeMusic = true;
 		scream1.Play ();
 
+        yield return new WaitForSeconds(1.2f);
 
+        pc2d.fadeOutScript.isEnded = true;
 
-
-
-		yield return new WaitForSeconds (2f);
+        yield return new WaitForSeconds (0.8f);
 		Application.LoadLevel (2);
 		//return;
 

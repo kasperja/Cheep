@@ -467,7 +467,7 @@ using System.Collections;
 
 		} else if(isDead){
 		
-			fadeOutScript.isEnded = true;
+			
 			fadeOutScript.isStarted = false;
 
 			m_MaxSpeed = 0f;

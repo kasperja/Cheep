@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HideCharSelect : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class HideCharSelect : MonoBehaviour {
     public GameObject xButtonTopObj;
     public Animator scrollViewAnimator;
     public bool startOverOnceBool = true;
+    public GameObject mask;
+    public Image leaderboard;
 
     //public bool firstStart = true;
     // Use this for initialization
@@ -28,15 +31,19 @@ public class HideCharSelect : MonoBehaviour {
 
         if (popupObj.activeSelf || popup1Obj.activeSelf)
         {
-
+            leaderboard.enabled = false;
+            //mask.SetActive(false);
             startOverOnceBool = true;
             menuObj.SetActive(true);
             xButtonTopObj.SetActive(false);
+            
 
 
         }
         else {
-            
+
+            //mask.SetActive(true);
+            leaderboard.enabled = true;
             menuObj.SetActive(false);
             xButtonTopObj.SetActive(true);
             if (startOverOnceBool) {
@@ -49,6 +56,7 @@ public class HideCharSelect : MonoBehaviour {
 		
 	}
     IEnumerator waitFalseAnimator() {
+        scrollViewAnimator.SetBool("startOver", true);
         yield return new WaitForSeconds(0.05f);
         scrollViewAnimator.SetBool("startOver", false);
 
