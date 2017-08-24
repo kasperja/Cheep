@@ -11,6 +11,7 @@ public class FadeIn : MonoBehaviour {
 	public Color col2;
 	private float t = 0f;
 	private float t2 = 0f;
+    public float fadeSpeed = 2f;
 	//public AudioSource music;
 	//public MusicStart mStart;
 
@@ -39,7 +40,7 @@ public class FadeIn : MonoBehaviour {
 
 			//if(isStartScreen)music.volume -= 2f * Time.deltaTime;
 
-			t += 2f * Time.deltaTime;
+			t += fadeSpeed * Time.deltaTime;
 
 			image.color = Color.Lerp(col1, col2, t);
 

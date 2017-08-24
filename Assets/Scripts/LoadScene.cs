@@ -4,8 +4,10 @@ using UnityEngine;
 
 
 public class LoadScene : MonoBehaviour {
-
+    public FadeIn fadeToMain;
 	public int lvlNumber = 0;
+    public bool isXchar = false;
+    public AudioSource buttonSound;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +20,18 @@ public class LoadScene : MonoBehaviour {
 
 	public void LoadSceneOne(){
 	
-		Application.LoadLevel (lvlNumber);
+		if(!isXchar)Application.LoadLevel (lvlNumber);
+
+        if (isXchar) StartCoroutine(fadeMainNum());
 	
 	}
+    IEnumerator fadeMainNum() {
+        fadeToMain.isStarted = true;
+        buttonSound.Play();
+        yield return new WaitForSeconds(0.22f);
+
+        Application.LoadLevel(lvlNumber);
+
+
+    }
 }

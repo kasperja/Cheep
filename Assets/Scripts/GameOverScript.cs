@@ -91,7 +91,7 @@ public class GameOverScript : MonoBehaviour {
 */
 	public GameObject tryButton;
 
-
+    public FadeIn fadeInMain;
 	//public GameObject noAdsButton;
 
 
@@ -691,8 +691,12 @@ public class GameOverScript : MonoBehaviour {
 		}
 
 		if(countPlays >= 3)yield return new WaitForSeconds (2f);
+        if (!isQuickRestart) {
+            fadeInMain.isStarted = true;
+            yield return new WaitForSeconds(0.25f);
 
-		adsDone = true;
+        }
+        adsDone = true;
 		//Application.LoadLevel (0);
 		yield return null;
 	

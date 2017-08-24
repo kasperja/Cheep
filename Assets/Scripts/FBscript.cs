@@ -29,7 +29,7 @@ public class FBscript : MonoBehaviour {
 	public void FBlogin()
 	{
 
-		buttonSound.Play ();
+		//buttonSound.Play ();
 
 		List<string> permissions = new List<string> ();
 
