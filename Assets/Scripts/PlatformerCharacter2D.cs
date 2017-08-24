@@ -418,11 +418,12 @@ using System.Collections;
 		
 		}
 
-		if(gameObject.GetComponent<Rigidbody2D>().velocity.y < -4f)m_Grounded = false;
+		if(gameObject.GetComponent<Rigidbody2D>().velocity.y < -1f)m_Grounded = false;
+        if (gameObject.GetComponent<Rigidbody2D>().velocity.y > 1f) m_Grounded = false;
 
-            // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
-            // This can be done using layers instead but Sample Assets will not overwrite your project settings.
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+        // This can be done using layers instead but Sample Assets will not overwrite your project settings.
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
 				if (colliders [i].gameObject != gameObject) {
@@ -777,8 +778,8 @@ using System.Collections;
 	IEnumerator waitGround(){
 
 		groundOnce = false;
-
-		yield return new WaitForSeconds (0.04f);
+        m_Grounded = false;
+        yield return new WaitForSeconds (0.04f);
 
 		m_Grounded = false;
 		m_Anim.SetBool("Ground", false);

@@ -18,7 +18,7 @@ public class IfScenePrevious : MonoBehaviour {
 
 		}
 
-		if ((prevScene == 0 || prevScene == 2) && !isStartScreen)buttonSound.Play ();
+		//if ((prevScene == 0 || prevScene == 2) && !isStartScreen)buttonSound.Play ();
 
 		prevScene = 2;
 

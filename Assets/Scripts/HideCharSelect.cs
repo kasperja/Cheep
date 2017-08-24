@@ -56,7 +56,7 @@ public class HideCharSelect : MonoBehaviour {
 		
 	}
     IEnumerator waitFalseAnimator() {
-        scrollViewAnimator.SetBool("startOver", true);
+        //scrollViewAnimator.SetBool("startOver", true);
         yield return new WaitForSeconds(0.05f);
         scrollViewAnimator.SetBool("startOver", false);
 

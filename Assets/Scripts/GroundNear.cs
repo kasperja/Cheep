@@ -18,8 +18,8 @@ public class GroundNear : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 
-		//Debug.Log ("HI2");
-		spawnGroundScript.spawnBoundsR = false;
+        //Debug.Log ("HI2");
+        if (other.tag == "Ground") spawnGroundScript.spawnBoundsR = false;
 
 
 
@@ -32,12 +32,10 @@ public class GroundNear : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 
+        if (other.tag == "Ground") spawnGroundScript.spawnBoundsR = false;
+        //Debug.Log ("HI3");
 
-		//Debug.Log ("HI3");
-
-			//spawnGroundScript.spawnBoundsR = false;
-
-
+        //spawnGroundScript.spawnBoundsR = false;
 
 
 
@@ -45,12 +43,14 @@ public class GroundNear : MonoBehaviour {
 
 
 
-	}
+
+
+    }
 	void OnTriggerExit2D(Collider2D other){
-		//Debug.Log ("HI4");
+        //Debug.Log ("HI4");
 
 
-		spawnGroundScript.spawnBoundsR = true;
+        if (other.tag == "Ground") spawnGroundScript.spawnBoundsR = true;
 
 
 
