@@ -75,7 +75,7 @@ public class EnableFade : MonoBehaviour {
         }
         else if(isStart && !isFirstStart){
 
-            fadeObj.SetActive(false);
+            //fadeObj.SetActive(false);
 
         }
 
