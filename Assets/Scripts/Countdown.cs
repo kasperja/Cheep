@@ -54,9 +54,11 @@ public class Countdown : MonoBehaviour {
 		}
 		hud.goDone = true;
 		countdownAnimator.SetInteger ("countdown", 0);
-		if(!isRocket)yield return new WaitForSeconds (1f);
+        
+        if (!isRocket)yield return new WaitForSeconds (1f);
 		textM.text = " ";
-		isRocket = false;
+        countdownAnimator.SetInteger("countdown", -1);
+        isRocket = false;
 		isRocketOnce = true;
 
 	
