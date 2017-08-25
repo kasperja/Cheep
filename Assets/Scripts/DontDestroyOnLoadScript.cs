@@ -143,13 +143,13 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 
         if (currentScene.name == "GameOverScene" && gameOverOnce && prevScene != 0) {
 
+            audioFadeOut = false;
             //StartCoroutine (waitAndDestroy ());
             music = musicIntro;
 
             isIntro = true;
             
             music.Play();
-			audioFadeOut = false;
             gameOverOnce = false;
 
 
