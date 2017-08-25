@@ -64,7 +64,7 @@ public class SpawnScript : MonoBehaviour {
 
                 if (isSuper)
                 {
-                    Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y -3f, transform.position.y +1f), transform.position.z), Quaternion.identity);
+                    Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y -3f, transform.position.y), transform.position.z), Quaternion.identity);
                 }
                 else {
 
