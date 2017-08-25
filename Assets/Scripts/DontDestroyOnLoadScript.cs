@@ -16,6 +16,13 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 	public AudioSource musicLoop;
 	public AudioSource musicEnd;
 
+    public static bool endMenuMusic = false;
+    private bool endOnce = true;
+
+    private bool gameOverOnce = true;
+
+    public int prevScene = 0;
+
 	void Awake(){
 
 
@@ -60,6 +67,7 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 		if (currentScene.name == "Scene01") {
 		
 			Debug.Log ("Scene 1");
+            endOnce = true;
 			audioFadeOut = true;
 
 		
@@ -82,6 +90,7 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 			StartCoroutine (waitAndDestroy ());
 
 			audioFadeOut = true;
+            gameOverOnce = true;
 
 
 		}
@@ -109,25 +118,71 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
 
 		currentScene = SceneManager.GetActiveScene();
 
-		if (currentScene.name == "Scene01") {
+        if (endMenuMusic && endOnce)
+        {
+
+            //StartCoroutine (waitAndDestroy ());
+            music.Stop();
+            musicEnd.Play();
+            prevScene = 1;
+            endOnce = false;
+            
+            //audioFadeOut = true;
+
+
+        }
+
+        /*if (currentScene.name == "Scene01") {
 
 			//StartCoroutine (waitAndDestroy ());
 
 			audioFadeOut = true;
 
 
-		}
+		}*/
 
-		if (currentScene.name == "GameOverScene") {
+        if (currentScene.name == "GameOverScene" && gameOverOnce && prevScene != 0) {
 
-			//StartCoroutine (waitAndDestroy ());
+            //StartCoroutine (waitAndDestroy ());
+            music = musicIntro;
 
+            isIntro = true;
+            
+            music.Play();
 			audioFadeOut = false;
+            gameOverOnce = false;
 
 
 		}
+        if (currentScene.name == "StartScene")
+        {
+            endMenuMusic = false;
+            endOnce = true;
+            prevScene = 0;
 
-		if (musicDisabled) {
+
+        }
+        if (currentScene.name == "Scene01")
+        {
+            gameOverOnce = true;
+            endMenuMusic = false;
+            endOnce = true;
+            prevScene = 1;
+
+
+        }
+        if (currentScene.name == "CharScene")
+        {
+
+            endMenuMusic = false;
+            endOnce = true;
+            prevScene = 3;
+
+
+        }
+
+
+        if (musicDisabled) {
 
 			music.volume = 0f;
 			music.volume = 0f;

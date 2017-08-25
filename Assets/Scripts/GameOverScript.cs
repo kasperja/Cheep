@@ -654,7 +654,8 @@ public class GameOverScript : MonoBehaviour {
 	}
 	public void RetryQuick(){
 
-		//click.Play ();
+        //click.Play ();
+        DontDestroyOnLoadScript.endMenuMusic = true;
 		isQuickRestart = true;
 		StartCoroutine (waitAndRestart());
 
@@ -696,6 +697,8 @@ public class GameOverScript : MonoBehaviour {
             yield return new WaitForSeconds(0.25f);
 
         }
+
+        DontDestroyOnLoadScript.endMenuMusic = false;
         adsDone = true;
 		//Application.LoadLevel (0);
 		yield return null;
