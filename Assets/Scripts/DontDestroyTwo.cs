@@ -110,6 +110,7 @@ public class DontDestroyTwo : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        StartCoroutine(startMusic());
 
 		introOnce = true;
 
@@ -196,7 +197,7 @@ public class DontDestroyTwo : MonoBehaviour {
 			music.Play ();
 			introOnce = false;
 			StopCoroutine(musicIntervals ());
-			StartCoroutine (musicIntervals ());
+			StartCoroutine (musicIntervalsStart ());
 		
 		}
 
@@ -364,7 +365,7 @@ public class DontDestroyTwo : MonoBehaviour {
 
 		} else if(!musicDisabled) {
 
-			if(music.volume < 0.45f)music.volume += 1f * Time.deltaTime;
+			if(music.volume < 0.45f)music.volume += 5f * Time.deltaTime;
 
 		}
 	}
@@ -402,7 +403,23 @@ public class DontDestroyTwo : MonoBehaviour {
 
 	}
 
-	IEnumerator musicIntervals(){
+    IEnumerator musicIntervalsStart()
+    {
+
+
+
+        yield return new WaitForSeconds(16f);
+        pointInTime += 1f;
+
+        shiftReady = true;
+
+
+        StartCoroutine(intervalShiftFalse());
+        StartCoroutine(musicIntervals());
+
+    }
+
+    IEnumerator musicIntervals(){
 	
 
 
@@ -458,5 +475,12 @@ public class DontDestroyTwo : MonoBehaviour {
 
 	
 	}
+    IEnumerator startMusic() {
+
+        yield return new WaitForSeconds(3f);
+
+        music.Play();
+
+    }
 
 }

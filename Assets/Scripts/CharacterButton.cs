@@ -20,7 +20,9 @@ public class CharacterButton : MonoBehaviour {
     //public ParticleSystem[] otherParticles;
     public GameObject loadingText;
 
-	void Start () {
+    
+
+    void Start () {
 
 		fadeOutScript = GameObject.Find ("FadeOut").GetComponent<FadeOut>();
 		//selectedParticle = charSelectScript.gameObject.GetComponentInChildren<ParticleSystem> ();
@@ -72,7 +74,9 @@ public class CharacterButton : MonoBehaviour {
 	IEnumerator waitAndStart(){
 	
 		fadeOutScript.isStarted = true;
+        DontDestroyOnLoadScript.endMenuMusic = true;
 		yield return new WaitForSeconds (0.15f);
+        DontDestroyOnLoadScript.endMenuMusic = false;
         loadingText.SetActive(true);
 		Application.LoadLevel (1);
 	
