@@ -148,8 +148,20 @@ public class DontDestroyOnLoadScript : MonoBehaviour {
             music = musicIntro;
 
             isIntro = true;
-            
-            music.Play();
+
+            if (!endMenuMusic)
+            {
+
+                music.Play();
+
+
+            }
+            else {
+
+                music.Stop();
+
+            }
+            endOnce = true;
             gameOverOnce = false;
 
 

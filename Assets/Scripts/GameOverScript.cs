@@ -668,7 +668,7 @@ public class GameOverScript : MonoBehaviour {
 
 		musicBool = true;
         //yield return new WaitForSeconds (0.5f);
-
+        
 
 #if UNITY_IOS
         if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
@@ -684,9 +684,9 @@ public class GameOverScript : MonoBehaviour {
         if (isQuickRestart) {
 			
 			fadeOutScript.isStarted = true;
-			//fadeOutScript.isEnded = true;
-
-			yield return new WaitForSeconds (0.5f);
+            //fadeOutScript.isEnded = true;
+            DontDestroyOnLoadScript.endMenuMusic = true;
+            yield return new WaitForSeconds (0.5f);
 
 		
 		}
@@ -697,7 +697,7 @@ public class GameOverScript : MonoBehaviour {
             yield return new WaitForSeconds(0.25f);
 
         }
-
+        //DontDestroyOnLoadScript.endMenuMusic = true;
         DontDestroyOnLoadScript.endMenuMusic = false;
         adsDone = true;
 		//Application.LoadLevel (0);
