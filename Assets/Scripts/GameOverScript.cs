@@ -92,6 +92,9 @@ public class GameOverScript : MonoBehaviour {
 	public GameObject tryButton;
 
     public FadeIn fadeInMain;
+    public FadeIn fadeInWhite;
+
+    public int prevScene = 0;
 	//public GameObject noAdsButton;
 
 
@@ -103,7 +106,26 @@ public class GameOverScript : MonoBehaviour {
 
 	void Start () {
 
-		if (ES2.Exists ("noAds")) {
+        if (ES2.Exists("prevScene"))
+        {
+
+            prevScene = ES2.Load<int>("prevScene");
+
+        }
+
+        if (prevScene == 1)
+        {
+
+            fadeInWhite.gameObject.SetActive(true);
+
+        }
+        else {
+
+            fadeInWhite.gameObject.SetActive(false);
+
+        }
+
+        if (ES2.Exists ("noAds")) {
 
 			disableAds =  ES2.Load<bool>( "noAds");
 		}
