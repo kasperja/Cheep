@@ -28,6 +28,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 1
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -43,10 +45,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 1
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -121,6 +126,7 @@ TextureImporter:
       pivot: {x: 0.4954751, y: 0.4698795}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0001
@@ -134,6 +140,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.4698795}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0002
@@ -147,6 +154,7 @@ TextureImporter:
       pivot: {x: 0.4801762, y: 0.47685185}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0003
@@ -160,6 +168,7 @@ TextureImporter:
       pivot: {x: 0.4885321, y: 0.46713614}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0004
@@ -173,6 +182,7 @@ TextureImporter:
       pivot: {x: 0.4752941, y: 0.47732696}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0005
@@ -186,6 +196,7 @@ TextureImporter:
       pivot: {x: 0.43349755, y: 0.47706422}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0006
@@ -199,6 +210,7 @@ TextureImporter:
       pivot: {x: 0.41666666, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0007
@@ -212,6 +224,7 @@ TextureImporter:
       pivot: {x: 0.40214476, y: 0.49545455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0008
@@ -225,6 +238,7 @@ TextureImporter:
       pivot: {x: 0.38120106, y: 0.52915764}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0009
@@ -238,6 +252,7 @@ TextureImporter:
       pivot: {x: 0.40053764, y: 0.50790066}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0010
@@ -251,6 +266,7 @@ TextureImporter:
       pivot: {x: 0.40526316, y: 0.505618}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0011
@@ -264,6 +280,7 @@ TextureImporter:
       pivot: {x: 0.4050633, y: 0.49779737}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0012
@@ -277,6 +294,7 @@ TextureImporter:
       pivot: {x: 0.421875, y: 0.5121413}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0013
@@ -290,6 +308,7 @@ TextureImporter:
       pivot: {x: 0.45049506, y: 0.5022727}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0014
@@ -303,6 +322,7 @@ TextureImporter:
       pivot: {x: 0.47429907, y: 0.49191687}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: jump03Lizard-0015
@@ -316,8 +336,10 @@ TextureImporter:
       pivot: {x: 0.4845815, y: 0.4698795}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -21,6 +21,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -36,10 +38,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -114,6 +119,7 @@ TextureImporter:
       pivot: {x: 0.41776314, y: 0.5038023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0001
@@ -127,6 +133,7 @@ TextureImporter:
       pivot: {x: 0.43610224, y: 0.5066414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0002
@@ -140,6 +147,7 @@ TextureImporter:
       pivot: {x: 0.43203884, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0003
@@ -153,6 +161,7 @@ TextureImporter:
       pivot: {x: 0.443038, y: 0.5028355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0004
@@ -166,6 +175,7 @@ TextureImporter:
       pivot: {x: 0.43569133, y: 0.49626866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0005
@@ -179,6 +189,7 @@ TextureImporter:
       pivot: {x: 0.4368932, y: 0.49626866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0006
@@ -192,6 +203,7 @@ TextureImporter:
       pivot: {x: 0.46353322, y: 0.49626866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0007
@@ -205,6 +217,7 @@ TextureImporter:
       pivot: {x: 0.4554295, y: 0.49626866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: YetiSkiing-0008
@@ -218,8 +231,10 @@ TextureImporter:
       pivot: {x: 0.47603834, y: 0.49532712}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
