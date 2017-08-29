@@ -25,6 +25,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -40,10 +42,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -118,6 +123,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.48654708}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0001
@@ -131,6 +137,7 @@ TextureImporter:
       pivot: {x: 0.51592356, y: 0.48769575}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0002
@@ -144,6 +151,7 @@ TextureImporter:
       pivot: {x: 0.6078767, y: 0.48988765}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0003
@@ -157,6 +165,7 @@ TextureImporter:
       pivot: {x: 0.6080139, y: 0.48660713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0004
@@ -170,6 +179,7 @@ TextureImporter:
       pivot: {x: 0.59205776, y: 0.49209931}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0005
@@ -183,6 +193,7 @@ TextureImporter:
       pivot: {x: 0.5546875, y: 0.49433106}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0006
@@ -196,6 +207,7 @@ TextureImporter:
       pivot: {x: 0.49103138, y: 0.49321267}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0007
@@ -209,6 +221,7 @@ TextureImporter:
       pivot: {x: 0.46728972, y: 0.49885583}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0008
@@ -222,6 +235,7 @@ TextureImporter:
       pivot: {x: 0.47465438, y: 0.4977169}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0009
@@ -235,6 +249,7 @@ TextureImporter:
       pivot: {x: 0.5169492, y: 0.49885583}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0010
@@ -248,6 +263,7 @@ TextureImporter:
       pivot: {x: 0.51495725, y: 0.49321267}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0011
@@ -261,6 +277,7 @@ TextureImporter:
       pivot: {x: 0.6076389, y: 0.49433106}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingRobby-0012
@@ -274,8 +291,10 @@ TextureImporter:
       pivot: {x: 0.60420316, y: 0.49209931}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -28,6 +28,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 1
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -43,10 +45,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 1
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -121,6 +126,7 @@ TextureImporter:
       pivot: {x: 0.5398058, y: 0.37804878}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0001
@@ -134,6 +140,7 @@ TextureImporter:
       pivot: {x: 0.54423076, y: 0.38912135}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0002
@@ -147,6 +154,7 @@ TextureImporter:
       pivot: {x: 0.5439252, y: 0.4025974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0003
@@ -160,6 +168,7 @@ TextureImporter:
       pivot: {x: 0.5363985, y: 0.41150442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0004
@@ -173,6 +182,7 @@ TextureImporter:
       pivot: {x: 0.556797, y: 0.43661973}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0005
@@ -186,6 +196,7 @@ TextureImporter:
       pivot: {x: 0.54442346, y: 0.4471154}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0006
@@ -199,6 +210,7 @@ TextureImporter:
       pivot: {x: 0.55128205, y: 0.43867925}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0007
@@ -212,6 +224,7 @@ TextureImporter:
       pivot: {x: 0.55350554, y: 0.40969163}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0008
@@ -225,6 +238,7 @@ TextureImporter:
       pivot: {x: 0.54423076, y: 0.37804878}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0009
@@ -238,6 +252,7 @@ TextureImporter:
       pivot: {x: 0.53992397, y: 0.3875}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0010
@@ -251,6 +266,7 @@ TextureImporter:
       pivot: {x: 0.53831416, y: 0.39574468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0011
@@ -264,6 +280,7 @@ TextureImporter:
       pivot: {x: 0.5553398, y: 0.39574468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0012
@@ -277,6 +294,7 @@ TextureImporter:
       pivot: {x: 0.544592, y: 0.41150442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0013
@@ -290,6 +308,7 @@ TextureImporter:
       pivot: {x: 0.53816795, y: 0.43055555}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0014
@@ -303,6 +322,7 @@ TextureImporter:
       pivot: {x: 0.5483871, y: 0.44339624}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingLizard-0015
@@ -316,8 +336,10 @@ TextureImporter:
       pivot: {x: 0.5389105, y: 0.40434784}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

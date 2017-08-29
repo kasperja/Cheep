@@ -28,6 +28,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -43,10 +45,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -121,6 +126,7 @@ TextureImporter:
       pivot: {x: 0.61695904, y: 0.50948507}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0001
@@ -134,6 +140,7 @@ TextureImporter:
       pivot: {x: 0.6360856, y: 0.51226157}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0002
@@ -147,6 +154,7 @@ TextureImporter:
       pivot: {x: 0.6213873, y: 0.51648355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0003
@@ -160,6 +168,7 @@ TextureImporter:
       pivot: {x: 0.62322944, y: 0.50948507}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0004
@@ -173,6 +182,7 @@ TextureImporter:
       pivot: {x: 0.6309859, y: 0.5236769}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0005
@@ -186,6 +196,7 @@ TextureImporter:
       pivot: {x: 0.6410959, y: 0.5280899}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0006
@@ -199,6 +210,7 @@ TextureImporter:
       pivot: {x: 0.65435356, y: 0.5295775}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0007
@@ -212,6 +224,7 @@ TextureImporter:
       pivot: {x: 0.6410959, y: 0.5356125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0008
@@ -225,6 +238,7 @@ TextureImporter:
       pivot: {x: 0.60882354, y: 0.50948507}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0009
@@ -238,6 +252,7 @@ TextureImporter:
       pivot: {x: 0.61918604, y: 0.5026738}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0010
@@ -251,6 +266,7 @@ TextureImporter:
       pivot: {x: 0.6410959, y: 0.53257793}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0011
@@ -264,6 +280,7 @@ TextureImporter:
       pivot: {x: 0.6320225, y: 0.5295775}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0012
@@ -277,6 +294,7 @@ TextureImporter:
       pivot: {x: 0.6371191, y: 0.5236769}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0013
@@ -290,6 +308,7 @@ TextureImporter:
       pivot: {x: 0.63858694, y: 0.51086956}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0014
@@ -303,6 +322,7 @@ TextureImporter:
       pivot: {x: 0.6401099, y: 0.5179063}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: skiingBugo-0015
@@ -316,8 +336,10 @@ TextureImporter:
       pivot: {x: 0.6619318, y: 0.51226157}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
