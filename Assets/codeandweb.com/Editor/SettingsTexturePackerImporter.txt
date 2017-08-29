@@ -46,6 +46,8 @@ tpsheetFileNames:
 - Assets/Resources/Textures/Cheep/Taco/TacoJump2-0.tpsheet
 - Assets/Resources/Textures/Cheep/Taco/TacoJump3-0.tpsheet
 - Assets/Resources/Textures/Cheep/Taco/TacoSkiing-0.tpsheet
+- Assets/Resources/Textures/Cheep/Yeti/Yeti-Skiing-0.tpsheet
+- Assets/Resources/Textures/Cheep/Yeti/Yeti-Skiing-1.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Resources/Textures/Cheep/Alien/AlienJump01-0.png
@@ -92,8 +94,12 @@ textureFileNames:
 - Assets/Resources/Textures/Cheep/Taco/TacoJump2-0.png
 - Assets/Resources/Textures/Cheep/Taco/TacoJump3-0.png
 - Assets/Resources/Textures/Cheep/Taco/TacoSkiing-0.png
+- Assets/Resources/Textures/Cheep/Yeti/Yeti-Skiing-0.png
+- Assets/Resources/Textures/Cheep/Yeti/Yeti-Skiing-1.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
 - 
 - 
 - 
