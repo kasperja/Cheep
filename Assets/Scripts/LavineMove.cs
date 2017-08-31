@@ -895,8 +895,10 @@ public class LavineMove : MonoBehaviour {
 	IEnumerator waitForRoll(){
 		
 		//deactivateOnce = true;
-		bossSpawn.SetActive (true);
+		
 		normSpawn.SetActive (false);
+        yield return new WaitForSeconds(1f);
+        bossSpawn.SetActive(true);
         //if (yetiObj.activeSelf) yetiSound.Play();
         yield return new WaitForSeconds (6f);
 
