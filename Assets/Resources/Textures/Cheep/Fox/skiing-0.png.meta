@@ -31,6 +31,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 1
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -46,10 +48,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 1
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -124,6 +129,7 @@ TextureImporter:
       pivot: {x: 0.53488374, y: 0.44583333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0001
@@ -137,6 +143,7 @@ TextureImporter:
       pivot: {x: 0.55334985, y: 0.44583333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0002
@@ -150,6 +157,7 @@ TextureImporter:
       pivot: {x: 0.53846157, y: 0.45147678}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0003
@@ -163,6 +171,7 @@ TextureImporter:
       pivot: {x: 0.54385966, y: 0.44214877}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0004
@@ -176,6 +185,7 @@ TextureImporter:
       pivot: {x: 0.5488722, y: 0.44032922}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0005
@@ -189,6 +199,7 @@ TextureImporter:
       pivot: {x: 0.5555556, y: 0.46320346}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0006
@@ -202,6 +213,7 @@ TextureImporter:
       pivot: {x: 0.5522388, y: 0.47982064}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0007
@@ -215,6 +227,7 @@ TextureImporter:
       pivot: {x: 0.56416464, y: 0.495283}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0008
@@ -228,6 +241,7 @@ TextureImporter:
       pivot: {x: 0.5673077, y: 0.5095238}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0009
@@ -241,6 +255,7 @@ TextureImporter:
       pivot: {x: 0.5673077, y: 0.5072464}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0010
@@ -254,6 +269,7 @@ TextureImporter:
       pivot: {x: 0.5477387, y: 0.5095238}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0011
@@ -267,6 +283,7 @@ TextureImporter:
       pivot: {x: 0.5555556, y: 0.49537036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0012
@@ -280,6 +297,7 @@ TextureImporter:
       pivot: {x: 0.55445546, y: 0.4841629}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0013
@@ -293,6 +311,7 @@ TextureImporter:
       pivot: {x: 0.55, y: 0.47136563}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0014
@@ -306,6 +325,7 @@ TextureImporter:
       pivot: {x: 0.5488722, y: 0.47555557}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0015
@@ -319,6 +339,7 @@ TextureImporter:
       pivot: {x: 0.54545456, y: 0.46120688}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxsking-0016
@@ -332,8 +353,10 @@ TextureImporter:
       pivot: {x: 0.53488374, y: 0.44583333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

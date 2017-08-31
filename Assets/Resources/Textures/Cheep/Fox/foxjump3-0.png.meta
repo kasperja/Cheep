@@ -24,6 +24,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 1
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -39,10 +41,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 1
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -117,6 +122,7 @@ TextureImporter:
       pivot: {x: 0.7094017, y: 0.5776699}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0001
@@ -130,6 +136,7 @@ TextureImporter:
       pivot: {x: 0.72651935, y: 0.5703704}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0002
@@ -143,6 +150,7 @@ TextureImporter:
       pivot: {x: 0.72727275, y: 0.58413464}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0003
@@ -156,6 +164,7 @@ TextureImporter:
       pivot: {x: 0.71875, y: 0.5776699}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0004
@@ -169,6 +178,7 @@ TextureImporter:
       pivot: {x: 0.7307692, y: 0.57560974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0005
@@ -182,6 +192,7 @@ TextureImporter:
       pivot: {x: 0.73756903, y: 0.5645933}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0006
@@ -195,6 +206,7 @@ TextureImporter:
       pivot: {x: 0.730659, y: 0.5693069}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0007
@@ -208,6 +220,7 @@ TextureImporter:
       pivot: {x: 0.73351645, y: 0.57560974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0008
@@ -221,6 +234,7 @@ TextureImporter:
       pivot: {x: 0.7307692, y: 0.57560974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0009
@@ -234,6 +248,7 @@ TextureImporter:
       pivot: {x: 0.71875, y: 0.5776699}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0010
@@ -247,6 +262,7 @@ TextureImporter:
       pivot: {x: 0.7292818, y: 0.5827338}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: foxjump3-0011
@@ -260,8 +276,10 @@ TextureImporter:
       pivot: {x: 0.72651935, y: 0.5703704}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

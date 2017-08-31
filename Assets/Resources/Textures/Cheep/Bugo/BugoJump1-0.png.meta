@@ -28,6 +28,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -43,10 +45,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -121,6 +126,7 @@ TextureImporter:
       pivot: {x: 0.6092233, y: 0.545}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0001
@@ -134,6 +140,7 @@ TextureImporter:
       pivot: {x: 0.6111111, y: 0.5425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0002
@@ -147,6 +154,7 @@ TextureImporter:
       pivot: {x: 0.63744074, y: 0.53431374}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0003
@@ -160,6 +168,7 @@ TextureImporter:
       pivot: {x: 0.617866, y: 0.5436893}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0004
@@ -173,6 +182,7 @@ TextureImporter:
       pivot: {x: 0.58588237, y: 0.53}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0005
@@ -186,6 +196,7 @@ TextureImporter:
       pivot: {x: 0.6105528, y: 0.53148615}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0006
@@ -199,6 +210,7 @@ TextureImporter:
       pivot: {x: 0.591687, y: 0.53266335}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0007
@@ -212,6 +224,7 @@ TextureImporter:
       pivot: {x: 0.5980392, y: 0.54477614}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0008
@@ -225,6 +238,7 @@ TextureImporter:
       pivot: {x: 0.5651042, y: 0.53753024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0009
@@ -238,6 +252,7 @@ TextureImporter:
       pivot: {x: 0.5816327, y: 0.54477614}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0010
@@ -251,6 +266,7 @@ TextureImporter:
       pivot: {x: 0.580402, y: 0.53940886}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0011
@@ -264,6 +280,7 @@ TextureImporter:
       pivot: {x: 0.5994832, y: 0.52882206}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0012
@@ -277,6 +294,7 @@ TextureImporter:
       pivot: {x: 0.57384986, y: 0.5286783}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0013
@@ -290,6 +308,7 @@ TextureImporter:
       pivot: {x: 0.6075, y: 0.5436893}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0014
@@ -303,6 +322,7 @@ TextureImporter:
       pivot: {x: 0.59697735, y: 0.5331695}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: bugoJump1-0015
@@ -316,8 +336,10 @@ TextureImporter:
       pivot: {x: 0.606357, y: 0.539801}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

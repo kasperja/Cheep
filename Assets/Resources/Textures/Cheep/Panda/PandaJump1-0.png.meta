@@ -28,6 +28,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -43,10 +45,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -121,6 +126,7 @@ TextureImporter:
       pivot: {x: 0.489426, y: 0.52360517}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0001
@@ -134,6 +140,7 @@ TextureImporter:
       pivot: {x: 0.48125, y: 0.5285412}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0002
@@ -147,6 +154,7 @@ TextureImporter:
       pivot: {x: 0.49235475, y: 0.52462524}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0003
@@ -160,6 +168,7 @@ TextureImporter:
       pivot: {x: 0.48923078, y: 0.525641}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0004
@@ -173,6 +182,7 @@ TextureImporter:
       pivot: {x: 0.48923078, y: 0.52441615}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0005
@@ -186,6 +196,7 @@ TextureImporter:
       pivot: {x: 0.4878049, y: 0.5315126}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0006
@@ -199,6 +210,7 @@ TextureImporter:
       pivot: {x: 0.48036253, y: 0.49598393}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0007
@@ -212,6 +224,7 @@ TextureImporter:
       pivot: {x: 0.49244714, y: 0.48076922}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0008
@@ -225,6 +238,7 @@ TextureImporter:
       pivot: {x: 0.5015015, y: 0.49233717}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0009
@@ -238,6 +252,7 @@ TextureImporter:
       pivot: {x: 0.49695122, y: 0.4844358}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0010
@@ -251,6 +266,7 @@ TextureImporter:
       pivot: {x: 0.48502994, y: 0.47961167}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0011
@@ -264,6 +280,7 @@ TextureImporter:
       pivot: {x: 0.5029586, y: 0.49317738}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0012
@@ -277,6 +294,7 @@ TextureImporter:
       pivot: {x: 0.48203593, y: 0.48249027}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0013
@@ -290,6 +308,7 @@ TextureImporter:
       pivot: {x: 0.48203593, y: 0.49098197}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0014
@@ -303,6 +322,7 @@ TextureImporter:
       pivot: {x: 0.49848944, y: 0.49}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: pandaJump1-0015
@@ -316,8 +336,10 @@ TextureImporter:
       pivot: {x: 0.49079755, y: 0.529661}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

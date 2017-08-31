@@ -22,6 +22,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -37,10 +39,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -115,6 +120,7 @@ TextureImporter:
       pivot: {x: 0.50530785, y: 0.52131784}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0001
@@ -128,6 +134,7 @@ TextureImporter:
       pivot: {x: 0.4989339, y: 0.530572}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0002
@@ -141,6 +148,7 @@ TextureImporter:
       pivot: {x: 0.5926573, y: 0.5284872}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0003
@@ -154,6 +162,7 @@ TextureImporter:
       pivot: {x: 0.5836299, y: 0.52952754}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0004
@@ -167,6 +176,7 @@ TextureImporter:
       pivot: {x: 0.54633206, y: 0.52156866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0005
@@ -180,6 +190,7 @@ TextureImporter:
       pivot: {x: 0.57586837, y: 0.5277778}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0006
@@ -193,6 +204,7 @@ TextureImporter:
       pivot: {x: 0.5010526, y: 0.52156866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0007
@@ -206,6 +218,7 @@ TextureImporter:
       pivot: {x: 0.49469215, y: 0.52589643}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0008
@@ -219,6 +232,7 @@ TextureImporter:
       pivot: {x: 0.4957627, y: 0.52716297}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
       name: robbyJump1-0009
@@ -232,8 +246,10 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.51968503}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: -1
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
