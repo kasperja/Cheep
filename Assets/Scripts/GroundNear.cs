@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundNear : MonoBehaviour {
 	public SpawnScript spawnGroundScript;
+   // public bool spawnReady = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,7 +20,12 @@ public class GroundNear : MonoBehaviour {
 
 
         //Debug.Log ("HI2");
-        if (other.tag == "Ground") spawnGroundScript.spawnBoundsR = false;
+        if (other.tag == "Ground") {
+
+            spawnGroundScript.spawnBoundsR = false;
+          //  spawnReady = false;
+
+        }
 
 
 
@@ -32,25 +38,34 @@ public class GroundNear : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 
-        if (other.tag == "Ground") spawnGroundScript.spawnBoundsR = false;
-        //Debug.Log ("HI3");
+        if (other.tag == "Ground") {
 
-        //spawnGroundScript.spawnBoundsR = false;
-
-
-
-
-
-
-
-
+            spawnGroundScript.spawnBoundsR = false;
+        //spawnReady = false;
 
     }
+    //Debug.Log ("HI3");
+
+    //spawnGroundScript.spawnBoundsR = false;
+
+
+
+
+
+
+
+
+
+}
 	void OnTriggerExit2D(Collider2D other){
         //Debug.Log ("HI4");
 
 
-        if (other.tag == "Ground") spawnGroundScript.spawnBoundsR = true;
+        if (other.tag == "Ground") {
+        spawnGroundScript.spawnBoundsR = true;
+   // spawnReady = true;
+
+}
 
 
 

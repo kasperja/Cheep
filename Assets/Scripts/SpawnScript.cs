@@ -17,6 +17,7 @@ public class SpawnScript : MonoBehaviour {
 	public bool spawnRocketDisable = false;
 	public bool isFG = false;
     public bool isSuper = false;
+    public bool isBoss = false;
 
 	//public ObjectPoolManager objm;
 	// Use this for initialization
@@ -28,13 +29,22 @@ public class SpawnScript : MonoBehaviour {
 
 	}
 
-	void Update(){
+    void Update() {
+
+        if (!isBoss)
+        {
+
+            spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
+            spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
 
 
-	
-		spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
-		spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
+        }
+        else {
+            spawnMinTwo = spawnMin;
+            spawnMaxTwo = spawnMax;
 
+
+        }
 		if (spawnReady && spawnReadyOnce && spawnBoundsR) {
 			
 			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
