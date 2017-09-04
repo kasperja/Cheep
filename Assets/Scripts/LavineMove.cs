@@ -8,6 +8,8 @@ public class LavineMove : MonoBehaviour {
 	public Transform endPos;
 	public Transform endPosDeath;
 
+    public GroundNearUniversal groundNearUniversal;
+
 	private float speed = 5f;
 
 	public bool isRolling = false;
@@ -852,8 +854,8 @@ public class LavineMove : MonoBehaviour {
                 powerUpSpawn.SetActive (true);
 				powerUpSuperSpawn.SetActive (true);
 				powerUpTopSpawn.SetActive (true);
-				bossSpawn.SetActive (false);
-				normSpawn.SetActive (true);
+				
+				
 				spamActive = false;
 				//isReady = false;
 				StartCoroutine (setRollingTrue ());
@@ -895,8 +897,22 @@ public class LavineMove : MonoBehaviour {
 	IEnumerator waitForRoll(){
 		
 		//deactivateOnce = true;
-		bossSpawn.SetActive (true);
+		
 		normSpawn.SetActive (false);
+        if (!groundNearUniversal.spawnReady)
+        {
+
+            yield return new WaitForSeconds(1.15f);
+            
+
+        }
+        else {
+
+            yield return new WaitForSeconds(0.5f);
+
+        }
+
+        bossSpawn.SetActive(true);
         //if (yetiObj.activeSelf) yetiSound.Play();
         yield return new WaitForSeconds (6f);
 
@@ -1013,12 +1029,19 @@ public class LavineMove : MonoBehaviour {
 
 		pc2D.feedbackOnce = true;
 		pc2D.feedbackOnceTwo = true;
+        yield return new WaitForSeconds(0.0f);
 
-		yield return new WaitForSeconds (0.7f);
-		slowMotionBool = false;
-		yield return new WaitForSeconds (2.3f);
+        normSpawn.SetActive(true);
+        
+        yield return new WaitForSeconds(0.2f);
+        
+        yield return new WaitForSeconds (0.4f);
+        bossSpawn.SetActive(false);
 
-		dangerOver = false;
+        slowMotionBool = false;
+		yield return new WaitForSeconds (2f);
+        
+        dangerOver = false;
 		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
 
 
