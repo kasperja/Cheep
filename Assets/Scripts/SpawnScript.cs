@@ -238,7 +238,7 @@ public class SpawnScript : MonoBehaviour {
             }
             else
             {
-                Debug.Log("YO!");
+              //  Debug.Log("YO!");
                 Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
             }
 
