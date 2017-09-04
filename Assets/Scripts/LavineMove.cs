@@ -101,6 +101,8 @@ public class LavineMove : MonoBehaviour {
 
     public AudioSource yetiSound;
 
+    
+
 	// Use this for initialization
 	void Start () {
 
@@ -809,8 +811,8 @@ public class LavineMove : MonoBehaviour {
 					StartCoroutine (vibrateNum ());
 
 					//StartCoroutine (waitForRoll ());
-					bossSpawn.SetActive (true);
-					normSpawn.SetActive (false);
+					//bossSpawn.SetActive (true);
+					//normSpawn.SetActive (false);
 				
 					//deactivateOnce = true;
 					//pc2D.DestroyAllObjects ();
@@ -902,7 +904,7 @@ public class LavineMove : MonoBehaviour {
         if (!groundNearUniversal.spawnReady)
         {
 
-            yield return new WaitForSeconds(1.15f);
+            yield return new WaitForSeconds(0.5f);
             
 
         }
