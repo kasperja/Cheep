@@ -101,6 +101,8 @@ public class LavineMove : MonoBehaviour {
 
     public AudioSource yetiSound;
 
+    
+
 	// Use this for initialization
 	void Start () {
 

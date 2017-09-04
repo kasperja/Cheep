@@ -14,16 +14,24 @@ public class GroundNear : MonoBehaviour {
 	void Update () {
 		
 	}
+    void FixedUpdate()
+    {
+
+        spawnGroundScript.isEmpty = true;
+
+    }
 
 
 	void OnTriggerEnter2D(Collider2D other){
 
-
+       
         //Debug.Log ("HI2");
         if (other.tag == "Ground") {
-
+            spawnGroundScript.counter++;
             spawnGroundScript.spawnBoundsR = false;
-          //  spawnReady = false;
+            //  spawnReady = false;
+            spawnGroundScript.hasExited = false;
+            spawnGroundScript.hasExitedOnce = false;
 
         }
 
@@ -38,12 +46,16 @@ public class GroundNear : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 
+        spawnGroundScript.isEmpty = false;
+
         if (other.tag == "Ground") {
 
             spawnGroundScript.spawnBoundsR = false;
-        //spawnReady = false;
+            //spawnGroundScript.hasExited = false;
+            //spawnGroundScript.hasExitedOnce = false;
+            //spawnReady = false;
 
-    }
+        }
     //Debug.Log ("HI3");
 
     //spawnGroundScript.spawnBoundsR = false;
@@ -60,9 +72,13 @@ public class GroundNear : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other){
         //Debug.Log ("HI4");
 
-
+        
         if (other.tag == "Ground") {
-        spawnGroundScript.spawnBoundsR = true;
+            spawnGroundScript.counter--;
+            spawnGroundScript.spawnBoundsR = true;
+            //spawnGroundScript.StartCoroutine("waitToBeSureTwo");
+            spawnGroundScript.hasExited = true;
+            spawnGroundScript.hasExitedOnce = true;
    // spawnReady = true;
 
 }

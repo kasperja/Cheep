@@ -12,7 +12,7 @@ public class SpawnScript : MonoBehaviour {
 	private bool spawnReady = false;
 	private bool spawnReadyOnce = true;
 	private bool coOnce = true;
-	public bool spawnBoundsR = true;
+	public bool spawnBoundsR = false;
 	private bool spawnReadyFront = false;
 	public bool spawnRocketDisable = false;
 	public bool isFG = false;
@@ -22,7 +22,16 @@ public class SpawnScript : MonoBehaviour {
     public bool isFirstStart = false;
     public GroundNearUniversal gUni;
     private bool isUpdate = false;
+    public bool hasExited = false;
+    public bool hasExitedOnce = false;
 
+    public bool CRrunning = false;
+    public bool runOnce = true;
+    public bool isEmpty = false;
+
+    public bool isMG = false;
+
+    public int counter = 0;
 	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
@@ -52,19 +61,45 @@ public class SpawnScript : MonoBehaviour {
 
         }
 		if (spawnReady && spawnReadyOnce && spawnBoundsR) {
-
-            StartCoroutine(waitToBeSure());
+            Debug.Log("Weeeee");
+            //StartCoroutine(waitToBeSure());
             spawnReadyOnce = false;
         }
-	
-	}
+
+        if (hasExited && hasExitedOnce) {
+
+           // StartCoroutine(waitToBeSureTwo());
+            hasExitedOnce = false;
+        }
+
+        if (!CRrunning && hasExited && runOnce && counter == 0) {
+
+            StartCoroutine(waitToBeSureTwo());
+            runOnce = false;
+        }
+
+        if (isMG && runOnce && !CRrunning)
+        {
+
+            StartCoroutine(waitToBeSureTwo());
+            runOnce = false;
+        }
+
+    }
 	void OnEnable(){
 
-        if (isBoss && gUni.spawnReady) Spawn();
+        // Debug.Log("Weeeee");
+        StopAllCoroutines();
+        CRrunning = false;
+        runOnce = true;
+       // hasExited = true;
+        
+
+       // if (isBoss && gUni.spawnReady) Spawn();
 
         if (!isFirstStart)
         {
-           StartCoroutine(waitStart());
+         //  StartCoroutine(waitStart());
             //Spawn();
 
         }
@@ -82,8 +117,11 @@ public class SpawnScript : MonoBehaviour {
 
     }
 	void OnDisable(){
-
+        // Debug.Log("Weeeee2");
+        runOnce = false;
         StopAllCoroutines();
+        CRrunning = false;
+        
 		//CancelInvoke ("Spawn");
 	
 	}
@@ -92,7 +130,7 @@ public class SpawnScript : MonoBehaviour {
 			if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
 				Instantiate (obj [Random.Range (0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y+1f, transform.position.y -1.2f),transform.position.z), Quaternion.identity);
 		}else{
-            if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
+            if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable && counter == 0)
             {
 
                 StartCoroutine(waitToBeSureTwo());
@@ -180,9 +218,9 @@ public class SpawnScript : MonoBehaviour {
 
     }
 
-    IEnumerator waitToBeSureTwo()
+    public IEnumerator waitToBeSureTwo()
     {
-
+        CRrunning = true;
 
         if (isBoss)
         {
@@ -190,9 +228,9 @@ public class SpawnScript : MonoBehaviour {
         }
         else
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(Random.Range(spawnMin, spawnMax));
         }
-        if (spawnBoundsR)
+        if (counter == 0)
         {
             if (isSuper)
             {
@@ -200,14 +238,22 @@ public class SpawnScript : MonoBehaviour {
             }
             else
             {
-
+                Debug.Log("YO!");
                 Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
             }
 
         }
-        yield return new WaitForSeconds(0.2f);
-        // spawnReadyOnce = true;
+        else if(isMG){
 
+            //yield return new WaitForSeconds(1f);
+            //StartCoroutine(waitToBeSureTwo());
+            Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+
+        }
+        //yield return new WaitForSeconds(0.2f);
+        // spawnReadyOnce = true;
+        runOnce = true;
+        CRrunning = false;
     }
 
 }
