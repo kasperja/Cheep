@@ -18,24 +18,30 @@ public class SpawnScript : MonoBehaviour {
 	public bool isFG = false;
     public bool isSuper = false;
     public bool isBoss = false;
+    public bool isNorm = false;
+    public bool isFirstStart = false;
+    public GroundNearUniversal gUni;
+    private bool isUpdate = false;
 
 	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
+        isFirstStart = false;
 
+        //objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
+        //Spawn ();
+        spawnReadyOnce = true;
+       // StartCoroutine(waitStart());
 
-		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
-		//Spawn ();
-
-	}
+    }
 
     void Update() {
 
-        if (!isBoss)
+        if (true)
         {
-
-            spawnMinTwo = 10f / pc2D.m_MaxSpeed * spawnMin * 1f;
-            spawnMaxTwo = 7.7f / pc2D.m_MaxSpeed * spawnMax * 1f;
+        
+            spawnMinTwo = (16 / pc2D.m_MaxSpeed) * spawnMin;
+            spawnMaxTwo = (16 / pc2D.m_MaxSpeed) * spawnMax;
 
 
         }
@@ -46,23 +52,39 @@ public class SpawnScript : MonoBehaviour {
 
         }
 		if (spawnReady && spawnReadyOnce && spawnBoundsR) {
-			
-			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
-			spawnReadyOnce = false;
 
-		}
+            StartCoroutine(waitToBeSure());
+            spawnReadyOnce = false;
+        }
 	
 	}
 	void OnEnable(){
 
-		Spawn ();
-		coOnce = true;
-		//spawnReadyOnce = true;
+        if (isBoss && gUni.spawnReady) Spawn();
 
-	}
+        if (!isFirstStart)
+        {
+           StartCoroutine(waitStart());
+            //Spawn();
+
+        }
+        else {
+            Spawn();
+            
+            isFirstStart = false;
+            
+
+        }
+		coOnce = true;
+        //spawnReadyOnce = true;
+        
+
+
+    }
 	void OnDisable(){
-	
-		CancelInvoke ("Spawn");
+
+        StopAllCoroutines();
+		//CancelInvoke ("Spawn");
 	
 	}
 	public void Spawn(){
@@ -71,33 +93,121 @@ public class SpawnScript : MonoBehaviour {
 				Instantiate (obj [Random.Range (0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y+1f, transform.position.y -1.2f),transform.position.z), Quaternion.identity);
 		}else{
             if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
+            {
 
-                if (isSuper)
-                {
-                    Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y -3f, transform.position.y), transform.position.z), Quaternion.identity);
-                }
-                else {
+                StartCoroutine(waitToBeSureTwo());
+            }
 
-                    Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-                }
 		//objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
 		}
 		spawnReadyFront = true;
 
-		if (coOnce) {
+        //StartCoroutine(waitStart());
+
+	/*	if (coOnce) {
 			StartCoroutine (waitStart ());
 			coOnce = false;
 		}
 
-		if(spawnReady)Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
+        if (spawnReady && !isNorm)
+        {
+            StartCoroutine(waitStart());
+            Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
 
-	}
+        }
+        else {
+
+           StartCoroutine(waitStart());
+
+        }
+
+        if (isNorm) {
+
+            StartCoroutine(waitStart());
+
+        }*/
+
+    }
 
 	IEnumerator waitStart(){
 
-		yield return new WaitForSeconds (Random.Range (0f, 0.1f));
-		spawnReady = true;
+        yield return new WaitForSeconds(Random.Range(spawnMinTwo, spawnMaxTwo));
+        Spawn();
+        
+        /*
+        if (isBoss)
+        {
+            yield return new WaitForSeconds(Random.Range(0f, 0f));
+            Spawn();
+        }
+        else if (isNorm)
+        {
+            yield return new WaitForSeconds(Random.Range(0.5f, 1f));
+            Spawn();
+        }
+        else {
 
-	}
+            yield return new WaitForSeconds(Random.Range(0.5f, 1f));
+            Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
+        }*/
+		//spawnReady = true;
+       // spawnReadyOnce = true;
+
+        if(!isUpdate)StartCoroutine(waitStart());
+        isUpdate = false;
+
+
+    }
+    IEnumerator waitToBeSure() {
+
+        
+        if (isBoss)
+        {
+            yield return new WaitForSeconds(0.0f);
+        }
+        else {
+            yield return new WaitForSeconds(0.2f);
+        }
+        if (spawnBoundsR) { 
+            //isUpdate = true;
+            //StartCoroutine(waitStart());
+            Spawn();
+        //Invoke("Spawn", Random.Range(spawnMinTwo, spawnMaxTwo));
+            spawnReadyOnce = false;
+        }
+        yield return new WaitForSeconds(0.2f);
+       // spawnReadyOnce = true;
+
+    }
+
+    IEnumerator waitToBeSureTwo()
+    {
+
+
+        if (isBoss)
+        {
+            yield return new WaitForSeconds(0.0f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+        if (spawnBoundsR)
+        {
+            if (isSuper)
+            {
+                Instantiate(obj[Random.Range(0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y - 3f, transform.position.y), transform.position.z), Quaternion.identity);
+            }
+            else
+            {
+
+                Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+            }
+
+        }
+        yield return new WaitForSeconds(0.2f);
+        // spawnReadyOnce = true;
+
+    }
 
 }
