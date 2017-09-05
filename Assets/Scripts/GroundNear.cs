@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GroundNear : MonoBehaviour {
 	public SpawnScript spawnGroundScript;
+    public bool isMax = false;
+    public bool isMaxObj = false;
    // public bool spawnReady = false;
 	// Use this for initialization
 	void Start () {
@@ -12,12 +14,14 @@ public class GroundNear : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (isMaxObj && spawnGroundScript.counter == 0) spawnGroundScript.isMaxSpawn = true;
 		
 	}
     void FixedUpdate()
     {
 
-        spawnGroundScript.isEmpty = true;
+      if(!isMaxObj)  spawnGroundScript.isEmpty = true;
 
     }
 
@@ -27,11 +31,23 @@ public class GroundNear : MonoBehaviour {
        
         //Debug.Log ("HI2");
         if (other.tag == "Ground") {
-            spawnGroundScript.counter++;
-            spawnGroundScript.spawnBoundsR = false;
-            //  spawnReady = false;
-            spawnGroundScript.hasExited = false;
-            spawnGroundScript.hasExitedOnce = false;
+
+            if (isMaxObj)
+            {
+                spawnGroundScript.maxCounter++;
+
+
+            }
+            if (!isMaxObj) {
+                spawnGroundScript.counter++;
+                spawnGroundScript.spawnBoundsR = false;
+                //  spawnReady = false;
+                spawnGroundScript.hasExited = false;
+                spawnGroundScript.hasExitedOnce = false;
+
+
+
+            }
 
         }
 
@@ -46,11 +62,14 @@ public class GroundNear : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 
-        spawnGroundScript.isEmpty = false;
+       //if(!isMaxObj) spawnGroundScript.isEmpty = false;
 
         if (other.tag == "Ground") {
 
-            spawnGroundScript.spawnBoundsR = false;
+            if (!isMaxObj)
+            {
+                spawnGroundScript.spawnBoundsR = false;
+            }
             //spawnGroundScript.hasExited = false;
             //spawnGroundScript.hasExitedOnce = false;
             //spawnReady = false;
@@ -74,11 +93,21 @@ public class GroundNear : MonoBehaviour {
 
         
         if (other.tag == "Ground") {
-            spawnGroundScript.counter--;
-            spawnGroundScript.spawnBoundsR = true;
-            //spawnGroundScript.StartCoroutine("waitToBeSureTwo");
-            spawnGroundScript.hasExited = true;
-            spawnGroundScript.hasExitedOnce = true;
+
+            if (isMaxObj) {
+                spawnGroundScript.maxCounter--;
+                
+
+            }
+
+            if (!isMaxObj)
+            {
+                spawnGroundScript.counter--;
+                spawnGroundScript.spawnBoundsR = true;
+                //spawnGroundScript.StartCoroutine("waitToBeSureTwo");
+                spawnGroundScript.hasExited = true;
+                spawnGroundScript.hasExitedOnce = true;
+            }
    // spawnReady = true;
 
 }
