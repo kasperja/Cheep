@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MgRotate : MonoBehaviour {
 
-	private Transform mainCam;
+	public Transform mainCam;
 	// Use this for initialization
 	void Start () {
 
