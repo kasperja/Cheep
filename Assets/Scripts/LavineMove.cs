@@ -1037,11 +1037,11 @@ public class LavineMove : MonoBehaviour {
         
         yield return new WaitForSeconds(0.2f);
         
-        yield return new WaitForSeconds (0.4f);
+        yield return new WaitForSeconds (8.4f);
         bossSpawn.SetActive(false);
 
         slowMotionBool = false;
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (0f);
         
         dangerOver = false;
 		//feedbackTextObj.GetComponent<TextMesh> ().color = new Color (1f,1f,1f, 1f);
