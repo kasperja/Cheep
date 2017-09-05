@@ -1036,9 +1036,9 @@ public class LavineMove : MonoBehaviour {
         normSpawn.SetActive(true);
         
         yield return new WaitForSeconds(0.2f);
-        
-        yield return new WaitForSeconds (8.4f);
         bossSpawn.SetActive(false);
+        yield return new WaitForSeconds (2.4f);
+        
 
         slowMotionBool = false;
 		yield return new WaitForSeconds (0f);
