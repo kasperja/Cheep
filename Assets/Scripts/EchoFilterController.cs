@@ -14,7 +14,10 @@ public class EchoFilterController : MonoBehaviour {
     private bool monkOnce = true;
 
     public AudioSource monkVoice;
-	void Start () {
+    public AudioSource monkBell;
+
+    private bool monkReady = true;
+    void Start () {
       //  echoFilter.enabled = false;
 	}
 	
@@ -35,14 +38,16 @@ public class EchoFilterController : MonoBehaviour {
             if (reverbFilter.reverbLevel > -10000f) reverbFilter.reverbLevel -= 4000f * Time.deltaTime;
 
         }
-        if ((counterMonk > 0) && monkOnce)
+        if ((counterMonk > 0) && monkOnce && monkReady)
         {
             //   echoFilter.enabled = true;
            // Debug.Log("monk!!!");
             monkVoice.Play();
+            StartCoroutine(monkBellWait());
             //if(echoFilter.wetMix < 0.5f) echoFilter.wetMix += 1f * Time.deltaTime;
             //if (reverbFilter.reverbLevel < 0) reverbFilter.reverbLevel += 10000f * Time.deltaTime;
             monkOnce = false;
+            monkReady = false;
 
         }
         else if(counterMonk == 0)
@@ -93,6 +98,16 @@ public class EchoFilterController : MonoBehaviour {
 
 
 
+
+    }
+
+    IEnumerator monkBellWait() {
+
+        yield return new WaitForSeconds(2f);
+        monkBell.Play();
+        yield return new WaitForSeconds(10f);
+        monkReady = true;
+       // Debug.Log(monkReady);
 
     }
 }
