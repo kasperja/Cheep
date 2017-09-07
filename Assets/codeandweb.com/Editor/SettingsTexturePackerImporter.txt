@@ -2,6 +2,8 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Resources/Textures/Birds/birdFlying-0.tpsheet
+- Assets/Resources/Textures/Birds/birdIdle-0.tpsheet
 - Assets/Resources/Textures/Cheep/Alien/AlienJump01-0.tpsheet
 - Assets/Resources/Textures/Cheep/Alien/AlienJump02-0.tpsheet
 - Assets/Resources/Textures/Cheep/Alien/AlienJump03-0.tpsheet
@@ -53,6 +55,8 @@ tpsheetFileNames:
 - Assets/Resources/Textures/FlagsTemple/flagsRight-0.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Resources/Textures/Birds/birdFlying-0.png
+- Assets/Resources/Textures/Birds/birdIdle-0.png
 - Assets/Resources/Textures/Cheep/Alien/AlienJump01-0.png
 - Assets/Resources/Textures/Cheep/Alien/AlienJump02-0.png
 - Assets/Resources/Textures/Cheep/Alien/AlienJump03-0.png
@@ -104,6 +108,8 @@ textureFileNames:
 - Assets/Resources/Textures/FlagsTemple/flagsRight-0.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
 - 
 - 
 - 
