@@ -105,7 +105,7 @@ public class EchoFilterController : MonoBehaviour {
 
         yield return new WaitForSeconds(2f);
         monkBell.Play();
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         monkReady = true;
        // Debug.Log(monkReady);
 
