@@ -19,7 +19,7 @@ public class SpawnScript : MonoBehaviour {
     public bool isSuper = false;
     public bool isBoss = false;
     public bool isNorm = false;
-    public bool isFirstStart = false;
+    public bool isFirstStart = true;
     public GroundNearUniversal gUni;
     //public GroundNear gN;
     private bool isUpdate = false;
@@ -41,7 +41,7 @@ public class SpawnScript : MonoBehaviour {
 	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
-        isFirstStart = false;
+        //isFirstStart = false;
 
         //objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
         //Spawn ();
@@ -54,7 +54,7 @@ public class SpawnScript : MonoBehaviour {
 
         if (maxCounter == 0 && !isMG) {
 
-            StartCoroutine(waitToBeSureTwo());
+            //StartCoroutine(waitToBeSureTwo());
             //isMaxOnce = false;
         }
 
@@ -100,9 +100,10 @@ public class SpawnScript : MonoBehaviour {
     }
 	void OnEnable(){
 
+        
         // Debug.Log("Weeeee");
         //if(!isMG)waitBeforeSpawn = false;
-        StopAllCoroutines();
+        //StopAllCoroutines();
         CRrunning = false;
         runOnce = true;
         // hasExited = true;
@@ -112,7 +113,9 @@ public class SpawnScript : MonoBehaviour {
 
         if (!isFirstStart)
         {
-            Spawn();
+           // if (isNorm) isBoss = true;
+            //Spawn();
+           //StartCoroutine(waitToBeSureTwo());
             //  StartCoroutine(waitStart());
             //Spawn();
 
@@ -256,7 +259,9 @@ public class SpawnScript : MonoBehaviour {
             }
             else
             {
-              //  Debug.Log("YO!");
+                //  Debug.Log("YO!");
+
+                if (isNorm) isBoss = false;
                 Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
             }
 
