@@ -70,14 +70,15 @@ public class GroundNear : MonoBehaviour {
             {
                 spawnGroundScript.spawnBoundsR = false;
             }
-            //spawnGroundScript.hasExited = false;
-            //spawnGroundScript.hasExitedOnce = false;
+            spawnGroundScript.hasExited = false;
+            spawnGroundScript.hasExitedOnce = false;
             //spawnReady = false;
+            spawnGroundScript.spawnBoundsR = false;
 
         }
     //Debug.Log ("HI3");
 
-    //spawnGroundScript.spawnBoundsR = false;
+    
 
 
 
@@ -104,7 +105,7 @@ public class GroundNear : MonoBehaviour {
             {
                 spawnGroundScript.counter--;
                 spawnGroundScript.spawnBoundsR = true;
-                //spawnGroundScript.StartCoroutine("waitToBeSureTwo");
+               // if(spawnGroundScript.gameObject.activeSelf)spawnGroundScript.StartCoroutine("waitToBeSureTwo");
                 spawnGroundScript.hasExited = true;
                 spawnGroundScript.hasExitedOnce = true;
             }
