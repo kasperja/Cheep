@@ -9,6 +9,7 @@ public class TreeRotation : MonoBehaviour {
 	//public float speed = 10f;
 	//public RotateCam rCam;
 	public bool isFG = false;
+    public bool isTemple = false;
 	// Use this for initialization
 	void Start () {
 
@@ -29,16 +30,20 @@ public class TreeRotation : MonoBehaviour {
 
 		if (!isFG) {
 			transform.rotation = new Quaternion (0f, 0f, target.rotation.z /*- target.rotation.z / 10f*/, 1f);
-		} else {
+		} else if(isTemple){
 
-			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
+			transform.rotation = new Quaternion (0f, 0f, target.rotation.z, 1f);
 
-		}
-		//transform.LookAt (new Vector3(transform.position.x, transform.position.z + 1000000f, -transform.position.y), Vector3.up);
-		//transform.RotateAround(gameObject.transform.position, Vector3.forward, target.transform.rotation.z);
+        }else {
+
+            transform.rotation = new Quaternion(0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
+
+        }
+        //transform.LookAt (new Vector3(transform.position.x, transform.position.z + 1000000f, -transform.position.y), Vector3.up);
+        //transform.RotateAround(gameObject.transform.position, Vector3.forward, target.transform.rotation.z);
 
 
-		//gameObject.transform.rotation.eulerAngles = new Vector3 (0, 0, -camRotateScript.angle);
-		
-	}
+        //gameObject.transform.rotation.eulerAngles = new Vector3 (0, 0, -camRotateScript.angle);
+
+    }
 }
