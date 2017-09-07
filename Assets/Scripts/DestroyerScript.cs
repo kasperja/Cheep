@@ -26,6 +26,7 @@ public class DestroyerScript : MonoBehaviour {
     public GameObject graphicsRobby;
     public GameObject graphicsBugo;
     public GameObject graphicsHrumpf;
+    
 
     private bool fadeEnabled = true;
     //public ObjectPoolManager objm;
@@ -108,7 +109,7 @@ public class DestroyerScript : MonoBehaviour {
         yield return new WaitForSeconds(1.2f);
 
         pc2d.fadeOutScript.isEnded = true;
-
+        AudioListener.volume -= 10f * Time.deltaTime;
         yield return new WaitForSeconds (0.8f);
 		Application.LoadLevel (2);
 		//return;

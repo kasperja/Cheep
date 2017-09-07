@@ -19,8 +19,9 @@ public class SpawnScript : MonoBehaviour {
     public bool isSuper = false;
     public bool isBoss = false;
     public bool isNorm = false;
-    public bool isFirstStart = false;
+    public bool isFirstStart = true;
     public GroundNearUniversal gUni;
+    //public GroundNear gN;
     private bool isUpdate = false;
     public bool hasExited = false;
     public bool hasExitedOnce = false;
@@ -30,12 +31,17 @@ public class SpawnScript : MonoBehaviour {
     public bool isEmpty = false;
 
     public bool isMG = false;
+    private bool waitBeforeSpawn = true;
 
     public int counter = 0;
+    public int maxCounter = 0;
+    //public int counter2 = 0;
+    private bool isMaxOnce = true;
+    public bool isMaxSpawn = false;
 	//public ObjectPoolManager objm;
 	// Use this for initialization
 	void Start () {
-        isFirstStart = false;
+        //isFirstStart = false;
 
         //objm.Acquire (obj[Random.Range(0, obj.Length)].GetComponent<StringName>().nameString, transform.position, Quaternion.identity);
         //Spawn ();
@@ -45,6 +51,12 @@ public class SpawnScript : MonoBehaviour {
     }
 
     void Update() {
+
+        if (maxCounter == 0 && !isMG) {
+
+            //StartCoroutine(waitToBeSureTwo());
+            //isMaxOnce = false;
+        }
 
         if (true)
         {
@@ -72,7 +84,7 @@ public class SpawnScript : MonoBehaviour {
             hasExitedOnce = false;
         }
 
-        if (!CRrunning && hasExited && runOnce && counter == 0) {
+        if (!CRrunning && /* hasExited &&*/ runOnce && counter == 0) {
 
             StartCoroutine(waitToBeSureTwo());
             runOnce = false;
@@ -88,25 +100,31 @@ public class SpawnScript : MonoBehaviour {
     }
 	void OnEnable(){
 
+        
         // Debug.Log("Weeeee");
-        StopAllCoroutines();
+        //if(!isMG)waitBeforeSpawn = false;
+        //StopAllCoroutines();
         CRrunning = false;
         runOnce = true;
-       // hasExited = true;
+        // hasExited = true;
+        //StartCoroutine(waitToBeSureTwo());
         
-
-       // if (isBoss && gUni.spawnReady) Spawn();
+        // if (isBoss && gUni.spawnReady) Spawn();
 
         if (!isFirstStart)
         {
-         //  StartCoroutine(waitStart());
+           // if (isNorm) isBoss = true;
+            //Spawn();
+           //StartCoroutine(waitToBeSureTwo());
+            //  StartCoroutine(waitStart());
             //Spawn();
 
         }
         else {
-            Spawn();
+           // Spawn();
             
             isFirstStart = false;
+
             
 
         }
@@ -119,6 +137,8 @@ public class SpawnScript : MonoBehaviour {
 	void OnDisable(){
         // Debug.Log("Weeeee2");
         runOnce = false;
+        counter = 0;
+        maxCounter = 0;
         StopAllCoroutines();
         CRrunning = false;
         
@@ -127,12 +147,12 @@ public class SpawnScript : MonoBehaviour {
 	}
 	public void Spawn(){
 		if (isFG) {
-			if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable)
+			if (/* spawnBoundsR && */ spawnReadyFront && !spawnRocketDisable)
 				Instantiate (obj [Random.Range (0, obj.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y+1f, transform.position.y -1.2f),transform.position.z), Quaternion.identity);
 		}else{
-            if (spawnBoundsR && spawnReadyFront && !spawnRocketDisable && counter == 0)
+            if (/* spawnBoundsR && spawnReadyFront &&*/ !spawnRocketDisable && counter == 0)
             {
-
+                
                 StartCoroutine(waitToBeSureTwo());
             }
 
@@ -226,9 +246,10 @@ public class SpawnScript : MonoBehaviour {
         {
             yield return new WaitForSeconds(0.0f);
         }
-        else
+        else if(!isFirstStart)
         {
             yield return new WaitForSeconds(Random.Range(spawnMin, spawnMax));
+            
         }
         if (counter == 0)
         {
@@ -238,7 +259,9 @@ public class SpawnScript : MonoBehaviour {
             }
             else
             {
-              //  Debug.Log("YO!");
+                //  Debug.Log("YO!");
+
+                if (isNorm) isBoss = false;
                 Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
             }
 
@@ -253,7 +276,9 @@ public class SpawnScript : MonoBehaviour {
         //yield return new WaitForSeconds(0.2f);
         // spawnReadyOnce = true;
         runOnce = true;
+        isMaxOnce = true;
         CRrunning = false;
+        
     }
 
 }
