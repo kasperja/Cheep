@@ -106,6 +106,7 @@ public class GameOverScript : MonoBehaviour {
 
 	void Start () {
 
+        AudioListener.volume = 1f;
         if (ES2.Exists("prevScene"))
         {
 
