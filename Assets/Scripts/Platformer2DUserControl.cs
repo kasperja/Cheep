@@ -94,7 +94,7 @@ namespace UnityStandardAssets._2D
 				}
 
 			} 
-			if (Input.GetKeyDown (KeyCode.Space) && Time.timeScale <=1.3f) {
+			if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && Time.timeScale <=1.3f) {
 
 
 
