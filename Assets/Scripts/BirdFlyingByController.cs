@@ -9,6 +9,7 @@ public class BirdFlyingByController : MonoBehaviour {
 
     public Renderer rendererBird;
     private bool isFirstStart = true;
+    public bool isMirrored = false;
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +43,15 @@ public class BirdFlyingByController : MonoBehaviour {
         {
             birdFlyingByAnimator.SetBool("StartOver", true);
             birdTransform.position = transform.position;
-            birdTransform.position += new Vector3(0f, Random.Range(-10f, 7f), 0f);
+            if (!isMirrored) {
+
+                birdTransform.position += new Vector3(0f, Random.Range(-10f, 7f), 0f);
+
+            } else {
+
+                birdTransform.position += new Vector3(0f, Random.Range(-10f, 7f), 0f);
+
+            }
         }
         yield return new WaitForSeconds(1f);
         birdFlyingByAnimator.SetBool("StartOver", false);

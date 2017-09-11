@@ -103,8 +103,12 @@ public class LavineMove : MonoBehaviour {
 
     
 
+    
+
 	// Use this for initialization
 	void Start () {
+
+
 
 		musicScript = GameObject.Find ("Music").GetComponent<DontDestroyTwo> ();
 
@@ -126,8 +130,9 @@ public class LavineMove : MonoBehaviour {
 
 		randomBoss = Random.Range (0f, 6f);
 
+       
 
-		if (randomBossEnabled && boss1Unlocked && boss2Unlocked && boss3Unlocked) {
+        if (randomBossEnabled && boss1Unlocked && boss2Unlocked && boss3Unlocked) {
 
 			if (randomBoss >= 0f && randomBoss < 1f) {
 				
@@ -336,7 +341,9 @@ public class LavineMove : MonoBehaviour {
 
 		if (isRolling) {
 
-			musicScript.isRollingMusic = true;
+            
+
+            musicScript.isRollingMusic = true;
 
 			pc2D.boostActivate = true;
 
@@ -405,8 +412,9 @@ public class LavineMove : MonoBehaviour {
 				} 
 				
 			}
-				if (rollOnce && !pc2D.isDead) {
+            if (rollOnce && !pc2D.isDead) {
 
+               
 
                 lavineSoundLoop.Play();
                 if (randomBossEnabled) {
@@ -828,7 +836,9 @@ public class LavineMove : MonoBehaviour {
 			
 		} else {
 
-			musicScript.isRollingMusic = false;
+            
+
+            musicScript.isRollingMusic = false;
 
 			tapTapObj.SetActive (false);
 
