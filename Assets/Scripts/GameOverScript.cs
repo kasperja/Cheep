@@ -64,6 +64,7 @@ public class GameOverScript : MonoBehaviour {
 	public bool disableAds = false;
 
 	public ParticleSystem konfettiParticle;
+    //public ParticleSystem konfettiParticle2;
 	public AudioSource applause;
     public AudioSource rewardSound;
 
@@ -351,7 +352,8 @@ public class GameOverScript : MonoBehaviour {
 				applause.Play ();
                 rewardSound.Play();
 				konfettiParticle.Play ();
-				yourScoreIsTxt.text = "It's a new record!";
+                //konfettiParticle2.Play();
+                yourScoreIsTxt.text = "It's a new record!";
 			}
 				
 
