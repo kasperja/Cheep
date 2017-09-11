@@ -15,12 +15,12 @@ public class TreeRotation : MonoBehaviour {
 
 		target = GameObject.Find ("Main Camera").GetComponent<Transform>();
 		if (!isFG) {
-			transform.rotation = new Quaternion (0f, 0f, target.rotation.z /*- target.rotation.z / 10f*/, 1f);
-		} else {
+			transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
+        } else {
 
-			transform.rotation = new Quaternion (0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
+			transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
 
-		}
+        }
 		//rCam = target.GetComponent<RotateCam> ();
 		
 	}
@@ -29,14 +29,14 @@ public class TreeRotation : MonoBehaviour {
 	void LateUpdate () {
 
 		if (!isFG) {
-			transform.rotation = new Quaternion (0f, 0f, target.rotation.z /*- target.rotation.z / 10f*/, 1f);
-		} else if(isTemple){
+            transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
+        } else if(isTemple){
 
-			transform.rotation = new Quaternion (0f, 0f, target.rotation.z, 1f);
+            transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
 
         }else {
 
-            transform.rotation = new Quaternion(0f, 0f, target.rotation.z - target.rotation.z / 2f, 1f);
+            transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
 
         }
         //transform.LookAt (new Vector3(transform.position.x, transform.position.z + 1000000f, -transform.position.y), Vector3.up);
