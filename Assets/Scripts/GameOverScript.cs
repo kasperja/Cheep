@@ -351,7 +351,9 @@ public class GameOverScript : MonoBehaviour {
 			if (ES2.Exists ("myCurrentScore")) {
 				applause.Play ();
                 rewardSound.Play();
-				konfettiParticle.Play ();
+
+                StartCoroutine(waitKonfetti());
+				//konfettiParticle.Play ();
                 //konfettiParticle2.Play();
                 yourScoreIsTxt.text = "It's a new record!";
 			}
@@ -729,6 +731,14 @@ public class GameOverScript : MonoBehaviour {
 		yield return null;
 	
 	}
+
+    IEnumerator waitKonfetti() {
+        yield return new WaitForSeconds(0.05f);
+        konfettiParticle.Play();
+
+    }
+
+
 	/*void OnGUI(){
 	
 		GUI.Label(new Rect(Screen.width / 2, Screen.height / 2 - Screen.height * 0.1f, Screen.width * 0.2f, Screen.width * 0.2f), "GAME OVER");

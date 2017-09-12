@@ -17,7 +17,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
     public int currentChar = 0;
 
     public float achievementIncreaseInterval = 1f;
-    
+
+    private bool isFirstStart = true;
     //public PlatformerCharacter2D pc2D;
 
     public Text textPickup;
@@ -170,6 +171,10 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
 
     private GameObject[] gameObjects;
+    private GameObject[] gameObjectsUnlocker;
+    private GameObject[] gameObjectsUnlockerParent;
+    private GameObject[] gameObjectsSuper;
+    private GameObject[] gameObjectsNorm;
 
     public GameObject UIimages;
 
@@ -196,8 +201,57 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
         for (var i = 0; i < gameObjects.Length; i++)
         {
-            Destroy(gameObjects[i]);
+
+          //  Destroy(gameObjects[i]);
         }
+    }
+    public void DestroyAllObjectsUnlocker()
+    {
+        gameObjectsUnlocker = GameObject.FindGameObjectsWithTag("Unlocker");
+
+        for (var i = 0; i < gameObjectsUnlocker.Length; i++)
+        {
+
+            if (!gameObjectsUnlocker[i].GetComponentInChildren<SpriteRenderer>().isVisible) Destroy(gameObjectsUnlocker[i].transform.parent.gameObject);
+        }
+
+        
+
+    }
+    public void DestroyAllObjectsSuper()
+    {
+        gameObjectsSuper = GameObject.FindGameObjectsWithTag("PowerupSuper");
+
+        for (var i = 0; i < gameObjectsSuper.Length; i++)
+        {
+
+            if (!gameObjectsSuper[i].GetComponent<SpriteRenderer>().isVisible) Destroy(gameObjectsSuper[i]);
+        }
+    }
+    public void DestroyAllObjectsNorm()
+    {
+        gameObjectsNorm = GameObject.FindGameObjectsWithTag("Powerup");
+
+        for (var i = 0; i < gameObjectsNorm.Length; i++)
+        {
+
+            if (!gameObjectsNorm[i].GetComponent<SpriteRenderer>().isVisible) Destroy(gameObjectsNorm[i]);
+        }
+    }
+
+    void OnEnable()
+    {
+        if (!isFirstStart) {
+
+            StartCoroutine(SpawnNum(timeInterval));
+
+        } else
+        {
+
+            isFirstStart = false;
+        }
+
+
     }
 
     void Start()

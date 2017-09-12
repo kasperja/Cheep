@@ -101,7 +101,10 @@ public class LavineMove : MonoBehaviour {
 
     public AudioSource yetiSound;
 
-    
+    public GameObject powerUpObj;
+    public GameObject superObj;
+    public GameObject unlockerObj;
+    public SpawnScriptUnlocker unlockerScript;
 
     
 
@@ -341,7 +344,15 @@ public class LavineMove : MonoBehaviour {
 
 		if (isRolling) {
 
+            unlockerScript.DestroyAllObjectsUnlocker();
+            unlockerScript.DestroyAllObjectsSuper();
+            unlockerScript.DestroyAllObjectsNorm();
+            powerUpObj.SetActive(false);
+            superObj.SetActive(false);
+            unlockerObj.SetActive(false);
             
+
+
 
             musicScript.isRollingMusic = true;
 
@@ -836,7 +847,9 @@ public class LavineMove : MonoBehaviour {
 			
 		} else {
 
-            
+            powerUpObj.SetActive(true);
+            superObj.SetActive(true);
+            unlockerObj.SetActive(true);
 
             musicScript.isRollingMusic = false;
 
