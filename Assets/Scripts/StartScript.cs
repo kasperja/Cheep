@@ -64,8 +64,8 @@ public class StartScript : MonoBehaviour {
 
 
 	IEnumerator retryNum (){
-
-		fadeOutScript.isStarted = true;
+        
+        fadeOutScript.isStarted = true;
         //StartCoroutine(StartAsync());
         yield return new WaitForSeconds (0.2f);
 		Application.LoadLevel (3);
