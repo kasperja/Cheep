@@ -17,6 +17,7 @@ public class FadeOut : MonoBehaviour {
 	//public MusicStart mStart;
 
 	public bool isStartScreen = false;
+    
 	// Use this for initialization
 	void Start () {
 
@@ -34,18 +35,21 @@ public class FadeOut : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
+            if (isStarted)
+            {
 
-		if (isStarted) {
+                isEnded = false;
 
-			isEnded = false;
+                //if(isStartScreen)music.volume -= 2f * Time.deltaTime;
 
-			//if(isStartScreen)music.volume -= 2f * Time.deltaTime;
+                t += fadeSpeed * Time.deltaTime;
 
-			t += fadeSpeed * Time.deltaTime;
+                image.color = Color.Lerp(col1, col2, t);
 
-			image.color = Color.Lerp(col1, col2, t);
-		
-		}
+            }
+       
+        
 		if (isEnded) {
 			
 			//if(!isStartScreen)music.volume -= 2f * Time.deltaTime;
@@ -57,4 +61,6 @@ public class FadeOut : MonoBehaviour {
 		}
 
 	}
+
+    
 }
