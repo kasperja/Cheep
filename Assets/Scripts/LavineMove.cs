@@ -345,10 +345,10 @@ public class LavineMove : MonoBehaviour {
 		if (isRolling) {
 
             unlockerScript.DestroyAllObjectsUnlocker();
-            unlockerScript.DestroyAllObjectsSuper();
-            unlockerScript.DestroyAllObjectsNorm();
-            powerUpObj.SetActive(false);
-            superObj.SetActive(false);
+            //unlockerScript.DestroyAllObjectsSuper();
+            //unlockerScript.DestroyAllObjectsNorm();
+            //powerUpObj.SetActive(false);
+            //superObj.SetActive(false);
             unlockerObj.SetActive(false);
             
 
