@@ -225,7 +225,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 						char8Purchased = true;
 						ES2.Save (char8Purchased, "char8Purchased");
 					}
-					if (prod.definition.id == "noAds") {
+					if (prod.definition.id == "noads") {
 
 						noAdsPurchased = true;
 						ES2.Save (noAdsPurchased, "noAds");
