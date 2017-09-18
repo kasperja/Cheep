@@ -98,6 +98,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
     private bool char27UnlockedPointsOnce2 = false;
     private bool char28UnlockedPointsOnce2 = false;
     private bool char29UnlockedPointsOnce2 = false;
+
+    private bool destroyOnce = true;
   
     public bool OneCharUnlockedThisGame = false;
     public Image pickupImg;
@@ -243,7 +245,23 @@ public class SpawnScriptUnlocker : MonoBehaviour
     {
         if (!isFirstStart) {
 
-            StartCoroutine(SpawnNum(timeInterval));
+            if (!char1UnlockedPointsOnceThisGame &&
+               !char2UnlockedPointsOnceThisGame &&
+               !char3UnlockedPointsOnceThisGame &&
+               !char4UnlockedPointsOnceThisGame &&
+               !char5UnlockedPointsOnceThisGame &&
+               !char6UnlockedPointsOnceThisGame &&
+               !char7UnlockedPointsOnceThisGame &&
+               !char8UnlockedPointsOnceThisGame &&
+               !char9UnlockedPointsOnceThisGame &&
+               !char10UnlockedPointsOnceThisGame && !achievemntUnlockedThisGame && !OneCharUnlockedThisGame) { StartCoroutine(SpawnNum(timeInterval)); }
+            else {
+
+
+                DestroyAllObjectsUnlocker();
+                DestroyAllObjects();
+
+            }
 
         } else
         {
@@ -759,6 +777,14 @@ public class SpawnScriptUnlocker : MonoBehaviour
             UIimages.SetActive(false);
             allCharsUnlocked = true;
             
+
+        }
+
+        if (destroyOnce && (achievemntUnlockedThisGame || OneCharUnlockedThisGame)) {
+
+            DestroyAllObjects();
+            DestroyAllObjectsUnlocker();
+            destroyOnce = false;
 
         }
 
@@ -2375,12 +2401,14 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
     IEnumerator SpawnNum(float waitTime)
     {
+
         yield return new WaitForSeconds(waitTime);
 
         Spawn();
 
         spawnReady = true;
 
+        destroyOnce = true;
     }
 
     public void Spawn()
