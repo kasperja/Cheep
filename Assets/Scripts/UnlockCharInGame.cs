@@ -619,6 +619,9 @@ public class UnlockCharInGame : MonoBehaviour {
 
 		unlockSound.Play ();
         unlockSoundApplause.Play();
+
+        spawnUnlocker.DestroyAllObjectsUnlocker();
+        spawnUnlocker.DestroyAllObjects();
 		yield return new WaitForSeconds (3.5f);
 
 		//txtFade.fadeOut = true;
