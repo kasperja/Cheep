@@ -122,13 +122,15 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 	public Product cata1;
 
 
+    public GameObject textObj;
 
-
-
+    public GameObject restoreButton;
 
 	private void Awake(){
 
-		if(ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
+        InitializePurchasing();
+
+        if (ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
         if (ES2.Exists("char1Purchased")) char1Purchased = ES2.Load<bool>("char1Purchased");
         if (ES2.Exists("char2Purchased")) char2Purchased = ES2.Load<bool>("char2Purchased");
         if (ES2.Exists("char3Purchased")) char3Purchased = ES2.Load<bool>("char3Purchased");
@@ -145,9 +147,11 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 		if (noAdsPurchased) {
 
-			gameObject.SetActive (false);
+            textObj.SetActive(false);
+            gameObject.GetComponent<Button>().enabled = false;
+            gameObject.GetComponent<Image>().enabled = false;
 
-		}
+        }
 
         if (ES2.Exists("noAds")) noAdsPurchased = ES2.Load<bool>("noAds");
 
@@ -156,8 +160,24 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 	void Start()
 	{
-        InitializePurchasing();
+        
+
+#if UNITY_IOS
+
+    restoreButton.SetActive(true);
+
+#elif UNITY_ANDROID
+
+        restoreButton.SetActive(false);
         RestorePurchases();
+
+#else
+        restoreButton.SetActive(false);
+        RestorePurchases();
+
+#endif
+
+
         if (ES2.Exists ("firstStart"))firstStart = ES2.Load<bool> ("firstStart");
 
 		if(ES2.Exists("char1Purchased"))char1Purchased = ES2.Load<bool> ("char1Purchased");
@@ -508,7 +528,11 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 		m_StoreController = controller;
 		// Store specific subsystem, for accessing device-specific store features.
 		m_StoreExtensionProvider = extensions;
-	}
+
+        
+
+
+    }
 
 
 	public void OnInitializeFailed(InitializationFailureReason error)
