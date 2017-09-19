@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisableButton : MonoBehaviour {
 
+    public GameObject textObj;
 	// Use this for initialization
 	void Start () {
 
@@ -13,7 +15,11 @@ public class DisableButton : MonoBehaviour {
 
 #else
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+
+        textObj.SetActive(false);
+        gameObject.GetComponent<Button>().enabled = false;
+        gameObject.GetComponent<Image>().enabled = false;
 
 #endif
 
