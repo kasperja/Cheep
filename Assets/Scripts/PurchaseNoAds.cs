@@ -30,7 +30,7 @@ public class PurchaseNoAds : MonoBehaviour, IStoreListener
 	public static string kProductIDConsumable =    "consumable";   
 	public static string kProductIDNonConsumable = "nonconsumable";
 
-	public static string kProductIDNoAds = "noAds";
+	public static string kProductIDNoAds = "noads";
 
 
 	public static string kProductIDSubscription =  "subscription"; 
