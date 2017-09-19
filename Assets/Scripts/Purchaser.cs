@@ -235,8 +235,9 @@ using UnityEngine.UI;
     public int nextChar = 1;
 
 		private void Awake(){
-		
-		if(ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
+
+        InitializePurchasing();
+        if (ES2.Exists("myHighscore"))highscore = ES2.Load<int> ("myHighscore");
 		findButtonsScript.FindInActive ();
 		//Instance = this;
 
@@ -1332,7 +1333,7 @@ using UnityEngine.UI;
             
         if (ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
 
-			InitializePurchasing ();
+			
 
 			//cata1 = m_StoreController.products.WithID (kProductIDCharacter1);
 
@@ -2189,7 +2190,9 @@ using UnityEngine.UI;
 			m_StoreController = controller;
 			// Store specific subsystem, for accessing device-specific store features.
 			m_StoreExtensionProvider = extensions;
-		}
+
+        
+    }
 
 
 		public void OnInitializeFailed(InitializationFailureReason error)
