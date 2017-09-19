@@ -156,9 +156,24 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
         if (ES2.Exists("noAds")) noAdsPurchased = ES2.Load<bool>("noAds");
 
 
+#if UNITY_IOS
+
+    restoreButton.SetActive(true);
+
+#elif UNITY_ANDROID
+
+        restoreButton.SetActive(false);
+        
+
+#else
+        restoreButton.SetActive(false);
+        
+
+#endif
+
     }
 
-	void Start()
+    void Start()
 	{
         
 
