@@ -105,7 +105,7 @@ public class LavineMove : MonoBehaviour {
     public GameObject superObj;
     public GameObject unlockerObj;
     public SpawnScriptUnlocker unlockerScript;
-
+    private bool destroyOnce = true;
     
 
 	// Use this for initialization
@@ -344,12 +344,12 @@ public class LavineMove : MonoBehaviour {
 
 		if (isRolling) {
 
-            unlockerScript.DestroyAllObjectsUnlocker();
+            
             //unlockerScript.DestroyAllObjectsSuper();
             //unlockerScript.DestroyAllObjectsNorm();
             //powerUpObj.SetActive(false);
             //superObj.SetActive(false);
-            unlockerObj.SetActive(false);
+            //unlockerObj.SetActive(false);
             
 
 
@@ -424,8 +424,10 @@ public class LavineMove : MonoBehaviour {
 				
 			}
             if (rollOnce && !pc2D.isDead) {
-
-               
+                unlockerScript.spawnEnabled = false;
+                unlockerScript.DestroyAllObjectsUnlocker();
+                unlockerScript.DestroyAllObjects();
+                
 
                 lavineSoundLoop.Play();
                 if (randomBossEnabled) {
@@ -849,7 +851,8 @@ public class LavineMove : MonoBehaviour {
 
             powerUpObj.SetActive(true);
             superObj.SetActive(true);
-            unlockerObj.SetActive(true);
+            //unlockerObj.SetActive(true);
+            
 
             musicScript.isRollingMusic = false;
 
@@ -1058,7 +1061,7 @@ public class LavineMove : MonoBehaviour {
         yield return new WaitForSeconds(0.0f);
 
         normSpawn.SetActive(true);
-        
+        unlockerScript.spawnEnabled = true;
         yield return new WaitForSeconds(0.2f);
         bossSpawn.SetActive(false);
         yield return new WaitForSeconds (2.4f);
