@@ -571,9 +571,11 @@ public class UnlockCharInGame : MonoBehaviour {
 
             StartCoroutine(waitUnlockPopup(charText, char26Image));
 
+       //     ES2.Save(char3UnlockedPointsOnce, "char3Unlock");
+
             char26UnlockedPointsOnce = false;
 
-            //ES2.Save (char3UnlockedPointsOnce, "char3Unlock");
+            
         }
 
         if (spawnUnlocker.char27UnlockedPointsOnceThisGame && char27UnlockedPointsOnce)
@@ -581,9 +583,10 @@ public class UnlockCharInGame : MonoBehaviour {
 
             StartCoroutine(waitUnlockPopup(charText, char27Image));
 
+           // ES2.Save(char4UnlockedPointsOnce, "char4Unlock");
+
             char27UnlockedPointsOnce = false;
 
-            //ES2.Save (char4UnlockedPointsOnce, "char4Unlock");
         }
 
         if (spawnUnlocker.char28UnlockedPointsOnceThisGame && char28UnlockedPointsOnce)
@@ -593,7 +596,7 @@ public class UnlockCharInGame : MonoBehaviour {
 
             char28UnlockedPointsOnce = false;
 
-            //ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
+         //   ES2.Save (char5UnlockedPointsOnce, "char5Unlock");
         }
         if (spawnUnlocker.char29UnlockedPointsOnceThisGame && char29UnlockedPointsOnce)
         {
@@ -605,7 +608,7 @@ public class UnlockCharInGame : MonoBehaviour {
 
             char29UnlockedPointsOnce = false;
 
-            //ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
+          //  ES2.Save (char1UnlockedPointsOnce, "char1Unlock");
         }
 
     }
