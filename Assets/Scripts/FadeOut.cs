@@ -18,6 +18,13 @@ public class FadeOut : MonoBehaviour {
 
 	public bool isStartScreen = false;
     
+
+    void Awake()
+    {
+
+       // if(!isStartScreen)image.color = col2;
+
+    }
 	// Use this for initialization
 	void Start () {
 

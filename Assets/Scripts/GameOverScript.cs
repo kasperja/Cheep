@@ -71,7 +71,7 @@ public class GameOverScript : MonoBehaviour {
     public FadeIn fadeOutScript;
 	private bool isQuickRestart = false;
 
-
+/*
 	private bool char1UnlockedPointsOnce = true;
 	private bool char2UnlockedPointsOnce = true;
 	private bool char3UnlockedPointsOnce = true;
@@ -80,7 +80,7 @@ public class GameOverScript : MonoBehaviour {
 	private bool char6UnlockedPointsOnce = true;
 	private bool char7UnlockedPointsOnce = true;
 	private bool char8UnlockedPointsOnce = true;
-
+    */
 	/*public GameObject char1pic;
 	public GameObject char2pic;
 	public GameObject char3pic;

@@ -30,7 +30,7 @@ public class TextOutline : MonoBehaviour {
 			MeshRenderer otherMeshRenderer = outline.GetComponent<MeshRenderer>();
 			otherMeshRenderer.material = new Material(meshRenderer.material);
 			//otherMeshRenderer.material = mat;
-			otherMeshRenderer.castShadows = false;
+			//otherMeshRenderer.castShadows = false;
 			otherMeshRenderer.receiveShadows = false;
 			otherMeshRenderer.sortingLayerID = meshRenderer.sortingLayerID;
 			otherMeshRenderer.sortingLayerName = meshRenderer.sortingLayerName;
