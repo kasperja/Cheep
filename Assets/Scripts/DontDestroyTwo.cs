@@ -101,7 +101,7 @@ public class DontDestroyTwo : MonoBehaviour {
 		if (currentScene.name == "Scene01") {
 
 			//DontDestroyOnLoad (gameObject);
-			gameObject.GetComponent<AudioSource> ().Play ();
+			//gameObject.GetComponent<AudioSource> ().Play ();
 
 
 		}

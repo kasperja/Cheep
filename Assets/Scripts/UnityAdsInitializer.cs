@@ -1,10 +1,11 @@
-﻿#if UNITY_IOS
+﻿
 
 using UnityEngine;
 using UnityEngine.Advertisements;
 
 public class UnityAdsInitializer : MonoBehaviour
 {
+#if UNITY_IOS
 	[SerializeField]
 	private string
 	androidGameId = "18658",
@@ -32,11 +33,7 @@ public class UnityAdsInitializer : MonoBehaviour
 
 #if UNITY_ANDROID
 
-using UnityEngine;
-using UnityEngine.Advertisements;
 
-public class UnityAdsInitializer : MonoBehaviour
-{
 	[SerializeField]
 	private string
 	androidGameId = "18658",
@@ -59,5 +56,5 @@ public class UnityAdsInitializer : MonoBehaviour
 			Advertisement.Initialize(gameId, testMode);
 		}
 	}
-}
 #endif
+}
