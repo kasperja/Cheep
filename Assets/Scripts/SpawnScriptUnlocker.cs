@@ -864,7 +864,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         if ((!allCharsUnlocked || (achiementsActivated && !achievemntUnlockedThisGame)) && spawnReady /* && (hud.playerScore >= (scoreInterval * multiplier)) */)
         {
 
-            multiplier += 1f;
+            //multiplier += 1f;
             //Spawn();
             StartCoroutine(SpawnNum(timeInterval));
 

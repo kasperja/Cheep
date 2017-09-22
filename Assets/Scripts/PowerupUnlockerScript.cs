@@ -11,7 +11,7 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
 	SpawnScriptUnlocker spawnUnlocker;
 
-	public float pickupAmmount = 1f;
+	public float pickupAmmount = 0f;
 
 	public float scoreIncreaseAmmount = 1000f;
 

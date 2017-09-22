@@ -187,8 +187,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
         RestorePurchases();
 
 #else
-        restoreButton.SetActive(false);
-        RestorePurchases();
+       
 
 #endif
 
