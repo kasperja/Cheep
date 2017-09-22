@@ -31,7 +31,7 @@ public class SpawnScript : MonoBehaviour {
     public bool isEmpty = false;
 
     public bool isMG = false;
-    private bool waitBeforeSpawn = true;
+    //private bool waitBeforeSpawn = true;
 
     public int counter = 0;
     public int maxCounter = 0;
@@ -67,8 +67,8 @@ public class SpawnScript : MonoBehaviour {
 
         }
         else {
-            spawnMinTwo = spawnMin;
-            spawnMaxTwo = spawnMax;
+            //spawnMinTwo = spawnMin;
+           // spawnMaxTwo = spawnMax;
 
 
         }

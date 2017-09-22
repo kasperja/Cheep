@@ -7,7 +7,7 @@ public class InstantiateCharSelect : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		GameObject charMenu = (GameObject)Instantiate(Resources.Load("CharSelectMenu")) as GameObject;
+		//GameObject charMenu = (GameObject)Instantiate(Resources.Load("CharSelectMenu")) as GameObject;
 		
 	}
 	
