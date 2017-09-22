@@ -68,7 +68,7 @@ public class StartScript : MonoBehaviour {
         fadeOutScript.isStarted = true;
         //StartCoroutine(StartAsync());
         yield return new WaitForSeconds (0.2f);
-		Application.LoadLevel (3);
+		SceneManager.LoadScene (3);
 
 
 
