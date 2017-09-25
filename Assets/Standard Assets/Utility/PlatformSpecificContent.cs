@@ -84,11 +84,11 @@ namespace UnityStandardAssets.Utility
 #if !(UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_TIZEN || UNITY_STV )
             if (m_BuildTargetGroup == BuildTargetGroup.Mobile)
             {
-                EnableContent(false);
+                EnableContent(true);
             }
             else
             {
-                EnableContent(true);
+                EnableContent(false);
             }
 #endif
         }
