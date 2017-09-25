@@ -477,7 +477,7 @@ public class DontDestroyTwo : MonoBehaviour {
 	}
     IEnumerator startMusic() {
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.8f);
 
         music.Play();
 
