@@ -12,7 +12,7 @@ public class CharacterSelect : MonoBehaviour {
 	public GameObject char2;
 
 	public Transform[] newPos;
-	public ParticleSystem selectParticles;
+	//public ParticleSystem selectParticles;
 
 
 	// Use this for initialization
@@ -51,7 +51,7 @@ public class CharacterSelect : MonoBehaviour {
 
 
 
-		selectParticles.transform.position = newPos [i].transform.position;
+		//selectParticles.transform.position = newPos [i].transform.position;
 
 
 	}
