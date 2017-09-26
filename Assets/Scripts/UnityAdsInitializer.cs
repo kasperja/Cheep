@@ -57,8 +57,8 @@ public class UnityAdsInitializer : MonoBehaviour
 		}
 	}
 }
-    #else
-    }
+
+#else
 
 #endif
 
