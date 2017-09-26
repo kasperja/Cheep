@@ -17,14 +17,14 @@ public class CameraBoxFollow : MonoBehaviour {
 
 	public bool isSteep = false;
 	public bool hasBeenBelow = false;
-	private bool hasBeenBelowOnce = true;
+	//private bool hasBeenBelowOnce = true;
 
 	private bool groundOnce = false;
 
 	public LavineMove lavineScript;
 
-	private float zoomInPos = 4f;
-	private float zoomOutPos = 0f;
+	//private float zoomInPos = 4f;
+	//private float zoomOutPos = 0f;
 
 	public Transform zoomPos;
 	public Transform normPos;

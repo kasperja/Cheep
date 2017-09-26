@@ -207,6 +207,7 @@ else if($_POST["mode"] == "download")
 		echo "04"; // ES2 MySQL table could not be found.
 		exit();
 	}
+}
 /*
 	*** DELETE FUNCTIONALITY ***
 */

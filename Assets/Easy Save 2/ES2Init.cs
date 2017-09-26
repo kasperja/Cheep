@@ -61,6 +61,9 @@ public class ES2Init : MonoBehaviour
 		ES2TypeManager.types[typeof(UnityEngine.Sprite)] = new ES2_Sprite();
 		ES2TypeManager.types[typeof(ES2AutoSaveManager)] = new ES2_ES2AutoSaveManager();
 		ES2TypeManager.types[typeof(System.DateTime)] = new ES2_DateTime();
+		ES2TypeManager.types[typeof(UnityEngine.PolygonCollider2D)] = new ES2_PolygonCollider2D();
+		ES2TypeManager.types[typeof(System.Object)] = new ES2_object();
+		ES2TypeManager.types[typeof(UnityEngine.Texture)] = new ES2_Texture();
 		ES2TypeManager.types[typeof(UnityEngine.AudioClip)] = new ES2_AudioClip();
 
 		ES2.initialised = true;
