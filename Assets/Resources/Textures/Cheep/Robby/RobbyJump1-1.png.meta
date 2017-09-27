@@ -12,7 +12,7 @@ TextureImporter:
     21300010: robbyJump1-0015
   serializedVersion: 4
   mipmaps:
-    mipMapMode: 0
+    mipMapMode: 1
     enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
@@ -37,7 +37,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: 0
+    aniso: 16
     mipBias: -1
     wrapU: 1
     wrapV: 1
