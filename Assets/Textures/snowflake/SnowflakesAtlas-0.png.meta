@@ -1,29 +1,24 @@
 fileFormatVersion: 2
-guid: 6dc25c72557440248a58f076f3bdc61a
-timeCreated: 1497947094
-licenseType: Pro
+guid: 7559b64dcb3797e43bcae8cc41171e40
+timeCreated: 1506583969
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pandaJump2-0000
-    21300002: pandaJump2-0001
-    21300004: pandaJump2-0002
-    21300006: pandaJump2-0003
-    21300008: pandaJump2-0004
-    21300010: pandaJump2-0005
-    21300012: pandaJump2-0006
-    21300014: pandaJump2-0007
-    21300016: pandaJump2-0008
-    21300018: pandaJump2-0009
-    21300020: pandaJump2-0010
-    21300022: pandaJump2-0011
-    21300024: pandaJump2-0012
-    21300026: pandaJump2-0013
-    21300028: pandaJump2-0014
-    21300030: pandaJump2-0015
+    21300000: snowflake01
+    21300002: snowflake02
+    21300004: snowflake03
+    21300006: snowflake04
+    21300008: snowflake05
+    21300010: snowflake06
+    21300012: snowflake07
+    21300014: snowflake08
+    21300016: snowflake09
+    21300018: snowflake10
+    21300020: snowflake11
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -46,12 +41,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
-    aniso: 0
+    filterMode: -1
+    aniso: 16
     mipBias: -1
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -74,7 +69,7 @@ TextureImporter:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +77,7 @@ TextureImporter:
   - buildTarget: Standalone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,7 +85,7 @@ TextureImporter:
   - buildTarget: iPhone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +93,7 @@ TextureImporter:
   - buildTarget: Android
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +101,7 @@ TextureImporter:
   - buildTarget: WebGL
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,225 +110,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pandaJump2-0000
+      name: snowflake01
       rect:
         serializedVersion: 2
         x: 1
-        y: 1629
-        width: 364
-        height: 418
+        y: 426
+        width: 78
+        height: 85
       alignment: 9
-      pivot: {x: 0.6181319, y: 0.50239235}
+      pivot: {x: 0.49358973, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0001
+      name: snowflake02
       rect:
         serializedVersion: 2
-        x: 367
-        y: 1627
-        width: 368
-        height: 420
+        x: 81
+        y: 421
+        width: 67
+        height: 90
       alignment: 9
-      pivot: {x: 0.6222826, y: 0.49761903}
+      pivot: {x: 0.5298507, y: 0.4722222}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0002
+      name: snowflake03
       rect:
         serializedVersion: 2
-        x: 737
-        y: 1616
-        width: 381
-        height: 431
+        x: 150
+        y: 412
+        width: 56
+        height: 99
       alignment: 9
-      pivot: {x: 0.6351706, y: 0.48955917}
+      pivot: {x: 0.54464287, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0003
+      name: snowflake04
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 1619
-        width: 366
-        height: 428
+        x: 208
+        y: 425
+        width: 47
+        height: 86
       alignment: 9
-      pivot: {x: 0.6229508, y: 0.49299064}
+      pivot: {x: 0.5638298, y: 0.49418604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0004
-      rect:
-        serializedVersion: 2
-        x: 1488
-        y: 1617
-        width: 377
-        height: 430
-      alignment: 9
-      pivot: {x: 0.63129973, y: 0.49534884}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: pandaJump2-0005
+      name: snowflake05
       rect:
         serializedVersion: 2
         x: 1
-        y: 1190
-        width: 368
-        height: 424
+        y: 324
+        width: 41
+        height: 86
       alignment: 9
-      pivot: {x: 0.625, y: 0.4976415}
+      pivot: {x: 0.5731707, y: 0.49418604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0006
+      name: snowflake06
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1193
-        width: 363
-        height: 421
+        x: 44
+        y: 325
+        width: 12
+        height: 85
       alignment: 9
-      pivot: {x: 0.6198347, y: 0.49881235}
+      pivot: {x: 0.625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0007
+      name: snowflake07
       rect:
         serializedVersion: 2
-        x: 736
-        y: 1189
-        width: 367
-        height: 425
+        x: 58
+        y: 324
+        width: 41
+        height: 86
       alignment: 9
-      pivot: {x: 0.6239782, y: 0.4964706}
+      pivot: {x: 0.5731707, y: 0.49418604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0008
+      name: snowflake08
       rect:
         serializedVersion: 2
-        x: 1105
-        y: 1183
-        width: 380
-        height: 431
+        x: 101
+        y: 324
+        width: 47
+        height: 86
       alignment: 9
-      pivot: {x: 0.63684213, y: 0.4849188}
+      pivot: {x: 0.5638298, y: 0.49418604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0009
+      name: snowflake09
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 1173
-        width: 367
-        height: 441
+        x: 150
+        y: 316
+        width: 56
+        height: 94
       alignment: 9
-      pivot: {x: 0.6239782, y: 0.47845805}
+      pivot: {x: 0.54464287, y: 0.45212767}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: pandaJump2-0010
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 734
-        width: 363
-        height: 437
-      alignment: 9
-      pivot: {x: 0.6198347, y: 0.4805492}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: pandaJump2-0011
-      rect:
-        serializedVersion: 2
-        x: 366
-        y: 735
-        width: 368
-        height: 436
-      alignment: 9
-      pivot: {x: 0.625, y: 0.48394495}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: pandaJump2-0012
-      rect:
-        serializedVersion: 2
-        x: 736
-        y: 746
-        width: 368
-        height: 425
-      alignment: 9
-      pivot: {x: 0.6195652, y: 0.4917647}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: pandaJump2-0013
-      rect:
-        serializedVersion: 2
-        x: 1106
-        y: 742
-        width: 369
-        height: 429
-      alignment: 9
-      pivot: {x: 0.62601626, y: 0.48951048}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: pandaJump2-0014
-      rect:
-        serializedVersion: 2
-        x: 1477
-        y: 741
-        width: 381
-        height: 430
-      alignment: 9
-      pivot: {x: 0.6351706, y: 0.49069768}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: pandaJump2-0015
+      name: snowflake10
       rect:
         serializedVersion: 2
         x: 1
-        y: 315
-        width: 385
-        height: 417
+        y: 219
+        width: 87
+        height: 95
       alignment: 9
-      pivot: {x: 0.638961, y: 0.50119907}
+      pivot: {x: 0.48850575, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: snowflake11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 229
+        width: 80
+        height: 85
+      alignment: 9
+      pivot: {x: 0.50625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

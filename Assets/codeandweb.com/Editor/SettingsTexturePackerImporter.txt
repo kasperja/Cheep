@@ -55,6 +55,8 @@ tpsheetFileNames:
 - Assets/Textures/FlagsTemple/flagsRight-0.tpsheet
 - Assets/Textures/Pickups/PickupAtlas.tpsheet
 - Assets/Textures/Pickups/PickupAtlas-1.tpsheet
+- Assets/Textures/snowflake/SnowflakesAtlas-0.tpsheet
+- Assets/Textures/TreesAtlas-0.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Textures/Birds/birdFlying-0.png
@@ -110,8 +112,12 @@ textureFileNames:
 - Assets/Textures/FlagsTemple/flagsRight-0.png
 - Assets/Textures/Pickups/PickupAtlas-0.png
 - Assets/Textures/Pickups/PickupAtlas-1.png
+- Assets/Textures/snowflake/SnowflakesAtlas-0.png
+- Assets/Textures/TreesAtlas-0.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
 - 
 - 
 - 
