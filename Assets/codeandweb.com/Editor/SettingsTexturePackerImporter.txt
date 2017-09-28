@@ -36,6 +36,8 @@ tpsheetFileNames:
 - Assets/Textures/Cheep/Panda/PandaJump2-0.tpsheet
 - Assets/Textures/Cheep/Panda/PandaJump3-0.tpsheet
 - Assets/Textures/Cheep/Panda/PandaSkiing-0.tpsheet
+- Assets/Textures/Cheep/platfomVariantsAtlas-0.tpsheet
+- Assets/Textures/Cheep/platfomVariantsAtlas-1.tpsheet
 - Assets/Textures/Cheep/Robby/RobbyJump1-0.tpsheet
 - Assets/Textures/Cheep/Robby/RobbyJump1-1.tpsheet
 - Assets/Textures/Cheep/Robby/RobbyJump2-0.tpsheet
@@ -44,15 +46,21 @@ tpsheetFileNames:
 - Assets/Textures/Cheep/Robby/RobbyJump3-1.tpsheet
 - Assets/Textures/Cheep/Robby/RobbySkiing-0.tpsheet
 - Assets/Textures/Cheep/Robby/RobbySkiing-1.tpsheet
+- Assets/Textures/Cheep/SpikeWalls-0.tpsheet
+- Assets/Textures/Cheep/SpikeWalls-1.tpsheet
 - Assets/Textures/Cheep/Taco/TacoJump1-0.tpsheet
 - Assets/Textures/Cheep/Taco/TacoJump2-0.tpsheet
 - Assets/Textures/Cheep/Taco/TacoJump3-0.tpsheet
 - Assets/Textures/Cheep/Taco/TacoSkiing-0.tpsheet
+- Assets/Textures/Cheep/TrailsAtlas.tpsheet
+- Assets/Textures/Cheep/TrailsAtlas-0.tpsheet
 - Assets/Textures/Cheep/Yeti/Yeti-Skiing-0.tpsheet
 - Assets/Textures/Cheep/Yeti/Yeti-Skiing-1.tpsheet
 - Assets/Textures/FlagsTemple/flagsLeft-0.tpsheet
 - Assets/Textures/FlagsTemple/flagsLeft-0-0.tpsheet
 - Assets/Textures/FlagsTemple/flagsRight-0.tpsheet
+- Assets/Textures/Menuer/ButtonsWIthBlacked-0.tpsheet
+- Assets/Textures/Menuer/CharIconsAtlas-0.tpsheet
 - Assets/Textures/ObstacleAtlas-0.tpsheet
 - Assets/Textures/Pickups/PickupAtlas.tpsheet
 - Assets/Textures/Pickups/PickupAtlas-1.tpsheet
@@ -94,6 +102,8 @@ textureFileNames:
 - Assets/Textures/Cheep/Panda/PandaJump2-0.png
 - Assets/Textures/Cheep/Panda/PandaJump3-0.png
 - Assets/Textures/Cheep/Panda/PandaSkiing-0.png
+- Assets/Textures/Cheep/platfomVariantsAtlas-0.png
+- Assets/Textures/Cheep/platfomVariantsAtlas-1.png
 - Assets/Textures/Cheep/Robby/RobbyJump1-0.png
 - Assets/Textures/Cheep/Robby/RobbyJump1-1.png
 - Assets/Textures/Cheep/Robby/RobbyJump2-0.png
@@ -102,15 +112,21 @@ textureFileNames:
 - Assets/Textures/Cheep/Robby/RobbyJump3-1.png
 - Assets/Textures/Cheep/Robby/RobbySkiing-0.png
 - Assets/Textures/Cheep/Robby/RobbySkiing-1.png
+- Assets/Textures/Cheep/SpikeWalls-0.png
+- Assets/Textures/Cheep/SpikeWalls-1.png
 - Assets/Textures/Cheep/Taco/TacoJump1-0.png
 - Assets/Textures/Cheep/Taco/TacoJump2-0.png
 - Assets/Textures/Cheep/Taco/TacoJump3-0.png
 - Assets/Textures/Cheep/Taco/TacoSkiing-0.png
+- Assets/Textures/Cheep/TrailsAtlas-0.png
+- Assets/Textures/Cheep/TrailsAtlas-0.png
 - Assets/Textures/Cheep/Yeti/Yeti-Skiing-0.png
 - Assets/Textures/Cheep/Yeti/Yeti-Skiing-1.png
 - Assets/Textures/FlagsTemple/flagsLeft-0-0.png
 - Assets/Textures/FlagsTemple/flagsLeft-0-0.png
 - Assets/Textures/FlagsTemple/flagsRight-0.png
+- Assets/Textures/Menuer/ButtonsWIthBlacked-0.png
+- Assets/Textures/Menuer/CharIconsAtlas-0.png
 - Assets/Textures/ObstacleAtlas-0.png
 - Assets/Textures/Pickups/PickupAtlas-0.png
 - Assets/Textures/Pickups/PickupAtlas-1.png
@@ -118,6 +134,14 @@ textureFileNames:
 - Assets/Textures/TreesAtlas-0.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 - 
 - 
 - 
