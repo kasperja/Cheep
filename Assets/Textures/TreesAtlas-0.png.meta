@@ -14,10 +14,11 @@ TextureImporter:
     21300014: Tree5FG
     21300016: Tree5mg
     21300018: Tree6FG
+    21300020: FG03Tree
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -57,7 +58,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -109,10 +110,24 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tree2
+      name: FG03Tree
       rect:
         serializedVersion: 2
         x: 1
+        y: 505
+        width: 247
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Tree2
+      rect:
+        serializedVersion: 2
+        x: 250
         y: 885
         width: 72
         height: 138
@@ -126,7 +141,7 @@ TextureImporter:
       name: Tree2mg
       rect:
         serializedVersion: 2
-        x: 75
+        x: 324
         y: 698
         width: 151
         height: 325
@@ -140,12 +155,12 @@ TextureImporter:
       name: Tree3
       rect:
         serializedVersion: 2
-        x: 228
-        y: 802
-        width: 96
-        height: 221
+        x: 477
+        y: 919
+        width: 55
+        height: 104
       alignment: 9
-      pivot: {x: 0.46875, y: 0.51131225}
+      pivot: {x: 0.5272727, y: 0.5432692}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,7 +169,7 @@ TextureImporter:
       name: Tree3mg
       rect:
         serializedVersion: 2
-        x: 326
+        x: 534
         y: 802
         width: 96
         height: 221
@@ -168,12 +183,12 @@ TextureImporter:
       name: Tree4
       rect:
         serializedVersion: 2
-        x: 424
-        y: 700
-        width: 129
-        height: 323
+        x: 632
+        y: 860
+        width: 67
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0.503096}
+      pivot: {x: 0.49253732, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,7 +197,7 @@ TextureImporter:
       name: Tree4mg
       rect:
         serializedVersion: 2
-        x: 555
+        x: 701
         y: 700
         width: 129
         height: 323
@@ -196,12 +211,12 @@ TextureImporter:
       name: Tree5
       rect:
         serializedVersion: 2
-        x: 686
-        y: 641
-        width: 181
-        height: 382
+        x: 832
+        y: 833
+        width: 91
+        height: 190
       alignment: 9
-      pivot: {x: 0.5, y: 0.4921466}
+      pivot: {x: 0.5, y: 0.49210528}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,7 +226,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 256
+        y: 120
         width: 181
         height: 383
       alignment: 9
@@ -225,7 +240,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 184
-        y: 257
+        y: 121
         width: 181
         height: 382
       alignment: 9
@@ -239,7 +254,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 367
-        y: 256
+        y: 120
         width: 206
         height: 383
       alignment: 9
