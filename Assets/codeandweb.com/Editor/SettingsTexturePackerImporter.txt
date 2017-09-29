@@ -32,6 +32,7 @@ tpsheetFileNames:
 - Assets/Textures/Cheep/Lizard/LizardJump02-0.tpsheet
 - Assets/Textures/Cheep/Lizard/LizardJump03-0.tpsheet
 - Assets/Textures/Cheep/Lizard/LizardSkiing-0.tpsheet
+- Assets/Textures/Cheep/ObstacleAtlas-0.tpsheet
 - Assets/Textures/Cheep/Panda/PandaJump1-0.tpsheet
 - Assets/Textures/Cheep/Panda/PandaJump2-0.tpsheet
 - Assets/Textures/Cheep/Panda/PandaJump3-0.tpsheet
@@ -61,9 +62,7 @@ tpsheetFileNames:
 - Assets/Textures/FlagsTemple/flagsRight-0.tpsheet
 - Assets/Textures/Menuer/ButtonsWIthBlacked-0.tpsheet
 - Assets/Textures/Menuer/CharIconsAtlas-0.tpsheet
-- Assets/Textures/ObstacleAtlas-0.tpsheet
-- Assets/Textures/Pickups/PickupAtlas.tpsheet
-- Assets/Textures/Pickups/PickupAtlas-1.tpsheet
+- Assets/Textures/Pickups/PickupAtlas-0.tpsheet
 - Assets/Textures/snowflake/SnowflakesAtlas-0.tpsheet
 - Assets/Textures/TreesAtlas-0.tpsheet
 textureFileNames:
@@ -98,6 +97,7 @@ textureFileNames:
 - Assets/Textures/Cheep/Lizard/LizardJump02-0.png
 - Assets/Textures/Cheep/Lizard/LizardJump03-0.png
 - Assets/Textures/Cheep/Lizard/LizardSkiing-0.png
+- Assets/Textures/Cheep/ObstacleAtlas-0.png
 - Assets/Textures/Cheep/Panda/PandaJump1-0.png
 - Assets/Textures/Cheep/Panda/PandaJump2-0.png
 - Assets/Textures/Cheep/Panda/PandaJump3-0.png
@@ -127,14 +127,11 @@ textureFileNames:
 - Assets/Textures/FlagsTemple/flagsRight-0.png
 - Assets/Textures/Menuer/ButtonsWIthBlacked-0.png
 - Assets/Textures/Menuer/CharIconsAtlas-0.png
-- Assets/Textures/ObstacleAtlas-0.png
 - Assets/Textures/Pickups/PickupAtlas-0.png
-- Assets/Textures/Pickups/PickupAtlas-1.png
 - Assets/Textures/snowflake/SnowflakesAtlas-0.png
 - Assets/Textures/TreesAtlas-0.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- 
 - 
 - 
 - 
