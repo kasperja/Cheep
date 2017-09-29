@@ -222,18 +222,18 @@ using System.Collections;
 			}
 
 			alwaysGround.SetActive (true);
-			if (Time.timeScale < 4f && rocketActivate)
-				Time.timeScale += 1f * Time.deltaTime;
+			//if (Time.timeScale < 4f && rocketActivate)
+				//Time.timeScale += 1f * Time.deltaTime;
 		
 		} else {
 			rocketSpawn.spawnRocketDisable = false;
 
-			if (Time.timeScale > 1f)
-				Time.timeScale -= 0.5f *Time.deltaTime;
+			//if (Time.timeScale > 1f)
+				//Time.timeScale -= 0.5f *Time.deltaTime;
 		
 		}
 
-		if (Time.timeScale <= 1f && !isRocket) {
+		if (!isRocket) {
 			alwaysGround.SetActive (false);
 			rocketParticle.Stop ();
 		}
