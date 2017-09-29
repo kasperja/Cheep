@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c027c84f157ee344cb2f95341fe9b257
-timeCreated: 1506506831
+timeCreated: 1506669045
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,10 +15,14 @@ TextureImporter:
     21300016: PickupMrTaco
     21300018: PickupPandy
     21300020: PickupRobby7
+    21300022: FallenTree
+    21300024: rock
+    21300026: rock2
+    21300028: snowman
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -56,9 +60,9 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -67,7 +71,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -75,7 +79,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -83,7 +87,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: iPhone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -91,7 +95,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -99,7 +103,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: WebGL
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -114,11 +118,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 409
-        width: 65
-        height: 102
+        y: 813
+        width: 96
+        height: 210
       alignment: 9
-      pivot: {x: 0.5, y: 0.49509802}
+      pivot: {x: 0.49479166, y: 0.5214286}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,12 +131,12 @@ TextureImporter:
       name: PickupBugo
       rect:
         serializedVersion: 2
-        x: 68
-        y: 455
-        width: 56
-        height: 56
+        x: 99
+        y: 905
+        width: 129
+        height: 118
       alignment: 9
-      pivot: {x: 0.49107143, y: 0.5089286}
+      pivot: {x: 0.5, y: 0.529661}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +145,12 @@ TextureImporter:
       name: PickupCat
       rect:
         serializedVersion: 2
-        x: 126
-        y: 438
-        width: 67
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 230
+        y: 876
+        width: 131
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50680274}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,11 +160,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 322
-        width: 88
-        height: 85
+        y: 633
+        width: 162
+        height: 178
       alignment: 9
-      pivot: {x: 0.4943182, y: 0.5235294}
+      pivot: {x: 0.5154321, y: 0.5421348}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,12 +173,12 @@ TextureImporter:
       name: PickupHippo
       rect:
         serializedVersion: 2
-        x: 91
-        y: 311
-        width: 81
-        height: 96
+        x: 165
+        y: 625
+        width: 136
+        height: 186
       alignment: 9
-      pivot: {x: 0.4382716, y: 0.484375}
+      pivot: {x: 0.5110294, y: 0.4919355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +187,12 @@ TextureImporter:
       name: PickupHruumpf
       rect:
         serializedVersion: 2
-        x: 1
-        y: 240
-        width: 91
-        height: 69
+        x: 303
+        y: 706
+        width: 173
+        height: 105
       alignment: 9
-      pivot: {x: 0.510989, y: 0.51449275}
+      pivot: {x: 0.5346821, y: 0.45238096}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +201,12 @@ TextureImporter:
       name: PickupHruumpf2
       rect:
         serializedVersion: 2
-        x: 94
-        y: 241
-        width: 94
-        height: 68
+        x: 1
+        y: 515
+        width: 186
+        height: 108
       alignment: 9
-      pivot: {x: 0.5, y: 0.49264705}
+      pivot: {x: 0.5268817, y: 0.4398148}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,12 +215,12 @@ TextureImporter:
       name: PickupLizard
       rect:
         serializedVersion: 2
-        x: 1
-        y: 128
-        width: 93
-        height: 110
-      alignment: 9
-      pivot: {x: 0.5, y: 0.50454545}
+        x: 189
+        y: 402
+        width: 185
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,12 +229,12 @@ TextureImporter:
       name: PickupMrTaco
       rect:
         serializedVersion: 2
-        x: 96
-        y: 127
-        width: 46
-        height: 111
+        x: 376
+        y: 402
+        width: 74
+        height: 221
       alignment: 9
-      pivot: {x: 0.42391303, y: 0.5}
+      pivot: {x: 0.49324325, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +243,12 @@ TextureImporter:
       name: PickupPandy
       rect:
         serializedVersion: 2
-        x: 144
-        y: 129
-        width: 61
-        height: 109
+        x: 1
+        y: 183
+        width: 109
+        height: 217
       alignment: 9
-      pivot: {x: 0.46721312, y: 0.5}
+      pivot: {x: 0.48165137, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,12 +257,12 @@ TextureImporter:
       name: PickupRobby7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 36
-        width: 56
-        height: 89
+        x: 112
+        y: 277
+        width: 107
+        height: 123
       alignment: 9
-      pivot: {x: 0.49107143, y: 0.5}
+      pivot: {x: 0.4906542, y: 0.5081301}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
