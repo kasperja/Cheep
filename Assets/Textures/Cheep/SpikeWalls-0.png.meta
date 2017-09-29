@@ -104,12 +104,12 @@ TextureImporter:
       name: mg2
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 1249
         width: 1920
-        height: 798
+        height: 799
       alignment: 9
-      pivot: {x: 0.5, y: 0.5037594}
+      pivot: {x: 0.5, y: 0.5031289}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,12 +118,12 @@ TextureImporter:
       name: FG2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 443
+        x: 0
+        y: 447
         width: 1920
-        height: 804
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 802
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50124687}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
