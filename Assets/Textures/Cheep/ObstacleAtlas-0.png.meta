@@ -107,11 +107,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 740
-        width: 523
-        height: 283
+        y: 747
+        width: 528
+        height: 276
       alignment: 9
-      pivot: {x: 0.4952199, y: 0.50353354}
+      pivot: {x: 0.51325756, y: 0.5126812}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -120,7 +120,7 @@ TextureImporter:
       name: rock
       rect:
         serializedVersion: 2
-        x: 526
+        x: 531
         y: 706
         width: 427
         height: 317
@@ -134,12 +134,12 @@ TextureImporter:
       name: rock2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 475
-        width: 333
-        height: 229
+        x: 272
+        y: 514
+        width: 334
+        height: 233
       alignment: 9
-      pivot: {x: 0.47297296, y: 0.5218341}
+      pivot: {x: 0.48652694, y: 0.50858366}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,12 +148,12 @@ TextureImporter:
       name: snowman
       rect:
         serializedVersion: 2
-        x: 336
-        y: 396
-        width: 304
-        height: 308
+        x: 1
+        y: 436
+        width: 306
+        height: 309
       alignment: 9
-      pivot: {x: 0.50328946, y: 0.49025974}
+      pivot: {x: 0.5, y: 0.49190938}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

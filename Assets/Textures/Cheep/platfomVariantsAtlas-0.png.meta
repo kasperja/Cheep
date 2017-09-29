@@ -9,6 +9,9 @@ TextureImporter:
     21300004: BrigdeBG
     21300006: BrigdeFG
     21300008: BrigdeMG
+    21300010: Cliffwall01
+    21300012: Cliffwall02
+    21300014: Temple
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -107,12 +110,12 @@ TextureImporter:
       name: AlpineHouseMG
       rect:
         serializedVersion: 2
-        x: 1
-        y: 740
-        width: 955
-        height: 1307
+        x: 0
+        y: 731
+        width: 964
+        height: 1317
       alignment: 9
-      pivot: {x: 0.50052357, y: 0.5057383}
+      pivot: {x: 0.50103736, y: 0.5018982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,40 +124,12 @@ TextureImporter:
       name: BottomTemple
       rect:
         serializedVersion: 2
-        x: 958
-        y: 1380
-        width: 1024
-        height: 667
+        x: 187
+        y: 67
+        width: 1027
+        height: 674
       alignment: 9
-      pivot: {x: 0.5488281, y: 0.50074965}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: BrigdeBG
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 531
-        width: 555
-        height: 207
-      alignment: 9
-      pivot: {x: 0.46576577, y: 0.46135265}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: BrigdeFG
-      rect:
-        serializedVersion: 2
-        x: 558
-        y: 530
-        width: 547
-        height: 208
-      alignment: 9
-      pivot: {x: 0.47440585, y: 0.6514423}
+      pivot: {x: 0.54625124, y: 0.5014837}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +138,54 @@ TextureImporter:
       name: BrigdeMG
       rect:
         serializedVersion: 2
-        x: 1107
-        y: 608
-        width: 433
-        height: 130
+        x: 0
+        y: 1921
+        width: 434
+        height: 127
       alignment: 9
-      pivot: {x: 0.48152426, y: 0.99615383}
+      pivot: {x: 0.4781106, y: 1.035433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Cliffwall01
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 166
+        width: 585
+        height: 946
+      alignment: 9
+      pivot: {x: 0.5188034, y: 0.5026427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Cliffwall02
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1112
+        width: 643
+        height: 936
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50801283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Temple
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1112
+        width: 441
+        height: 797
+      alignment: 9
+      pivot: {x: 0.4659864, y: 0.46235883}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
