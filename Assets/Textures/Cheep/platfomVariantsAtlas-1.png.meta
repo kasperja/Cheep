@@ -7,6 +7,8 @@ TextureImporter:
     21300000: Cliffwall01
     21300002: Cliffwall02
     21300004: Temple
+    21300006: BrigdeBG
+    21300008: BrigdeFG
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -102,43 +104,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cliffwall01
+      name: BrigdeBG
       rect:
         serializedVersion: 2
-        x: 1
-        y: 76
-        width: 571
-        height: 947
+        x: 0
+        y: 261
+        width: 551
+        height: 251
       alignment: 9
-      pivot: {x: 0.5052539, y: 0.5021119}
+      pivot: {x: 0.4582577, y: 0.51593626}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Cliffwall02
+      name: BrigdeFG
       rect:
         serializedVersion: 2
-        x: 574
-        y: 86
-        width: 643
-        height: 937
+        x: 0
+        y: 77
+        width: 547
+        height: 218
       alignment: 9
-      pivot: {x: 0.5, y: 0.50747067}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: Temple
-      rect:
-        serializedVersion: 2
-        x: 1219
-        y: 215
-        width: 444
-        height: 808
-      alignment: 9
-      pivot: {x: 0.46734235, y: 0.45730197}
+      pivot: {x: 0.47074956, y: 0.6215596}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
