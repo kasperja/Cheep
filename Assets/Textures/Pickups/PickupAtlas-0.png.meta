@@ -117,8 +117,8 @@ TextureImporter:
       name: PickupAlien
       rect:
         serializedVersion: 2
-        x: 338
-        y: 303
+        x: 1
+        y: 415
         width: 103
         height: 208
       alignment: 9
@@ -131,8 +131,8 @@ TextureImporter:
       name: PickupBugo
       rect:
         serializedVersion: 2
-        x: 376
-        y: 145
+        x: 363
+        y: 682
         width: 129
         height: 133
       alignment: 9
@@ -145,8 +145,8 @@ TextureImporter:
       name: PickupCat
       rect:
         serializedVersion: 2
-        x: 116
-        y: 23
+        x: 168
+        y: 643
         width: 154
         height: 150
       alignment: 9
@@ -159,8 +159,8 @@ TextureImporter:
       name: PickupFox
       rect:
         serializedVersion: 2
-        x: 188
-        y: 336
+        x: 1
+        y: 625
         width: 165
         height: 175
       alignment: 9
@@ -173,8 +173,8 @@ TextureImporter:
       name: PickupHippo
       rect:
         serializedVersion: 2
-        x: 1
-        y: 82
+        x: 363
+        y: 817
         width: 134
         height: 206
       alignment: 9
@@ -187,8 +187,8 @@ TextureImporter:
       name: PickupHruumpf
       rect:
         serializedVersion: 2
-        x: 376
-        y: 280
+        x: 188
+        y: 910
         width: 173
         height: 113
       alignment: 9
@@ -201,8 +201,8 @@ TextureImporter:
       name: PickupHruumpf2
       rect:
         serializedVersion: 2
-        x: 431
-        y: 395
+        x: 188
+        y: 795
         width: 173
         height: 113
       alignment: 9
@@ -216,7 +216,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 290
+        y: 802
         width: 185
         height: 221
       alignment: 0
@@ -229,8 +229,8 @@ TextureImporter:
       name: PickupMrTaco
       rect:
         serializedVersion: 2
-        x: 300
-        y: 79
+        x: 435
+        y: 459
         width: 74
         height: 221
       alignment: 9
@@ -243,8 +243,8 @@ TextureImporter:
       name: PickupPandy
       rect:
         serializedVersion: 2
-        x: 188
-        y: 116
+        x: 324
+        y: 462
         width: 109
         height: 218
       alignment: 9
@@ -257,8 +257,8 @@ TextureImporter:
       name: PickupRobby7
       rect:
         serializedVersion: 2
-        x: 606
-        y: 389
+        x: 168
+        y: 519
         width: 107
         height: 122
       alignment: 9
