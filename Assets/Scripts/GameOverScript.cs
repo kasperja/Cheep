@@ -650,6 +650,7 @@ public class GameOverScript : MonoBehaviour {
 #endif
 
 
+
             )) {
 			
 			if (isQuickRestart) {
@@ -695,16 +696,17 @@ public class GameOverScript : MonoBehaviour {
 
 		musicBool = true;
         //yield return new WaitForSeconds (0.5f);
-        
+
 
 #if UNITY_IOS
-        if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount)Advertisement.Show ();
+        if(!disableAds && ES2.Exists ("myCurrentScore") && showAdCount && Advertisement.IsReady())Advertisement.Show ();
 #endif
 #if UNITY_ANDROID
-        if (!disableAds && ES2.Exists("myCurrentScore") && showAdCount) Advertisement.Show();
+        if (!disableAds && ES2.Exists("myCurrentScore") && showAdCount && Advertisement.IsReady()) Advertisement.Show();
 #endif
+#if !UNITY_IOS && !UNITY_ANDROID
 
-
+#endif
 
 
 
