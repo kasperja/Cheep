@@ -205,7 +205,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
         for (var i = 0; i < gameObjects.Length; i++)
         {
 
-          //  Destroy(gameObjects[i]);
+            Destroy(gameObjects[i]);
         }
     }
     public void DestroyAllObjectsUnlocker()
@@ -854,6 +854,7 @@ public class SpawnScriptUnlocker : MonoBehaviour
             }
             achievemntUnlockedThisGame = true;
             DestroyAllObjects();
+            DestroyAllObjectsUnlocker();
             popupAchievement.SetActive(true);
 
             ES2.Save(achievementMaxPoints[currentChar], "a" + currentChar);
