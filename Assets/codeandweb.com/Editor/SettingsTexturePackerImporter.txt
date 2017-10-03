@@ -61,6 +61,7 @@ tpsheetFileNames:
 - Assets/Textures/FlagsTemple/flagsLeft-0-0.tpsheet
 - Assets/Textures/FlagsTemple/flagsRight-0.tpsheet
 - Assets/Textures/Menuer/ButtonsWIthBlacked-0.tpsheet
+- Assets/Textures/Menuer/CharIconsAtlas-0.tpsheet
 - Assets/Textures/Pickups/PickupAtlas-0.tpsheet
 - Assets/Textures/snowflake/SnowflakesAtlas-0.tpsheet
 - Assets/Textures/TreesAtlas-0.tpsheet
@@ -125,11 +126,13 @@ textureFileNames:
 - Assets/Textures/FlagsTemple/flagsLeft-0-0.png
 - Assets/Textures/FlagsTemple/flagsRight-0.png
 - Assets/Textures/Menuer/ButtonsWIthBlacked-0.png
+- Assets/Textures/Menuer/CharIconsAtlas-0.png
 - Assets/Textures/Pickups/PickupAtlas-0.png
 - Assets/Textures/snowflake/SnowflakesAtlas-0.png
 - Assets/Textures/TreesAtlas-0.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 
