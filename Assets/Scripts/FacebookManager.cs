@@ -165,7 +165,7 @@ public class FacebookManager : MonoBehaviour {
 				FacebookManager.Instance.ProfileName + " scored " + ES2.Load<int> ("myHighscore") + " in SNÖ!",
 				"Try if you can beat it",
 				"Play for free on iPhone or Android",
-				new Uri ("http://i.imgur.com/IaZQqNx.jpg"),
+				new Uri ("https://i.imgur.com/OTiAZRS.png"),
 				string.Empty,
 				ShareCallback
 		
@@ -179,7 +179,7 @@ public class FacebookManager : MonoBehaviour {
 				FacebookManager.Instance.ProfileName + " plays SNÖ",
 				"Check out the game and compete",
 				"Play for free on iPhone or Android",
-				new Uri ("http://i.imgur.com/IaZQqNx.jpg"),
+				new Uri ("https://i.imgur.com/OTiAZRS.png"),
 				string.Empty,
 				ShareCallback
 
@@ -213,7 +213,7 @@ public class FacebookManager : MonoBehaviour {
 		FB.Mobile.AppInvite (
 
 			new Uri(AppLinkURL),
-			new Uri("http://i.imgur.com/IaZQqNx.jpg"),
+			new Uri("https://i.imgur.com/OTiAZRS.png"),
 			InviteCallback
 		
 		
