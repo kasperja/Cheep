@@ -126,6 +126,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
     public GameObject restoreButton;
 
+    public RectTransform startGameButton;
 	private void Awake(){
 
         InitializePurchasing();
@@ -147,6 +148,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 		if (noAdsPurchased) {
 
+            startGameButton.anchoredPosition = new Vector2(startGameButton.anchoredPosition.x, -63.96f);
             textObj.SetActive(false);
             gameObject.GetComponent<Button>().enabled = false;
             gameObject.GetComponent<Image>().enabled = false;
