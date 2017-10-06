@@ -146,7 +146,7 @@ public class FacebookManager : MonoBehaviour {
 		
 		} else {
 		
-			AppLinkURL = "https://snogame.com/";
+			AppLinkURL = "https://www.facebook.com/SnoApp/";
 		
 		}
 	
@@ -157,35 +157,64 @@ public class FacebookManager : MonoBehaviour {
 
 	{
 		if (ES2.Exists ("myHighscore")) {
-			
-			FB.FeedShare (
-		
-				string.Empty, 
-				new Uri (AppLinkURL),
-				FacebookManager.Instance.ProfileName + " scored " + ES2.Load<int> ("myHighscore") + " in SNÖ!",
-				"Try if you can beat it",
-				"Play for free on iPhone or Android",
-				new Uri ("https://i.imgur.com/OTiAZRS.png"),
-				string.Empty,
-				ShareCallback
-		
-			);
-		} else {
-		
+
+            //int score = ES2.Load<int>("myHighscore");
+            /*
+            FB.AppRequest(
+                message: FacebookManager.Instance.ProfileName + " scored " + ES2.Load<int> ("myHighscore") + " in SNÖ!",
+               //title: null, actionType: 0, objectId: null, to: null, data: null,
+                callback: delegate (IAppRequestResult result) {
+               Debug.Log(result.RawResult);
+    }
+);
+*/
+
+            FB.AppRequest(
+                message: "I Just got " + ES2.Load<int>("myHighscore") + " points in SNÖ! Can you beat it?",
+                to: null,
+                 // data: "{\"challenge_score\":" + ES2.Load<int>("myHighscore") + "}",
+                  title: "SNÖ Challenge!",
+                  callback: ShareCallback
+                );
+
+            /* FB.FeedShare (
+
+                 string.Empty, 
+                 link: new Uri (AppLinkURL),
+                 linkName: FacebookManager.Instance.ProfileName + " scored " + ES2.Load<int> ("myHighscore") + " in SNÖ!",
+                 //"Try if you can beat it",
+                 //"Play for free on iPhone or Android",
+                 //new Uri ("https://i.imgur.com/OTiAZRS.png"),
+                 //string.Empty,
+                 callback: ShareCallback
+
+             );*/
+        } else {
+
+            
+
+            FB.AppRequest(
+                message: "I challenge you in SNÖ!",
+                to: null,
+                 // title: null, actionType: 0, objectId: null, to: null, data: null,
+                 title: "SNÖ Challenge!",
+                 callback: ShareCallback
+            );
+            /*
 			FB.FeedShare (
 
 				string.Empty, 
-				new Uri (AppLinkURL),
-				FacebookManager.Instance.ProfileName + " plays SNÖ",
-				"Check out the game and compete",
-				"Play for free on iPhone or Android",
-				new Uri ("https://i.imgur.com/OTiAZRS.png"),
-				string.Empty,
-				ShareCallback
+				link: new Uri (AppLinkURL),
+				linkName: FacebookManager.Instance.ProfileName + " plays SNÖ",
+				//"Check out the game and compete",
+				//"Play for free on iPhone or Android",
+				//new Uri ("https://i.imgur.com/OTiAZRS.png"),
+				//string.Empty,
+				callback: ShareCallback
+                
+			);*/
 
-			);
-		
-		}
+        }
 
 	}
 
