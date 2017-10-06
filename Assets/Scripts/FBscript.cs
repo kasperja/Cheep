@@ -20,9 +20,9 @@ public class FBscript : MonoBehaviour {
 
        
 
-		FacebookManager.Instance.InitFB ();
+		//FacebookManager.Instance.InitFB ();
 
-		DealWithFBMenus (FB.IsLoggedIn);
+		//DealWithFBMenus (FB.IsLoggedIn);
 	
 	}
 
@@ -50,9 +50,9 @@ public class FBscript : MonoBehaviour {
 			
 			if (FB.IsLoggedIn) {
 
-				FacebookManager.Instance.IsLoggedIn = true;
+				//FacebookManager.Instance.IsLoggedIn = true;
 
-				FacebookManager.Instance.GetProfile ();
+				//FacebookManager.Instance.GetProfile ();
 
 				Debug.Log ("FB is logged in");
 
@@ -62,7 +62,7 @@ public class FBscript : MonoBehaviour {
 
 			}
 
-			DealWithFBMenus (FB.IsLoggedIn);
+			//DealWithFBMenus (FB.IsLoggedIn);
 
 		}
 
@@ -74,8 +74,8 @@ public class FBscript : MonoBehaviour {
 	
 		if (isLoggedIn) {
 			
-			DialogLoggedIn.SetActive (true);
-			DialogLoggedOut.SetActive (false);
+			//DialogLoggedIn.SetActive (true);
+			//DialogLoggedOut.SetActive (false);
 
 			if (FacebookManager.Instance.ProfileName != null) {
 			
@@ -106,8 +106,8 @@ public class FBscript : MonoBehaviour {
 		
 		} else {
 
-			DialogLoggedIn.SetActive (false);
-			DialogLoggedOut.SetActive (true);
+			//DialogLoggedIn.SetActive (false);
+			//DialogLoggedOut.SetActive (true);
 
 		}
 	
