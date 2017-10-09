@@ -102,7 +102,7 @@ public class PurchaseNoAds : MonoBehaviour, IStoreListener
 
 
 
-        RestorePurchases();
+      //  RestorePurchases();
 
 
 
