@@ -164,7 +164,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 #elif UNITY_ANDROID
 
-        restoreButton.SetActive(false);
+       // restoreButton.SetActive(false);
         
 
 #else
@@ -185,7 +185,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 #elif UNITY_ANDROID
 
-        restoreButton.SetActive(false);
+    //    restoreButton.SetActive(false);
         RestorePurchases();
 
 #else
