@@ -6,6 +6,7 @@ public class PressedButton : MonoBehaviour {
 	private Animator animatorButton;
 	private AudioSource buttonSound;
 	public bool hasSound = true;
+    public bool hasAnim = true;
 	// Use this for initialization
 	void Start () {
 		animatorButton = GetComponent<Animator> ();
@@ -18,7 +19,8 @@ public class PressedButton : MonoBehaviour {
 	}
 
 	public void PlayAnim(){
-		animatorButton.SetBool ("Pressed", true);
+        //buttonSound = GetComponent<AudioSource>();
+       if(hasAnim) animatorButton.SetBool ("Pressed", true);
 		if(hasSound)buttonSound.Play ();
 		StartCoroutine (waitFalse ());
 	
@@ -27,7 +29,7 @@ public class PressedButton : MonoBehaviour {
 	IEnumerator waitFalse() {
 
 		yield return new WaitForSeconds (0f);
-		animatorButton.SetBool ("Pressed", false);
+		if(hasAnim)animatorButton.SetBool ("Pressed", false);
 	
 	}
 }
