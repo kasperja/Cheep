@@ -1118,7 +1118,7 @@ using UnityEngine.UI;
     void Start()
 		{
         findButtonsScript.FindInActive();
-        RestorePurchases();
+       // RestorePurchases();
 
         if (ES2.Exists ("char1Unlock")) {
 
