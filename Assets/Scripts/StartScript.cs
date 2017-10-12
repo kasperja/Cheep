@@ -44,7 +44,7 @@ public class StartScript : MonoBehaviour {
 			Application.Quit ();
 		}*/
 	
-		if(Input.GetKeyDown (KeyCode.O) || deleteSaves)ES2.DeleteDefaultFolder();
+		//if(Input.GetKeyDown (KeyCode.O) || deleteSaves)ES2.DeleteDefaultFolder();
 
 	}
 

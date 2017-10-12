@@ -426,7 +426,7 @@ public class LavineMove : MonoBehaviour {
             if (rollOnce && !pc2D.isDead) {
                 unlockerScript.spawnEnabled = false;
                 unlockerScript.DestroyAllObjectsUnlocker();
-                unlockerScript.DestroyAllObjects();
+                //unlockerScript.DestroyAllObjects();
                 
 
                 lavineSoundLoop.Play();
