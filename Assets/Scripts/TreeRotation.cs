@@ -9,6 +9,7 @@ public class TreeRotation : MonoBehaviour {
 	//public float speed = 10f;
 	//public RotateCam rCam;
 	public bool isFG = false;
+    public bool isTriangleFG = false;
     public bool isTemple = false;
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class TreeRotation : MonoBehaviour {
 			transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
         } else {
 
-			transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
+            if (!isTriangleFG) transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
 
         }
 		//rCam = target.GetComponent<RotateCam> ();
@@ -36,7 +37,7 @@ public class TreeRotation : MonoBehaviour {
 
         }else {
 
-            transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
+            if (!isTriangleFG) transform.rotation = Quaternion.Euler(0f, 0f, target.rotation.eulerAngles.z);
 
         }
         //transform.LookAt (new Vector3(transform.position.x, transform.position.z + 1000000f, -transform.position.y), Vector3.up);
