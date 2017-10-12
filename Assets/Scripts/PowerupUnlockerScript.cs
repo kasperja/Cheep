@@ -17,7 +17,9 @@ public class PowerupUnlockerScript : MonoBehaviour {
 
     public bool setFalse = false;
 
-    private ParticleSystem pickupParticle; 
+    private ParticleSystem pickupParticle;
+
+    
 	//public HUDScript hudScript;
 
 	void Start(){
@@ -56,11 +58,20 @@ public class PowerupUnlockerScript : MonoBehaviour {
         if (other.tag == "Player")
         {
 
-
+            spawnUnlocker.StartCoroutine(spawnUnlocker.IncreaseReadyNum());
 
             //spawnUnlocker = GameObject.Find ("PowerupSpawn top unlocker").GetComponent<SpawnScriptUnlocker> ();
+            Debug.Log("picked up");
 
-            spawnUnlocker.numberOfPickups += 1f;
+            if (spawnUnlocker.increaseReady) {
+                
+                spawnUnlocker.numberOfPickups += 1f;
+
+                Debug.Log("increased");
+
+                spawnUnlocker.increaseReady = false;
+
+            }
 
             spawnUnlocker.UIanimator.SetBool("pickedup", true);
 

@@ -34,6 +34,8 @@ public class SpawnScriptUnlocker : MonoBehaviour
     public float numberOfPickups = 0f;
     private float origNumberOfPickups = 0f;
 
+    public bool increaseReady = true;
+
     private bool startOnce = true;
     private bool startTextOnce = false;
 
@@ -217,8 +219,9 @@ public class SpawnScriptUnlocker : MonoBehaviour
 
             if (!gameObjectsUnlocker[i].GetComponentInChildren<SpriteRenderer>().isVisible) Destroy(gameObjectsUnlocker[i].transform.parent.gameObject);
         }
-
         
+
+
 
     }
     public void DestroyAllObjectsSuper()
@@ -2411,11 +2414,22 @@ public class SpawnScriptUnlocker : MonoBehaviour
         spawnReady = true;
 
         destroyOnce = true;
+
+        
+    }
+
+    public IEnumerator IncreaseReadyNum() {
+
+        yield return new WaitForSeconds(2f);
+
+        increaseReady = true;
+
+
     }
 
     public void Spawn()
     {
-
+       
 
         if (!allCharsUnlocked && spawnEnabled)
         {

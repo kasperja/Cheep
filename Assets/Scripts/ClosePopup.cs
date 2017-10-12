@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClosePopup : MonoBehaviour {
 
     public GameObject popup;
+    public AudioSource buttonSound;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,7 +17,7 @@ public class ClosePopup : MonoBehaviour {
 	}
     public void Close() {
 
-
+        buttonSound.Play();
         popup.SetActive(false);
 
 
