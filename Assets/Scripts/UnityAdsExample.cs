@@ -8,8 +8,8 @@ public class UnityAdsExample : MonoBehaviour
 {
 #if UNITY_IOS
 
-	[SerializeField] private string androidGameId = "18658"; //ID for testing
-	[SerializeField] private string iosGameId = "18660"; //ID for testing
+	[SerializeField] private string androidGameId = "1326167""; //ID for testing
+	[SerializeField] private string iosGameId = "1326168"; //ID for testing
 
 	[SerializeField] bool enableTestMode;
 
@@ -38,8 +38,8 @@ public class UnityAdsExample : MonoBehaviour
 
 
 #elif UNITY_ANDROID
-    [SerializeField] private string androidGameId = "18658"; //ID for testing
-	[SerializeField] private string iosGameId = "18660"; //ID for testing
+    [SerializeField] private string androidGameId = "1326167"; //ID for testing
+	[SerializeField] private string iosGameId = "1326168"; //ID for testing
 
 	[SerializeField] bool enableTestMode;
 
