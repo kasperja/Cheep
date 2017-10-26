@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: ee7c6e0fb7a2689448f46a5b5267f6c8
+timeCreated: 1509003043
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: jump01Lizard-0008
+    21300002: jump01Lizard-0012
+    21300004: jump02Lizard-0002
+    21300006: jump02Lizard-0007
+    21300008: jump02Lizard-0012
+    21300010: jump03Lizard-0002
+    21300012: jump03Lizard-0003
+    21300014: jump03Lizard-0004
+    21300016: jump03Lizard-0005
+    21300018: jump03Lizard-0007
+    21300020: jump03Lizard-0009
+    21300022: jump03Lizard-0011
+    21300024: jump03Lizard-0012
+    21300026: jump03Lizard-0013
+    21300028: jump03Lizard-0014
+    21300030: skiingLizard-0000
+    21300032: skiingLizard-0001
+    21300034: skiingLizard-0002
+    21300036: skiingLizard-0003
+    21300038: skiingLizard-0004
+    21300040: skiingLizard-0005
+    21300042: skiingLizard-0006
+    21300044: skiingLizard-0007
+    21300046: skiingLizard-0008
+    21300048: skiingLizard-0011
+    21300050: skiingLizard-0012
+    21300052: skiingLizard-0013
+    21300054: skiingLizard-0014
+    21300056: skiingLizard-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jump01Lizard-0008
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1142
+        width: 390
+        height: 315
+      alignment: 9
+      pivot: {x: 0.52307695, y: 0.51746035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump01Lizard-0012
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1183
+        width: 407
+        height: 322
+      alignment: 9
+      pivot: {x: 0.55036855, y: 0.5341615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump02Lizard-0002
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1434
+        width: 411
+        height: 322
+      alignment: 9
+      pivot: {x: 0.5863747, y: 0.46583852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump02Lizard-0007
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1286
+        width: 391
+        height: 333
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.4894895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump02Lizard-0012
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1706
+        width: 401
+        height: 341
+      alignment: 9
+      pivot: {x: 0.56857854, y: 0.48387095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1700
+        width: 396
+        height: 347
+      alignment: 9
+      pivot: {x: 0.49242425, y: 0.4610951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0003
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1301
+        width: 373
+        height: 348
+      alignment: 9
+      pivot: {x: 0.47184986, y: 0.46264368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0004
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1700
+        width: 373
+        height: 347
+      alignment: 9
+      pivot: {x: 0.461126, y: 0.46397695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0005
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1407
+        width: 352
+        height: 362
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.48895028}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0007
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1055
+        width: 325
+        height: 385
+      alignment: 9
+      pivot: {x: 0.39076924, y: 0.5246753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0009
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 1665
+        width: 324
+        height: 382
+      alignment: 9
+      pivot: {x: 0.38580248, y: 0.5209424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0011
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1476
+        width: 340
+        height: 381
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.5249344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0012
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1250
+        width: 338
+        height: 369
+      alignment: 9
+      pivot: {x: 0.40236688, y: 0.49593496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0013
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1447
+        width: 379
+        height: 363
+      alignment: 9
+      pivot: {x: 0.42480212, y: 0.4986226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: jump03Lizard-0014
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1694
+        width: 369
+        height: 353
+      alignment: 9
+      pivot: {x: 0.45528457, y: 0.47025496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0000
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 512
+        width: 444
+        height: 221
+      alignment: 9
+      pivot: {x: 0.5743243, y: 0.3484163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0001
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 480
+        width: 447
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5771812, y: 0.385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0002
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 343
+        width: 451
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5654102, y: 0.39896372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0003
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 813
+        width: 471
+        height: 188
+      alignment: 9
+      pivot: {x: 0.54352444, y: 0.40957448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0004
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 725
+        width: 471
+        height: 180
+      alignment: 9
+      pivot: {x: 0.54989386, y: 0.43888888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0005
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1029
+        width: 513
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5048733, y: 0.45142856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0006
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 625
+        width: 476
+        height: 178
+      alignment: 9
+      pivot: {x: 0.539916, y: 0.43258426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0007
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 945
+        width: 484
+        height: 191
+      alignment: 9
+      pivot: {x: 0.6053719, y: 0.40837696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0008
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1138
+        width: 487
+        height: 208
+      alignment: 9
+      pivot: {x: 0.60780287, y: 0.37980768}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 847
+        width: 487
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5893224, y: 0.4072165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 656
+        width: 483
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5797101, y: 0.41269842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0013
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 762
+        width: 452
+        height: 181
+      alignment: 9
+      pivot: {x: 0.5641593, y: 0.43093923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0014
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 336
+        width: 457
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5645514, y: 0.44252872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingLizard-0015
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 590
+        width: 450
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5644444, y: 0.40104166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

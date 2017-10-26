@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 911474f21646b75499fc261b32038ed4
+timeCreated: 1509011722
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bugoJump1-0000
+    21300002: bugoJump1-0001
+    21300004: bugoJump1-0002
+    21300006: bugoJump1-0003
+    21300008: bugoJump1-0004
+    21300010: bugoJump1-0005
+    21300012: bugoJump1-0006
+    21300014: bugoJump1-0007
+    21300016: bugoJump1-0008
+    21300018: bugoJump1-0009
+    21300020: bugoJump1-0010
+    21300022: bugoJump1-0011
+    21300024: bugoJump1-0012
+    21300026: bugoJump1-0013
+    21300028: bugoJump1-0014
+    21300030: bugoJump1-0015
+    21300032: bugoJump2-0000
+    21300034: bugoJump2-0001
+    21300036: bugoJump2-0002
+    21300038: bugoJump2-0003
+    21300040: bugoJump2-0004
+    21300042: bugoJump2-0005
+    21300044: bugoJump2-0006
+    21300046: bugoJump2-0008
+    21300048: bugoJump2-0011
+    21300050: bugoJump2-0012
+    21300052: bugoJump2-0013
+    21300054: bugoJump2-0014
+    21300056: bugoJump2-0015
+    21300058: bugoJump3-0002
+    21300060: bugoJump3-0003
+    21300062: bugoJump3-0006
+    21300064: bugoJump3-0010
+    21300066: bugoJump3-0012
+    21300068: skiingBugo-0007
+    21300070: skiingBugo-0012
+    21300072: skiingBugo-0014
+    21300074: skiingBugo-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 83
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: 33
+    textureCompression: 2
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: 47
+    textureCompression: 2
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 10
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bugoJump1-0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1371
+        width: 353
+        height: 376
+      alignment: 9
+      pivot: {x: 0.6062323, y: 0.5265958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0001
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1040
+        width: 357
+        height: 350
+      alignment: 9
+      pivot: {x: 0.60504204, y: 0.5342857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0002
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1697
+        width: 364
+        height: 350
+      alignment: 9
+      pivot: {x: 0.61538464, y: 0.5371429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0003
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1158
+        width: 358
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5949721, y: 0.5184136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0004
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1472
+        width: 360
+        height: 365
+      alignment: 9
+      pivot: {x: 0.5861111, y: 0.5178082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0005
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1256
+        width: 360
+        height: 350
+      alignment: 9
+      pivot: {x: 0.60833335, y: 0.5342857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0006
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 549
+        width: 351
+        height: 347
+      alignment: 9
+      pivot: {x: 0.5754986, y: 0.5389049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1697
+        width: 388
+        height: 350
+      alignment: 9
+      pivot: {x: 0.6314433, y: 0.5371429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0008
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1509
+        width: 361
+        height: 361
+      alignment: 9
+      pivot: {x: 0.60387814, y: 0.51800555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0009
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1187
+        width: 338
+        height: 367
+      alignment: 9
+      pivot: {x: 0.56213015, y: 0.5558583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0010
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1442
+        width: 343
+        height: 364
+      alignment: 9
+      pivot: {x: 0.56559765, y: 0.51373625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0011
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 772
+        width: 340
+        height: 352
+      alignment: 9
+      pivot: {x: 0.5735294, y: 0.5369318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0012
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 934
+        width: 336
+        height: 371
+      alignment: 9
+      pivot: {x: 0.5833333, y: 0.50673854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1026
+        width: 337
+        height: 375
+      alignment: 9
+      pivot: {x: 0.58456975, y: 0.53866667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0014
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1604
+        width: 347
+        height: 376
+      alignment: 9
+      pivot: {x: 0.5907781, y: 0.5212766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump1-0015
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 1693
+        width: 359
+        height: 354
+      alignment: 9
+      pivot: {x: 0.60724235, y: 0.53107345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0000
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 591
+        width: 310
+        height: 380
+      alignment: 9
+      pivot: {x: 0.6870968, y: 0.55526316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0001
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1652
+        width: 268
+        height: 395
+      alignment: 9
+      pivot: {x: 0.67164177, y: 0.53417724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0002
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 614
+        width: 272
+        height: 394
+      alignment: 9
+      pivot: {x: 0.6691176, y: 0.52030456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0003
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 225
+        width: 275
+        height: 403
+      alignment: 9
+      pivot: {x: 0.68, y: 0.53349876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0004
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 1337
+        width: 270
+        height: 393
+      alignment: 9
+      pivot: {x: 0.67407405, y: 0.519084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0005
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 204
+        width: 278
+        height: 404
+      alignment: 9
+      pivot: {x: 0.68345326, y: 0.55445546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0006
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1253
+        width: 289
+        height: 376
+      alignment: 9
+      pivot: {x: 0.69550174, y: 0.55585104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 331
+        width: 252
+        height: 407
+      alignment: 9
+      pivot: {x: 0.63095236, y: 0.54299754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0011
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 105
+        width: 246
+        height: 397
+      alignment: 9
+      pivot: {x: 0.6422764, y: 0.5465995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0012
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 235
+        width: 247
+        height: 408
+      alignment: 9
+      pivot: {x: 0.64777327, y: 0.5367647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0013
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 298
+        width: 271
+        height: 402
+      alignment: 9
+      pivot: {x: 0.67527676, y: 0.53482586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0014
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 698
+        width: 304
+        height: 399
+      alignment: 9
+      pivot: {x: 0.65460527, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump2-0015
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 289
+        width: 293
+        height: 391
+      alignment: 9
+      pivot: {x: 0.6416382, y: 0.5319693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump3-0002
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 116
+        width: 304
+        height: 363
+      alignment: 9
+      pivot: {x: 0.74671054, y: 0.5509642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump3-0003
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 9
+        width: 304
+        height: 340
+      alignment: 9
+      pivot: {x: 0.73355263, y: 0.5264706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump3-0006
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 562
+        width: 289
+        height: 371
+      alignment: 9
+      pivot: {x: 0.75086504, y: 0.5471698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump3-0010
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 430
+        width: 281
+        height: 373
+      alignment: 9
+      pivot: {x: 0.74377227, y: 0.54959786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: bugoJump3-0012
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1031
+        width: 293
+        height: 386
+      alignment: 9
+      pivot: {x: 0.74061435, y: 0.55440414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingBugo-0007
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1040
+        width: 330
+        height: 323
+      alignment: 9
+      pivot: {x: 0.6424242, y: 0.49226007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingBugo-0012
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1
+        width: 296
+        height: 331
+      alignment: 9
+      pivot: {x: 0.6452703, y: 0.46827793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingBugo-0014
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 752
+        width: 330
+        height: 332
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.46686748}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingBugo-0015
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 18
+        width: 323
+        height: 328
+      alignment: 9
+      pivot: {x: 0.6408669, y: 0.4847561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
