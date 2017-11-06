@@ -509,7 +509,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 							char8Purchased = true;
 							ES2.Save (char8Purchased, "char8Purchased");
 						}
-						if (prod.definition.id == "noAds") {
+						if (prod.definition.id == "noads") {
 
 							noAdsPurchased = true;
 							ES2.Save (noAdsPurchased, "noAds");
@@ -531,8 +531,78 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 		// Otherwise ...
 		else
 		{
-			// We are not running on an Apple device. No work is necessary to restore purchases.
-			Debug.Log("RestorePurchases FAIL. Not supported on this platform. Current = " + Application.platform);
+            // We are not running on an Apple device. No work is necessary to restore purchases.
+
+            foreach (Product prod in m_StoreController.products.all)
+            {
+
+                if (prod.hasReceipt)
+                {
+
+                    if (prod.definition.id == "character1")
+                    {
+
+                        char1Purchased = true;
+                        ES2.Save(char1Purchased, "char1Purchased");
+                    }
+                    if (prod.definition.id == "character2")
+                    {
+
+                        char2Purchased = true;
+                        ES2.Save(char2Purchased, "char2Purchased");
+
+                    }
+                    if (prod.definition.id == "character3")
+                    {
+
+                        char3Purchased = true;
+                        ES2.Save(char3Purchased, "char3Purchased");
+                    }
+                    if (prod.definition.id == "character4")
+                    {
+
+                        char4Purchased = true;
+                        ES2.Save(char4Purchased, "char4Purchased");
+                    }
+                    if (prod.definition.id == "character5")
+                    {
+
+                        char5Purchased = true;
+                        ES2.Save(char5Purchased, "char5Purchased");
+                    }
+                    if (prod.definition.id == "character6")
+                    {
+
+                        char6Purchased = true;
+                        ES2.Save(char6Purchased, "char6Purchased");
+                    }
+                    if (prod.definition.id == "character7")
+                    {
+
+                        char7Purchased = true;
+                        ES2.Save(char7Purchased, "char7Purchased");
+
+                    }
+                    if (prod.definition.id == "character8")
+                    {
+
+                        char8Purchased = true;
+                        ES2.Save(char8Purchased, "char8Purchased");
+                    }
+                    if (prod.definition.id == "noads")
+                    {
+
+                        noAdsPurchased = true;
+                        ES2.Save(noAdsPurchased, "noAds");
+                    }
+
+
+
+                }
+
+            }
+
+            Debug.Log("RestorePurchases FAIL. Not supported on this platform. Current = " + Application.platform);
 		}
 	}
 
