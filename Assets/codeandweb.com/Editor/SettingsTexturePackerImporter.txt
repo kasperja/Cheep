@@ -4,55 +4,31 @@ tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 - Assets/Textures/Birds/birdFlying-0.tpsheet
 - Assets/Textures/Birds/birdIdle-0.tpsheet
-- Assets/Textures/Cheep/Alien/AlienJump01-0.tpsheet
-- Assets/Textures/Cheep/Alien/AlienJump02-0.tpsheet
-- Assets/Textures/Cheep/Alien/AlienJump03-0.tpsheet
-- Assets/Textures/Cheep/Alien/AlienSkiing-0.tpsheet
-- Assets/Textures/Cheep/Bugo/BugoJump1-0.tpsheet
-- Assets/Textures/Cheep/Bugo/BugoJump2-0.tpsheet
-- Assets/Textures/Cheep/Bugo/BugoJump3-0.tpsheet
-- Assets/Textures/Cheep/Bugo/BugoSkiing-0.tpsheet
-- Assets/Textures/Cheep/Cat/CatJump01-0.tpsheet
-- Assets/Textures/Cheep/Cat/CatJump02-0.tpsheet
-- Assets/Textures/Cheep/Cat/CatJump03-0.tpsheet
-- Assets/Textures/Cheep/Cat/CatSkiing-0.tpsheet
-- Assets/Textures/Cheep/Fox/foxjump1-0.tpsheet
-- Assets/Textures/Cheep/Fox/foxjump2-0.tpsheet
-- Assets/Textures/Cheep/Fox/foxjump3-0.tpsheet
-- Assets/Textures/Cheep/Fox/skiing-0.tpsheet
-- Assets/Textures/Cheep/Hippo/HippoJump01-0.tpsheet
-- Assets/Textures/Cheep/Hippo/HippoJump02-0.tpsheet
-- Assets/Textures/Cheep/Hippo/HippoJump03-0.tpsheet
-- Assets/Textures/Cheep/Hippo/HippoSkiing-0.tpsheet
-- Assets/Textures/Cheep/Hrumpf/HrumpfJump1-0.tpsheet
-- Assets/Textures/Cheep/Hrumpf/HrumpfJump2-0.tpsheet
-- Assets/Textures/Cheep/Hrumpf/HrumpfJump3-0.tpsheet
-- Assets/Textures/Cheep/Hrumpf/SkiingHrumpf-0.tpsheet
-- Assets/Textures/Cheep/Lizard/LizardJump01-0.tpsheet
-- Assets/Textures/Cheep/Lizard/LizardJump02-0.tpsheet
-- Assets/Textures/Cheep/Lizard/LizardJump03-0.tpsheet
-- Assets/Textures/Cheep/Lizard/LizardSkiing-0.tpsheet
+- Assets/Textures/Cheep/Alien/Alien-0.tpsheet
+- Assets/Textures/Cheep/Bugo/Bugo-0.tpsheet
+- Assets/Textures/Cheep/Bugo/Bugo-1.tpsheet
+- Assets/Textures/Cheep/Cat/Cat-0.tpsheet
+- Assets/Textures/Cheep/Cat/Cat-1.tpsheet
+- Assets/Textures/Cheep/Fox/Fox-0.tpsheet
+- Assets/Textures/Cheep/Fox/Fox-1.tpsheet
+- Assets/Textures/Cheep/Hippo/Hippo-0.tpsheet
+- Assets/Textures/Cheep/Hippo/Hippo-1.tpsheet
+- Assets/Textures/Cheep/Hrumpf/Hrumpf-0.tpsheet
+- Assets/Textures/Cheep/Hrumpf/Hrumpf-1.tpsheet
+- Assets/Textures/Cheep/Lizard/Lizard-0.tpsheet
+- Assets/Textures/Cheep/Lizard/Lizard-1.tpsheet
 - Assets/Textures/Cheep/ObstacleAtlas-0.tpsheet
-- Assets/Textures/Cheep/Panda/PandaJump1-0.tpsheet
-- Assets/Textures/Cheep/Panda/PandaJump2-0.tpsheet
-- Assets/Textures/Cheep/Panda/PandaJump3-0.tpsheet
-- Assets/Textures/Cheep/Panda/PandaSkiing-0.tpsheet
+- Assets/Textures/Cheep/Panda/Panda-0.tpsheet
+- Assets/Textures/Cheep/Panda/Panda-1.tpsheet
 - Assets/Textures/Cheep/platfomVariantsAtlas-0.tpsheet
 - Assets/Textures/Cheep/platfomVariantsAtlas-1.tpsheet
-- Assets/Textures/Cheep/Robby/RobbyJump1-0.tpsheet
-- Assets/Textures/Cheep/Robby/RobbyJump1-1.tpsheet
-- Assets/Textures/Cheep/Robby/RobbyJump2-0.tpsheet
-- Assets/Textures/Cheep/Robby/RobbyJump2-1.tpsheet
-- Assets/Textures/Cheep/Robby/RobbyJump3-0.tpsheet
-- Assets/Textures/Cheep/Robby/RobbyJump3-1.tpsheet
-- Assets/Textures/Cheep/Robby/RobbySkiing-0.tpsheet
-- Assets/Textures/Cheep/Robby/RobbySkiing-1.tpsheet
+- Assets/Textures/Cheep/Robby/Robby-0.tpsheet
+- Assets/Textures/Cheep/Robby/Robby-1.tpsheet
+- Assets/Textures/Cheep/Robby/Robby-2.tpsheet
 - Assets/Textures/Cheep/SpikeWalls-0.tpsheet
 - Assets/Textures/Cheep/SpikeWalls-1.tpsheet
-- Assets/Textures/Cheep/Taco/TacoJump1-0.tpsheet
-- Assets/Textures/Cheep/Taco/TacoJump2-0.tpsheet
-- Assets/Textures/Cheep/Taco/TacoJump3-0.tpsheet
-- Assets/Textures/Cheep/Taco/TacoSkiing-0.tpsheet
+- Assets/Textures/Cheep/Taco/Taco-0.tpsheet
+- Assets/Textures/Cheep/Taco/Taco-1.tpsheet
 - Assets/Textures/Cheep/TrailsAtlas.tpsheet
 - Assets/Textures/Cheep/TrailsAtlas-0.tpsheet
 - Assets/Textures/Cheep/Yeti/Yeti-Skiing-0.tpsheet
@@ -69,55 +45,31 @@ textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Textures/Birds/birdFlying-0.png
 - Assets/Textures/Birds/birdIdle-0.png
-- Assets/Textures/Cheep/Alien/AlienJump01-0.png
-- Assets/Textures/Cheep/Alien/AlienJump02-0.png
-- Assets/Textures/Cheep/Alien/AlienJump03-0.png
-- Assets/Textures/Cheep/Alien/AlienSkiing-0.png
-- Assets/Textures/Cheep/Bugo/BugoJump1-0.png
-- Assets/Textures/Cheep/Bugo/BugoJump2-0.png
-- Assets/Textures/Cheep/Bugo/BugoJump3-0.png
-- Assets/Textures/Cheep/Bugo/BugoSkiing-0.png
-- Assets/Textures/Cheep/Cat/CatJump01-0.png
-- Assets/Textures/Cheep/Cat/CatJump02-0.png
-- Assets/Textures/Cheep/Cat/CatJump03-0.png
-- Assets/Textures/Cheep/Cat/CatSkiing-0.png
-- Assets/Textures/Cheep/Fox/foxjump1-0.png
-- Assets/Textures/Cheep/Fox/foxjump2-0.png
-- Assets/Textures/Cheep/Fox/foxjump3-0.png
-- Assets/Textures/Cheep/Fox/skiing-0.png
-- Assets/Textures/Cheep/Hippo/HippoJump01-0.png
-- Assets/Textures/Cheep/Hippo/HippoJump02-0.png
-- Assets/Textures/Cheep/Hippo/HippoJump03-0.png
-- Assets/Textures/Cheep/Hippo/HippoSkiing-0.png
-- Assets/Textures/Cheep/Hrumpf/HrumpfJump1-0.png
-- Assets/Textures/Cheep/Hrumpf/HrumpfJump2-0.png
-- Assets/Textures/Cheep/Hrumpf/HrumpfJump3-0.png
-- Assets/Textures/Cheep/Hrumpf/SkiingHrumpf-0.png
-- Assets/Textures/Cheep/Lizard/LizardJump01-0.png
-- Assets/Textures/Cheep/Lizard/LizardJump02-0.png
-- Assets/Textures/Cheep/Lizard/LizardJump03-0.png
-- Assets/Textures/Cheep/Lizard/LizardSkiing-0.png
+- Assets/Textures/Cheep/Alien/Alien-0.png
+- Assets/Textures/Cheep/Bugo/Bugo-0.png
+- Assets/Textures/Cheep/Bugo/Bugo-1.png
+- Assets/Textures/Cheep/Cat/Cat-0.png
+- Assets/Textures/Cheep/Cat/Cat-1.png
+- Assets/Textures/Cheep/Fox/Fox-0.png
+- Assets/Textures/Cheep/Fox/Fox-1.png
+- Assets/Textures/Cheep/Hippo/Hippo-0.png
+- Assets/Textures/Cheep/Hippo/Hippo-1.png
+- Assets/Textures/Cheep/Hrumpf/Hrumpf-0.png
+- Assets/Textures/Cheep/Hrumpf/Hrumpf-1.png
+- Assets/Textures/Cheep/Lizard/Lizard-0.png
+- Assets/Textures/Cheep/Lizard/Lizard-1.png
 - Assets/Textures/Cheep/ObstacleAtlas-0.png
-- Assets/Textures/Cheep/Panda/PandaJump1-0.png
-- Assets/Textures/Cheep/Panda/PandaJump2-0.png
-- Assets/Textures/Cheep/Panda/PandaJump3-0.png
-- Assets/Textures/Cheep/Panda/PandaSkiing-0.png
+- Assets/Textures/Cheep/Panda/Panda-0.png
+- Assets/Textures/Cheep/Panda/Panda-1.png
 - Assets/Textures/Cheep/platfomVariantsAtlas-0.png
 - Assets/Textures/Cheep/platfomVariantsAtlas-1.png
-- Assets/Textures/Cheep/Robby/RobbyJump1-0.png
-- Assets/Textures/Cheep/Robby/RobbyJump1-1.png
-- Assets/Textures/Cheep/Robby/RobbyJump2-0.png
-- Assets/Textures/Cheep/Robby/RobbyJump2-1.png
-- Assets/Textures/Cheep/Robby/RobbyJump3-0.png
-- Assets/Textures/Cheep/Robby/RobbyJump3-1.png
-- Assets/Textures/Cheep/Robby/RobbySkiing-0.png
-- Assets/Textures/Cheep/Robby/RobbySkiing-1.png
+- Assets/Textures/Cheep/Robby/Robby-0.png
+- Assets/Textures/Cheep/Robby/Robby-1.png
+- Assets/Textures/Cheep/Robby/Robby-2.png
 - Assets/Textures/Cheep/SpikeWalls-0.png
 - Assets/Textures/Cheep/SpikeWalls-1.png
-- Assets/Textures/Cheep/Taco/TacoJump1-0.png
-- Assets/Textures/Cheep/Taco/TacoJump2-0.png
-- Assets/Textures/Cheep/Taco/TacoJump3-0.png
-- Assets/Textures/Cheep/Taco/TacoSkiing-0.png
+- Assets/Textures/Cheep/Taco/Taco-0.png
+- Assets/Textures/Cheep/Taco/Taco-1.png
 - Assets/Textures/Cheep/TrailsAtlas-0.png
 - Assets/Textures/Cheep/TrailsAtlas-0.png
 - Assets/Textures/Cheep/Yeti/Yeti-Skiing-0.png
@@ -132,30 +84,6 @@ textureFileNames:
 - Assets/Textures/TreesAtlas-0.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
 - 
 - 
 - 

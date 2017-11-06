@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 679e1219c8f29f047860c62f94000ed4
+timeCreated: 1509012339
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hrumpfJump1-0000
+    21300002: hrumpfJump1-0002
+    21300004: hrumpfJump1-0003
+    21300006: hrumpfJump1-0004
+    21300008: hrumpfJump1-0005
+    21300010: hrumpfJump1-0006
+    21300012: hrumpfJump1-0007
+    21300014: hrumpfJump1-0008
+    21300016: hrumpfJump1-0009
+    21300018: hrumpfJump1-0010
+    21300020: hrumpfJump1-0011
+    21300022: hrumpfJump1-0012
+    21300024: hrumpfJump1-0013
+    21300026: hrumpfJump1-0014
+    21300028: hrumpfJump1-0015
+    21300030: hrumpfJump2-0002
+    21300032: hrumpfJump2-0003
+    21300034: hrumpfJump2-0004
+    21300036: hrumpfJump2-0005
+    21300038: hrumpfJump2-0006
+    21300040: hrumpfJump2-0007
+    21300042: hrumpfJump2-0008
+    21300044: hrumpfJump2-0009
+    21300046: hrumpfJump2-0010
+    21300048: hrumpfJump2-0011
+    21300050: hrumpfJump2-0012
+    21300052: hrumpfJump2-0013
+    21300054: hrumpfJump2-0014
+    21300056: hrumpfJump2-0015
+    21300058: hrumpfJump3-0003
+    21300060: hrumpfJump3-0008
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 83
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hrumpfJump1-0000
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 603
+        width: 334
+        height: 363
+      alignment: 9
+      pivot: {x: 0.44610777, y: 0.553719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0002
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 6
+        width: 341
+        height: 350
+      alignment: 9
+      pivot: {x: 0.4340176, y: 0.56285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 536
+        width: 341
+        height: 356
+      alignment: 9
+      pivot: {x: 0.4398827, y: 0.5533708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0004
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 1694
+        width: 371
+        height: 353
+      alignment: 9
+      pivot: {x: 0.41239893, y: 0.5750708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0005
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 457
+        width: 359
+        height: 349
+      alignment: 9
+      pivot: {x: 0.4373259, y: 0.5816619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0006
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1702
+        width: 390
+        height: 345
+      alignment: 9
+      pivot: {x: 0.41025642, y: 0.5942029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0007
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 900
+        width: 369
+        height: 344
+      alignment: 9
+      pivot: {x: 0.4498645, y: 0.59011626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1681
+        width: 376
+        height: 366
+      alignment: 9
+      pivot: {x: 0.41489363, y: 0.57923496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0009
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1173
+        width: 372
+        height: 342
+      alignment: 9
+      pivot: {x: 0.4543011, y: 0.58187133}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0010
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1707
+        width: 397
+        height: 340
+      alignment: 9
+      pivot: {x: 0.41309825, y: 0.5882353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0011
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 113
+        width: 350
+        height: 342
+      alignment: 9
+      pivot: {x: 0.45714286, y: 0.5847953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0012
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 632
+        width: 356
+        height: 346
+      alignment: 9
+      pivot: {x: 0.4522472, y: 0.5780347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0013
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 475
+        width: 349
+        height: 350
+      alignment: 9
+      pivot: {x: 0.4469914, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0014
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 514
+        width: 347
+        height: 356
+      alignment: 9
+      pivot: {x: 0.43227667, y: 0.58426964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump1-0015
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 342
+        width: 335
+        height: 361
+      alignment: 9
+      pivot: {x: 0.44179106, y: 0.5512465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0002
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 155
+        width: 339
+        height: 356
+      alignment: 9
+      pivot: {x: 0.4660767, y: 0.55617976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0003
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 899
+        width: 347
+        height: 350
+      alignment: 9
+      pivot: {x: 0.45821327, y: 0.5542857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0004
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 210
+        width: 332
+        height: 362
+      alignment: 9
+      pivot: {x: 0.46084338, y: 0.5718232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0005
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1669
+        width: 354
+        height: 378
+      alignment: 9
+      pivot: {x: 0.4519774, y: 0.5767196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0006
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 692
+        width: 341
+        height: 368
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0.5706522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0007
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 172
+        width: 341
+        height: 349
+      alignment: 9
+      pivot: {x: 0.48680353, y: 0.56160456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0008
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1149
+        width: 341
+        height: 378
+      alignment: 9
+      pivot: {x: 0.48680353, y: 0.5952381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0009
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1676
+        width: 349
+        height: 371
+      alignment: 9
+      pivot: {x: 0.46991405, y: 0.5849057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0010
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 26
+        width: 339
+        height: 351
+      alignment: 9
+      pivot: {x: 0.47492626, y: 0.5641026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0011
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1336
+        width: 346
+        height: 372
+      alignment: 9
+      pivot: {x: 0.45953757, y: 0.5860215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0012
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1184
+        width: 336
+        height: 355
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0.5605634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1101
+        width: 349
+        height: 363
+      alignment: 9
+      pivot: {x: 0.44126076, y: 0.56749314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0014
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1382
+        width: 359
+        height: 371
+      alignment: 9
+      pivot: {x: 0.454039, y: 0.5902965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump2-0015
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 1243
+        width: 335
+        height: 379
+      alignment: 9
+      pivot: {x: 0.46567163, y: 0.58575195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump3-0003
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 6
+        width: 294
+        height: 372
+      alignment: 9
+      pivot: {x: 0.6394558, y: 0.5188172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hrumpfJump3-0008
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 914
+        width: 286
+        height: 360
+      alignment: 9
+      pivot: {x: 0.6503497, y: 0.575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

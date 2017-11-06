@@ -1,0 +1,346 @@
+fileFormatVersion: 2
+guid: 388837f8378579648895174f3639a8d5
+timeCreated: 1509010950
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: robbyJump3-0000
+    21300002: robbyJump3-0001
+    21300004: robbyJump3-0005
+    21300006: robbyJump3-0006
+    21300008: robbyJump3-0008
+    21300010: robbyJump3-0010
+    21300012: robbyJump3-0013
+    21300014: robbyJump3-0014
+    21300016: robbyJump3-0015
+    21300018: skiingRobby-0000
+    21300020: skiingRobby-0001
+    21300022: skiingRobby-0007
+    21300024: skiingRobby-0008
+    21300026: skiingRobby-0009
+    21300028: skiingRobby-0010
+    21300030: skiingRobby-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 83
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: robbyJump3-0000
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1442
+        width: 374
+        height: 433
+      alignment: 9
+      pivot: {x: 0.6069519, y: 0.5196305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0001
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 828
+        width: 367
+        height: 429
+      alignment: 9
+      pivot: {x: 0.640327, y: 0.5244755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0005
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1315
+        width: 376
+        height: 432
+      alignment: 9
+      pivot: {x: 0.6143617, y: 0.5138889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1615
+        width: 377
+        height: 432
+      alignment: 9
+      pivot: {x: 0.64456236, y: 0.5208333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0008
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1621
+        width: 374
+        height: 426
+      alignment: 9
+      pivot: {x: 0.64171124, y: 0.5164319}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0010
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1614
+        width: 369
+        height: 432
+      alignment: 9
+      pivot: {x: 0.6585366, y: 0.5208333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0013
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1621
+        width: 374
+        height: 426
+      alignment: 9
+      pivot: {x: 0.6363636, y: 0.52112675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0014
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 1622
+        width: 374
+        height: 425
+      alignment: 9
+      pivot: {x: 0.62299466, y: 0.52705884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: robbyJump3-0015
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 808
+        width: 366
+        height: 425
+      alignment: 9
+      pivot: {x: 0.6284153, y: 0.5294118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0000
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 859
+        width: 408
+        height: 373
+      alignment: 9
+      pivot: {x: 0.50490195, y: 0.49061662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0001
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1234
+        width: 428
+        height: 375
+      alignment: 9
+      pivot: {x: 0.5420561, y: 0.48533332}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0007
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 836
+        width: 380
+        height: 374
+      alignment: 9
+      pivot: {x: 0.4631579, y: 0.486631}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0008
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 899
+        width: 404
+        height: 375
+      alignment: 9
+      pivot: {x: 0.48267326, y: 0.488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0009
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1212
+        width: 435
+        height: 369
+      alignment: 9
+      pivot: {x: 0.53103447, y: 0.49322492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0010
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1249
+        width: 427
+        height: 372
+      alignment: 9
+      pivot: {x: 0.48946136, y: 0.48924732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: skiingRobby-0015
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1235
+        width: 426
+        height: 375
+      alignment: 9
+      pivot: {x: 0.5399061, y: 0.48533332}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

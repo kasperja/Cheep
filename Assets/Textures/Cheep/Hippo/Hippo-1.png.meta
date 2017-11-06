@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 0644693faa084ea439388d043e69c400
+timeCreated: 1509009885
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hippo-jump01-0002
+    21300002: hippo-jump01-0008
+    21300004: hippo-jump01-0011
+    21300006: hippo-jump01-0012
+    21300008: hippo-jump01-0013
+    21300010: hippo-jump01-0014
+    21300012: hippo-jump01-0015
+    21300014: hippo-jump02-0004
+    21300016: hippo-jump02-0005
+    21300018: hippo-jump02-0008
+    21300020: hippo-jump02-0011
+    21300022: hippo-jump02-0013
+    21300024: hippo-jump03-0003
+    21300026: hippo-jump03-0004
+    21300028: hippo-jump03-0005
+    21300030: hippo-jump03-0006
+    21300032: hippo-jump03-0011
+    21300034: hippo-jump03-0013
+    21300036: hippo-skiing-0000
+    21300038: hippo-skiing-0001
+    21300040: hippo-skiing-0002
+    21300042: hippo-skiing-0003
+    21300044: hippo-skiing-0004
+    21300046: hippo-skiing-0005
+    21300048: hippo-skiing-0006
+    21300050: hippo-skiing-0007
+    21300052: hippo-skiing-0009
+    21300054: hippo-skiing-0012
+    21300056: hippo-skiing-0013
+    21300058: hippo-skiing-0014
+    21300060: hippo-skiing-0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 83
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hippo-jump01-0002
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1634
+        width: 308
+        height: 413
+      alignment: 9
+      pivot: {x: 0.52597404, y: 0.535109}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump01-0008
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1645
+        width: 309
+        height: 402
+      alignment: 9
+      pivot: {x: 0.5339806, y: 0.53731346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump01-0011
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1641
+        width: 312
+        height: 406
+      alignment: 9
+      pivot: {x: 0.52884614, y: 0.5270936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump01-0012
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 59
+        width: 315
+        height: 402
+      alignment: 9
+      pivot: {x: 0.50793654, y: 0.5273632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump01-0013
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 525
+        width: 312
+        height: 405
+      alignment: 9
+      pivot: {x: 0.525641, y: 0.5358025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump01-0014
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 8
+        width: 311
+        height: 407
+      alignment: 9
+      pivot: {x: 0.5273312, y: 0.5282555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump01-0015
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1227
+        width: 308
+        height: 402
+      alignment: 9
+      pivot: {x: 0.52272725, y: 0.5199005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump02-0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 352
+        width: 318
+        height: 401
+      alignment: 9
+      pivot: {x: 0.4811321, y: 0.5436409}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump02-0005
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1262
+        width: 311
+        height: 402
+      alignment: 9
+      pivot: {x: 0.488746, y: 0.5472637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump02-0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 321
+        height: 398
+      alignment: 9
+      pivot: {x: 0.46417445, y: 0.53768843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump02-0011
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 761
+        width: 309
+        height: 399
+      alignment: 9
+      pivot: {x: 0.4854369, y: 0.5463659}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump02-0013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1020
+        width: 315
+        height: 405
+      alignment: 9
+      pivot: {x: 0.4857143, y: 0.54567903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1683
+        width: 357
+        height: 364
+      alignment: 9
+      pivot: {x: 0.40616247, y: 0.52747256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 680
+        width: 355
+        height: 364
+      alignment: 9
+      pivot: {x: 0.4084507, y: 0.52747256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0005
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 932
+        width: 354
+        height: 361
+      alignment: 9
+      pivot: {x: 0.4124294, y: 0.5290859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0006
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 847
+        width: 353
+        height: 361
+      alignment: 9
+      pivot: {x: 0.4164306, y: 0.5290859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0011
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 462
+        width: 354
+        height: 361
+      alignment: 9
+      pivot: {x: 0.4124294, y: 0.5290859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-jump03-0013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1349
+        width: 357
+        height: 364
+      alignment: 9
+      pivot: {x: 0.40616247, y: 0.52747256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0000
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 963
+        width: 344
+        height: 329
+      alignment: 9
+      pivot: {x: 0.48255813, y: 0.50151974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0001
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 940
+        width: 360
+        height: 317
+      alignment: 9
+      pivot: {x: 0.51944447, y: 0.51735014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0002
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 661
+        width: 344
+        height: 307
+      alignment: 9
+      pivot: {x: 0.49418604, y: 0.5276873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0003
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 1432
+        width: 344
+        height: 314
+      alignment: 9
+      pivot: {x: 0.51744187, y: 0.51592356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0004
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1220
+        width: 353
+        height: 321
+      alignment: 9
+      pivot: {x: 0.49858356, y: 0.5046729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0005
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 649
+        width: 355
+        height: 314
+      alignment: 9
+      pivot: {x: 0.52394366, y: 0.51592356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0006
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1736
+        width: 369
+        height: 311
+      alignment: 9
+      pivot: {x: 0.5230352, y: 0.5209003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0007
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 627
+        width: 382
+        height: 311
+      alignment: 9
+      pivot: {x: 0.5052356, y: 0.5209003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0009
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1210
+        width: 394
+        height: 312
+      alignment: 9
+      pivot: {x: 0.5177665, y: 0.5224359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0012
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1732
+        width: 369
+        height: 315
+      alignment: 9
+      pivot: {x: 0.5176152, y: 0.51428574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0013
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 29
+        width: 352
+        height: 310
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.5225806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0014
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1424
+        width: 363
+        height: 310
+      alignment: 9
+      pivot: {x: 0.5068871, y: 0.5225806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: hippo-skiing-0015
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 341
+        width: 348
+        height: 316
+      alignment: 9
+      pivot: {x: 0.52011496, y: 0.51265824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

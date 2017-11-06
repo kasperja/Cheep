@@ -123,6 +123,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
 
     public GameObject textObj;
+    public GameObject textParent;
 
     public GameObject restoreButton;
 
@@ -130,6 +131,8 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 	private void Awake(){
 
         InitializePurchasing();
+
+       
 
         if (ES2.Exists("noAds"))noAdsPurchased = ES2.Load<bool> ("noAds");
         if (ES2.Exists("char1Purchased")) char1Purchased = ES2.Load<bool>("char1Purchased");
@@ -150,6 +153,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 
             startGameButton.anchoredPosition = new Vector2(startGameButton.anchoredPosition.x, -63.96f);
             textObj.SetActive(false);
+            textParent.SetActive(false);
             gameObject.GetComponent<Button>().enabled = false;
             gameObject.GetComponent<Image>().enabled = false;
 
@@ -163,6 +167,7 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
     restoreButton.SetActive(true);
 
 #elif UNITY_ANDROID
+
 
         restoreButton.SetActive(false);
         
