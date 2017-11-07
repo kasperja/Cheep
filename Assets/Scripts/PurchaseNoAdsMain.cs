@@ -620,13 +620,41 @@ public class PurchaseNoAdsMain : MonoBehaviour, IStoreListener
 		// Store specific subsystem, for accessing device-specific store features.
 		m_StoreExtensionProvider = extensions;
 
-        
+        extensions.GetExtension<IAppleExtensions>().RestoreTransactions(result => {
+            if (result)
+            {
 
+#if UNITY_IOS
+
+    
+
+#elif UNITY_ANDROID
+
+
+                RestorePurchases();
+
+#else
+       
+
+#endif
+
+                //RestorePurchases();
+                // This does not mean anything was restored,
+                // merely that the restoration process succeeded.
+            }
+            else
+            {
+                // Restoration failed.
+            }
+        });
+
+
+        //RestorePurchases();
 
     }
 
 
-	public void OnInitializeFailed(InitializationFailureReason error)
+    public void OnInitializeFailed(InitializationFailureReason error)
 	{
 		// Purchasing set-up has not succeeded. Check error for reason. Consider sharing this reason with the user.
 		Debug.Log("OnInitializeFailed InitializationFailureReason:" + error);
